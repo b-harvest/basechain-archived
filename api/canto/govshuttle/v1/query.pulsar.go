@@ -20,8 +20,8 @@ var (
 )
 
 func init() {
-	file_canto_govshuttle_v1_query_proto_init()
-	md_QueryParamsRequest = File_canto_govshuttle_v1_query_proto.Messages().ByName("QueryParamsRequest")
+	file_basechain_govshuttle_v1_query_proto_init()
+	md_QueryParamsRequest = File_basechain_govshuttle_v1_query_proto.Messages().ByName("QueryParamsRequest")
 }
 
 var _ protoreflect.Message = (*fastReflection_QueryParamsRequest)(nil)
@@ -33,7 +33,7 @@ func (x *QueryParamsRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryParamsRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_govshuttle_v1_query_proto_msgTypes[0]
+	mi := &file_basechain_govshuttle_v1_query_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -106,9 +106,9 @@ func (x *fastReflection_QueryParamsRequest) Has(fd protoreflect.FieldDescriptor)
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -122,9 +122,9 @@ func (x *fastReflection_QueryParamsRequest) Clear(fd protoreflect.FieldDescripto
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -138,9 +138,9 @@ func (x *fastReflection_QueryParamsRequest) Get(descriptor protoreflect.FieldDes
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -158,9 +158,9 @@ func (x *fastReflection_QueryParamsRequest) Set(fd protoreflect.FieldDescriptor,
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -178,9 +178,9 @@ func (x *fastReflection_QueryParamsRequest) Mutable(fd protoreflect.FieldDescrip
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -191,9 +191,9 @@ func (x *fastReflection_QueryParamsRequest) NewField(fd protoreflect.FieldDescri
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -203,7 +203,7 @@ func (x *fastReflection_QueryParamsRequest) NewField(fd protoreflect.FieldDescri
 func (x *fastReflection_QueryParamsRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.govshuttle.v1.QueryParamsRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.govshuttle.v1.QueryParamsRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -377,8 +377,8 @@ var (
 )
 
 func init() {
-	file_canto_govshuttle_v1_query_proto_init()
-	md_QueryParamsResponse = File_canto_govshuttle_v1_query_proto.Messages().ByName("QueryParamsResponse")
+	file_basechain_govshuttle_v1_query_proto_init()
+	md_QueryParamsResponse = File_basechain_govshuttle_v1_query_proto.Messages().ByName("QueryParamsResponse")
 	fd_QueryParamsResponse_params = md_QueryParamsResponse.Fields().ByName("params")
 }
 
@@ -391,7 +391,7 @@ func (x *QueryParamsResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryParamsResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_govshuttle_v1_query_proto_msgTypes[1]
+	mi := &file_basechain_govshuttle_v1_query_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -468,13 +468,13 @@ func (x *fastReflection_QueryParamsResponse) Range(f func(protoreflect.FieldDesc
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryParamsResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.QueryParamsResponse.params":
+	case "basechain.govshuttle.v1.QueryParamsResponse.params":
 		return x.Params != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -486,13 +486,13 @@ func (x *fastReflection_QueryParamsResponse) Has(fd protoreflect.FieldDescriptor
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryParamsResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.QueryParamsResponse.params":
+	case "basechain.govshuttle.v1.QueryParamsResponse.params":
 		x.Params = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -504,14 +504,14 @@ func (x *fastReflection_QueryParamsResponse) Clear(fd protoreflect.FieldDescript
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryParamsResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.govshuttle.v1.QueryParamsResponse.params":
+	case "basechain.govshuttle.v1.QueryParamsResponse.params":
 		value := x.Params
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -527,13 +527,13 @@ func (x *fastReflection_QueryParamsResponse) Get(descriptor protoreflect.FieldDe
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryParamsResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.QueryParamsResponse.params":
+	case "basechain.govshuttle.v1.QueryParamsResponse.params":
 		x.Params = value.Message().Interface().(*Params)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -549,16 +549,16 @@ func (x *fastReflection_QueryParamsResponse) Set(fd protoreflect.FieldDescriptor
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryParamsResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.QueryParamsResponse.params":
+	case "basechain.govshuttle.v1.QueryParamsResponse.params":
 		if x.Params == nil {
 			x.Params = new(Params)
 		}
 		return protoreflect.ValueOfMessage(x.Params.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -567,14 +567,14 @@ func (x *fastReflection_QueryParamsResponse) Mutable(fd protoreflect.FieldDescri
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryParamsResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.QueryParamsResponse.params":
+	case "basechain.govshuttle.v1.QueryParamsResponse.params":
 		m := new(Params)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -584,7 +584,7 @@ func (x *fastReflection_QueryParamsResponse) NewField(fd protoreflect.FieldDescr
 func (x *fastReflection_QueryParamsResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.govshuttle.v1.QueryParamsResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.govshuttle.v1.QueryParamsResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -810,7 +810,7 @@ func (x *fastReflection_QueryParamsResponse) ProtoMethods() *protoiface.Methods 
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/govshuttle/v1/query.proto
+// source: basechain/govshuttle/v1/query.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -829,7 +829,7 @@ type QueryParamsRequest struct {
 func (x *QueryParamsRequest) Reset() {
 	*x = QueryParamsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_govshuttle_v1_query_proto_msgTypes[0]
+		mi := &file_basechain_govshuttle_v1_query_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -843,7 +843,7 @@ func (*QueryParamsRequest) ProtoMessage() {}
 
 // Deprecated: Use QueryParamsRequest.ProtoReflect.Descriptor instead.
 func (*QueryParamsRequest) Descriptor() ([]byte, []int) {
-	return file_canto_govshuttle_v1_query_proto_rawDescGZIP(), []int{0}
+	return file_basechain_govshuttle_v1_query_proto_rawDescGZIP(), []int{0}
 }
 
 // QueryParamsResponse is response type for the Query/Params RPC method.
@@ -859,7 +859,7 @@ type QueryParamsResponse struct {
 func (x *QueryParamsResponse) Reset() {
 	*x = QueryParamsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_govshuttle_v1_query_proto_msgTypes[1]
+		mi := &file_basechain_govshuttle_v1_query_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -873,7 +873,7 @@ func (*QueryParamsResponse) ProtoMessage() {}
 
 // Deprecated: Use QueryParamsResponse.ProtoReflect.Descriptor instead.
 func (*QueryParamsResponse) Descriptor() ([]byte, []int) {
-	return file_canto_govshuttle_v1_query_proto_rawDescGZIP(), []int{1}
+	return file_basechain_govshuttle_v1_query_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *QueryParamsResponse) GetParams() *Params {
@@ -883,9 +883,9 @@ func (x *QueryParamsResponse) GetParams() *Params {
 	return nil
 }
 
-var File_canto_govshuttle_v1_query_proto protoreflect.FileDescriptor
+var File_basechain_govshuttle_v1_query_proto protoreflect.FileDescriptor
 
-var file_canto_govshuttle_v1_query_proto_rawDesc = []byte{
+var file_basechain_govshuttle_v1_query_proto_rawDesc = []byte{
 	0x0a, 0x1f, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x67, 0x6f, 0x76, 0x73, 0x68, 0x75, 0x74, 0x74,
 	0x6c, 0x65, 0x2f, 0x76, 0x31, 0x2f, 0x71, 0x75, 0x65, 0x72, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x12, 0x13, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2e, 0x67, 0x6f, 0x76, 0x73, 0x68, 0x75, 0x74,
@@ -929,27 +929,27 @@ var file_canto_govshuttle_v1_query_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_govshuttle_v1_query_proto_rawDescOnce sync.Once
-	file_canto_govshuttle_v1_query_proto_rawDescData = file_canto_govshuttle_v1_query_proto_rawDesc
+	file_basechain_govshuttle_v1_query_proto_rawDescOnce sync.Once
+	file_basechain_govshuttle_v1_query_proto_rawDescData = file_basechain_govshuttle_v1_query_proto_rawDesc
 )
 
-func file_canto_govshuttle_v1_query_proto_rawDescGZIP() []byte {
-	file_canto_govshuttle_v1_query_proto_rawDescOnce.Do(func() {
-		file_canto_govshuttle_v1_query_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_govshuttle_v1_query_proto_rawDescData)
+func file_basechain_govshuttle_v1_query_proto_rawDescGZIP() []byte {
+	file_basechain_govshuttle_v1_query_proto_rawDescOnce.Do(func() {
+		file_basechain_govshuttle_v1_query_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_govshuttle_v1_query_proto_rawDescData)
 	})
-	return file_canto_govshuttle_v1_query_proto_rawDescData
+	return file_basechain_govshuttle_v1_query_proto_rawDescData
 }
 
-var file_canto_govshuttle_v1_query_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_canto_govshuttle_v1_query_proto_goTypes = []interface{}{
-	(*QueryParamsRequest)(nil),  // 0: canto.govshuttle.v1.QueryParamsRequest
-	(*QueryParamsResponse)(nil), // 1: canto.govshuttle.v1.QueryParamsResponse
-	(*Params)(nil),              // 2: canto.govshuttle.v1.Params
+var file_basechain_govshuttle_v1_query_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_basechain_govshuttle_v1_query_proto_goTypes = []interface{}{
+	(*QueryParamsRequest)(nil),  // 0: basechain.govshuttle.v1.QueryParamsRequest
+	(*QueryParamsResponse)(nil), // 1: basechain.govshuttle.v1.QueryParamsResponse
+	(*Params)(nil),              // 2: basechain.govshuttle.v1.Params
 }
-var file_canto_govshuttle_v1_query_proto_depIdxs = []int32{
-	2, // 0: canto.govshuttle.v1.QueryParamsResponse.params:type_name -> canto.govshuttle.v1.Params
-	0, // 1: canto.govshuttle.v1.Query.Params:input_type -> canto.govshuttle.v1.QueryParamsRequest
-	1, // 2: canto.govshuttle.v1.Query.Params:output_type -> canto.govshuttle.v1.QueryParamsResponse
+var file_basechain_govshuttle_v1_query_proto_depIdxs = []int32{
+	2, // 0: basechain.govshuttle.v1.QueryParamsResponse.params:type_name -> basechain.govshuttle.v1.Params
+	0, // 1: basechain.govshuttle.v1.Query.Params:input_type -> basechain.govshuttle.v1.QueryParamsRequest
+	1, // 2: basechain.govshuttle.v1.Query.Params:output_type -> basechain.govshuttle.v1.QueryParamsResponse
 	2, // [2:3] is the sub-list for method output_type
 	1, // [1:2] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
@@ -957,14 +957,14 @@ var file_canto_govshuttle_v1_query_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_canto_govshuttle_v1_query_proto_init() }
-func file_canto_govshuttle_v1_query_proto_init() {
-	if File_canto_govshuttle_v1_query_proto != nil {
+func init() { file_basechain_govshuttle_v1_query_proto_init() }
+func file_basechain_govshuttle_v1_query_proto_init() {
+	if File_basechain_govshuttle_v1_query_proto != nil {
 		return
 	}
-	file_canto_govshuttle_v1_govshuttle_proto_init()
+	file_basechain_govshuttle_v1_govshuttle_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_canto_govshuttle_v1_query_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_govshuttle_v1_query_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryParamsRequest); i {
 			case 0:
 				return &v.state
@@ -976,7 +976,7 @@ func file_canto_govshuttle_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_govshuttle_v1_query_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_govshuttle_v1_query_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryParamsResponse); i {
 			case 0:
 				return &v.state
@@ -993,18 +993,18 @@ func file_canto_govshuttle_v1_query_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_govshuttle_v1_query_proto_rawDesc,
+			RawDescriptor: file_basechain_govshuttle_v1_query_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_canto_govshuttle_v1_query_proto_goTypes,
-		DependencyIndexes: file_canto_govshuttle_v1_query_proto_depIdxs,
-		MessageInfos:      file_canto_govshuttle_v1_query_proto_msgTypes,
+		GoTypes:           file_basechain_govshuttle_v1_query_proto_goTypes,
+		DependencyIndexes: file_basechain_govshuttle_v1_query_proto_depIdxs,
+		MessageInfos:      file_basechain_govshuttle_v1_query_proto_msgTypes,
 	}.Build()
-	File_canto_govshuttle_v1_query_proto = out.File
-	file_canto_govshuttle_v1_query_proto_rawDesc = nil
-	file_canto_govshuttle_v1_query_proto_goTypes = nil
-	file_canto_govshuttle_v1_query_proto_depIdxs = nil
+	File_basechain_govshuttle_v1_query_proto = out.File
+	file_basechain_govshuttle_v1_query_proto_rawDesc = nil
+	file_basechain_govshuttle_v1_query_proto_goTypes = nil
+	file_basechain_govshuttle_v1_query_proto_depIdxs = nil
 }

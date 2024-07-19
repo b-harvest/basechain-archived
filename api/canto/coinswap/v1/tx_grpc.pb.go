@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: canto/coinswap/v1/tx.proto
+// source: basechain/coinswap/v1/tx.proto
 
 package coinswapv1
 
@@ -19,10 +19,10 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Msg_AddLiquidity_FullMethodName    = "/canto.coinswap.v1.Msg/AddLiquidity"
-	Msg_RemoveLiquidity_FullMethodName = "/canto.coinswap.v1.Msg/RemoveLiquidity"
-	Msg_SwapCoin_FullMethodName        = "/canto.coinswap.v1.Msg/SwapCoin"
-	Msg_UpdateParams_FullMethodName    = "/canto.coinswap.v1.Msg/UpdateParams"
+	Msg_AddLiquidity_FullMethodName    = "/basechain.coinswap.v1.Msg/AddLiquidity"
+	Msg_RemoveLiquidity_FullMethodName = "/basechain.coinswap.v1.Msg/RemoveLiquidity"
+	Msg_SwapCoin_FullMethodName        = "/basechain.coinswap.v1.Msg/SwapCoin"
+	Msg_UpdateParams_FullMethodName    = "/basechain.coinswap.v1.Msg/UpdateParams"
 )
 
 // MsgClient is the client API for Msg service.
@@ -215,7 +215,7 @@ func _Msg_UpdateParams_Handler(srv interface{}, ctx context.Context, dec func(in
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Msg_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "canto.coinswap.v1.Msg",
+	ServiceName: "basechain.coinswap.v1.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -236,5 +236,5 @@ var Msg_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "canto/coinswap/v1/tx.proto",
+	Metadata: "basechain/coinswap/v1/tx.proto",
 }

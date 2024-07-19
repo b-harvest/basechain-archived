@@ -69,8 +69,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_csr_proto_init()
-	md_CSR = File_canto_csr_v1_csr_proto.Messages().ByName("CSR")
+	file_basechain_csr_v1_csr_proto_init()
+	md_CSR = File_basechain_csr_v1_csr_proto.Messages().ByName("CSR")
 	fd_CSR_contracts = md_CSR.Fields().ByName("contracts")
 	fd_CSR_id = md_CSR.Fields().ByName("id")
 	fd_CSR_txs = md_CSR.Fields().ByName("txs")
@@ -86,7 +86,7 @@ func (x *CSR) ProtoReflect() protoreflect.Message {
 }
 
 func (x *CSR) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_csr_proto_msgTypes[0]
+	mi := &file_basechain_csr_v1_csr_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -181,19 +181,19 @@ func (x *fastReflection_CSR) Range(f func(protoreflect.FieldDescriptor, protoref
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_CSR) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.csr.v1.CSR.contracts":
+	case "basechain.csr.v1.CSR.contracts":
 		return len(x.Contracts) != 0
-	case "canto.csr.v1.CSR.id":
+	case "basechain.csr.v1.CSR.id":
 		return x.Id != uint64(0)
-	case "canto.csr.v1.CSR.txs":
+	case "basechain.csr.v1.CSR.txs":
 		return x.Txs != uint64(0)
-	case "canto.csr.v1.CSR.revenue":
+	case "basechain.csr.v1.CSR.revenue":
 		return x.Revenue != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.CSR"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.CSR"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.CSR does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.CSR does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -205,19 +205,19 @@ func (x *fastReflection_CSR) Has(fd protoreflect.FieldDescriptor) bool {
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_CSR) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.csr.v1.CSR.contracts":
+	case "basechain.csr.v1.CSR.contracts":
 		x.Contracts = nil
-	case "canto.csr.v1.CSR.id":
+	case "basechain.csr.v1.CSR.id":
 		x.Id = uint64(0)
-	case "canto.csr.v1.CSR.txs":
+	case "basechain.csr.v1.CSR.txs":
 		x.Txs = uint64(0)
-	case "canto.csr.v1.CSR.revenue":
+	case "basechain.csr.v1.CSR.revenue":
 		x.Revenue = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.CSR"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.CSR"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.CSR does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.CSR does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -229,26 +229,26 @@ func (x *fastReflection_CSR) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_CSR) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.csr.v1.CSR.contracts":
+	case "basechain.csr.v1.CSR.contracts":
 		if len(x.Contracts) == 0 {
 			return protoreflect.ValueOfList(&_CSR_1_list{})
 		}
 		listValue := &_CSR_1_list{list: &x.Contracts}
 		return protoreflect.ValueOfList(listValue)
-	case "canto.csr.v1.CSR.id":
+	case "basechain.csr.v1.CSR.id":
 		value := x.Id
 		return protoreflect.ValueOfUint64(value)
-	case "canto.csr.v1.CSR.txs":
+	case "basechain.csr.v1.CSR.txs":
 		value := x.Txs
 		return protoreflect.ValueOfUint64(value)
-	case "canto.csr.v1.CSR.revenue":
+	case "basechain.csr.v1.CSR.revenue":
 		value := x.Revenue
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.CSR"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.CSR"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.CSR does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.CSR does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -264,21 +264,21 @@ func (x *fastReflection_CSR) Get(descriptor protoreflect.FieldDescriptor) protor
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_CSR) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.csr.v1.CSR.contracts":
+	case "basechain.csr.v1.CSR.contracts":
 		lv := value.List()
 		clv := lv.(*_CSR_1_list)
 		x.Contracts = *clv.list
-	case "canto.csr.v1.CSR.id":
+	case "basechain.csr.v1.CSR.id":
 		x.Id = value.Uint()
-	case "canto.csr.v1.CSR.txs":
+	case "basechain.csr.v1.CSR.txs":
 		x.Txs = value.Uint()
-	case "canto.csr.v1.CSR.revenue":
+	case "basechain.csr.v1.CSR.revenue":
 		x.Revenue = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.CSR"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.CSR"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.CSR does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.CSR does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -294,23 +294,23 @@ func (x *fastReflection_CSR) Set(fd protoreflect.FieldDescriptor, value protoref
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_CSR) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.CSR.contracts":
+	case "basechain.csr.v1.CSR.contracts":
 		if x.Contracts == nil {
 			x.Contracts = []string{}
 		}
 		value := &_CSR_1_list{list: &x.Contracts}
 		return protoreflect.ValueOfList(value)
-	case "canto.csr.v1.CSR.id":
-		panic(fmt.Errorf("field id of message canto.csr.v1.CSR is not mutable"))
-	case "canto.csr.v1.CSR.txs":
-		panic(fmt.Errorf("field txs of message canto.csr.v1.CSR is not mutable"))
-	case "canto.csr.v1.CSR.revenue":
-		panic(fmt.Errorf("field revenue of message canto.csr.v1.CSR is not mutable"))
+	case "basechain.csr.v1.CSR.id":
+		panic(fmt.Errorf("field id of message basechain.csr.v1.CSR is not mutable"))
+	case "basechain.csr.v1.CSR.txs":
+		panic(fmt.Errorf("field txs of message basechain.csr.v1.CSR is not mutable"))
+	case "basechain.csr.v1.CSR.revenue":
+		panic(fmt.Errorf("field revenue of message basechain.csr.v1.CSR is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.CSR"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.CSR"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.CSR does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.CSR does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -319,20 +319,20 @@ func (x *fastReflection_CSR) Mutable(fd protoreflect.FieldDescriptor) protorefle
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_CSR) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.CSR.contracts":
+	case "basechain.csr.v1.CSR.contracts":
 		list := []string{}
 		return protoreflect.ValueOfList(&_CSR_1_list{list: &list})
-	case "canto.csr.v1.CSR.id":
+	case "basechain.csr.v1.CSR.id":
 		return protoreflect.ValueOfUint64(uint64(0))
-	case "canto.csr.v1.CSR.txs":
+	case "basechain.csr.v1.CSR.txs":
 		return protoreflect.ValueOfUint64(uint64(0))
-	case "canto.csr.v1.CSR.revenue":
+	case "basechain.csr.v1.CSR.revenue":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.CSR"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.CSR"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.CSR does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.CSR does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -342,7 +342,7 @@ func (x *fastReflection_CSR) NewField(fd protoreflect.FieldDescriptor) protorefl
 func (x *fastReflection_CSR) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.CSR", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.CSR", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -658,7 +658,7 @@ func (x *fastReflection_CSR) ProtoMethods() *protoiface.Methods {
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/csr/v1/csr.proto
+// source: basechain/csr/v1/csr.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -687,7 +687,7 @@ type CSR struct {
 func (x *CSR) Reset() {
 	*x = CSR{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_csr_proto_msgTypes[0]
+		mi := &file_basechain_csr_v1_csr_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -701,7 +701,7 @@ func (*CSR) ProtoMessage() {}
 
 // Deprecated: Use CSR.ProtoReflect.Descriptor instead.
 func (*CSR) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_csr_proto_rawDescGZIP(), []int{0}
+	return file_basechain_csr_v1_csr_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *CSR) GetContracts() []string {
@@ -732,9 +732,9 @@ func (x *CSR) GetRevenue() string {
 	return ""
 }
 
-var File_canto_csr_v1_csr_proto protoreflect.FileDescriptor
+var File_basechain_csr_v1_csr_proto protoreflect.FileDescriptor
 
-var file_canto_csr_v1_csr_proto_rawDesc = []byte{
+var file_basechain_csr_v1_csr_proto_rawDesc = []byte{
 	0x0a, 0x16, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x63, 0x73, 0x72, 0x2f, 0x76, 0x31, 0x2f, 0x63,
 	0x73, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0c, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2e,
 	0x63, 0x73, 0x72, 0x2e, 0x76, 0x31, 0x1a, 0x14, 0x67, 0x6f, 0x67, 0x6f, 0x70, 0x72, 0x6f, 0x74,
@@ -763,22 +763,22 @@ var file_canto_csr_v1_csr_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_csr_v1_csr_proto_rawDescOnce sync.Once
-	file_canto_csr_v1_csr_proto_rawDescData = file_canto_csr_v1_csr_proto_rawDesc
+	file_basechain_csr_v1_csr_proto_rawDescOnce sync.Once
+	file_basechain_csr_v1_csr_proto_rawDescData = file_basechain_csr_v1_csr_proto_rawDesc
 )
 
-func file_canto_csr_v1_csr_proto_rawDescGZIP() []byte {
-	file_canto_csr_v1_csr_proto_rawDescOnce.Do(func() {
-		file_canto_csr_v1_csr_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_csr_v1_csr_proto_rawDescData)
+func file_basechain_csr_v1_csr_proto_rawDescGZIP() []byte {
+	file_basechain_csr_v1_csr_proto_rawDescOnce.Do(func() {
+		file_basechain_csr_v1_csr_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_csr_v1_csr_proto_rawDescData)
 	})
-	return file_canto_csr_v1_csr_proto_rawDescData
+	return file_basechain_csr_v1_csr_proto_rawDescData
 }
 
-var file_canto_csr_v1_csr_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_canto_csr_v1_csr_proto_goTypes = []interface{}{
-	(*CSR)(nil), // 0: canto.csr.v1.CSR
+var file_basechain_csr_v1_csr_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_basechain_csr_v1_csr_proto_goTypes = []interface{}{
+	(*CSR)(nil), // 0: basechain.csr.v1.CSR
 }
-var file_canto_csr_v1_csr_proto_depIdxs = []int32{
+var file_basechain_csr_v1_csr_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -786,13 +786,13 @@ var file_canto_csr_v1_csr_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_canto_csr_v1_csr_proto_init() }
-func file_canto_csr_v1_csr_proto_init() {
-	if File_canto_csr_v1_csr_proto != nil {
+func init() { file_basechain_csr_v1_csr_proto_init() }
+func file_basechain_csr_v1_csr_proto_init() {
+	if File_basechain_csr_v1_csr_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_canto_csr_v1_csr_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_csr_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CSR); i {
 			case 0:
 				return &v.state
@@ -809,18 +809,18 @@ func file_canto_csr_v1_csr_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_csr_v1_csr_proto_rawDesc,
+			RawDescriptor: file_basechain_csr_v1_csr_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   1,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_canto_csr_v1_csr_proto_goTypes,
-		DependencyIndexes: file_canto_csr_v1_csr_proto_depIdxs,
-		MessageInfos:      file_canto_csr_v1_csr_proto_msgTypes,
+		GoTypes:           file_basechain_csr_v1_csr_proto_goTypes,
+		DependencyIndexes: file_basechain_csr_v1_csr_proto_depIdxs,
+		MessageInfos:      file_basechain_csr_v1_csr_proto_msgTypes,
 	}.Build()
-	File_canto_csr_v1_csr_proto = out.File
-	file_canto_csr_v1_csr_proto_rawDesc = nil
-	file_canto_csr_v1_csr_proto_goTypes = nil
-	file_canto_csr_v1_csr_proto_depIdxs = nil
+	File_basechain_csr_v1_csr_proto = out.File
+	file_basechain_csr_v1_csr_proto_rawDesc = nil
+	file_basechain_csr_v1_csr_proto_goTypes = nil
+	file_basechain_csr_v1_csr_proto_depIdxs = nil
 }

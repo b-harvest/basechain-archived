@@ -16,7 +16,7 @@ import (
 
 func init() {
 	cfg := sdk.GetConfig()
-	cfg.SetBech32PrefixForAccount("canto", "cantopub")
+	cfg.SetBech32PrefixForAccount("basechain", "basechainpub")
 }
 
 func TestIsSupportedKeys(t *testing.T) {
@@ -72,7 +72,7 @@ func TestIsSupportedKeys(t *testing.T) {
 	}
 }
 
-func TestGetcantoAddressFromBech32(t *testing.T) {
+func TestGetbasechainAddressFromBech32(t *testing.T) {
 	testCases := []struct {
 		name       string
 		address    string
@@ -87,38 +87,38 @@ func TestGetcantoAddressFromBech32(t *testing.T) {
 		},
 		{
 			"invalid bech32 address",
-			"canto",
+			"basechain",
 			"",
 			true,
 		},
 		{
 			"invalid address bytes",
-			"canto1123",
+			"basechain1123",
 			"",
 			true,
 		},
 		{
-			"canto address",
-			"canto1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
-			"canto1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
+			"basechain address",
+			"basechain1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
+			"basechain1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
 			false,
 		},
 		{
 			"cosmos address",
 			"cosmos1qql8ag4cluz6r4dz28p3w00dnc9w8ueulg2gmc",
-			"canto1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
+			"basechain1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
 			false,
 		},
 		{
 			"osmosis address",
 			"osmo1qql8ag4cluz6r4dz28p3w00dnc9w8ueuhnecd2",
-			"canto1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
+			"basechain1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
 			false,
 		},
 	}
 
 	for _, tc := range testCases {
-		addr, err := GetcantoAddressFromBech32(tc.address)
+		addr, err := GetbasechainAddressFromBech32(tc.address)
 		if tc.expError {
 			require.Error(t, err, tc.name)
 		} else {

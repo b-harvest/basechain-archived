@@ -120,8 +120,8 @@ import (
 	ibctesting "github.com/cosmos/ibc-go/v8/testing"
 	ibctestingtypes "github.com/cosmos/ibc-go/v8/testing/types"
 
-	coinswapv1 "github.com/Canto-Network/Canto/v7/api/canto/coinswap/v1"
-	erc20v1 "github.com/Canto-Network/Canto/v7/api/canto/erc20/v1"
+	coinswapv1 "github.com/Canto-Network/Canto/v7/api/basechain/coinswap/v1"
+	erc20v1 "github.com/Canto-Network/Canto/v7/api/basechain/erc20/v1"
 	evmv1 "github.com/evmos/ethermint/api/ethermint/evm/v1"
 	ethante "github.com/evmos/ethermint/app/ante"
 	enccodec "github.com/evmos/ethermint/encoding/codec"
@@ -177,7 +177,7 @@ import (
 )
 
 // Name defines the application binary name
-const Name = "cantod"
+const Name = "basechaind"
 
 var (
 	// DefaultNodeHome default home directories for the application daemon
@@ -279,7 +279,7 @@ func init() {
 		panic(err)
 	}
 
-	DefaultNodeHome = filepath.Join(userHomeDir, ".cantod")
+	DefaultNodeHome = filepath.Join(userHomeDir, ".basechaind")
 
 	// manually update the power reduction by replacing micro (u) -> atto (a) Canto
 	sdk.DefaultPowerReduction = ethermint.PowerReduction

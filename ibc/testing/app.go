@@ -33,7 +33,7 @@ import (
 	tmtypes "github.com/cometbft/cometbft/types"
 	dbm "github.com/cosmos/cosmos-db"
 
-	cantoapp "github.com/Canto-Network/Canto/v7/app"
+	basechainapp "github.com/Canto-Network/Canto/v7/app"
 )
 
 var DefaultTestingAppInit func() (TestingApp, map[string]json.RawMessage) = SetupTestingApp
@@ -67,9 +67,9 @@ func SetupTestingApp() (TestingApp, map[string]json.RawMessage) {
 // SetupTestingApp initializes the IBC-go testing application
 func SetupTestingCantoApp() (TestingApp, map[string]json.RawMessage) {
 	db := dbm.NewMemDB()
-	app := cantoapp.NewCanto(log.NewNopLogger(), db, nil, true, map[int64]bool{}, cantoapp.DefaultNodeHome, 5, false, simtestutil.EmptyAppOptions{})
+	app := basechainapp.NewCanto(log.NewNopLogger(), db, nil, true, map[int64]bool{}, basechainapp.DefaultNodeHome, 5, false, simtestutil.EmptyAppOptions{})
 
-	return app, cantoapp.NewDefaultGenesisState()
+	return app, basechainapp.NewDefaultGenesisState()
 }
 
 func SetupWithGenesisValSet(tb testing.TB, valSet *tmtypes.ValidatorSet, genAccs []authtypes.GenesisAccount, chainID string, powerReduction sdkmath.Int, balances ...banktypes.Balance) TestingApp {
@@ -217,7 +217,7 @@ func SetupWithGenesisValSetCanto(tb testing.TB, valSet *tmtypes.ValidatorSet, ge
 		&abci.RequestInitChain{
 			ChainId:         chainID,
 			Validators:      []abci.ValidatorUpdate{},
-			ConsensusParams: cantoapp.DefaultConsensusParams,
+			ConsensusParams: basechainapp.DefaultConsensusParams,
 			AppStateBytes:   stateBytes,
 		},
 	)

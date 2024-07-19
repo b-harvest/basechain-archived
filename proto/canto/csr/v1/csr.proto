@@ -1,5 +1,5 @@
 syntax = "proto3";
-package canto.csr.v1;
+package basechain.csr.v1;
 
 import "gogoproto/gogo.proto";
 import "cosmos_proto/cosmos.proto";

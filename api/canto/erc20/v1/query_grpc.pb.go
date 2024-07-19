@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: canto/erc20/v1/query.proto
+// source: basechain/erc20/v1/query.proto
 
 package erc20v1
 
@@ -19,9 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Query_TokenPairs_FullMethodName = "/canto.erc20.v1.Query/TokenPairs"
-	Query_TokenPair_FullMethodName  = "/canto.erc20.v1.Query/TokenPair"
-	Query_Params_FullMethodName     = "/canto.erc20.v1.Query/Params"
+	Query_TokenPairs_FullMethodName = "/basechain.erc20.v1.Query/TokenPairs"
+	Query_TokenPair_FullMethodName  = "/basechain.erc20.v1.Query/TokenPair"
+	Query_Params_FullMethodName     = "/basechain.erc20.v1.Query/Params"
 )
 
 // QueryClient is the client API for Query service.
@@ -168,7 +168,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Query_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "canto.erc20.v1.Query",
+	ServiceName: "basechain.erc20.v1.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -185,5 +185,5 @@ var Query_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "canto/erc20/v1/query.proto",
+	Metadata: "basechain/erc20/v1/query.proto",
 }

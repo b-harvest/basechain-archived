@@ -21,8 +21,8 @@ var (
 )
 
 func init() {
-	file_canto_coinswap_v1_query_proto_init()
-	md_QueryParamsRequest = File_canto_coinswap_v1_query_proto.Messages().ByName("QueryParamsRequest")
+	file_basechain_coinswap_v1_query_proto_init()
+	md_QueryParamsRequest = File_basechain_coinswap_v1_query_proto.Messages().ByName("QueryParamsRequest")
 }
 
 var _ protoreflect.Message = (*fastReflection_QueryParamsRequest)(nil)
@@ -34,7 +34,7 @@ func (x *QueryParamsRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryParamsRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_coinswap_v1_query_proto_msgTypes[0]
+	mi := &file_basechain_coinswap_v1_query_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -107,9 +107,9 @@ func (x *fastReflection_QueryParamsRequest) Has(fd protoreflect.FieldDescriptor)
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -123,9 +123,9 @@ func (x *fastReflection_QueryParamsRequest) Clear(fd protoreflect.FieldDescripto
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -139,9 +139,9 @@ func (x *fastReflection_QueryParamsRequest) Get(descriptor protoreflect.FieldDes
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -159,9 +159,9 @@ func (x *fastReflection_QueryParamsRequest) Set(fd protoreflect.FieldDescriptor,
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -179,9 +179,9 @@ func (x *fastReflection_QueryParamsRequest) Mutable(fd protoreflect.FieldDescrip
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -192,9 +192,9 @@ func (x *fastReflection_QueryParamsRequest) NewField(fd protoreflect.FieldDescri
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -204,7 +204,7 @@ func (x *fastReflection_QueryParamsRequest) NewField(fd protoreflect.FieldDescri
 func (x *fastReflection_QueryParamsRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.coinswap.v1.QueryParamsRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.coinswap.v1.QueryParamsRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -378,8 +378,8 @@ var (
 )
 
 func init() {
-	file_canto_coinswap_v1_query_proto_init()
-	md_QueryParamsResponse = File_canto_coinswap_v1_query_proto.Messages().ByName("QueryParamsResponse")
+	file_basechain_coinswap_v1_query_proto_init()
+	md_QueryParamsResponse = File_basechain_coinswap_v1_query_proto.Messages().ByName("QueryParamsResponse")
 	fd_QueryParamsResponse_params = md_QueryParamsResponse.Fields().ByName("params")
 }
 
@@ -392,7 +392,7 @@ func (x *QueryParamsResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryParamsResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_coinswap_v1_query_proto_msgTypes[1]
+	mi := &file_basechain_coinswap_v1_query_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -469,13 +469,13 @@ func (x *fastReflection_QueryParamsResponse) Range(f func(protoreflect.FieldDesc
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryParamsResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryParamsResponse.params":
+	case "basechain.coinswap.v1.QueryParamsResponse.params":
 		return x.Params != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -487,13 +487,13 @@ func (x *fastReflection_QueryParamsResponse) Has(fd protoreflect.FieldDescriptor
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryParamsResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryParamsResponse.params":
+	case "basechain.coinswap.v1.QueryParamsResponse.params":
 		x.Params = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -505,14 +505,14 @@ func (x *fastReflection_QueryParamsResponse) Clear(fd protoreflect.FieldDescript
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryParamsResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.coinswap.v1.QueryParamsResponse.params":
+	case "basechain.coinswap.v1.QueryParamsResponse.params":
 		value := x.Params
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -528,13 +528,13 @@ func (x *fastReflection_QueryParamsResponse) Get(descriptor protoreflect.FieldDe
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryParamsResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryParamsResponse.params":
+	case "basechain.coinswap.v1.QueryParamsResponse.params":
 		x.Params = value.Message().Interface().(*Params)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -550,16 +550,16 @@ func (x *fastReflection_QueryParamsResponse) Set(fd protoreflect.FieldDescriptor
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryParamsResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryParamsResponse.params":
+	case "basechain.coinswap.v1.QueryParamsResponse.params":
 		if x.Params == nil {
 			x.Params = new(Params)
 		}
 		return protoreflect.ValueOfMessage(x.Params.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -568,14 +568,14 @@ func (x *fastReflection_QueryParamsResponse) Mutable(fd protoreflect.FieldDescri
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryParamsResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryParamsResponse.params":
+	case "basechain.coinswap.v1.QueryParamsResponse.params":
 		m := new(Params)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -585,7 +585,7 @@ func (x *fastReflection_QueryParamsResponse) NewField(fd protoreflect.FieldDescr
 func (x *fastReflection_QueryParamsResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.coinswap.v1.QueryParamsResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.coinswap.v1.QueryParamsResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -813,8 +813,8 @@ var (
 )
 
 func init() {
-	file_canto_coinswap_v1_query_proto_init()
-	md_QueryLiquidityPoolRequest = File_canto_coinswap_v1_query_proto.Messages().ByName("QueryLiquidityPoolRequest")
+	file_basechain_coinswap_v1_query_proto_init()
+	md_QueryLiquidityPoolRequest = File_basechain_coinswap_v1_query_proto.Messages().ByName("QueryLiquidityPoolRequest")
 	fd_QueryLiquidityPoolRequest_lpt_denom = md_QueryLiquidityPoolRequest.Fields().ByName("lpt_denom")
 }
 
@@ -827,7 +827,7 @@ func (x *QueryLiquidityPoolRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryLiquidityPoolRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_coinswap_v1_query_proto_msgTypes[2]
+	mi := &file_basechain_coinswap_v1_query_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -904,13 +904,13 @@ func (x *fastReflection_QueryLiquidityPoolRequest) Range(f func(protoreflect.Fie
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryLiquidityPoolRequest) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
+	case "basechain.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
 		return x.LptDenom != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -922,13 +922,13 @@ func (x *fastReflection_QueryLiquidityPoolRequest) Has(fd protoreflect.FieldDesc
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolRequest) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
+	case "basechain.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
 		x.LptDenom = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -940,14 +940,14 @@ func (x *fastReflection_QueryLiquidityPoolRequest) Clear(fd protoreflect.FieldDe
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryLiquidityPoolRequest) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
+	case "basechain.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
 		value := x.LptDenom
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -963,13 +963,13 @@ func (x *fastReflection_QueryLiquidityPoolRequest) Get(descriptor protoreflect.F
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolRequest) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
+	case "basechain.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
 		x.LptDenom = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -985,13 +985,13 @@ func (x *fastReflection_QueryLiquidityPoolRequest) Set(fd protoreflect.FieldDesc
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolRequest) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
-		panic(fmt.Errorf("field lpt_denom of message canto.coinswap.v1.QueryLiquidityPoolRequest is not mutable"))
+	case "basechain.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
+		panic(fmt.Errorf("field lpt_denom of message basechain.coinswap.v1.QueryLiquidityPoolRequest is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1000,13 +1000,13 @@ func (x *fastReflection_QueryLiquidityPoolRequest) Mutable(fd protoreflect.Field
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryLiquidityPoolRequest) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
+	case "basechain.coinswap.v1.QueryLiquidityPoolRequest.lpt_denom":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1016,7 +1016,7 @@ func (x *fastReflection_QueryLiquidityPoolRequest) NewField(fd protoreflect.Fiel
 func (x *fastReflection_QueryLiquidityPoolRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.coinswap.v1.QueryLiquidityPoolRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.coinswap.v1.QueryLiquidityPoolRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1233,8 +1233,8 @@ var (
 )
 
 func init() {
-	file_canto_coinswap_v1_query_proto_init()
-	md_QueryLiquidityPoolResponse = File_canto_coinswap_v1_query_proto.Messages().ByName("QueryLiquidityPoolResponse")
+	file_basechain_coinswap_v1_query_proto_init()
+	md_QueryLiquidityPoolResponse = File_basechain_coinswap_v1_query_proto.Messages().ByName("QueryLiquidityPoolResponse")
 	fd_QueryLiquidityPoolResponse_pool = md_QueryLiquidityPoolResponse.Fields().ByName("pool")
 }
 
@@ -1247,7 +1247,7 @@ func (x *QueryLiquidityPoolResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryLiquidityPoolResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_coinswap_v1_query_proto_msgTypes[3]
+	mi := &file_basechain_coinswap_v1_query_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1324,13 +1324,13 @@ func (x *fastReflection_QueryLiquidityPoolResponse) Range(f func(protoreflect.Fi
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryLiquidityPoolResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolResponse.pool":
+	case "basechain.coinswap.v1.QueryLiquidityPoolResponse.pool":
 		return x.Pool != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1342,13 +1342,13 @@ func (x *fastReflection_QueryLiquidityPoolResponse) Has(fd protoreflect.FieldDes
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolResponse.pool":
+	case "basechain.coinswap.v1.QueryLiquidityPoolResponse.pool":
 		x.Pool = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1360,14 +1360,14 @@ func (x *fastReflection_QueryLiquidityPoolResponse) Clear(fd protoreflect.FieldD
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryLiquidityPoolResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolResponse.pool":
+	case "basechain.coinswap.v1.QueryLiquidityPoolResponse.pool":
 		value := x.Pool
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1383,13 +1383,13 @@ func (x *fastReflection_QueryLiquidityPoolResponse) Get(descriptor protoreflect.
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolResponse.pool":
+	case "basechain.coinswap.v1.QueryLiquidityPoolResponse.pool":
 		x.Pool = value.Message().Interface().(*PoolInfo)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1405,16 +1405,16 @@ func (x *fastReflection_QueryLiquidityPoolResponse) Set(fd protoreflect.FieldDes
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolResponse.pool":
+	case "basechain.coinswap.v1.QueryLiquidityPoolResponse.pool":
 		if x.Pool == nil {
 			x.Pool = new(PoolInfo)
 		}
 		return protoreflect.ValueOfMessage(x.Pool.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1423,14 +1423,14 @@ func (x *fastReflection_QueryLiquidityPoolResponse) Mutable(fd protoreflect.Fiel
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryLiquidityPoolResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolResponse.pool":
+	case "basechain.coinswap.v1.QueryLiquidityPoolResponse.pool":
 		m := new(PoolInfo)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1440,7 +1440,7 @@ func (x *fastReflection_QueryLiquidityPoolResponse) NewField(fd protoreflect.Fie
 func (x *fastReflection_QueryLiquidityPoolResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.coinswap.v1.QueryLiquidityPoolResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.coinswap.v1.QueryLiquidityPoolResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1668,8 +1668,8 @@ var (
 )
 
 func init() {
-	file_canto_coinswap_v1_query_proto_init()
-	md_QueryLiquidityPoolsRequest = File_canto_coinswap_v1_query_proto.Messages().ByName("QueryLiquidityPoolsRequest")
+	file_basechain_coinswap_v1_query_proto_init()
+	md_QueryLiquidityPoolsRequest = File_basechain_coinswap_v1_query_proto.Messages().ByName("QueryLiquidityPoolsRequest")
 	fd_QueryLiquidityPoolsRequest_pagination = md_QueryLiquidityPoolsRequest.Fields().ByName("pagination")
 }
 
@@ -1682,7 +1682,7 @@ func (x *QueryLiquidityPoolsRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryLiquidityPoolsRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_coinswap_v1_query_proto_msgTypes[4]
+	mi := &file_basechain_coinswap_v1_query_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1759,13 +1759,13 @@ func (x *fastReflection_QueryLiquidityPoolsRequest) Range(f func(protoreflect.Fi
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryLiquidityPoolsRequest) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
 		return x.Pagination != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1777,13 +1777,13 @@ func (x *fastReflection_QueryLiquidityPoolsRequest) Has(fd protoreflect.FieldDes
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolsRequest) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
 		x.Pagination = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1795,14 +1795,14 @@ func (x *fastReflection_QueryLiquidityPoolsRequest) Clear(fd protoreflect.FieldD
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryLiquidityPoolsRequest) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
 		value := x.Pagination
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1818,13 +1818,13 @@ func (x *fastReflection_QueryLiquidityPoolsRequest) Get(descriptor protoreflect.
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolsRequest) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
 		x.Pagination = value.Message().Interface().(*v1beta1.PageRequest)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1840,16 +1840,16 @@ func (x *fastReflection_QueryLiquidityPoolsRequest) Set(fd protoreflect.FieldDes
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolsRequest) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
 		if x.Pagination == nil {
 			x.Pagination = new(v1beta1.PageRequest)
 		}
 		return protoreflect.ValueOfMessage(x.Pagination.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1858,14 +1858,14 @@ func (x *fastReflection_QueryLiquidityPoolsRequest) Mutable(fd protoreflect.Fiel
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryLiquidityPoolsRequest) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsRequest.pagination":
 		m := new(v1beta1.PageRequest)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsRequest"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1875,7 +1875,7 @@ func (x *fastReflection_QueryLiquidityPoolsRequest) NewField(fd protoreflect.Fie
 func (x *fastReflection_QueryLiquidityPoolsRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.coinswap.v1.QueryLiquidityPoolsRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.coinswap.v1.QueryLiquidityPoolsRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -2155,8 +2155,8 @@ var (
 )
 
 func init() {
-	file_canto_coinswap_v1_query_proto_init()
-	md_QueryLiquidityPoolsResponse = File_canto_coinswap_v1_query_proto.Messages().ByName("QueryLiquidityPoolsResponse")
+	file_basechain_coinswap_v1_query_proto_init()
+	md_QueryLiquidityPoolsResponse = File_basechain_coinswap_v1_query_proto.Messages().ByName("QueryLiquidityPoolsResponse")
 	fd_QueryLiquidityPoolsResponse_pools = md_QueryLiquidityPoolsResponse.Fields().ByName("pools")
 	fd_QueryLiquidityPoolsResponse_pagination = md_QueryLiquidityPoolsResponse.Fields().ByName("pagination")
 }
@@ -2170,7 +2170,7 @@ func (x *QueryLiquidityPoolsResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryLiquidityPoolsResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_coinswap_v1_query_proto_msgTypes[5]
+	mi := &file_basechain_coinswap_v1_query_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2253,15 +2253,15 @@ func (x *fastReflection_QueryLiquidityPoolsResponse) Range(f func(protoreflect.F
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryLiquidityPoolsResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pools":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pools":
 		return len(x.Pools) != 0
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
 		return x.Pagination != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2273,15 +2273,15 @@ func (x *fastReflection_QueryLiquidityPoolsResponse) Has(fd protoreflect.FieldDe
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolsResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pools":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pools":
 		x.Pools = nil
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
 		x.Pagination = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2293,20 +2293,20 @@ func (x *fastReflection_QueryLiquidityPoolsResponse) Clear(fd protoreflect.Field
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryLiquidityPoolsResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pools":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pools":
 		if len(x.Pools) == 0 {
 			return protoreflect.ValueOfList(&_QueryLiquidityPoolsResponse_1_list{})
 		}
 		listValue := &_QueryLiquidityPoolsResponse_1_list{list: &x.Pools}
 		return protoreflect.ValueOfList(listValue)
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
 		value := x.Pagination
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -2322,17 +2322,17 @@ func (x *fastReflection_QueryLiquidityPoolsResponse) Get(descriptor protoreflect
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolsResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pools":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pools":
 		lv := value.List()
 		clv := lv.(*_QueryLiquidityPoolsResponse_1_list)
 		x.Pools = *clv.list
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
 		x.Pagination = value.Message().Interface().(*v1beta1.PageResponse)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2348,22 +2348,22 @@ func (x *fastReflection_QueryLiquidityPoolsResponse) Set(fd protoreflect.FieldDe
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryLiquidityPoolsResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pools":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pools":
 		if x.Pools == nil {
 			x.Pools = []*PoolInfo{}
 		}
 		value := &_QueryLiquidityPoolsResponse_1_list{list: &x.Pools}
 		return protoreflect.ValueOfList(value)
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
 		if x.Pagination == nil {
 			x.Pagination = new(v1beta1.PageResponse)
 		}
 		return protoreflect.ValueOfMessage(x.Pagination.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2372,17 +2372,17 @@ func (x *fastReflection_QueryLiquidityPoolsResponse) Mutable(fd protoreflect.Fie
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryLiquidityPoolsResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pools":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pools":
 		list := []*PoolInfo{}
 		return protoreflect.ValueOfList(&_QueryLiquidityPoolsResponse_1_list{list: &list})
-	case "canto.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
+	case "basechain.coinswap.v1.QueryLiquidityPoolsResponse.pagination":
 		m := new(v1beta1.PageResponse)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.QueryLiquidityPoolsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.QueryLiquidityPoolsResponse"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.QueryLiquidityPoolsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2392,7 +2392,7 @@ func (x *fastReflection_QueryLiquidityPoolsResponse) NewField(fd protoreflect.Fi
 func (x *fastReflection_QueryLiquidityPoolsResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.coinswap.v1.QueryLiquidityPoolsResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.coinswap.v1.QueryLiquidityPoolsResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -2681,8 +2681,8 @@ var (
 )
 
 func init() {
-	file_canto_coinswap_v1_query_proto_init()
-	md_PoolInfo = File_canto_coinswap_v1_query_proto.Messages().ByName("PoolInfo")
+	file_basechain_coinswap_v1_query_proto_init()
+	md_PoolInfo = File_basechain_coinswap_v1_query_proto.Messages().ByName("PoolInfo")
 	fd_PoolInfo_id = md_PoolInfo.Fields().ByName("id")
 	fd_PoolInfo_escrow_address = md_PoolInfo.Fields().ByName("escrow_address")
 	fd_PoolInfo_standard = md_PoolInfo.Fields().ByName("standard")
@@ -2700,7 +2700,7 @@ func (x *PoolInfo) ProtoReflect() protoreflect.Message {
 }
 
 func (x *PoolInfo) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_coinswap_v1_query_proto_msgTypes[6]
+	mi := &file_basechain_coinswap_v1_query_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2807,23 +2807,23 @@ func (x *fastReflection_PoolInfo) Range(f func(protoreflect.FieldDescriptor, pro
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_PoolInfo) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.PoolInfo.id":
+	case "basechain.coinswap.v1.PoolInfo.id":
 		return x.Id != ""
-	case "canto.coinswap.v1.PoolInfo.escrow_address":
+	case "basechain.coinswap.v1.PoolInfo.escrow_address":
 		return x.EscrowAddress != ""
-	case "canto.coinswap.v1.PoolInfo.standard":
+	case "basechain.coinswap.v1.PoolInfo.standard":
 		return x.Standard != nil
-	case "canto.coinswap.v1.PoolInfo.token":
+	case "basechain.coinswap.v1.PoolInfo.token":
 		return x.Token != nil
-	case "canto.coinswap.v1.PoolInfo.lpt":
+	case "basechain.coinswap.v1.PoolInfo.lpt":
 		return x.Lpt != nil
-	case "canto.coinswap.v1.PoolInfo.fee":
+	case "basechain.coinswap.v1.PoolInfo.fee":
 		return x.Fee != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.PoolInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.PoolInfo"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.PoolInfo does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.PoolInfo does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2835,23 +2835,23 @@ func (x *fastReflection_PoolInfo) Has(fd protoreflect.FieldDescriptor) bool {
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_PoolInfo) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.PoolInfo.id":
+	case "basechain.coinswap.v1.PoolInfo.id":
 		x.Id = ""
-	case "canto.coinswap.v1.PoolInfo.escrow_address":
+	case "basechain.coinswap.v1.PoolInfo.escrow_address":
 		x.EscrowAddress = ""
-	case "canto.coinswap.v1.PoolInfo.standard":
+	case "basechain.coinswap.v1.PoolInfo.standard":
 		x.Standard = nil
-	case "canto.coinswap.v1.PoolInfo.token":
+	case "basechain.coinswap.v1.PoolInfo.token":
 		x.Token = nil
-	case "canto.coinswap.v1.PoolInfo.lpt":
+	case "basechain.coinswap.v1.PoolInfo.lpt":
 		x.Lpt = nil
-	case "canto.coinswap.v1.PoolInfo.fee":
+	case "basechain.coinswap.v1.PoolInfo.fee":
 		x.Fee = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.PoolInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.PoolInfo"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.PoolInfo does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.PoolInfo does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2863,29 +2863,29 @@ func (x *fastReflection_PoolInfo) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_PoolInfo) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.coinswap.v1.PoolInfo.id":
+	case "basechain.coinswap.v1.PoolInfo.id":
 		value := x.Id
 		return protoreflect.ValueOfString(value)
-	case "canto.coinswap.v1.PoolInfo.escrow_address":
+	case "basechain.coinswap.v1.PoolInfo.escrow_address":
 		value := x.EscrowAddress
 		return protoreflect.ValueOfString(value)
-	case "canto.coinswap.v1.PoolInfo.standard":
+	case "basechain.coinswap.v1.PoolInfo.standard":
 		value := x.Standard
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
-	case "canto.coinswap.v1.PoolInfo.token":
+	case "basechain.coinswap.v1.PoolInfo.token":
 		value := x.Token
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
-	case "canto.coinswap.v1.PoolInfo.lpt":
+	case "basechain.coinswap.v1.PoolInfo.lpt":
 		value := x.Lpt
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
-	case "canto.coinswap.v1.PoolInfo.fee":
+	case "basechain.coinswap.v1.PoolInfo.fee":
 		value := x.Fee
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.PoolInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.PoolInfo"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.PoolInfo does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.PoolInfo does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -2901,23 +2901,23 @@ func (x *fastReflection_PoolInfo) Get(descriptor protoreflect.FieldDescriptor) p
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_PoolInfo) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.PoolInfo.id":
+	case "basechain.coinswap.v1.PoolInfo.id":
 		x.Id = value.Interface().(string)
-	case "canto.coinswap.v1.PoolInfo.escrow_address":
+	case "basechain.coinswap.v1.PoolInfo.escrow_address":
 		x.EscrowAddress = value.Interface().(string)
-	case "canto.coinswap.v1.PoolInfo.standard":
+	case "basechain.coinswap.v1.PoolInfo.standard":
 		x.Standard = value.Message().Interface().(*v1beta11.Coin)
-	case "canto.coinswap.v1.PoolInfo.token":
+	case "basechain.coinswap.v1.PoolInfo.token":
 		x.Token = value.Message().Interface().(*v1beta11.Coin)
-	case "canto.coinswap.v1.PoolInfo.lpt":
+	case "basechain.coinswap.v1.PoolInfo.lpt":
 		x.Lpt = value.Message().Interface().(*v1beta11.Coin)
-	case "canto.coinswap.v1.PoolInfo.fee":
+	case "basechain.coinswap.v1.PoolInfo.fee":
 		x.Fee = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.PoolInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.PoolInfo"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.PoolInfo does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.PoolInfo does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2933,32 +2933,32 @@ func (x *fastReflection_PoolInfo) Set(fd protoreflect.FieldDescriptor, value pro
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_PoolInfo) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.PoolInfo.standard":
+	case "basechain.coinswap.v1.PoolInfo.standard":
 		if x.Standard == nil {
 			x.Standard = new(v1beta11.Coin)
 		}
 		return protoreflect.ValueOfMessage(x.Standard.ProtoReflect())
-	case "canto.coinswap.v1.PoolInfo.token":
+	case "basechain.coinswap.v1.PoolInfo.token":
 		if x.Token == nil {
 			x.Token = new(v1beta11.Coin)
 		}
 		return protoreflect.ValueOfMessage(x.Token.ProtoReflect())
-	case "canto.coinswap.v1.PoolInfo.lpt":
+	case "basechain.coinswap.v1.PoolInfo.lpt":
 		if x.Lpt == nil {
 			x.Lpt = new(v1beta11.Coin)
 		}
 		return protoreflect.ValueOfMessage(x.Lpt.ProtoReflect())
-	case "canto.coinswap.v1.PoolInfo.id":
-		panic(fmt.Errorf("field id of message canto.coinswap.v1.PoolInfo is not mutable"))
-	case "canto.coinswap.v1.PoolInfo.escrow_address":
-		panic(fmt.Errorf("field escrow_address of message canto.coinswap.v1.PoolInfo is not mutable"))
-	case "canto.coinswap.v1.PoolInfo.fee":
-		panic(fmt.Errorf("field fee of message canto.coinswap.v1.PoolInfo is not mutable"))
+	case "basechain.coinswap.v1.PoolInfo.id":
+		panic(fmt.Errorf("field id of message basechain.coinswap.v1.PoolInfo is not mutable"))
+	case "basechain.coinswap.v1.PoolInfo.escrow_address":
+		panic(fmt.Errorf("field escrow_address of message basechain.coinswap.v1.PoolInfo is not mutable"))
+	case "basechain.coinswap.v1.PoolInfo.fee":
+		panic(fmt.Errorf("field fee of message basechain.coinswap.v1.PoolInfo is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.PoolInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.PoolInfo"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.PoolInfo does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.PoolInfo does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2967,26 +2967,26 @@ func (x *fastReflection_PoolInfo) Mutable(fd protoreflect.FieldDescriptor) proto
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_PoolInfo) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.coinswap.v1.PoolInfo.id":
+	case "basechain.coinswap.v1.PoolInfo.id":
 		return protoreflect.ValueOfString("")
-	case "canto.coinswap.v1.PoolInfo.escrow_address":
+	case "basechain.coinswap.v1.PoolInfo.escrow_address":
 		return protoreflect.ValueOfString("")
-	case "canto.coinswap.v1.PoolInfo.standard":
+	case "basechain.coinswap.v1.PoolInfo.standard":
 		m := new(v1beta11.Coin)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
-	case "canto.coinswap.v1.PoolInfo.token":
+	case "basechain.coinswap.v1.PoolInfo.token":
 		m := new(v1beta11.Coin)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
-	case "canto.coinswap.v1.PoolInfo.lpt":
+	case "basechain.coinswap.v1.PoolInfo.lpt":
 		m := new(v1beta11.Coin)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
-	case "canto.coinswap.v1.PoolInfo.fee":
+	case "basechain.coinswap.v1.PoolInfo.fee":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.coinswap.v1.PoolInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.coinswap.v1.PoolInfo"))
 		}
-		panic(fmt.Errorf("message canto.coinswap.v1.PoolInfo does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.coinswap.v1.PoolInfo does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2996,7 +2996,7 @@ func (x *fastReflection_PoolInfo) NewField(fd protoreflect.FieldDescriptor) prot
 func (x *fastReflection_PoolInfo) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.coinswap.v1.PoolInfo", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.coinswap.v1.PoolInfo", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -3459,7 +3459,7 @@ func (x *fastReflection_PoolInfo) ProtoMethods() *protoiface.Methods {
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/coinswap/v1/query.proto
+// source: basechain/coinswap/v1/query.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -3478,7 +3478,7 @@ type QueryParamsRequest struct {
 func (x *QueryParamsRequest) Reset() {
 	*x = QueryParamsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_coinswap_v1_query_proto_msgTypes[0]
+		mi := &file_basechain_coinswap_v1_query_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3492,7 +3492,7 @@ func (*QueryParamsRequest) ProtoMessage() {}
 
 // Deprecated: Use QueryParamsRequest.ProtoReflect.Descriptor instead.
 func (*QueryParamsRequest) Descriptor() ([]byte, []int) {
-	return file_canto_coinswap_v1_query_proto_rawDescGZIP(), []int{0}
+	return file_basechain_coinswap_v1_query_proto_rawDescGZIP(), []int{0}
 }
 
 // QueryParamsResponse is response type for the Query/Params RPC method.
@@ -3507,7 +3507,7 @@ type QueryParamsResponse struct {
 func (x *QueryParamsResponse) Reset() {
 	*x = QueryParamsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_coinswap_v1_query_proto_msgTypes[1]
+		mi := &file_basechain_coinswap_v1_query_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3521,7 +3521,7 @@ func (*QueryParamsResponse) ProtoMessage() {}
 
 // Deprecated: Use QueryParamsResponse.ProtoReflect.Descriptor instead.
 func (*QueryParamsResponse) Descriptor() ([]byte, []int) {
-	return file_canto_coinswap_v1_query_proto_rawDescGZIP(), []int{1}
+	return file_basechain_coinswap_v1_query_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *QueryParamsResponse) GetParams() *Params {
@@ -3544,7 +3544,7 @@ type QueryLiquidityPoolRequest struct {
 func (x *QueryLiquidityPoolRequest) Reset() {
 	*x = QueryLiquidityPoolRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_coinswap_v1_query_proto_msgTypes[2]
+		mi := &file_basechain_coinswap_v1_query_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3558,7 +3558,7 @@ func (*QueryLiquidityPoolRequest) ProtoMessage() {}
 
 // Deprecated: Use QueryLiquidityPoolRequest.ProtoReflect.Descriptor instead.
 func (*QueryLiquidityPoolRequest) Descriptor() ([]byte, []int) {
-	return file_canto_coinswap_v1_query_proto_rawDescGZIP(), []int{2}
+	return file_basechain_coinswap_v1_query_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *QueryLiquidityPoolRequest) GetLptDenom() string {
@@ -3581,7 +3581,7 @@ type QueryLiquidityPoolResponse struct {
 func (x *QueryLiquidityPoolResponse) Reset() {
 	*x = QueryLiquidityPoolResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_coinswap_v1_query_proto_msgTypes[3]
+		mi := &file_basechain_coinswap_v1_query_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3595,7 +3595,7 @@ func (*QueryLiquidityPoolResponse) ProtoMessage() {}
 
 // Deprecated: Use QueryLiquidityPoolResponse.ProtoReflect.Descriptor instead.
 func (*QueryLiquidityPoolResponse) Descriptor() ([]byte, []int) {
-	return file_canto_coinswap_v1_query_proto_rawDescGZIP(), []int{3}
+	return file_basechain_coinswap_v1_query_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *QueryLiquidityPoolResponse) GetPool() *PoolInfo {
@@ -3619,7 +3619,7 @@ type QueryLiquidityPoolsRequest struct {
 func (x *QueryLiquidityPoolsRequest) Reset() {
 	*x = QueryLiquidityPoolsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_coinswap_v1_query_proto_msgTypes[4]
+		mi := &file_basechain_coinswap_v1_query_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3633,7 +3633,7 @@ func (*QueryLiquidityPoolsRequest) ProtoMessage() {}
 
 // Deprecated: Use QueryLiquidityPoolsRequest.ProtoReflect.Descriptor instead.
 func (*QueryLiquidityPoolsRequest) Descriptor() ([]byte, []int) {
-	return file_canto_coinswap_v1_query_proto_rawDescGZIP(), []int{4}
+	return file_basechain_coinswap_v1_query_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *QueryLiquidityPoolsRequest) GetPagination() *v1beta1.PageRequest {
@@ -3657,7 +3657,7 @@ type QueryLiquidityPoolsResponse struct {
 func (x *QueryLiquidityPoolsResponse) Reset() {
 	*x = QueryLiquidityPoolsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_coinswap_v1_query_proto_msgTypes[5]
+		mi := &file_basechain_coinswap_v1_query_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3671,7 +3671,7 @@ func (*QueryLiquidityPoolsResponse) ProtoMessage() {}
 
 // Deprecated: Use QueryLiquidityPoolsResponse.ProtoReflect.Descriptor instead.
 func (*QueryLiquidityPoolsResponse) Descriptor() ([]byte, []int) {
-	return file_canto_coinswap_v1_query_proto_rawDescGZIP(), []int{5}
+	return file_basechain_coinswap_v1_query_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *QueryLiquidityPoolsResponse) GetPools() []*PoolInfo {
@@ -3709,7 +3709,7 @@ type PoolInfo struct {
 func (x *PoolInfo) Reset() {
 	*x = PoolInfo{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_coinswap_v1_query_proto_msgTypes[6]
+		mi := &file_basechain_coinswap_v1_query_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3723,7 +3723,7 @@ func (*PoolInfo) ProtoMessage() {}
 
 // Deprecated: Use PoolInfo.ProtoReflect.Descriptor instead.
 func (*PoolInfo) Descriptor() ([]byte, []int) {
-	return file_canto_coinswap_v1_query_proto_rawDescGZIP(), []int{6}
+	return file_basechain_coinswap_v1_query_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *PoolInfo) GetId() string {
@@ -3768,9 +3768,9 @@ func (x *PoolInfo) GetFee() string {
 	return ""
 }
 
-var File_canto_coinswap_v1_query_proto protoreflect.FileDescriptor
+var File_basechain_coinswap_v1_query_proto protoreflect.FileDescriptor
 
-var file_canto_coinswap_v1_query_proto_rawDesc = []byte{
+var file_basechain_coinswap_v1_query_proto_rawDesc = []byte{
 	0x0a, 0x1d, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x63, 0x6f, 0x69, 0x6e, 0x73, 0x77, 0x61, 0x70,
 	0x2f, 0x76, 0x31, 0x2f, 0x71, 0x75, 0x65, 0x72, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12,
 	0x11, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2e, 0x63, 0x6f, 0x69, 0x6e, 0x73, 0x77, 0x61, 0x70, 0x2e,
@@ -3874,46 +3874,46 @@ var file_canto_coinswap_v1_query_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_coinswap_v1_query_proto_rawDescOnce sync.Once
-	file_canto_coinswap_v1_query_proto_rawDescData = file_canto_coinswap_v1_query_proto_rawDesc
+	file_basechain_coinswap_v1_query_proto_rawDescOnce sync.Once
+	file_basechain_coinswap_v1_query_proto_rawDescData = file_basechain_coinswap_v1_query_proto_rawDesc
 )
 
-func file_canto_coinswap_v1_query_proto_rawDescGZIP() []byte {
-	file_canto_coinswap_v1_query_proto_rawDescOnce.Do(func() {
-		file_canto_coinswap_v1_query_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_coinswap_v1_query_proto_rawDescData)
+func file_basechain_coinswap_v1_query_proto_rawDescGZIP() []byte {
+	file_basechain_coinswap_v1_query_proto_rawDescOnce.Do(func() {
+		file_basechain_coinswap_v1_query_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_coinswap_v1_query_proto_rawDescData)
 	})
-	return file_canto_coinswap_v1_query_proto_rawDescData
+	return file_basechain_coinswap_v1_query_proto_rawDescData
 }
 
-var file_canto_coinswap_v1_query_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
-var file_canto_coinswap_v1_query_proto_goTypes = []interface{}{
-	(*QueryParamsRequest)(nil),          // 0: canto.coinswap.v1.QueryParamsRequest
-	(*QueryParamsResponse)(nil),         // 1: canto.coinswap.v1.QueryParamsResponse
-	(*QueryLiquidityPoolRequest)(nil),   // 2: canto.coinswap.v1.QueryLiquidityPoolRequest
-	(*QueryLiquidityPoolResponse)(nil),  // 3: canto.coinswap.v1.QueryLiquidityPoolResponse
-	(*QueryLiquidityPoolsRequest)(nil),  // 4: canto.coinswap.v1.QueryLiquidityPoolsRequest
-	(*QueryLiquidityPoolsResponse)(nil), // 5: canto.coinswap.v1.QueryLiquidityPoolsResponse
-	(*PoolInfo)(nil),                    // 6: canto.coinswap.v1.PoolInfo
-	(*Params)(nil),                      // 7: canto.coinswap.v1.Params
+var file_basechain_coinswap_v1_query_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_basechain_coinswap_v1_query_proto_goTypes = []interface{}{
+	(*QueryParamsRequest)(nil),          // 0: basechain.coinswap.v1.QueryParamsRequest
+	(*QueryParamsResponse)(nil),         // 1: basechain.coinswap.v1.QueryParamsResponse
+	(*QueryLiquidityPoolRequest)(nil),   // 2: basechain.coinswap.v1.QueryLiquidityPoolRequest
+	(*QueryLiquidityPoolResponse)(nil),  // 3: basechain.coinswap.v1.QueryLiquidityPoolResponse
+	(*QueryLiquidityPoolsRequest)(nil),  // 4: basechain.coinswap.v1.QueryLiquidityPoolsRequest
+	(*QueryLiquidityPoolsResponse)(nil), // 5: basechain.coinswap.v1.QueryLiquidityPoolsResponse
+	(*PoolInfo)(nil),                    // 6: basechain.coinswap.v1.PoolInfo
+	(*Params)(nil),                      // 7: basechain.coinswap.v1.Params
 	(*v1beta1.PageRequest)(nil),         // 8: cosmos.base.query.v1beta1.PageRequest
 	(*v1beta1.PageResponse)(nil),        // 9: cosmos.base.query.v1beta1.PageResponse
 	(*v1beta11.Coin)(nil),               // 10: cosmos.base.v1beta1.Coin
 }
-var file_canto_coinswap_v1_query_proto_depIdxs = []int32{
-	7,  // 0: canto.coinswap.v1.QueryParamsResponse.params:type_name -> canto.coinswap.v1.Params
-	6,  // 1: canto.coinswap.v1.QueryLiquidityPoolResponse.pool:type_name -> canto.coinswap.v1.PoolInfo
-	8,  // 2: canto.coinswap.v1.QueryLiquidityPoolsRequest.pagination:type_name -> cosmos.base.query.v1beta1.PageRequest
-	6,  // 3: canto.coinswap.v1.QueryLiquidityPoolsResponse.pools:type_name -> canto.coinswap.v1.PoolInfo
-	9,  // 4: canto.coinswap.v1.QueryLiquidityPoolsResponse.pagination:type_name -> cosmos.base.query.v1beta1.PageResponse
-	10, // 5: canto.coinswap.v1.PoolInfo.standard:type_name -> cosmos.base.v1beta1.Coin
-	10, // 6: canto.coinswap.v1.PoolInfo.token:type_name -> cosmos.base.v1beta1.Coin
-	10, // 7: canto.coinswap.v1.PoolInfo.lpt:type_name -> cosmos.base.v1beta1.Coin
-	0,  // 8: canto.coinswap.v1.Query.Params:input_type -> canto.coinswap.v1.QueryParamsRequest
-	2,  // 9: canto.coinswap.v1.Query.LiquidityPool:input_type -> canto.coinswap.v1.QueryLiquidityPoolRequest
-	4,  // 10: canto.coinswap.v1.Query.LiquidityPools:input_type -> canto.coinswap.v1.QueryLiquidityPoolsRequest
-	1,  // 11: canto.coinswap.v1.Query.Params:output_type -> canto.coinswap.v1.QueryParamsResponse
-	3,  // 12: canto.coinswap.v1.Query.LiquidityPool:output_type -> canto.coinswap.v1.QueryLiquidityPoolResponse
-	5,  // 13: canto.coinswap.v1.Query.LiquidityPools:output_type -> canto.coinswap.v1.QueryLiquidityPoolsResponse
+var file_basechain_coinswap_v1_query_proto_depIdxs = []int32{
+	7,  // 0: basechain.coinswap.v1.QueryParamsResponse.params:type_name -> basechain.coinswap.v1.Params
+	6,  // 1: basechain.coinswap.v1.QueryLiquidityPoolResponse.pool:type_name -> basechain.coinswap.v1.PoolInfo
+	8,  // 2: basechain.coinswap.v1.QueryLiquidityPoolsRequest.pagination:type_name -> cosmos.base.query.v1beta1.PageRequest
+	6,  // 3: basechain.coinswap.v1.QueryLiquidityPoolsResponse.pools:type_name -> basechain.coinswap.v1.PoolInfo
+	9,  // 4: basechain.coinswap.v1.QueryLiquidityPoolsResponse.pagination:type_name -> cosmos.base.query.v1beta1.PageResponse
+	10, // 5: basechain.coinswap.v1.PoolInfo.standard:type_name -> cosmos.base.v1beta1.Coin
+	10, // 6: basechain.coinswap.v1.PoolInfo.token:type_name -> cosmos.base.v1beta1.Coin
+	10, // 7: basechain.coinswap.v1.PoolInfo.lpt:type_name -> cosmos.base.v1beta1.Coin
+	0,  // 8: basechain.coinswap.v1.Query.Params:input_type -> basechain.coinswap.v1.QueryParamsRequest
+	2,  // 9: basechain.coinswap.v1.Query.LiquidityPool:input_type -> basechain.coinswap.v1.QueryLiquidityPoolRequest
+	4,  // 10: basechain.coinswap.v1.Query.LiquidityPools:input_type -> basechain.coinswap.v1.QueryLiquidityPoolsRequest
+	1,  // 11: basechain.coinswap.v1.Query.Params:output_type -> basechain.coinswap.v1.QueryParamsResponse
+	3,  // 12: basechain.coinswap.v1.Query.LiquidityPool:output_type -> basechain.coinswap.v1.QueryLiquidityPoolResponse
+	5,  // 13: basechain.coinswap.v1.Query.LiquidityPools:output_type -> basechain.coinswap.v1.QueryLiquidityPoolsResponse
 	11, // [11:14] is the sub-list for method output_type
 	8,  // [8:11] is the sub-list for method input_type
 	8,  // [8:8] is the sub-list for extension type_name
@@ -3921,14 +3921,14 @@ var file_canto_coinswap_v1_query_proto_depIdxs = []int32{
 	0,  // [0:8] is the sub-list for field type_name
 }
 
-func init() { file_canto_coinswap_v1_query_proto_init() }
-func file_canto_coinswap_v1_query_proto_init() {
-	if File_canto_coinswap_v1_query_proto != nil {
+func init() { file_basechain_coinswap_v1_query_proto_init() }
+func file_basechain_coinswap_v1_query_proto_init() {
+	if File_basechain_coinswap_v1_query_proto != nil {
 		return
 	}
-	file_canto_coinswap_v1_coinswap_proto_init()
+	file_basechain_coinswap_v1_coinswap_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_canto_coinswap_v1_query_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_coinswap_v1_query_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryParamsRequest); i {
 			case 0:
 				return &v.state
@@ -3940,7 +3940,7 @@ func file_canto_coinswap_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_coinswap_v1_query_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_coinswap_v1_query_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryParamsResponse); i {
 			case 0:
 				return &v.state
@@ -3952,7 +3952,7 @@ func file_canto_coinswap_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_coinswap_v1_query_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_coinswap_v1_query_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryLiquidityPoolRequest); i {
 			case 0:
 				return &v.state
@@ -3964,7 +3964,7 @@ func file_canto_coinswap_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_coinswap_v1_query_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_coinswap_v1_query_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryLiquidityPoolResponse); i {
 			case 0:
 				return &v.state
@@ -3976,7 +3976,7 @@ func file_canto_coinswap_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_coinswap_v1_query_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_coinswap_v1_query_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryLiquidityPoolsRequest); i {
 			case 0:
 				return &v.state
@@ -3988,7 +3988,7 @@ func file_canto_coinswap_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_coinswap_v1_query_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_coinswap_v1_query_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryLiquidityPoolsResponse); i {
 			case 0:
 				return &v.state
@@ -4000,7 +4000,7 @@ func file_canto_coinswap_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_coinswap_v1_query_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_coinswap_v1_query_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PoolInfo); i {
 			case 0:
 				return &v.state
@@ -4017,18 +4017,18 @@ func file_canto_coinswap_v1_query_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_coinswap_v1_query_proto_rawDesc,
+			RawDescriptor: file_basechain_coinswap_v1_query_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_canto_coinswap_v1_query_proto_goTypes,
-		DependencyIndexes: file_canto_coinswap_v1_query_proto_depIdxs,
-		MessageInfos:      file_canto_coinswap_v1_query_proto_msgTypes,
+		GoTypes:           file_basechain_coinswap_v1_query_proto_goTypes,
+		DependencyIndexes: file_basechain_coinswap_v1_query_proto_depIdxs,
+		MessageInfos:      file_basechain_coinswap_v1_query_proto_msgTypes,
 	}.Build()
-	File_canto_coinswap_v1_query_proto = out.File
-	file_canto_coinswap_v1_query_proto_rawDesc = nil
-	file_canto_coinswap_v1_query_proto_goTypes = nil
-	file_canto_coinswap_v1_query_proto_depIdxs = nil
+	File_basechain_coinswap_v1_query_proto = out.File
+	file_basechain_coinswap_v1_query_proto_rawDesc = nil
+	file_basechain_coinswap_v1_query_proto_goTypes = nil
+	file_basechain_coinswap_v1_query_proto_depIdxs = nil
 }

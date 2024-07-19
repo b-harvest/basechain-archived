@@ -79,7 +79,7 @@ func (suite *KeeperTestSuite) setupRegisterIBCVoucher() (banktypes.Metadata, *ty
 
 func (suite *KeeperTestSuite) TestMsgConvertCoin_ValidateBasic() {
 	msg := types.MsgConvertCoin{}
-	suite.Require().Equal("/canto.erc20.v1.MsgConvertCoin", sdk.MsgTypeURL(&msg))
+	suite.Require().Equal("/basechain.erc20.v1.MsgConvertCoin", sdk.MsgTypeURL(&msg))
 
 	testCases := []struct {
 		name       string
@@ -112,7 +112,7 @@ func (suite *KeeperTestSuite) TestMsgConvertCoin_ValidateBasic() {
 			"msg convert coin - invalid sender",
 			sdk.NewCoin("coin", sdkmath.NewInt(100)),
 			tests.GenerateAddress().String(),
-			"cantoinvalid",
+			"basechaininvalid",
 			false,
 		},
 		{
@@ -143,7 +143,7 @@ func (suite *KeeperTestSuite) TestMsgConvertCoin_ValidateBasic() {
 
 func (suite *KeeperTestSuite) TestMsgConvertERC20_ValidateBasic() {
 	msg := types.MsgConvertERC20{}
-	suite.Require().Equal("/canto.erc20.v1.MsgConvertERC20", sdk.MsgTypeURL(&msg))
+	suite.Require().Equal("/basechain.erc20.v1.MsgConvertERC20", sdk.MsgTypeURL(&msg))
 
 	testCases := []struct {
 		name       string
@@ -1539,7 +1539,7 @@ func (suite *KeeperTestSuite) TestMsgExecutionByProposal() {
 		{
 			"fail - MsgRegisterCoin - authority check",
 			&types.MsgRegisterCoin{
-				Authority:   "canto1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
+				Authority:   "basechain1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
 				Title:       "MsgRegisterCoin",
 				Description: "MsgRegisterCoin test",
 				Metadata: banktypes.Metadata{
@@ -1602,7 +1602,7 @@ func (suite *KeeperTestSuite) TestMsgExecutionByProposal() {
 		{
 			"fail - MsgRegisterERC20 - authority check",
 			&types.MsgRegisterERC20{
-				Authority:    "canto1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
+				Authority:    "basechain1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
 				Title:        "MsgRegisterERC20",
 				Description:  "MsgRegisterERC20 test",
 				Erc20Address: erc20Address,
@@ -1636,7 +1636,7 @@ func (suite *KeeperTestSuite) TestMsgExecutionByProposal() {
 		{
 			"fail - MsgToggleTokenConversion - authority check",
 			&types.MsgToggleTokenConversion{
-				Authority:   "canto1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
+				Authority:   "basechain1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
 				Title:       "MsgToggleTokenConversion",
 				Description: "MsgToggleTokenConversion test",
 				Token:       erc20Address,
@@ -1669,7 +1669,7 @@ func (suite *KeeperTestSuite) TestMsgExecutionByProposal() {
 		{
 			"fail - MsgUpdateParams - authority check",
 			&types.MsgUpdateParams{
-				Authority: "canto1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
+				Authority: "basechain1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
 				Params:    types.NewParams(false, false),
 			},
 			func() {},

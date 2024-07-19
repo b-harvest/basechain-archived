@@ -17,7 +17,7 @@ import (
 	evmtypes "github.com/evmos/ethermint/x/evm/types"
 )
 
-// HandlerOptions defines the list of module keepers required to run the canto
+// HandlerOptions defines the list of module keepers required to run the basechain
 // AnteHandler decorators.
 type HandlerOptions struct {
 	AccountKeeper          evmtypes.AccountKeeper

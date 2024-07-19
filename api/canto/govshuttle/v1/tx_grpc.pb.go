@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: canto/govshuttle/v1/tx.proto
+// source: basechain/govshuttle/v1/tx.proto
 
 package govshuttlev1
 
@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Msg_LendingMarketProposal_FullMethodName = "/canto.govshuttle.v1.Msg/LendingMarketProposal"
-	Msg_TreasuryProposal_FullMethodName      = "/canto.govshuttle.v1.Msg/TreasuryProposal"
+	Msg_LendingMarketProposal_FullMethodName = "/basechain.govshuttle.v1.Msg/LendingMarketProposal"
+	Msg_TreasuryProposal_FullMethodName      = "/basechain.govshuttle.v1.Msg/TreasuryProposal"
 )
 
 // MsgClient is the client API for Msg service.
@@ -135,7 +135,7 @@ func _Msg_TreasuryProposal_Handler(srv interface{}, ctx context.Context, dec fun
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Msg_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "canto.govshuttle.v1.Msg",
+	ServiceName: "basechain.govshuttle.v1.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -148,5 +148,5 @@ var Msg_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "canto/govshuttle/v1/tx.proto",
+	Metadata: "basechain/govshuttle/v1/tx.proto",
 }

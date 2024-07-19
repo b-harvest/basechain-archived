@@ -25,8 +25,8 @@ var (
 )
 
 func init() {
-	file_canto_govshuttle_v1_tx_proto_init()
-	md_MsgLendingMarketProposal = File_canto_govshuttle_v1_tx_proto.Messages().ByName("MsgLendingMarketProposal")
+	file_basechain_govshuttle_v1_tx_proto_init()
+	md_MsgLendingMarketProposal = File_basechain_govshuttle_v1_tx_proto.Messages().ByName("MsgLendingMarketProposal")
 	fd_MsgLendingMarketProposal_authority = md_MsgLendingMarketProposal.Fields().ByName("authority")
 	fd_MsgLendingMarketProposal_title = md_MsgLendingMarketProposal.Fields().ByName("title")
 	fd_MsgLendingMarketProposal_description = md_MsgLendingMarketProposal.Fields().ByName("description")
@@ -42,7 +42,7 @@ func (x *MsgLendingMarketProposal) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgLendingMarketProposal) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_govshuttle_v1_tx_proto_msgTypes[0]
+	mi := &file_basechain_govshuttle_v1_tx_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -137,19 +137,19 @@ func (x *fastReflection_MsgLendingMarketProposal) Range(f func(protoreflect.Fiel
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_MsgLendingMarketProposal) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.authority":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.authority":
 		return x.Authority != ""
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.title":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.title":
 		return x.Title != ""
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.description":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.description":
 		return x.Description != ""
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.metadata":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.metadata":
 		return x.Metadata != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -161,19 +161,19 @@ func (x *fastReflection_MsgLendingMarketProposal) Has(fd protoreflect.FieldDescr
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgLendingMarketProposal) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.authority":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.authority":
 		x.Authority = ""
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.title":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.title":
 		x.Title = ""
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.description":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.description":
 		x.Description = ""
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.metadata":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.metadata":
 		x.Metadata = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -185,23 +185,23 @@ func (x *fastReflection_MsgLendingMarketProposal) Clear(fd protoreflect.FieldDes
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_MsgLendingMarketProposal) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.authority":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.authority":
 		value := x.Authority
 		return protoreflect.ValueOfString(value)
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.title":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.title":
 		value := x.Title
 		return protoreflect.ValueOfString(value)
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.description":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.description":
 		value := x.Description
 		return protoreflect.ValueOfString(value)
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.metadata":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.metadata":
 		value := x.Metadata
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -217,19 +217,19 @@ func (x *fastReflection_MsgLendingMarketProposal) Get(descriptor protoreflect.Fi
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgLendingMarketProposal) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.authority":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.authority":
 		x.Authority = value.Interface().(string)
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.title":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.title":
 		x.Title = value.Interface().(string)
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.description":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.description":
 		x.Description = value.Interface().(string)
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.metadata":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.metadata":
 		x.Metadata = value.Message().Interface().(*LendingMarketMetadata)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -245,22 +245,22 @@ func (x *fastReflection_MsgLendingMarketProposal) Set(fd protoreflect.FieldDescr
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgLendingMarketProposal) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.metadata":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.metadata":
 		if x.Metadata == nil {
 			x.Metadata = new(LendingMarketMetadata)
 		}
 		return protoreflect.ValueOfMessage(x.Metadata.ProtoReflect())
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.authority":
-		panic(fmt.Errorf("field authority of message canto.govshuttle.v1.MsgLendingMarketProposal is not mutable"))
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.title":
-		panic(fmt.Errorf("field title of message canto.govshuttle.v1.MsgLendingMarketProposal is not mutable"))
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.description":
-		panic(fmt.Errorf("field description of message canto.govshuttle.v1.MsgLendingMarketProposal is not mutable"))
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.authority":
+		panic(fmt.Errorf("field authority of message basechain.govshuttle.v1.MsgLendingMarketProposal is not mutable"))
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.title":
+		panic(fmt.Errorf("field title of message basechain.govshuttle.v1.MsgLendingMarketProposal is not mutable"))
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.description":
+		panic(fmt.Errorf("field description of message basechain.govshuttle.v1.MsgLendingMarketProposal is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -269,20 +269,20 @@ func (x *fastReflection_MsgLendingMarketProposal) Mutable(fd protoreflect.FieldD
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_MsgLendingMarketProposal) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.authority":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.authority":
 		return protoreflect.ValueOfString("")
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.title":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.title":
 		return protoreflect.ValueOfString("")
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.description":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.description":
 		return protoreflect.ValueOfString("")
-	case "canto.govshuttle.v1.MsgLendingMarketProposal.metadata":
+	case "basechain.govshuttle.v1.MsgLendingMarketProposal.metadata":
 		m := new(LendingMarketMetadata)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposal does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -292,7 +292,7 @@ func (x *fastReflection_MsgLendingMarketProposal) NewField(fd protoreflect.Field
 func (x *fastReflection_MsgLendingMarketProposal) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.govshuttle.v1.MsgLendingMarketProposal", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.govshuttle.v1.MsgLendingMarketProposal", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -648,8 +648,8 @@ var (
 )
 
 func init() {
-	file_canto_govshuttle_v1_tx_proto_init()
-	md_MsgLendingMarketProposalResponse = File_canto_govshuttle_v1_tx_proto.Messages().ByName("MsgLendingMarketProposalResponse")
+	file_basechain_govshuttle_v1_tx_proto_init()
+	md_MsgLendingMarketProposalResponse = File_basechain_govshuttle_v1_tx_proto.Messages().ByName("MsgLendingMarketProposalResponse")
 }
 
 var _ protoreflect.Message = (*fastReflection_MsgLendingMarketProposalResponse)(nil)
@@ -661,7 +661,7 @@ func (x *MsgLendingMarketProposalResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgLendingMarketProposalResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_govshuttle_v1_tx_proto_msgTypes[1]
+	mi := &file_basechain_govshuttle_v1_tx_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -734,9 +734,9 @@ func (x *fastReflection_MsgLendingMarketProposalResponse) Has(fd protoreflect.Fi
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -750,9 +750,9 @@ func (x *fastReflection_MsgLendingMarketProposalResponse) Clear(fd protoreflect.
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -766,9 +766,9 @@ func (x *fastReflection_MsgLendingMarketProposalResponse) Get(descriptor protore
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -786,9 +786,9 @@ func (x *fastReflection_MsgLendingMarketProposalResponse) Set(fd protoreflect.Fi
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -806,9 +806,9 @@ func (x *fastReflection_MsgLendingMarketProposalResponse) Mutable(fd protoreflec
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -819,9 +819,9 @@ func (x *fastReflection_MsgLendingMarketProposalResponse) NewField(fd protorefle
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgLendingMarketProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgLendingMarketProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgLendingMarketProposalResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -831,7 +831,7 @@ func (x *fastReflection_MsgLendingMarketProposalResponse) NewField(fd protorefle
 func (x *fastReflection_MsgLendingMarketProposalResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.govshuttle.v1.MsgLendingMarketProposalResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.govshuttle.v1.MsgLendingMarketProposalResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1008,8 +1008,8 @@ var (
 )
 
 func init() {
-	file_canto_govshuttle_v1_tx_proto_init()
-	md_MsgTreasuryProposal = File_canto_govshuttle_v1_tx_proto.Messages().ByName("MsgTreasuryProposal")
+	file_basechain_govshuttle_v1_tx_proto_init()
+	md_MsgTreasuryProposal = File_basechain_govshuttle_v1_tx_proto.Messages().ByName("MsgTreasuryProposal")
 	fd_MsgTreasuryProposal_authority = md_MsgTreasuryProposal.Fields().ByName("authority")
 	fd_MsgTreasuryProposal_title = md_MsgTreasuryProposal.Fields().ByName("title")
 	fd_MsgTreasuryProposal_description = md_MsgTreasuryProposal.Fields().ByName("description")
@@ -1025,7 +1025,7 @@ func (x *MsgTreasuryProposal) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgTreasuryProposal) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_govshuttle_v1_tx_proto_msgTypes[2]
+	mi := &file_basechain_govshuttle_v1_tx_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1120,19 +1120,19 @@ func (x *fastReflection_MsgTreasuryProposal) Range(f func(protoreflect.FieldDesc
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_MsgTreasuryProposal) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.MsgTreasuryProposal.authority":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.authority":
 		return x.Authority != ""
-	case "canto.govshuttle.v1.MsgTreasuryProposal.title":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.title":
 		return x.Title != ""
-	case "canto.govshuttle.v1.MsgTreasuryProposal.description":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.description":
 		return x.Description != ""
-	case "canto.govshuttle.v1.MsgTreasuryProposal.metadata":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.metadata":
 		return x.Metadata != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposal does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposal does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1144,19 +1144,19 @@ func (x *fastReflection_MsgTreasuryProposal) Has(fd protoreflect.FieldDescriptor
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgTreasuryProposal) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.MsgTreasuryProposal.authority":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.authority":
 		x.Authority = ""
-	case "canto.govshuttle.v1.MsgTreasuryProposal.title":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.title":
 		x.Title = ""
-	case "canto.govshuttle.v1.MsgTreasuryProposal.description":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.description":
 		x.Description = ""
-	case "canto.govshuttle.v1.MsgTreasuryProposal.metadata":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.metadata":
 		x.Metadata = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposal does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposal does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1168,23 +1168,23 @@ func (x *fastReflection_MsgTreasuryProposal) Clear(fd protoreflect.FieldDescript
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_MsgTreasuryProposal) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.govshuttle.v1.MsgTreasuryProposal.authority":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.authority":
 		value := x.Authority
 		return protoreflect.ValueOfString(value)
-	case "canto.govshuttle.v1.MsgTreasuryProposal.title":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.title":
 		value := x.Title
 		return protoreflect.ValueOfString(value)
-	case "canto.govshuttle.v1.MsgTreasuryProposal.description":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.description":
 		value := x.Description
 		return protoreflect.ValueOfString(value)
-	case "canto.govshuttle.v1.MsgTreasuryProposal.metadata":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.metadata":
 		value := x.Metadata
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposal does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposal does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1200,19 +1200,19 @@ func (x *fastReflection_MsgTreasuryProposal) Get(descriptor protoreflect.FieldDe
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgTreasuryProposal) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.MsgTreasuryProposal.authority":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.authority":
 		x.Authority = value.Interface().(string)
-	case "canto.govshuttle.v1.MsgTreasuryProposal.title":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.title":
 		x.Title = value.Interface().(string)
-	case "canto.govshuttle.v1.MsgTreasuryProposal.description":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.description":
 		x.Description = value.Interface().(string)
-	case "canto.govshuttle.v1.MsgTreasuryProposal.metadata":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.metadata":
 		x.Metadata = value.Message().Interface().(*TreasuryProposalMetadata)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposal does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposal does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1228,22 +1228,22 @@ func (x *fastReflection_MsgTreasuryProposal) Set(fd protoreflect.FieldDescriptor
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgTreasuryProposal) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.MsgTreasuryProposal.metadata":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.metadata":
 		if x.Metadata == nil {
 			x.Metadata = new(TreasuryProposalMetadata)
 		}
 		return protoreflect.ValueOfMessage(x.Metadata.ProtoReflect())
-	case "canto.govshuttle.v1.MsgTreasuryProposal.authority":
-		panic(fmt.Errorf("field authority of message canto.govshuttle.v1.MsgTreasuryProposal is not mutable"))
-	case "canto.govshuttle.v1.MsgTreasuryProposal.title":
-		panic(fmt.Errorf("field title of message canto.govshuttle.v1.MsgTreasuryProposal is not mutable"))
-	case "canto.govshuttle.v1.MsgTreasuryProposal.description":
-		panic(fmt.Errorf("field description of message canto.govshuttle.v1.MsgTreasuryProposal is not mutable"))
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.authority":
+		panic(fmt.Errorf("field authority of message basechain.govshuttle.v1.MsgTreasuryProposal is not mutable"))
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.title":
+		panic(fmt.Errorf("field title of message basechain.govshuttle.v1.MsgTreasuryProposal is not mutable"))
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.description":
+		panic(fmt.Errorf("field description of message basechain.govshuttle.v1.MsgTreasuryProposal is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposal does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposal does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1252,20 +1252,20 @@ func (x *fastReflection_MsgTreasuryProposal) Mutable(fd protoreflect.FieldDescri
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_MsgTreasuryProposal) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.MsgTreasuryProposal.authority":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.authority":
 		return protoreflect.ValueOfString("")
-	case "canto.govshuttle.v1.MsgTreasuryProposal.title":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.title":
 		return protoreflect.ValueOfString("")
-	case "canto.govshuttle.v1.MsgTreasuryProposal.description":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.description":
 		return protoreflect.ValueOfString("")
-	case "canto.govshuttle.v1.MsgTreasuryProposal.metadata":
+	case "basechain.govshuttle.v1.MsgTreasuryProposal.metadata":
 		m := new(TreasuryProposalMetadata)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposal"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposal"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposal does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposal does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1275,7 +1275,7 @@ func (x *fastReflection_MsgTreasuryProposal) NewField(fd protoreflect.FieldDescr
 func (x *fastReflection_MsgTreasuryProposal) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.govshuttle.v1.MsgTreasuryProposal", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.govshuttle.v1.MsgTreasuryProposal", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1631,8 +1631,8 @@ var (
 )
 
 func init() {
-	file_canto_govshuttle_v1_tx_proto_init()
-	md_MsgTreasuryProposalResponse = File_canto_govshuttle_v1_tx_proto.Messages().ByName("MsgTreasuryProposalResponse")
+	file_basechain_govshuttle_v1_tx_proto_init()
+	md_MsgTreasuryProposalResponse = File_basechain_govshuttle_v1_tx_proto.Messages().ByName("MsgTreasuryProposalResponse")
 }
 
 var _ protoreflect.Message = (*fastReflection_MsgTreasuryProposalResponse)(nil)
@@ -1644,7 +1644,7 @@ func (x *MsgTreasuryProposalResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgTreasuryProposalResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_govshuttle_v1_tx_proto_msgTypes[3]
+	mi := &file_basechain_govshuttle_v1_tx_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1717,9 +1717,9 @@ func (x *fastReflection_MsgTreasuryProposalResponse) Has(fd protoreflect.FieldDe
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1733,9 +1733,9 @@ func (x *fastReflection_MsgTreasuryProposalResponse) Clear(fd protoreflect.Field
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1749,9 +1749,9 @@ func (x *fastReflection_MsgTreasuryProposalResponse) Get(descriptor protoreflect
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1769,9 +1769,9 @@ func (x *fastReflection_MsgTreasuryProposalResponse) Set(fd protoreflect.FieldDe
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1789,9 +1789,9 @@ func (x *fastReflection_MsgTreasuryProposalResponse) Mutable(fd protoreflect.Fie
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1802,9 +1802,9 @@ func (x *fastReflection_MsgTreasuryProposalResponse) NewField(fd protoreflect.Fi
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.MsgTreasuryProposalResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.MsgTreasuryProposalResponse"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.MsgTreasuryProposalResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1814,7 +1814,7 @@ func (x *fastReflection_MsgTreasuryProposalResponse) NewField(fd protoreflect.Fi
 func (x *fastReflection_MsgTreasuryProposalResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.govshuttle.v1.MsgTreasuryProposalResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.govshuttle.v1.MsgTreasuryProposalResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1986,7 +1986,7 @@ func (x *fastReflection_MsgTreasuryProposalResponse) ProtoMethods() *protoiface.
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/govshuttle/v1/tx.proto
+// source: basechain/govshuttle/v1/tx.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -2011,7 +2011,7 @@ type MsgLendingMarketProposal struct {
 func (x *MsgLendingMarketProposal) Reset() {
 	*x = MsgLendingMarketProposal{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_govshuttle_v1_tx_proto_msgTypes[0]
+		mi := &file_basechain_govshuttle_v1_tx_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2025,7 +2025,7 @@ func (*MsgLendingMarketProposal) ProtoMessage() {}
 
 // Deprecated: Use MsgLendingMarketProposal.ProtoReflect.Descriptor instead.
 func (*MsgLendingMarketProposal) Descriptor() ([]byte, []int) {
-	return file_canto_govshuttle_v1_tx_proto_rawDescGZIP(), []int{0}
+	return file_basechain_govshuttle_v1_tx_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *MsgLendingMarketProposal) GetAuthority() string {
@@ -2065,7 +2065,7 @@ type MsgLendingMarketProposalResponse struct {
 func (x *MsgLendingMarketProposalResponse) Reset() {
 	*x = MsgLendingMarketProposalResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_govshuttle_v1_tx_proto_msgTypes[1]
+		mi := &file_basechain_govshuttle_v1_tx_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2079,7 +2079,7 @@ func (*MsgLendingMarketProposalResponse) ProtoMessage() {}
 
 // Deprecated: Use MsgLendingMarketProposalResponse.ProtoReflect.Descriptor instead.
 func (*MsgLendingMarketProposalResponse) Descriptor() ([]byte, []int) {
-	return file_canto_govshuttle_v1_tx_proto_rawDescGZIP(), []int{1}
+	return file_basechain_govshuttle_v1_tx_proto_rawDescGZIP(), []int{1}
 }
 
 type MsgTreasuryProposal struct {
@@ -2098,7 +2098,7 @@ type MsgTreasuryProposal struct {
 func (x *MsgTreasuryProposal) Reset() {
 	*x = MsgTreasuryProposal{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_govshuttle_v1_tx_proto_msgTypes[2]
+		mi := &file_basechain_govshuttle_v1_tx_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2112,7 +2112,7 @@ func (*MsgTreasuryProposal) ProtoMessage() {}
 
 // Deprecated: Use MsgTreasuryProposal.ProtoReflect.Descriptor instead.
 func (*MsgTreasuryProposal) Descriptor() ([]byte, []int) {
-	return file_canto_govshuttle_v1_tx_proto_rawDescGZIP(), []int{2}
+	return file_basechain_govshuttle_v1_tx_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *MsgTreasuryProposal) GetAuthority() string {
@@ -2152,7 +2152,7 @@ type MsgTreasuryProposalResponse struct {
 func (x *MsgTreasuryProposalResponse) Reset() {
 	*x = MsgTreasuryProposalResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_govshuttle_v1_tx_proto_msgTypes[3]
+		mi := &file_basechain_govshuttle_v1_tx_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2166,12 +2166,12 @@ func (*MsgTreasuryProposalResponse) ProtoMessage() {}
 
 // Deprecated: Use MsgTreasuryProposalResponse.ProtoReflect.Descriptor instead.
 func (*MsgTreasuryProposalResponse) Descriptor() ([]byte, []int) {
-	return file_canto_govshuttle_v1_tx_proto_rawDescGZIP(), []int{3}
+	return file_basechain_govshuttle_v1_tx_proto_rawDescGZIP(), []int{3}
 }
 
-var File_canto_govshuttle_v1_tx_proto protoreflect.FileDescriptor
+var File_basechain_govshuttle_v1_tx_proto protoreflect.FileDescriptor
 
-var file_canto_govshuttle_v1_tx_proto_rawDesc = []byte{
+var file_basechain_govshuttle_v1_tx_proto_rawDesc = []byte{
 	0x0a, 0x1c, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x67, 0x6f, 0x76, 0x73, 0x68, 0x75, 0x74, 0x74,
 	0x6c, 0x65, 0x2f, 0x76, 0x31, 0x2f, 0x74, 0x78, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x13,
 	0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2e, 0x67, 0x6f, 0x76, 0x73, 0x68, 0x75, 0x74, 0x74, 0x6c, 0x65,
@@ -2253,33 +2253,33 @@ var file_canto_govshuttle_v1_tx_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_govshuttle_v1_tx_proto_rawDescOnce sync.Once
-	file_canto_govshuttle_v1_tx_proto_rawDescData = file_canto_govshuttle_v1_tx_proto_rawDesc
+	file_basechain_govshuttle_v1_tx_proto_rawDescOnce sync.Once
+	file_basechain_govshuttle_v1_tx_proto_rawDescData = file_basechain_govshuttle_v1_tx_proto_rawDesc
 )
 
-func file_canto_govshuttle_v1_tx_proto_rawDescGZIP() []byte {
-	file_canto_govshuttle_v1_tx_proto_rawDescOnce.Do(func() {
-		file_canto_govshuttle_v1_tx_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_govshuttle_v1_tx_proto_rawDescData)
+func file_basechain_govshuttle_v1_tx_proto_rawDescGZIP() []byte {
+	file_basechain_govshuttle_v1_tx_proto_rawDescOnce.Do(func() {
+		file_basechain_govshuttle_v1_tx_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_govshuttle_v1_tx_proto_rawDescData)
 	})
-	return file_canto_govshuttle_v1_tx_proto_rawDescData
+	return file_basechain_govshuttle_v1_tx_proto_rawDescData
 }
 
-var file_canto_govshuttle_v1_tx_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_canto_govshuttle_v1_tx_proto_goTypes = []interface{}{
-	(*MsgLendingMarketProposal)(nil),         // 0: canto.govshuttle.v1.MsgLendingMarketProposal
-	(*MsgLendingMarketProposalResponse)(nil), // 1: canto.govshuttle.v1.MsgLendingMarketProposalResponse
-	(*MsgTreasuryProposal)(nil),              // 2: canto.govshuttle.v1.MsgTreasuryProposal
-	(*MsgTreasuryProposalResponse)(nil),      // 3: canto.govshuttle.v1.MsgTreasuryProposalResponse
-	(*LendingMarketMetadata)(nil),            // 4: canto.govshuttle.v1.LendingMarketMetadata
-	(*TreasuryProposalMetadata)(nil),         // 5: canto.govshuttle.v1.TreasuryProposalMetadata
+var file_basechain_govshuttle_v1_tx_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_basechain_govshuttle_v1_tx_proto_goTypes = []interface{}{
+	(*MsgLendingMarketProposal)(nil),         // 0: basechain.govshuttle.v1.MsgLendingMarketProposal
+	(*MsgLendingMarketProposalResponse)(nil), // 1: basechain.govshuttle.v1.MsgLendingMarketProposalResponse
+	(*MsgTreasuryProposal)(nil),              // 2: basechain.govshuttle.v1.MsgTreasuryProposal
+	(*MsgTreasuryProposalResponse)(nil),      // 3: basechain.govshuttle.v1.MsgTreasuryProposalResponse
+	(*LendingMarketMetadata)(nil),            // 4: basechain.govshuttle.v1.LendingMarketMetadata
+	(*TreasuryProposalMetadata)(nil),         // 5: basechain.govshuttle.v1.TreasuryProposalMetadata
 }
-var file_canto_govshuttle_v1_tx_proto_depIdxs = []int32{
-	4, // 0: canto.govshuttle.v1.MsgLendingMarketProposal.metadata:type_name -> canto.govshuttle.v1.LendingMarketMetadata
-	5, // 1: canto.govshuttle.v1.MsgTreasuryProposal.metadata:type_name -> canto.govshuttle.v1.TreasuryProposalMetadata
-	0, // 2: canto.govshuttle.v1.Msg.LendingMarketProposal:input_type -> canto.govshuttle.v1.MsgLendingMarketProposal
-	2, // 3: canto.govshuttle.v1.Msg.TreasuryProposal:input_type -> canto.govshuttle.v1.MsgTreasuryProposal
-	1, // 4: canto.govshuttle.v1.Msg.LendingMarketProposal:output_type -> canto.govshuttle.v1.MsgLendingMarketProposalResponse
-	3, // 5: canto.govshuttle.v1.Msg.TreasuryProposal:output_type -> canto.govshuttle.v1.MsgTreasuryProposalResponse
+var file_basechain_govshuttle_v1_tx_proto_depIdxs = []int32{
+	4, // 0: basechain.govshuttle.v1.MsgLendingMarketProposal.metadata:type_name -> basechain.govshuttle.v1.LendingMarketMetadata
+	5, // 1: basechain.govshuttle.v1.MsgTreasuryProposal.metadata:type_name -> basechain.govshuttle.v1.TreasuryProposalMetadata
+	0, // 2: basechain.govshuttle.v1.Msg.LendingMarketProposal:input_type -> basechain.govshuttle.v1.MsgLendingMarketProposal
+	2, // 3: basechain.govshuttle.v1.Msg.TreasuryProposal:input_type -> basechain.govshuttle.v1.MsgTreasuryProposal
+	1, // 4: basechain.govshuttle.v1.Msg.LendingMarketProposal:output_type -> basechain.govshuttle.v1.MsgLendingMarketProposalResponse
+	3, // 5: basechain.govshuttle.v1.Msg.TreasuryProposal:output_type -> basechain.govshuttle.v1.MsgTreasuryProposalResponse
 	4, // [4:6] is the sub-list for method output_type
 	2, // [2:4] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name
@@ -2287,14 +2287,14 @@ var file_canto_govshuttle_v1_tx_proto_depIdxs = []int32{
 	0, // [0:2] is the sub-list for field type_name
 }
 
-func init() { file_canto_govshuttle_v1_tx_proto_init() }
-func file_canto_govshuttle_v1_tx_proto_init() {
-	if File_canto_govshuttle_v1_tx_proto != nil {
+func init() { file_basechain_govshuttle_v1_tx_proto_init() }
+func file_basechain_govshuttle_v1_tx_proto_init() {
+	if File_basechain_govshuttle_v1_tx_proto != nil {
 		return
 	}
-	file_canto_govshuttle_v1_govshuttle_proto_init()
+	file_basechain_govshuttle_v1_govshuttle_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_canto_govshuttle_v1_tx_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_govshuttle_v1_tx_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgLendingMarketProposal); i {
 			case 0:
 				return &v.state
@@ -2306,7 +2306,7 @@ func file_canto_govshuttle_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_govshuttle_v1_tx_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_govshuttle_v1_tx_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgLendingMarketProposalResponse); i {
 			case 0:
 				return &v.state
@@ -2318,7 +2318,7 @@ func file_canto_govshuttle_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_govshuttle_v1_tx_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_govshuttle_v1_tx_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgTreasuryProposal); i {
 			case 0:
 				return &v.state
@@ -2330,7 +2330,7 @@ func file_canto_govshuttle_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_govshuttle_v1_tx_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_govshuttle_v1_tx_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgTreasuryProposalResponse); i {
 			case 0:
 				return &v.state
@@ -2347,18 +2347,18 @@ func file_canto_govshuttle_v1_tx_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_govshuttle_v1_tx_proto_rawDesc,
+			RawDescriptor: file_basechain_govshuttle_v1_tx_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_canto_govshuttle_v1_tx_proto_goTypes,
-		DependencyIndexes: file_canto_govshuttle_v1_tx_proto_depIdxs,
-		MessageInfos:      file_canto_govshuttle_v1_tx_proto_msgTypes,
+		GoTypes:           file_basechain_govshuttle_v1_tx_proto_goTypes,
+		DependencyIndexes: file_basechain_govshuttle_v1_tx_proto_depIdxs,
+		MessageInfos:      file_basechain_govshuttle_v1_tx_proto_msgTypes,
 	}.Build()
-	File_canto_govshuttle_v1_tx_proto = out.File
-	file_canto_govshuttle_v1_tx_proto_rawDesc = nil
-	file_canto_govshuttle_v1_tx_proto_goTypes = nil
-	file_canto_govshuttle_v1_tx_proto_depIdxs = nil
+	File_basechain_govshuttle_v1_tx_proto = out.File
+	file_basechain_govshuttle_v1_tx_proto_rawDesc = nil
+	file_basechain_govshuttle_v1_tx_proto_goTypes = nil
+	file_basechain_govshuttle_v1_tx_proto_depIdxs = nil
 }

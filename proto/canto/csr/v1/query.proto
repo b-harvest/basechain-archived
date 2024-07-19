@@ -1,11 +1,11 @@
 syntax = "proto3";
-package canto.csr.v1;
+package basechain.csr.v1;
 
 import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
 import "cosmos/base/query/v1beta1/pagination.proto";
-import "canto/csr/v1/params.proto";
-import "canto/csr/v1/csr.proto";
+import "basechain/csr/v1/params.proto";
+import "basechain/csr/v1/csr.proto";
 
 option go_package = "github.com/Canto-Network/Canto/v7/x/csr/types";
 
@@ -13,26 +13,26 @@ option go_package = "github.com/Canto-Network/Canto/v7/x/csr/types";
 service Query {
   // Parameters queries the parameters of the module.
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
-    option (google.api.http).get = "/canto/v1/csr/params";
+    option (google.api.http).get = "/basechain/v1/csr/params";
   }
   // query all registered CSRs
   rpc CSRs(QueryCSRsRequest) returns (QueryCSRsResponse) {
-    option (google.api.http).get = "/canto/v1/csr/csrs";
+    option (google.api.http).get = "/basechain/v1/csr/csrs";
   }
   // query a specific CSR by the nftId
   rpc CSRByNFT(QueryCSRByNFTRequest) returns (QueryCSRByNFTResponse) {
     // query by address
-    option (google.api.http).get = "/canto/v1/csr/nft/{nftId}";
+    option (google.api.http).get = "/basechain/v1/csr/nft/{nftId}";
   }
   // query a CSR by smart contract address
   rpc CSRByContract(QueryCSRByContractRequest)
       returns (QueryCSRByContractResponse) {
     // query by deployer address
-    option (google.api.http).get = "/canto/v1/csr/contract/{address}";
+    option (google.api.http).get = "/basechain/v1/csr/contract/{address}";
   }
   // query the turnstile address
   rpc Turnstile(QueryTurnstileRequest) returns (QueryTurnstileResponse) {
-    option (google.api.http).get = "/canto/v1/csr/turnstile";
+    option (google.api.http).get = "/basechain/v1/csr/turnstile";
   }
 }
 

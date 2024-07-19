@@ -22,8 +22,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_params_proto_init()
-	md_Params = File_canto_csr_v1_params_proto.Messages().ByName("Params")
+	file_basechain_csr_v1_params_proto_init()
+	md_Params = File_basechain_csr_v1_params_proto.Messages().ByName("Params")
 	fd_Params_enable_csr = md_Params.Fields().ByName("enable_csr")
 	fd_Params_csr_shares = md_Params.Fields().ByName("csr_shares")
 }
@@ -37,7 +37,7 @@ func (x *Params) ProtoReflect() protoreflect.Message {
 }
 
 func (x *Params) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_params_proto_msgTypes[0]
+	mi := &file_basechain_csr_v1_params_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -120,15 +120,15 @@ func (x *fastReflection_Params) Range(f func(protoreflect.FieldDescriptor, proto
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_Params) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.csr.v1.Params.enable_csr":
+	case "basechain.csr.v1.Params.enable_csr":
 		return x.EnableCsr != false
-	case "canto.csr.v1.Params.csr_shares":
+	case "basechain.csr.v1.Params.csr_shares":
 		return x.CsrShares != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.Params does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.Params does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -140,15 +140,15 @@ func (x *fastReflection_Params) Has(fd protoreflect.FieldDescriptor) bool {
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_Params) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.csr.v1.Params.enable_csr":
+	case "basechain.csr.v1.Params.enable_csr":
 		x.EnableCsr = false
-	case "canto.csr.v1.Params.csr_shares":
+	case "basechain.csr.v1.Params.csr_shares":
 		x.CsrShares = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.Params does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.Params does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -160,17 +160,17 @@ func (x *fastReflection_Params) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_Params) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.csr.v1.Params.enable_csr":
+	case "basechain.csr.v1.Params.enable_csr":
 		value := x.EnableCsr
 		return protoreflect.ValueOfBool(value)
-	case "canto.csr.v1.Params.csr_shares":
+	case "basechain.csr.v1.Params.csr_shares":
 		value := x.CsrShares
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.Params does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.Params does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -186,15 +186,15 @@ func (x *fastReflection_Params) Get(descriptor protoreflect.FieldDescriptor) pro
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_Params) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.csr.v1.Params.enable_csr":
+	case "basechain.csr.v1.Params.enable_csr":
 		x.EnableCsr = value.Bool()
-	case "canto.csr.v1.Params.csr_shares":
+	case "basechain.csr.v1.Params.csr_shares":
 		x.CsrShares = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.Params does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.Params does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -210,15 +210,15 @@ func (x *fastReflection_Params) Set(fd protoreflect.FieldDescriptor, value proto
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_Params) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.Params.enable_csr":
-		panic(fmt.Errorf("field enable_csr of message canto.csr.v1.Params is not mutable"))
-	case "canto.csr.v1.Params.csr_shares":
-		panic(fmt.Errorf("field csr_shares of message canto.csr.v1.Params is not mutable"))
+	case "basechain.csr.v1.Params.enable_csr":
+		panic(fmt.Errorf("field enable_csr of message basechain.csr.v1.Params is not mutable"))
+	case "basechain.csr.v1.Params.csr_shares":
+		panic(fmt.Errorf("field csr_shares of message basechain.csr.v1.Params is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.Params does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.Params does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -227,15 +227,15 @@ func (x *fastReflection_Params) Mutable(fd protoreflect.FieldDescriptor) protore
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_Params) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.Params.enable_csr":
+	case "basechain.csr.v1.Params.enable_csr":
 		return protoreflect.ValueOfBool(false)
-	case "canto.csr.v1.Params.csr_shares":
+	case "basechain.csr.v1.Params.csr_shares":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.Params does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.Params does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -245,7 +245,7 @@ func (x *fastReflection_Params) NewField(fd protoreflect.FieldDescriptor) protor
 func (x *fastReflection_Params) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.Params", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.Params", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -493,7 +493,7 @@ func (x *fastReflection_Params) ProtoMethods() *protoiface.Methods {
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/csr/v1/params.proto
+// source: basechain/csr/v1/params.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -518,7 +518,7 @@ type Params struct {
 func (x *Params) Reset() {
 	*x = Params{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_params_proto_msgTypes[0]
+		mi := &file_basechain_csr_v1_params_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -532,7 +532,7 @@ func (*Params) ProtoMessage() {}
 
 // Deprecated: Use Params.ProtoReflect.Descriptor instead.
 func (*Params) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_params_proto_rawDescGZIP(), []int{0}
+	return file_basechain_csr_v1_params_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Params) GetEnableCsr() bool {
@@ -549,9 +549,9 @@ func (x *Params) GetCsrShares() string {
 	return ""
 }
 
-var File_canto_csr_v1_params_proto protoreflect.FileDescriptor
+var File_basechain_csr_v1_params_proto protoreflect.FileDescriptor
 
-var file_canto_csr_v1_params_proto_rawDesc = []byte{
+var file_basechain_csr_v1_params_proto_rawDesc = []byte{
 	0x0a, 0x19, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x63, 0x73, 0x72, 0x2f, 0x76, 0x31, 0x2f, 0x70,
 	0x61, 0x72, 0x61, 0x6d, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0c, 0x63, 0x61, 0x6e,
 	0x74, 0x6f, 0x2e, 0x63, 0x73, 0x72, 0x2e, 0x76, 0x31, 0x1a, 0x14, 0x67, 0x6f, 0x67, 0x6f, 0x70,
@@ -582,22 +582,22 @@ var file_canto_csr_v1_params_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_csr_v1_params_proto_rawDescOnce sync.Once
-	file_canto_csr_v1_params_proto_rawDescData = file_canto_csr_v1_params_proto_rawDesc
+	file_basechain_csr_v1_params_proto_rawDescOnce sync.Once
+	file_basechain_csr_v1_params_proto_rawDescData = file_basechain_csr_v1_params_proto_rawDesc
 )
 
-func file_canto_csr_v1_params_proto_rawDescGZIP() []byte {
-	file_canto_csr_v1_params_proto_rawDescOnce.Do(func() {
-		file_canto_csr_v1_params_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_csr_v1_params_proto_rawDescData)
+func file_basechain_csr_v1_params_proto_rawDescGZIP() []byte {
+	file_basechain_csr_v1_params_proto_rawDescOnce.Do(func() {
+		file_basechain_csr_v1_params_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_csr_v1_params_proto_rawDescData)
 	})
-	return file_canto_csr_v1_params_proto_rawDescData
+	return file_basechain_csr_v1_params_proto_rawDescData
 }
 
-var file_canto_csr_v1_params_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_canto_csr_v1_params_proto_goTypes = []interface{}{
-	(*Params)(nil), // 0: canto.csr.v1.Params
+var file_basechain_csr_v1_params_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_basechain_csr_v1_params_proto_goTypes = []interface{}{
+	(*Params)(nil), // 0: basechain.csr.v1.Params
 }
-var file_canto_csr_v1_params_proto_depIdxs = []int32{
+var file_basechain_csr_v1_params_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -605,13 +605,13 @@ var file_canto_csr_v1_params_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_canto_csr_v1_params_proto_init() }
-func file_canto_csr_v1_params_proto_init() {
-	if File_canto_csr_v1_params_proto != nil {
+func init() { file_basechain_csr_v1_params_proto_init() }
+func file_basechain_csr_v1_params_proto_init() {
+	if File_basechain_csr_v1_params_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_canto_csr_v1_params_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_params_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Params); i {
 			case 0:
 				return &v.state
@@ -628,18 +628,18 @@ func file_canto_csr_v1_params_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_csr_v1_params_proto_rawDesc,
+			RawDescriptor: file_basechain_csr_v1_params_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   1,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_canto_csr_v1_params_proto_goTypes,
-		DependencyIndexes: file_canto_csr_v1_params_proto_depIdxs,
-		MessageInfos:      file_canto_csr_v1_params_proto_msgTypes,
+		GoTypes:           file_basechain_csr_v1_params_proto_goTypes,
+		DependencyIndexes: file_basechain_csr_v1_params_proto_depIdxs,
+		MessageInfos:      file_basechain_csr_v1_params_proto_msgTypes,
 	}.Build()
-	File_canto_csr_v1_params_proto = out.File
-	file_canto_csr_v1_params_proto_rawDesc = nil
-	file_canto_csr_v1_params_proto_goTypes = nil
-	file_canto_csr_v1_params_proto_depIdxs = nil
+	File_basechain_csr_v1_params_proto = out.File
+	file_basechain_csr_v1_params_proto_rawDesc = nil
+	file_basechain_csr_v1_params_proto_goTypes = nil
+	file_basechain_csr_v1_params_proto_depIdxs = nil
 }

@@ -56,10 +56,10 @@ func RegisterInterfaces(registry codectypes.InterfaceRegistry) {
 // concrete types on the provided LegacyAmino codec. These types are used for
 // Amino JSON serialization and EIP-712 compatibility.
 func RegisterLegacyAminoCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgRegisterCoin{}, "canto/MsgRegisterCoin", nil)
-	cdc.RegisterConcrete(&MsgRegisterERC20{}, "canto/MsgRegisterERC20", nil)
-	cdc.RegisterConcrete(&MsgConvertCoin{}, "canto/MsgConvertCoin", nil)
-	cdc.RegisterConcrete(&MsgConvertERC20{}, "canto/MsgConvertERC20", nil)
-	cdc.RegisterConcrete(&MsgUpdateParams{}, "canto/x/erc20/MsgUpdateParams", nil)
-	cdc.RegisterConcrete(&Params{}, "canto/x/erc20/Params", nil)
+	cdc.RegisterConcrete(&MsgRegisterCoin{}, "basechain/MsgRegisterCoin", nil)
+	cdc.RegisterConcrete(&MsgRegisterERC20{}, "basechain/MsgRegisterERC20", nil)
+	cdc.RegisterConcrete(&MsgConvertCoin{}, "basechain/MsgConvertCoin", nil)
+	cdc.RegisterConcrete(&MsgConvertERC20{}, "basechain/MsgConvertERC20", nil)
+	cdc.RegisterConcrete(&MsgUpdateParams{}, "basechain/x/erc20/MsgUpdateParams", nil)
+	cdc.RegisterConcrete(&Params{}, "basechain/x/erc20/Params", nil)
 }

@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: canto/inflation/v1/query.proto
+// source: basechain/inflation/v1/query.proto
 
 package inflationv1
 
@@ -19,12 +19,12 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Query_Period_FullMethodName             = "/canto.inflation.v1.Query/Period"
-	Query_EpochMintProvision_FullMethodName = "/canto.inflation.v1.Query/EpochMintProvision"
-	Query_SkippedEpochs_FullMethodName      = "/canto.inflation.v1.Query/SkippedEpochs"
-	Query_CirculatingSupply_FullMethodName  = "/canto.inflation.v1.Query/CirculatingSupply"
-	Query_InflationRate_FullMethodName      = "/canto.inflation.v1.Query/InflationRate"
-	Query_Params_FullMethodName             = "/canto.inflation.v1.Query/Params"
+	Query_Period_FullMethodName             = "/basechain.inflation.v1.Query/Period"
+	Query_EpochMintProvision_FullMethodName = "/basechain.inflation.v1.Query/EpochMintProvision"
+	Query_SkippedEpochs_FullMethodName      = "/basechain.inflation.v1.Query/SkippedEpochs"
+	Query_CirculatingSupply_FullMethodName  = "/basechain.inflation.v1.Query/CirculatingSupply"
+	Query_InflationRate_FullMethodName      = "/basechain.inflation.v1.Query/InflationRate"
+	Query_Params_FullMethodName             = "/basechain.inflation.v1.Query/Params"
 )
 
 // QueryClient is the client API for Query service.
@@ -275,7 +275,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Query_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "canto.inflation.v1.Query",
+	ServiceName: "basechain.inflation.v1.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -304,5 +304,5 @@ var Query_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "canto/inflation/v1/query.proto",
+	Metadata: "basechain/inflation/v1/query.proto",
 }

@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: canto/csr/v1/query.proto
+// source: basechain/csr/v1/query.proto
 
 package csrv1
 
@@ -19,11 +19,11 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Query_Params_FullMethodName        = "/canto.csr.v1.Query/Params"
-	Query_CSRs_FullMethodName          = "/canto.csr.v1.Query/CSRs"
-	Query_CSRByNFT_FullMethodName      = "/canto.csr.v1.Query/CSRByNFT"
-	Query_CSRByContract_FullMethodName = "/canto.csr.v1.Query/CSRByContract"
-	Query_Turnstile_FullMethodName     = "/canto.csr.v1.Query/Turnstile"
+	Query_Params_FullMethodName        = "/basechain.csr.v1.Query/Params"
+	Query_CSRs_FullMethodName          = "/basechain.csr.v1.Query/CSRs"
+	Query_CSRByNFT_FullMethodName      = "/basechain.csr.v1.Query/CSRByNFT"
+	Query_CSRByContract_FullMethodName = "/basechain.csr.v1.Query/CSRByContract"
+	Query_Turnstile_FullMethodName     = "/basechain.csr.v1.Query/Turnstile"
 )
 
 // QueryClient is the client API for Query service.
@@ -238,7 +238,7 @@ func _Query_Turnstile_Handler(srv interface{}, ctx context.Context, dec func(int
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Query_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "canto.csr.v1.Query",
+	ServiceName: "basechain.csr.v1.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -263,5 +263,5 @@ var Query_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "canto/csr/v1/query.proto",
+	Metadata: "basechain/csr/v1/query.proto",
 }

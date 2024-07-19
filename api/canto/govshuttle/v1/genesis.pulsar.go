@@ -20,8 +20,8 @@ var (
 )
 
 func init() {
-	file_canto_govshuttle_v1_genesis_proto_init()
-	md_GenesisState = File_canto_govshuttle_v1_genesis_proto.Messages().ByName("GenesisState")
+	file_basechain_govshuttle_v1_genesis_proto_init()
+	md_GenesisState = File_basechain_govshuttle_v1_genesis_proto.Messages().ByName("GenesisState")
 	fd_GenesisState_params = md_GenesisState.Fields().ByName("params")
 	fd_GenesisState_port_contract_addr = md_GenesisState.Fields().ByName("port_contract_addr")
 }
@@ -35,7 +35,7 @@ func (x *GenesisState) ProtoReflect() protoreflect.Message {
 }
 
 func (x *GenesisState) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_govshuttle_v1_genesis_proto_msgTypes[0]
+	mi := &file_basechain_govshuttle_v1_genesis_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -118,15 +118,15 @@ func (x *fastReflection_GenesisState) Range(f func(protoreflect.FieldDescriptor,
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_GenesisState) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.GenesisState.params":
+	case "basechain.govshuttle.v1.GenesisState.params":
 		return x.Params != nil
-	case "canto.govshuttle.v1.GenesisState.port_contract_addr":
+	case "basechain.govshuttle.v1.GenesisState.port_contract_addr":
 		return x.PortContractAddr != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -138,15 +138,15 @@ func (x *fastReflection_GenesisState) Has(fd protoreflect.FieldDescriptor) bool 
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_GenesisState) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.GenesisState.params":
+	case "basechain.govshuttle.v1.GenesisState.params":
 		x.Params = nil
-	case "canto.govshuttle.v1.GenesisState.port_contract_addr":
+	case "basechain.govshuttle.v1.GenesisState.port_contract_addr":
 		x.PortContractAddr = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -158,17 +158,17 @@ func (x *fastReflection_GenesisState) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_GenesisState) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.govshuttle.v1.GenesisState.params":
+	case "basechain.govshuttle.v1.GenesisState.params":
 		value := x.Params
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
-	case "canto.govshuttle.v1.GenesisState.port_contract_addr":
+	case "basechain.govshuttle.v1.GenesisState.port_contract_addr":
 		value := x.PortContractAddr
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.GenesisState does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.GenesisState does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -184,15 +184,15 @@ func (x *fastReflection_GenesisState) Get(descriptor protoreflect.FieldDescripto
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_GenesisState) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.GenesisState.params":
+	case "basechain.govshuttle.v1.GenesisState.params":
 		x.Params = value.Message().Interface().(*Params)
-	case "canto.govshuttle.v1.GenesisState.port_contract_addr":
+	case "basechain.govshuttle.v1.GenesisState.port_contract_addr":
 		x.PortContractAddr = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -208,18 +208,18 @@ func (x *fastReflection_GenesisState) Set(fd protoreflect.FieldDescriptor, value
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_GenesisState) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.GenesisState.params":
+	case "basechain.govshuttle.v1.GenesisState.params":
 		if x.Params == nil {
 			x.Params = new(Params)
 		}
 		return protoreflect.ValueOfMessage(x.Params.ProtoReflect())
-	case "canto.govshuttle.v1.GenesisState.port_contract_addr":
-		panic(fmt.Errorf("field port_contract_addr of message canto.govshuttle.v1.GenesisState is not mutable"))
+	case "basechain.govshuttle.v1.GenesisState.port_contract_addr":
+		panic(fmt.Errorf("field port_contract_addr of message basechain.govshuttle.v1.GenesisState is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -228,16 +228,16 @@ func (x *fastReflection_GenesisState) Mutable(fd protoreflect.FieldDescriptor) p
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_GenesisState) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.govshuttle.v1.GenesisState.params":
+	case "basechain.govshuttle.v1.GenesisState.params":
 		m := new(Params)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
-	case "canto.govshuttle.v1.GenesisState.port_contract_addr":
+	case "basechain.govshuttle.v1.GenesisState.port_contract_addr":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.govshuttle.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.govshuttle.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.govshuttle.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.govshuttle.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -247,7 +247,7 @@ func (x *fastReflection_GenesisState) NewField(fd protoreflect.FieldDescriptor) 
 func (x *fastReflection_GenesisState) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.govshuttle.v1.GenesisState", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.govshuttle.v1.GenesisState", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -516,7 +516,7 @@ func (x *fastReflection_GenesisState) ProtoMethods() *protoiface.Methods {
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/govshuttle/v1/genesis.proto
+// source: basechain/govshuttle/v1/genesis.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -538,7 +538,7 @@ type GenesisState struct {
 func (x *GenesisState) Reset() {
 	*x = GenesisState{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_govshuttle_v1_genesis_proto_msgTypes[0]
+		mi := &file_basechain_govshuttle_v1_genesis_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -552,7 +552,7 @@ func (*GenesisState) ProtoMessage() {}
 
 // Deprecated: Use GenesisState.ProtoReflect.Descriptor instead.
 func (*GenesisState) Descriptor() ([]byte, []int) {
-	return file_canto_govshuttle_v1_genesis_proto_rawDescGZIP(), []int{0}
+	return file_basechain_govshuttle_v1_genesis_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *GenesisState) GetParams() *Params {
@@ -569,9 +569,9 @@ func (x *GenesisState) GetPortContractAddr() string {
 	return ""
 }
 
-var File_canto_govshuttle_v1_genesis_proto protoreflect.FileDescriptor
+var File_basechain_govshuttle_v1_genesis_proto protoreflect.FileDescriptor
 
-var file_canto_govshuttle_v1_genesis_proto_rawDesc = []byte{
+var file_basechain_govshuttle_v1_genesis_proto_rawDesc = []byte{
 	0x0a, 0x21, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x67, 0x6f, 0x76, 0x73, 0x68, 0x75, 0x74, 0x74,
 	0x6c, 0x65, 0x2f, 0x76, 0x31, 0x2f, 0x67, 0x65, 0x6e, 0x65, 0x73, 0x69, 0x73, 0x2e, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x12, 0x13, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2e, 0x67, 0x6f, 0x76, 0x73, 0x68,
@@ -603,24 +603,24 @@ var file_canto_govshuttle_v1_genesis_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_govshuttle_v1_genesis_proto_rawDescOnce sync.Once
-	file_canto_govshuttle_v1_genesis_proto_rawDescData = file_canto_govshuttle_v1_genesis_proto_rawDesc
+	file_basechain_govshuttle_v1_genesis_proto_rawDescOnce sync.Once
+	file_basechain_govshuttle_v1_genesis_proto_rawDescData = file_basechain_govshuttle_v1_genesis_proto_rawDesc
 )
 
-func file_canto_govshuttle_v1_genesis_proto_rawDescGZIP() []byte {
-	file_canto_govshuttle_v1_genesis_proto_rawDescOnce.Do(func() {
-		file_canto_govshuttle_v1_genesis_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_govshuttle_v1_genesis_proto_rawDescData)
+func file_basechain_govshuttle_v1_genesis_proto_rawDescGZIP() []byte {
+	file_basechain_govshuttle_v1_genesis_proto_rawDescOnce.Do(func() {
+		file_basechain_govshuttle_v1_genesis_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_govshuttle_v1_genesis_proto_rawDescData)
 	})
-	return file_canto_govshuttle_v1_genesis_proto_rawDescData
+	return file_basechain_govshuttle_v1_genesis_proto_rawDescData
 }
 
-var file_canto_govshuttle_v1_genesis_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_canto_govshuttle_v1_genesis_proto_goTypes = []interface{}{
-	(*GenesisState)(nil), // 0: canto.govshuttle.v1.GenesisState
-	(*Params)(nil),       // 1: canto.govshuttle.v1.Params
+var file_basechain_govshuttle_v1_genesis_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_basechain_govshuttle_v1_genesis_proto_goTypes = []interface{}{
+	(*GenesisState)(nil), // 0: basechain.govshuttle.v1.GenesisState
+	(*Params)(nil),       // 1: basechain.govshuttle.v1.Params
 }
-var file_canto_govshuttle_v1_genesis_proto_depIdxs = []int32{
-	1, // 0: canto.govshuttle.v1.GenesisState.params:type_name -> canto.govshuttle.v1.Params
+var file_basechain_govshuttle_v1_genesis_proto_depIdxs = []int32{
+	1, // 0: basechain.govshuttle.v1.GenesisState.params:type_name -> basechain.govshuttle.v1.Params
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
@@ -628,14 +628,14 @@ var file_canto_govshuttle_v1_genesis_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_canto_govshuttle_v1_genesis_proto_init() }
-func file_canto_govshuttle_v1_genesis_proto_init() {
-	if File_canto_govshuttle_v1_genesis_proto != nil {
+func init() { file_basechain_govshuttle_v1_genesis_proto_init() }
+func file_basechain_govshuttle_v1_genesis_proto_init() {
+	if File_basechain_govshuttle_v1_genesis_proto != nil {
 		return
 	}
-	file_canto_govshuttle_v1_govshuttle_proto_init()
+	file_basechain_govshuttle_v1_govshuttle_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_canto_govshuttle_v1_genesis_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_govshuttle_v1_genesis_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GenesisState); i {
 			case 0:
 				return &v.state
@@ -652,18 +652,18 @@ func file_canto_govshuttle_v1_genesis_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_govshuttle_v1_genesis_proto_rawDesc,
+			RawDescriptor: file_basechain_govshuttle_v1_genesis_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   1,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_canto_govshuttle_v1_genesis_proto_goTypes,
-		DependencyIndexes: file_canto_govshuttle_v1_genesis_proto_depIdxs,
-		MessageInfos:      file_canto_govshuttle_v1_genesis_proto_msgTypes,
+		GoTypes:           file_basechain_govshuttle_v1_genesis_proto_goTypes,
+		DependencyIndexes: file_basechain_govshuttle_v1_genesis_proto_depIdxs,
+		MessageInfos:      file_basechain_govshuttle_v1_genesis_proto_msgTypes,
 	}.Build()
-	File_canto_govshuttle_v1_genesis_proto = out.File
-	file_canto_govshuttle_v1_genesis_proto_rawDesc = nil
-	file_canto_govshuttle_v1_genesis_proto_goTypes = nil
-	file_canto_govshuttle_v1_genesis_proto_depIdxs = nil
+	File_basechain_govshuttle_v1_genesis_proto = out.File
+	file_basechain_govshuttle_v1_genesis_proto_rawDesc = nil
+	file_basechain_govshuttle_v1_genesis_proto_goTypes = nil
+	file_basechain_govshuttle_v1_genesis_proto_depIdxs = nil
 }

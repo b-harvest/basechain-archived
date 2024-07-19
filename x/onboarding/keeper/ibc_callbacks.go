@@ -21,9 +21,9 @@ import (
 )
 
 // OnRecvPacket performs an IBC receive callback.
-// It swaps the transferred IBC denom to acanto and
+// It swaps the transferred IBC denom to abasecoin and
 // convert the remaining balance to ERC20 tokens.
-// If the balance of acanto is greater than the predefined value,
+// If the balance of abasecoin is greater than the predefined value,
 // the swap is omitted and the entire transferred amount is converted to ERC20.
 func (k Keeper) OnRecvPacket(
 	ctx sdk.Context,
@@ -53,7 +53,7 @@ func (k Keeper) OnRecvPacket(
 		return ack
 	}
 
-	// Get recipient addresses in `canto1` and the original bech32 format
+	// Get recipient addresses in `basechain1` and the original bech32 format
 	_, recipient, senderBech32, recipientBech32, err := ibc.GetTransferSenderRecipient(packet)
 	if err != nil {
 		return channeltypes.NewErrorAcknowledgement(err)

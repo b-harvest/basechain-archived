@@ -42,16 +42,16 @@ import (
 
 	"github.com/Canto-Network/Canto/v7/app"
 	cmdcfg "github.com/Canto-Network/Canto/v7/cmd/config"
-	cantokr "github.com/Canto-Network/Canto/v7/crypto/keyring"
+	basechainkr "github.com/Canto-Network/Canto/v7/crypto/keyring"
 
 	rosettacmd "github.com/cosmos/rosetta/cmd"
 )
 
 const (
-	EnvPrefix = "canto"
+	EnvPrefix = "basechain"
 )
 
-// NewRootCmd creates a new root command for cantod. It is called once in the
+// NewRootCmd creates a new root command for basechaind. It is called once in the
 // main function.
 func NewRootCmd() (*cobra.Command, params.EncodingConfig) {
 	tempApp := app.NewCanto(
@@ -80,12 +80,12 @@ func NewRootCmd() (*cobra.Command, params.EncodingConfig) {
 		WithAccountRetriever(types.AccountRetriever{}).
 		WithBroadcastMode(flags.BroadcastSync).
 		WithHomeDir(app.DefaultNodeHome).
-		WithKeyringOptions(cantokr.Option()).
+		WithKeyringOptions(basechainkr.Option()).
 		WithViper(EnvPrefix)
 
 	rootCmd := &cobra.Command{
 		Use:   app.Name,
-		Short: "canto Daemon",
+		Short: "basechain Daemon",
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
 			// set the default command outputs
 			cmd.SetOut(cmd.OutOrStdout())
@@ -262,7 +262,7 @@ func (a appCreator) newApp(logger log.Logger, db dbm.DB, traceStore io.Writer, a
 		skipUpgradeHeights[int64(h)] = true
 	}
 
-	cantoApp := app.NewCanto(
+	basechainApp := app.NewCanto(
 		logger, db, traceStore, true, skipUpgradeHeights,
 		cast.ToString(appOpts.Get(flags.FlagHome)),
 		cast.ToUint(appOpts.Get(sdkserver.FlagInvCheckPeriod)),
@@ -271,7 +271,7 @@ func (a appCreator) newApp(logger log.Logger, db dbm.DB, traceStore io.Writer, a
 		baseappOptions...,
 	)
 
-	return cantoApp
+	return basechainApp
 }
 
 // appExport creates a new simapp (optionally at a given height)
@@ -286,21 +286,21 @@ func (a appCreator) appExport(
 	appOpts servertypes.AppOptions,
 	modulesToExport []string,
 ) (servertypes.ExportedApp, error) {
-	var cantoApp *app.Canto
+	var basechainApp *app.Canto
 	homePath, ok := appOpts.Get(flags.FlagHome).(string)
 	if !ok || homePath == "" {
 		return servertypes.ExportedApp{}, errors.New("application home not set")
 	}
 
 	if height != -1 {
-		cantoApp = app.NewCanto(logger, db, traceStore, false, map[int64]bool{}, "", uint(1), false, appOpts)
+		basechainApp = app.NewCanto(logger, db, traceStore, false, map[int64]bool{}, "", uint(1), false, appOpts)
 
-		if err := cantoApp.LoadHeight(height); err != nil {
+		if err := basechainApp.LoadHeight(height); err != nil {
 			return servertypes.ExportedApp{}, err
 		}
 	} else {
-		cantoApp = app.NewCanto(logger, db, traceStore, true, map[int64]bool{}, "", uint(1), false, appOpts)
+		basechainApp = app.NewCanto(logger, db, traceStore, true, map[int64]bool{}, "", uint(1), false, appOpts)
 	}
 
-	return cantoApp.ExportAppStateAndValidators(forZeroHeight, jailAllowedAddrs, modulesToExport)
+	return basechainApp.ExportAppStateAndValidators(forZeroHeight, jailAllowedAddrs, modulesToExport)
 }

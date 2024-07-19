@@ -27,8 +27,8 @@ var (
 )
 
 func init() {
-	file_canto_epochs_v1_genesis_proto_init()
-	md_EpochInfo = File_canto_epochs_v1_genesis_proto.Messages().ByName("EpochInfo")
+	file_basechain_epochs_v1_genesis_proto_init()
+	md_EpochInfo = File_basechain_epochs_v1_genesis_proto.Messages().ByName("EpochInfo")
 	fd_EpochInfo_identifier = md_EpochInfo.Fields().ByName("identifier")
 	fd_EpochInfo_start_time = md_EpochInfo.Fields().ByName("start_time")
 	fd_EpochInfo_duration = md_EpochInfo.Fields().ByName("duration")
@@ -47,7 +47,7 @@ func (x *EpochInfo) ProtoReflect() protoreflect.Message {
 }
 
 func (x *EpochInfo) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_epochs_v1_genesis_proto_msgTypes[0]
+	mi := &file_basechain_epochs_v1_genesis_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -160,25 +160,25 @@ func (x *fastReflection_EpochInfo) Range(f func(protoreflect.FieldDescriptor, pr
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_EpochInfo) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.epochs.v1.EpochInfo.identifier":
+	case "basechain.epochs.v1.EpochInfo.identifier":
 		return x.Identifier != ""
-	case "canto.epochs.v1.EpochInfo.start_time":
+	case "basechain.epochs.v1.EpochInfo.start_time":
 		return x.StartTime != nil
-	case "canto.epochs.v1.EpochInfo.duration":
+	case "basechain.epochs.v1.EpochInfo.duration":
 		return x.Duration != nil
-	case "canto.epochs.v1.EpochInfo.current_epoch":
+	case "basechain.epochs.v1.EpochInfo.current_epoch":
 		return x.CurrentEpoch != int64(0)
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_time":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_time":
 		return x.CurrentEpochStartTime != nil
-	case "canto.epochs.v1.EpochInfo.epoch_counting_started":
+	case "basechain.epochs.v1.EpochInfo.epoch_counting_started":
 		return x.EpochCountingStarted != false
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_height":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_height":
 		return x.CurrentEpochStartHeight != int64(0)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.EpochInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.EpochInfo"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.EpochInfo does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.EpochInfo does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -190,25 +190,25 @@ func (x *fastReflection_EpochInfo) Has(fd protoreflect.FieldDescriptor) bool {
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_EpochInfo) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.epochs.v1.EpochInfo.identifier":
+	case "basechain.epochs.v1.EpochInfo.identifier":
 		x.Identifier = ""
-	case "canto.epochs.v1.EpochInfo.start_time":
+	case "basechain.epochs.v1.EpochInfo.start_time":
 		x.StartTime = nil
-	case "canto.epochs.v1.EpochInfo.duration":
+	case "basechain.epochs.v1.EpochInfo.duration":
 		x.Duration = nil
-	case "canto.epochs.v1.EpochInfo.current_epoch":
+	case "basechain.epochs.v1.EpochInfo.current_epoch":
 		x.CurrentEpoch = int64(0)
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_time":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_time":
 		x.CurrentEpochStartTime = nil
-	case "canto.epochs.v1.EpochInfo.epoch_counting_started":
+	case "basechain.epochs.v1.EpochInfo.epoch_counting_started":
 		x.EpochCountingStarted = false
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_height":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_height":
 		x.CurrentEpochStartHeight = int64(0)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.EpochInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.EpochInfo"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.EpochInfo does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.EpochInfo does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -220,32 +220,32 @@ func (x *fastReflection_EpochInfo) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_EpochInfo) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.epochs.v1.EpochInfo.identifier":
+	case "basechain.epochs.v1.EpochInfo.identifier":
 		value := x.Identifier
 		return protoreflect.ValueOfString(value)
-	case "canto.epochs.v1.EpochInfo.start_time":
+	case "basechain.epochs.v1.EpochInfo.start_time":
 		value := x.StartTime
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
-	case "canto.epochs.v1.EpochInfo.duration":
+	case "basechain.epochs.v1.EpochInfo.duration":
 		value := x.Duration
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
-	case "canto.epochs.v1.EpochInfo.current_epoch":
+	case "basechain.epochs.v1.EpochInfo.current_epoch":
 		value := x.CurrentEpoch
 		return protoreflect.ValueOfInt64(value)
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_time":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_time":
 		value := x.CurrentEpochStartTime
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
-	case "canto.epochs.v1.EpochInfo.epoch_counting_started":
+	case "basechain.epochs.v1.EpochInfo.epoch_counting_started":
 		value := x.EpochCountingStarted
 		return protoreflect.ValueOfBool(value)
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_height":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_height":
 		value := x.CurrentEpochStartHeight
 		return protoreflect.ValueOfInt64(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.EpochInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.EpochInfo"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.EpochInfo does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.EpochInfo does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -261,25 +261,25 @@ func (x *fastReflection_EpochInfo) Get(descriptor protoreflect.FieldDescriptor) 
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_EpochInfo) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.epochs.v1.EpochInfo.identifier":
+	case "basechain.epochs.v1.EpochInfo.identifier":
 		x.Identifier = value.Interface().(string)
-	case "canto.epochs.v1.EpochInfo.start_time":
+	case "basechain.epochs.v1.EpochInfo.start_time":
 		x.StartTime = value.Message().Interface().(*timestamppb.Timestamp)
-	case "canto.epochs.v1.EpochInfo.duration":
+	case "basechain.epochs.v1.EpochInfo.duration":
 		x.Duration = value.Message().Interface().(*durationpb.Duration)
-	case "canto.epochs.v1.EpochInfo.current_epoch":
+	case "basechain.epochs.v1.EpochInfo.current_epoch":
 		x.CurrentEpoch = value.Int()
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_time":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_time":
 		x.CurrentEpochStartTime = value.Message().Interface().(*timestamppb.Timestamp)
-	case "canto.epochs.v1.EpochInfo.epoch_counting_started":
+	case "basechain.epochs.v1.EpochInfo.epoch_counting_started":
 		x.EpochCountingStarted = value.Bool()
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_height":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_height":
 		x.CurrentEpochStartHeight = value.Int()
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.EpochInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.EpochInfo"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.EpochInfo does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.EpochInfo does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -295,34 +295,34 @@ func (x *fastReflection_EpochInfo) Set(fd protoreflect.FieldDescriptor, value pr
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_EpochInfo) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.epochs.v1.EpochInfo.start_time":
+	case "basechain.epochs.v1.EpochInfo.start_time":
 		if x.StartTime == nil {
 			x.StartTime = new(timestamppb.Timestamp)
 		}
 		return protoreflect.ValueOfMessage(x.StartTime.ProtoReflect())
-	case "canto.epochs.v1.EpochInfo.duration":
+	case "basechain.epochs.v1.EpochInfo.duration":
 		if x.Duration == nil {
 			x.Duration = new(durationpb.Duration)
 		}
 		return protoreflect.ValueOfMessage(x.Duration.ProtoReflect())
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_time":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_time":
 		if x.CurrentEpochStartTime == nil {
 			x.CurrentEpochStartTime = new(timestamppb.Timestamp)
 		}
 		return protoreflect.ValueOfMessage(x.CurrentEpochStartTime.ProtoReflect())
-	case "canto.epochs.v1.EpochInfo.identifier":
-		panic(fmt.Errorf("field identifier of message canto.epochs.v1.EpochInfo is not mutable"))
-	case "canto.epochs.v1.EpochInfo.current_epoch":
-		panic(fmt.Errorf("field current_epoch of message canto.epochs.v1.EpochInfo is not mutable"))
-	case "canto.epochs.v1.EpochInfo.epoch_counting_started":
-		panic(fmt.Errorf("field epoch_counting_started of message canto.epochs.v1.EpochInfo is not mutable"))
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_height":
-		panic(fmt.Errorf("field current_epoch_start_height of message canto.epochs.v1.EpochInfo is not mutable"))
+	case "basechain.epochs.v1.EpochInfo.identifier":
+		panic(fmt.Errorf("field identifier of message basechain.epochs.v1.EpochInfo is not mutable"))
+	case "basechain.epochs.v1.EpochInfo.current_epoch":
+		panic(fmt.Errorf("field current_epoch of message basechain.epochs.v1.EpochInfo is not mutable"))
+	case "basechain.epochs.v1.EpochInfo.epoch_counting_started":
+		panic(fmt.Errorf("field epoch_counting_started of message basechain.epochs.v1.EpochInfo is not mutable"))
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_height":
+		panic(fmt.Errorf("field current_epoch_start_height of message basechain.epochs.v1.EpochInfo is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.EpochInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.EpochInfo"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.EpochInfo does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.EpochInfo does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -331,28 +331,28 @@ func (x *fastReflection_EpochInfo) Mutable(fd protoreflect.FieldDescriptor) prot
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_EpochInfo) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.epochs.v1.EpochInfo.identifier":
+	case "basechain.epochs.v1.EpochInfo.identifier":
 		return protoreflect.ValueOfString("")
-	case "canto.epochs.v1.EpochInfo.start_time":
+	case "basechain.epochs.v1.EpochInfo.start_time":
 		m := new(timestamppb.Timestamp)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
-	case "canto.epochs.v1.EpochInfo.duration":
+	case "basechain.epochs.v1.EpochInfo.duration":
 		m := new(durationpb.Duration)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
-	case "canto.epochs.v1.EpochInfo.current_epoch":
+	case "basechain.epochs.v1.EpochInfo.current_epoch":
 		return protoreflect.ValueOfInt64(int64(0))
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_time":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_time":
 		m := new(timestamppb.Timestamp)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
-	case "canto.epochs.v1.EpochInfo.epoch_counting_started":
+	case "basechain.epochs.v1.EpochInfo.epoch_counting_started":
 		return protoreflect.ValueOfBool(false)
-	case "canto.epochs.v1.EpochInfo.current_epoch_start_height":
+	case "basechain.epochs.v1.EpochInfo.current_epoch_start_height":
 		return protoreflect.ValueOfInt64(int64(0))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.EpochInfo"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.EpochInfo"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.EpochInfo does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.EpochInfo does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -362,7 +362,7 @@ func (x *fastReflection_EpochInfo) NewField(fd protoreflect.FieldDescriptor) pro
 func (x *fastReflection_EpochInfo) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.epochs.v1.EpochInfo", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.epochs.v1.EpochInfo", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -879,8 +879,8 @@ var (
 )
 
 func init() {
-	file_canto_epochs_v1_genesis_proto_init()
-	md_GenesisState = File_canto_epochs_v1_genesis_proto.Messages().ByName("GenesisState")
+	file_basechain_epochs_v1_genesis_proto_init()
+	md_GenesisState = File_basechain_epochs_v1_genesis_proto.Messages().ByName("GenesisState")
 	fd_GenesisState_epochs = md_GenesisState.Fields().ByName("epochs")
 }
 
@@ -893,7 +893,7 @@ func (x *GenesisState) ProtoReflect() protoreflect.Message {
 }
 
 func (x *GenesisState) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_epochs_v1_genesis_proto_msgTypes[1]
+	mi := &file_basechain_epochs_v1_genesis_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -970,13 +970,13 @@ func (x *fastReflection_GenesisState) Range(f func(protoreflect.FieldDescriptor,
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_GenesisState) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.epochs.v1.GenesisState.epochs":
+	case "basechain.epochs.v1.GenesisState.epochs":
 		return len(x.Epochs) != 0
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -988,13 +988,13 @@ func (x *fastReflection_GenesisState) Has(fd protoreflect.FieldDescriptor) bool 
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_GenesisState) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.epochs.v1.GenesisState.epochs":
+	case "basechain.epochs.v1.GenesisState.epochs":
 		x.Epochs = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1006,7 +1006,7 @@ func (x *fastReflection_GenesisState) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_GenesisState) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.epochs.v1.GenesisState.epochs":
+	case "basechain.epochs.v1.GenesisState.epochs":
 		if len(x.Epochs) == 0 {
 			return protoreflect.ValueOfList(&_GenesisState_1_list{})
 		}
@@ -1014,9 +1014,9 @@ func (x *fastReflection_GenesisState) Get(descriptor protoreflect.FieldDescripto
 		return protoreflect.ValueOfList(listValue)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.GenesisState does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.GenesisState does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1032,15 +1032,15 @@ func (x *fastReflection_GenesisState) Get(descriptor protoreflect.FieldDescripto
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_GenesisState) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.epochs.v1.GenesisState.epochs":
+	case "basechain.epochs.v1.GenesisState.epochs":
 		lv := value.List()
 		clv := lv.(*_GenesisState_1_list)
 		x.Epochs = *clv.list
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1056,7 +1056,7 @@ func (x *fastReflection_GenesisState) Set(fd protoreflect.FieldDescriptor, value
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_GenesisState) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.epochs.v1.GenesisState.epochs":
+	case "basechain.epochs.v1.GenesisState.epochs":
 		if x.Epochs == nil {
 			x.Epochs = []*EpochInfo{}
 		}
@@ -1064,9 +1064,9 @@ func (x *fastReflection_GenesisState) Mutable(fd protoreflect.FieldDescriptor) p
 		return protoreflect.ValueOfList(value)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1075,14 +1075,14 @@ func (x *fastReflection_GenesisState) Mutable(fd protoreflect.FieldDescriptor) p
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_GenesisState) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.epochs.v1.GenesisState.epochs":
+	case "basechain.epochs.v1.GenesisState.epochs":
 		list := []*EpochInfo{}
 		return protoreflect.ValueOfList(&_GenesisState_1_list{list: &list})
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.epochs.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.epochs.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.epochs.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.epochs.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1092,7 +1092,7 @@ func (x *fastReflection_GenesisState) NewField(fd protoreflect.FieldDescriptor) 
 func (x *fastReflection_GenesisState) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.epochs.v1.GenesisState", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.epochs.v1.GenesisState", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1320,7 +1320,7 @@ func (x *fastReflection_GenesisState) ProtoMethods() *protoiface.Methods {
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/epochs/v1/genesis.proto
+// source: basechain/epochs/v1/genesis.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -1346,7 +1346,7 @@ type EpochInfo struct {
 func (x *EpochInfo) Reset() {
 	*x = EpochInfo{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_epochs_v1_genesis_proto_msgTypes[0]
+		mi := &file_basechain_epochs_v1_genesis_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1360,7 +1360,7 @@ func (*EpochInfo) ProtoMessage() {}
 
 // Deprecated: Use EpochInfo.ProtoReflect.Descriptor instead.
 func (*EpochInfo) Descriptor() ([]byte, []int) {
-	return file_canto_epochs_v1_genesis_proto_rawDescGZIP(), []int{0}
+	return file_basechain_epochs_v1_genesis_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *EpochInfo) GetIdentifier() string {
@@ -1424,7 +1424,7 @@ type GenesisState struct {
 func (x *GenesisState) Reset() {
 	*x = GenesisState{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_epochs_v1_genesis_proto_msgTypes[1]
+		mi := &file_basechain_epochs_v1_genesis_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1438,7 +1438,7 @@ func (*GenesisState) ProtoMessage() {}
 
 // Deprecated: Use GenesisState.ProtoReflect.Descriptor instead.
 func (*GenesisState) Descriptor() ([]byte, []int) {
-	return file_canto_epochs_v1_genesis_proto_rawDescGZIP(), []int{1}
+	return file_basechain_epochs_v1_genesis_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *GenesisState) GetEpochs() []*EpochInfo {
@@ -1448,9 +1448,9 @@ func (x *GenesisState) GetEpochs() []*EpochInfo {
 	return nil
 }
 
-var File_canto_epochs_v1_genesis_proto protoreflect.FileDescriptor
+var File_basechain_epochs_v1_genesis_proto protoreflect.FileDescriptor
 
-var file_canto_epochs_v1_genesis_proto_rawDesc = []byte{
+var file_basechain_epochs_v1_genesis_proto_rawDesc = []byte{
 	0x0a, 0x1d, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x65, 0x70, 0x6f, 0x63, 0x68, 0x73, 0x2f, 0x76,
 	0x31, 0x2f, 0x67, 0x65, 0x6e, 0x65, 0x73, 0x69, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12,
 	0x0f, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2e, 0x65, 0x70, 0x6f, 0x63, 0x68, 0x73, 0x2e, 0x76, 0x31,
@@ -1512,29 +1512,29 @@ var file_canto_epochs_v1_genesis_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_epochs_v1_genesis_proto_rawDescOnce sync.Once
-	file_canto_epochs_v1_genesis_proto_rawDescData = file_canto_epochs_v1_genesis_proto_rawDesc
+	file_basechain_epochs_v1_genesis_proto_rawDescOnce sync.Once
+	file_basechain_epochs_v1_genesis_proto_rawDescData = file_basechain_epochs_v1_genesis_proto_rawDesc
 )
 
-func file_canto_epochs_v1_genesis_proto_rawDescGZIP() []byte {
-	file_canto_epochs_v1_genesis_proto_rawDescOnce.Do(func() {
-		file_canto_epochs_v1_genesis_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_epochs_v1_genesis_proto_rawDescData)
+func file_basechain_epochs_v1_genesis_proto_rawDescGZIP() []byte {
+	file_basechain_epochs_v1_genesis_proto_rawDescOnce.Do(func() {
+		file_basechain_epochs_v1_genesis_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_epochs_v1_genesis_proto_rawDescData)
 	})
-	return file_canto_epochs_v1_genesis_proto_rawDescData
+	return file_basechain_epochs_v1_genesis_proto_rawDescData
 }
 
-var file_canto_epochs_v1_genesis_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_canto_epochs_v1_genesis_proto_goTypes = []interface{}{
-	(*EpochInfo)(nil),             // 0: canto.epochs.v1.EpochInfo
-	(*GenesisState)(nil),          // 1: canto.epochs.v1.GenesisState
+var file_basechain_epochs_v1_genesis_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_basechain_epochs_v1_genesis_proto_goTypes = []interface{}{
+	(*EpochInfo)(nil),             // 0: basechain.epochs.v1.EpochInfo
+	(*GenesisState)(nil),          // 1: basechain.epochs.v1.GenesisState
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 	(*durationpb.Duration)(nil),   // 3: google.protobuf.Duration
 }
-var file_canto_epochs_v1_genesis_proto_depIdxs = []int32{
-	2, // 0: canto.epochs.v1.EpochInfo.start_time:type_name -> google.protobuf.Timestamp
-	3, // 1: canto.epochs.v1.EpochInfo.duration:type_name -> google.protobuf.Duration
-	2, // 2: canto.epochs.v1.EpochInfo.current_epoch_start_time:type_name -> google.protobuf.Timestamp
-	0, // 3: canto.epochs.v1.GenesisState.epochs:type_name -> canto.epochs.v1.EpochInfo
+var file_basechain_epochs_v1_genesis_proto_depIdxs = []int32{
+	2, // 0: basechain.epochs.v1.EpochInfo.start_time:type_name -> google.protobuf.Timestamp
+	3, // 1: basechain.epochs.v1.EpochInfo.duration:type_name -> google.protobuf.Duration
+	2, // 2: basechain.epochs.v1.EpochInfo.current_epoch_start_time:type_name -> google.protobuf.Timestamp
+	0, // 3: basechain.epochs.v1.GenesisState.epochs:type_name -> basechain.epochs.v1.EpochInfo
 	4, // [4:4] is the sub-list for method output_type
 	4, // [4:4] is the sub-list for method input_type
 	4, // [4:4] is the sub-list for extension type_name
@@ -1542,13 +1542,13 @@ var file_canto_epochs_v1_genesis_proto_depIdxs = []int32{
 	0, // [0:4] is the sub-list for field type_name
 }
 
-func init() { file_canto_epochs_v1_genesis_proto_init() }
-func file_canto_epochs_v1_genesis_proto_init() {
-	if File_canto_epochs_v1_genesis_proto != nil {
+func init() { file_basechain_epochs_v1_genesis_proto_init() }
+func file_basechain_epochs_v1_genesis_proto_init() {
+	if File_basechain_epochs_v1_genesis_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_canto_epochs_v1_genesis_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_epochs_v1_genesis_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*EpochInfo); i {
 			case 0:
 				return &v.state
@@ -1560,7 +1560,7 @@ func file_canto_epochs_v1_genesis_proto_init() {
 				return nil
 			}
 		}
-		file_canto_epochs_v1_genesis_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_epochs_v1_genesis_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GenesisState); i {
 			case 0:
 				return &v.state
@@ -1577,18 +1577,18 @@ func file_canto_epochs_v1_genesis_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_epochs_v1_genesis_proto_rawDesc,
+			RawDescriptor: file_basechain_epochs_v1_genesis_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_canto_epochs_v1_genesis_proto_goTypes,
-		DependencyIndexes: file_canto_epochs_v1_genesis_proto_depIdxs,
-		MessageInfos:      file_canto_epochs_v1_genesis_proto_msgTypes,
+		GoTypes:           file_basechain_epochs_v1_genesis_proto_goTypes,
+		DependencyIndexes: file_basechain_epochs_v1_genesis_proto_depIdxs,
+		MessageInfos:      file_basechain_epochs_v1_genesis_proto_msgTypes,
 	}.Build()
-	File_canto_epochs_v1_genesis_proto = out.File
-	file_canto_epochs_v1_genesis_proto_rawDesc = nil
-	file_canto_epochs_v1_genesis_proto_goTypes = nil
-	file_canto_epochs_v1_genesis_proto_depIdxs = nil
+	File_basechain_epochs_v1_genesis_proto = out.File
+	file_basechain_epochs_v1_genesis_proto_rawDesc = nil
+	file_basechain_epochs_v1_genesis_proto_goTypes = nil
+	file_basechain_epochs_v1_genesis_proto_depIdxs = nil
 }

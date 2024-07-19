@@ -82,7 +82,7 @@ func (suite *KeeperTestSuite) SetupApp() {
 	require.NoError(t, err)
 
 	suite.address = common.BytesToAddress(priv.PubKey().Address().Bytes())
-	suite.denom = "acanto"
+	suite.denom = "abasecoin"
 
 	// consensus key
 	pubKey := cosmosed25519.GenPrivKey().PubKey()
@@ -90,7 +90,7 @@ func (suite *KeeperTestSuite) SetupApp() {
 	suite.consAddress = sdk.ConsAddress(pubKey.Address())
 	suite.ctx = suite.app.BaseApp.NewContextLegacy(false, tmproto.Header{
 		Height:          1,
-		ChainID:         "canto_9001-1",
+		ChainID:         "basechain_9001-1",
 		Time:            time.Now().UTC(),
 		ProposerAddress: suite.consAddress.Bytes(),
 

@@ -69,7 +69,7 @@ func (suite *KeeperTestSuite) DoSetupTest(t require.TestingT) {
 
 	suite.ctx = suite.app.BaseApp.NewContextLegacy(false, tmproto.Header{
 		Height:          1,
-		ChainID:         "canto_9001-1",
+		ChainID:         "basechain_9001-1",
 		Time:            time.Now().UTC(),
 		ProposerAddress: consAddress.Bytes(),
 
@@ -111,7 +111,7 @@ func (suite *KeeperTestSuite) DoSetupTest(t require.TestingT) {
 
 	stakingParams, err := suite.app.StakingKeeper.GetParams(suite.ctx)
 	suite.NoError(err)
-	stakingParams.BondDenom = "acanto"
+	stakingParams.BondDenom = "abasecoin"
 	suite.app.StakingKeeper.SetParams(suite.ctx, stakingParams)
 }
 

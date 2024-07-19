@@ -1,7 +1,7 @@
 syntax = "proto3";
-package canto.erc20.v1;
+package basechain.erc20.v1;
 
-import "canto/erc20/v1/erc20.proto";
+import "basechain/erc20/v1/erc20.proto";
 import "gogoproto/gogo.proto";
 import "amino/amino.proto";
 
@@ -25,7 +25,7 @@ message GenesisState {
 
 // Params defines the erc20 module params
 message Params {
-  option (amino.name) = "canto/x/erc20/Params";
+  option (amino.name) = "basechain/x/erc20/Params";
 
   // parameter to enable the conversion of Cosmos coins <--> ERC20 tokens.
   bool enable_erc20 = 1;

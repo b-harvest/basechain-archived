@@ -22,7 +22,7 @@ import (
 	ethermint "github.com/evmos/ethermint/types"
 	evmtypes "github.com/evmos/ethermint/x/evm/types"
 
-	cantokr "github.com/Canto-Network/Canto/v7/crypto/keyring"
+	basechainkr "github.com/Canto-Network/Canto/v7/crypto/keyring"
 )
 
 // AddGenesisAccountCmd returns add-genesis-account cobra Command.
@@ -58,7 +58,7 @@ contain valid denominations. Accounts may optionally be supplied with vesting pa
 						clientCtx.HomeDir,
 						inBuf,
 						clientCtx.Codec,
-						cantokr.Option(),
+						basechainkr.Option(),
 					)
 					if err != nil {
 						return err

@@ -1,10 +1,10 @@
 syntax = "proto3";
-package canto.inflation.v1;
+package basechain.inflation.v1;
 
 import "gogoproto/gogo.proto";
 import "amino/amino.proto";
 
-import "canto/inflation/v1/inflation.proto";
+import "basechain/inflation/v1/inflation.proto";
 
 option go_package = "github.com/Canto-Network/Canto/v7/x/inflation/types";
 
@@ -24,7 +24,7 @@ message GenesisState {
 
 // Params holds parameters for the inflation module.
 message Params {
-  option (amino.name) = "canto/x/inflation/Params";
+  option (amino.name) = "basechain/x/inflation/Params";
 
   // type of coin to mint
   string mint_denom = 1;

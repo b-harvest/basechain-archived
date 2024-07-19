@@ -2,33 +2,33 @@
 
 ### Install & Initialize 
 
-* Install cantod binary
+* Install basechaind binary
 
-* Initialize canto node directory 
+* Initialize basechain node directory 
 ```bash
-cantod init <node_name> --chain-id <chain_id>
+basechaind init <node_name> --chain-id <chain_id>
 ```
 * Download the [genesis file](https://github.com/Canto-Network/Canto/raw/main/Mainnet/genesis.json)
 ```bash
-wget https://github.com/Canto-Network/Canto/raw/main/Mainnet/genesis.json -b $HOME/.cantod/config
+wget https://github.com/Canto-Network/Canto/raw/main/Mainnet/genesis.json -b $HOME/.basechaind/config
 ```
 
 ### Add a Genesis Account
 A genesis account is required to create a GENTX
 
 ```bash
-cantod add-genesis-account <address-or-key-name> acanto --chain-id <chain-id>
+basechaind add-genesis-account <address-or-key-name> abasechain --chain-id <chain-id>
 ```
 ### Create & Submit a GENTX file + genesis.json
 A GENTX is a genesis transaction that adds a validator node to the genesis file.
 ```bash
-cantod gentx <key_name> <token-amount>acanto --chain-id=<chain_id> --moniker=<your_moniker> --commission-max-change-rate=0.01 --commission-max-rate=0.10 --commission-rate=0.05 --details="<details here>" --security-contact="<email>" --website="<website>"
+basechaind gentx <key_name> <token-amount>abasechain --chain-id=<chain_id> --moniker=<your_moniker> --commission-max-change-rate=0.01 --commission-max-rate=0.10 --commission-rate=0.05 --details="<details here>" --security-contact="<email>" --website="<website>"
 ```
 * Fork [Canto](https://github.com/Canto-Network/Canto)
 
-* Copy the contents of `${HOME}/.cantod/config/gentx/gentx-XXXXXXXX.json` to `$HOME/Canto/Mainnet/gentx/<yourvalidatorname>.json`
+* Copy the contents of `${HOME}/.basechaind/config/gentx/gentx-XXXXXXXX.json` to `$HOME/Canto/Mainnet/gentx/<yourvalidatorname>.json`
 
-* Copy the genesis.json file `${HOME}/.cantod/config/genesis.json` to `$HOME/Canto/Mainnet/Genesis-Files/`
+* Copy the genesis.json file `${HOME}/.basechaind/config/genesis.json` to `$HOME/Canto/Mainnet/Genesis-Files/`
 
 * Create a pull request to the main branch of the [repository](https://github.com/Canto-Network/Canto/Mainnet/gentx)
 
@@ -37,13 +37,13 @@ cantod gentx <key_name> <token-amount>acanto --chain-id=<chain_id> --moniker=<yo
 You do not need to reinitialize your Canto Node. Basically a hard fork on Cosmos is starting from block 1 with a new genesis file. All your configuration files can stay the same. Steps to ensure a safe restart
 
 1) Backup your data directory. 
-* `mkdir $HOME/canto-backup` 
+* `mkdir $HOME/basechain-backup` 
 
-* `cp $HOME/.cantod/data $HOME/canto-backup/`
+* `cp $HOME/.basechaind/data $HOME/basechain-backup/`
 
 2) Remove old genesis 
 
-* `rm $HOME/.cantod/genesis.json`
+* `rm $HOME/.basechaind/genesis.json`
 
 3) Download new genesis
 
@@ -51,11 +51,11 @@ You do not need to reinitialize your Canto Node. Basically a hard fork on Cosmos
 
 4) Remove old data
 
-* `rm -rf $HOME/.cantod/data`
+* `rm -rf $HOME/.basechaind/data`
 
 5) Create a new data directory
 
-* `mkdir $HOME/.cantod/data`
+* `mkdir $HOME/.basechaind/data`
 
 If you do not reinitialize then your peer id and ip address will remain the same which will prevent you from needing to update your peers list.
 
@@ -64,24 +64,24 @@ If you do not reinitialize then your peer id and ip address will remain the same
 cd $HOME/Canto
 git checkout <branch>
 make install
-mv $HOME/go/bin/cantod /usr/bin/
+mv $HOME/go/bin/basechaind /usr/bin/
 ```
 
 
 6) Restart your node
 
-* `systemctl restart cantod`
+* `systemctl restart basechaind`
 
 ## Emergency Reversion
 
-1) Move your backup data directory into your .cantod directory 
+1) Move your backup data directory into your .basechaind directory 
 
-* `mv HOME/canto-backup/data $HOME/.canto/`
+* `mv HOME/basechain-backup/data $HOME/.basechain/`
 
 2) Download the old genesis file
 
-* `wget https://github.com/Canto-Network/Canto/raw/main/Mainnet/genesis.json -b $HOME/.cantod/config/`
+* `wget https://github.com/Canto-Network/Canto/raw/main/Mainnet/genesis.json -b $HOME/.basechaind/config/`
 
 3) Restart your node
 
-* `systemctl restart cantod`
+* `systemctl restart basechaind`

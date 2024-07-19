@@ -21,8 +21,8 @@ var (
 )
 
 func init() {
-	file_canto_onboarding_v1_genesis_proto_init()
-	md_GenesisState = File_canto_onboarding_v1_genesis_proto.Messages().ByName("GenesisState")
+	file_basechain_onboarding_v1_genesis_proto_init()
+	md_GenesisState = File_basechain_onboarding_v1_genesis_proto.Messages().ByName("GenesisState")
 	fd_GenesisState_params = md_GenesisState.Fields().ByName("params")
 }
 
@@ -35,7 +35,7 @@ func (x *GenesisState) ProtoReflect() protoreflect.Message {
 }
 
 func (x *GenesisState) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_onboarding_v1_genesis_proto_msgTypes[0]
+	mi := &file_basechain_onboarding_v1_genesis_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -112,13 +112,13 @@ func (x *fastReflection_GenesisState) Range(f func(protoreflect.FieldDescriptor,
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_GenesisState) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.onboarding.v1.GenesisState.params":
+	case "basechain.onboarding.v1.GenesisState.params":
 		return x.Params != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -130,13 +130,13 @@ func (x *fastReflection_GenesisState) Has(fd protoreflect.FieldDescriptor) bool 
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_GenesisState) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.onboarding.v1.GenesisState.params":
+	case "basechain.onboarding.v1.GenesisState.params":
 		x.Params = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -148,14 +148,14 @@ func (x *fastReflection_GenesisState) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_GenesisState) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.onboarding.v1.GenesisState.params":
+	case "basechain.onboarding.v1.GenesisState.params":
 		value := x.Params
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.GenesisState does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.GenesisState does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -171,13 +171,13 @@ func (x *fastReflection_GenesisState) Get(descriptor protoreflect.FieldDescripto
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_GenesisState) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.onboarding.v1.GenesisState.params":
+	case "basechain.onboarding.v1.GenesisState.params":
 		x.Params = value.Message().Interface().(*Params)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -193,16 +193,16 @@ func (x *fastReflection_GenesisState) Set(fd protoreflect.FieldDescriptor, value
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_GenesisState) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.onboarding.v1.GenesisState.params":
+	case "basechain.onboarding.v1.GenesisState.params":
 		if x.Params == nil {
 			x.Params = new(Params)
 		}
 		return protoreflect.ValueOfMessage(x.Params.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -211,14 +211,14 @@ func (x *fastReflection_GenesisState) Mutable(fd protoreflect.FieldDescriptor) p
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_GenesisState) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.onboarding.v1.GenesisState.params":
+	case "basechain.onboarding.v1.GenesisState.params":
 		m := new(Params)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.GenesisState"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.GenesisState"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.GenesisState does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.GenesisState does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -228,7 +228,7 @@ func (x *fastReflection_GenesisState) NewField(fd protoreflect.FieldDescriptor) 
 func (x *fastReflection_GenesisState) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.onboarding.v1.GenesisState", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.onboarding.v1.GenesisState", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -504,8 +504,8 @@ var (
 )
 
 func init() {
-	file_canto_onboarding_v1_genesis_proto_init()
-	md_Params = File_canto_onboarding_v1_genesis_proto.Messages().ByName("Params")
+	file_basechain_onboarding_v1_genesis_proto_init()
+	md_Params = File_basechain_onboarding_v1_genesis_proto.Messages().ByName("Params")
 	fd_Params_enable_onboarding = md_Params.Fields().ByName("enable_onboarding")
 	fd_Params_auto_swap_threshold = md_Params.Fields().ByName("auto_swap_threshold")
 	fd_Params_whitelisted_channels = md_Params.Fields().ByName("whitelisted_channels")
@@ -520,7 +520,7 @@ func (x *Params) ProtoReflect() protoreflect.Message {
 }
 
 func (x *Params) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_onboarding_v1_genesis_proto_msgTypes[1]
+	mi := &file_basechain_onboarding_v1_genesis_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -609,17 +609,17 @@ func (x *fastReflection_Params) Range(f func(protoreflect.FieldDescriptor, proto
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_Params) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.onboarding.v1.Params.enable_onboarding":
+	case "basechain.onboarding.v1.Params.enable_onboarding":
 		return x.EnableOnboarding != false
-	case "canto.onboarding.v1.Params.auto_swap_threshold":
+	case "basechain.onboarding.v1.Params.auto_swap_threshold":
 		return x.AutoSwapThreshold != ""
-	case "canto.onboarding.v1.Params.whitelisted_channels":
+	case "basechain.onboarding.v1.Params.whitelisted_channels":
 		return len(x.WhitelistedChannels) != 0
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.Params does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.Params does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -631,17 +631,17 @@ func (x *fastReflection_Params) Has(fd protoreflect.FieldDescriptor) bool {
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_Params) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.onboarding.v1.Params.enable_onboarding":
+	case "basechain.onboarding.v1.Params.enable_onboarding":
 		x.EnableOnboarding = false
-	case "canto.onboarding.v1.Params.auto_swap_threshold":
+	case "basechain.onboarding.v1.Params.auto_swap_threshold":
 		x.AutoSwapThreshold = ""
-	case "canto.onboarding.v1.Params.whitelisted_channels":
+	case "basechain.onboarding.v1.Params.whitelisted_channels":
 		x.WhitelistedChannels = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.Params does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.Params does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -653,13 +653,13 @@ func (x *fastReflection_Params) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_Params) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.onboarding.v1.Params.enable_onboarding":
+	case "basechain.onboarding.v1.Params.enable_onboarding":
 		value := x.EnableOnboarding
 		return protoreflect.ValueOfBool(value)
-	case "canto.onboarding.v1.Params.auto_swap_threshold":
+	case "basechain.onboarding.v1.Params.auto_swap_threshold":
 		value := x.AutoSwapThreshold
 		return protoreflect.ValueOfString(value)
-	case "canto.onboarding.v1.Params.whitelisted_channels":
+	case "basechain.onboarding.v1.Params.whitelisted_channels":
 		if len(x.WhitelistedChannels) == 0 {
 			return protoreflect.ValueOfList(&_Params_4_list{})
 		}
@@ -667,9 +667,9 @@ func (x *fastReflection_Params) Get(descriptor protoreflect.FieldDescriptor) pro
 		return protoreflect.ValueOfList(listValue)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.Params does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.Params does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -685,19 +685,19 @@ func (x *fastReflection_Params) Get(descriptor protoreflect.FieldDescriptor) pro
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_Params) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.onboarding.v1.Params.enable_onboarding":
+	case "basechain.onboarding.v1.Params.enable_onboarding":
 		x.EnableOnboarding = value.Bool()
-	case "canto.onboarding.v1.Params.auto_swap_threshold":
+	case "basechain.onboarding.v1.Params.auto_swap_threshold":
 		x.AutoSwapThreshold = value.Interface().(string)
-	case "canto.onboarding.v1.Params.whitelisted_channels":
+	case "basechain.onboarding.v1.Params.whitelisted_channels":
 		lv := value.List()
 		clv := lv.(*_Params_4_list)
 		x.WhitelistedChannels = *clv.list
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.Params does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.Params does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -713,21 +713,21 @@ func (x *fastReflection_Params) Set(fd protoreflect.FieldDescriptor, value proto
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_Params) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.onboarding.v1.Params.whitelisted_channels":
+	case "basechain.onboarding.v1.Params.whitelisted_channels":
 		if x.WhitelistedChannels == nil {
 			x.WhitelistedChannels = []string{}
 		}
 		value := &_Params_4_list{list: &x.WhitelistedChannels}
 		return protoreflect.ValueOfList(value)
-	case "canto.onboarding.v1.Params.enable_onboarding":
-		panic(fmt.Errorf("field enable_onboarding of message canto.onboarding.v1.Params is not mutable"))
-	case "canto.onboarding.v1.Params.auto_swap_threshold":
-		panic(fmt.Errorf("field auto_swap_threshold of message canto.onboarding.v1.Params is not mutable"))
+	case "basechain.onboarding.v1.Params.enable_onboarding":
+		panic(fmt.Errorf("field enable_onboarding of message basechain.onboarding.v1.Params is not mutable"))
+	case "basechain.onboarding.v1.Params.auto_swap_threshold":
+		panic(fmt.Errorf("field auto_swap_threshold of message basechain.onboarding.v1.Params is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.Params does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.Params does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -736,18 +736,18 @@ func (x *fastReflection_Params) Mutable(fd protoreflect.FieldDescriptor) protore
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_Params) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.onboarding.v1.Params.enable_onboarding":
+	case "basechain.onboarding.v1.Params.enable_onboarding":
 		return protoreflect.ValueOfBool(false)
-	case "canto.onboarding.v1.Params.auto_swap_threshold":
+	case "basechain.onboarding.v1.Params.auto_swap_threshold":
 		return protoreflect.ValueOfString("")
-	case "canto.onboarding.v1.Params.whitelisted_channels":
+	case "basechain.onboarding.v1.Params.whitelisted_channels":
 		list := []string{}
 		return protoreflect.ValueOfList(&_Params_4_list{list: &list})
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.onboarding.v1.Params"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.onboarding.v1.Params"))
 		}
-		panic(fmt.Errorf("message canto.onboarding.v1.Params does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.onboarding.v1.Params does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -757,7 +757,7 @@ func (x *fastReflection_Params) NewField(fd protoreflect.FieldDescriptor) protor
 func (x *fastReflection_Params) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.onboarding.v1.Params", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.onboarding.v1.Params", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1052,7 +1052,7 @@ func (x *fastReflection_Params) ProtoMethods() *protoiface.Methods {
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/onboarding/v1/genesis.proto
+// source: basechain/onboarding/v1/genesis.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -1074,7 +1074,7 @@ type GenesisState struct {
 func (x *GenesisState) Reset() {
 	*x = GenesisState{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_onboarding_v1_genesis_proto_msgTypes[0]
+		mi := &file_basechain_onboarding_v1_genesis_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1088,7 +1088,7 @@ func (*GenesisState) ProtoMessage() {}
 
 // Deprecated: Use GenesisState.ProtoReflect.Descriptor instead.
 func (*GenesisState) Descriptor() ([]byte, []int) {
-	return file_canto_onboarding_v1_genesis_proto_rawDescGZIP(), []int{0}
+	return file_basechain_onboarding_v1_genesis_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *GenesisState) GetParams() *Params {
@@ -1113,7 +1113,7 @@ type Params struct {
 func (x *Params) Reset() {
 	*x = Params{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_onboarding_v1_genesis_proto_msgTypes[1]
+		mi := &file_basechain_onboarding_v1_genesis_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1127,7 +1127,7 @@ func (*Params) ProtoMessage() {}
 
 // Deprecated: Use Params.ProtoReflect.Descriptor instead.
 func (*Params) Descriptor() ([]byte, []int) {
-	return file_canto_onboarding_v1_genesis_proto_rawDescGZIP(), []int{1}
+	return file_basechain_onboarding_v1_genesis_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Params) GetEnableOnboarding() bool {
@@ -1151,9 +1151,9 @@ func (x *Params) GetWhitelistedChannels() []string {
 	return nil
 }
 
-var File_canto_onboarding_v1_genesis_proto protoreflect.FileDescriptor
+var File_basechain_onboarding_v1_genesis_proto protoreflect.FileDescriptor
 
-var file_canto_onboarding_v1_genesis_proto_rawDesc = []byte{
+var file_basechain_onboarding_v1_genesis_proto_rawDesc = []byte{
 	0x0a, 0x21, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x6f, 0x6e, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x69,
 	0x6e, 0x67, 0x2f, 0x76, 0x31, 0x2f, 0x67, 0x65, 0x6e, 0x65, 0x73, 0x69, 0x73, 0x2e, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x12, 0x13, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2e, 0x6f, 0x6e, 0x62, 0x6f, 0x61,
@@ -1198,24 +1198,24 @@ var file_canto_onboarding_v1_genesis_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_onboarding_v1_genesis_proto_rawDescOnce sync.Once
-	file_canto_onboarding_v1_genesis_proto_rawDescData = file_canto_onboarding_v1_genesis_proto_rawDesc
+	file_basechain_onboarding_v1_genesis_proto_rawDescOnce sync.Once
+	file_basechain_onboarding_v1_genesis_proto_rawDescData = file_basechain_onboarding_v1_genesis_proto_rawDesc
 )
 
-func file_canto_onboarding_v1_genesis_proto_rawDescGZIP() []byte {
-	file_canto_onboarding_v1_genesis_proto_rawDescOnce.Do(func() {
-		file_canto_onboarding_v1_genesis_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_onboarding_v1_genesis_proto_rawDescData)
+func file_basechain_onboarding_v1_genesis_proto_rawDescGZIP() []byte {
+	file_basechain_onboarding_v1_genesis_proto_rawDescOnce.Do(func() {
+		file_basechain_onboarding_v1_genesis_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_onboarding_v1_genesis_proto_rawDescData)
 	})
-	return file_canto_onboarding_v1_genesis_proto_rawDescData
+	return file_basechain_onboarding_v1_genesis_proto_rawDescData
 }
 
-var file_canto_onboarding_v1_genesis_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_canto_onboarding_v1_genesis_proto_goTypes = []interface{}{
-	(*GenesisState)(nil), // 0: canto.onboarding.v1.GenesisState
-	(*Params)(nil),       // 1: canto.onboarding.v1.Params
+var file_basechain_onboarding_v1_genesis_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_basechain_onboarding_v1_genesis_proto_goTypes = []interface{}{
+	(*GenesisState)(nil), // 0: basechain.onboarding.v1.GenesisState
+	(*Params)(nil),       // 1: basechain.onboarding.v1.Params
 }
-var file_canto_onboarding_v1_genesis_proto_depIdxs = []int32{
-	1, // 0: canto.onboarding.v1.GenesisState.params:type_name -> canto.onboarding.v1.Params
+var file_basechain_onboarding_v1_genesis_proto_depIdxs = []int32{
+	1, // 0: basechain.onboarding.v1.GenesisState.params:type_name -> basechain.onboarding.v1.Params
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
@@ -1223,13 +1223,13 @@ var file_canto_onboarding_v1_genesis_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_canto_onboarding_v1_genesis_proto_init() }
-func file_canto_onboarding_v1_genesis_proto_init() {
-	if File_canto_onboarding_v1_genesis_proto != nil {
+func init() { file_basechain_onboarding_v1_genesis_proto_init() }
+func file_basechain_onboarding_v1_genesis_proto_init() {
+	if File_basechain_onboarding_v1_genesis_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_canto_onboarding_v1_genesis_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_onboarding_v1_genesis_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GenesisState); i {
 			case 0:
 				return &v.state
@@ -1241,7 +1241,7 @@ func file_canto_onboarding_v1_genesis_proto_init() {
 				return nil
 			}
 		}
-		file_canto_onboarding_v1_genesis_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_onboarding_v1_genesis_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Params); i {
 			case 0:
 				return &v.state
@@ -1258,18 +1258,18 @@ func file_canto_onboarding_v1_genesis_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_onboarding_v1_genesis_proto_rawDesc,
+			RawDescriptor: file_basechain_onboarding_v1_genesis_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_canto_onboarding_v1_genesis_proto_goTypes,
-		DependencyIndexes: file_canto_onboarding_v1_genesis_proto_depIdxs,
-		MessageInfos:      file_canto_onboarding_v1_genesis_proto_msgTypes,
+		GoTypes:           file_basechain_onboarding_v1_genesis_proto_goTypes,
+		DependencyIndexes: file_basechain_onboarding_v1_genesis_proto_depIdxs,
+		MessageInfos:      file_basechain_onboarding_v1_genesis_proto_msgTypes,
 	}.Build()
-	File_canto_onboarding_v1_genesis_proto = out.File
-	file_canto_onboarding_v1_genesis_proto_rawDesc = nil
-	file_canto_onboarding_v1_genesis_proto_goTypes = nil
-	file_canto_onboarding_v1_genesis_proto_depIdxs = nil
+	File_basechain_onboarding_v1_genesis_proto = out.File
+	file_basechain_onboarding_v1_genesis_proto_rawDesc = nil
+	file_basechain_onboarding_v1_genesis_proto_goTypes = nil
+	file_basechain_onboarding_v1_genesis_proto_depIdxs = nil
 }

@@ -51,7 +51,7 @@ func (suite *TestSuite) TestEventEmit() {
 
 func (suite *TestSuite) TestMsgSwapOrder_ValidateBasic() {
 	msg := types.MsgSwapOrder{}
-	suite.Require().Equal("/canto.coinswap.v1.MsgSwapOrder", sdk.MsgTypeURL(&msg))
+	suite.Require().Equal("/basechain.coinswap.v1.MsgSwapOrder", sdk.MsgTypeURL(&msg))
 
 	type fields struct {
 		Input      types.Input
@@ -91,7 +91,7 @@ func (suite *TestSuite) TestMsgSwapOrder_ValidateBasic() {
 
 func (suite *TestSuite) TestMsgAddLiquidity_ValidateBasic() {
 	msg := types.MsgAddLiquidity{}
-	suite.Require().Equal("/canto.coinswap.v1.MsgAddLiquidity", sdk.MsgTypeURL(&msg))
+	suite.Require().Equal("/basechain.coinswap.v1.MsgAddLiquidity", sdk.MsgTypeURL(&msg))
 
 	type fields struct {
 		MaxToken         sdk.Coin
@@ -195,7 +195,7 @@ func (suite *TestSuite) TestMsgAddLiquidity_ValidateBasic() {
 
 func (suite *TestSuite) TestMsgRemoveLiquidity_ValidateBasic() {
 	msg := types.MsgRemoveLiquidity{}
-	suite.Require().Equal("/canto.coinswap.v1.MsgRemoveLiquidity", sdk.MsgTypeURL(&msg))
+	suite.Require().Equal("/basechain.coinswap.v1.MsgRemoveLiquidity", sdk.MsgTypeURL(&msg))
 
 	type fields struct {
 		WithdrawLiquidity sdk.Coin

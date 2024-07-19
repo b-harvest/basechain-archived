@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: canto/onboarding/v1/query.proto
+// source: basechain/onboarding/v1/query.proto
 
 package onboardingv1
 
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Query_Params_FullMethodName = "/canto.onboarding.v1.Query/Params"
+	Query_Params_FullMethodName = "/basechain.onboarding.v1.Query/Params"
 )
 
 // QueryClient is the client API for Query service.
@@ -98,7 +98,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Query_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "canto.onboarding.v1.Query",
+	ServiceName: "basechain.onboarding.v1.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -107,5 +107,5 @@ var Query_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "canto/onboarding/v1/query.proto",
+	Metadata: "basechain/onboarding/v1/query.proto",
 }

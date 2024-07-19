@@ -58,7 +58,7 @@ func CreateUpgradeHandler(
 			return vm, err
 		}
 
-		// canto v8 custom
+		// basechain v8 custom
 		{
 			params, err := stakingKeeper.GetParams(ctx)
 			if err != nil {

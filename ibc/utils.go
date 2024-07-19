@@ -9,7 +9,7 @@ import (
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	channeltypes "github.com/cosmos/ibc-go/v8/modules/core/04-channel/types"
 
-	canto "github.com/Canto-Network/Canto/v7/types"
+	basechain "github.com/Canto-Network/Canto/v7/types"
 )
 
 // GetTransferSenderRecipient returns the sender and recipient sdk.AccAddresses
@@ -30,15 +30,15 @@ func GetTransferSenderRecipient(packet channeltypes.Packet) (
 	}
 
 	// validate the sender bech32 address from the counterparty chain
-	// and change the bech32 human readable prefix (HRP) of the sender to `canto`
-	sender, err = canto.GetcantoAddressFromBech32(data.Sender)
+	// and change the bech32 human readable prefix (HRP) of the sender to `basechain`
+	sender, err = basechain.GetbasechainAddressFromBech32(data.Sender)
 	if err != nil {
 		return nil, nil, "", "", errorsmod.Wrap(err, "invalid sender")
 	}
 
 	// validate the recipient bech32 address from the counterparty chain
-	// and change the bech32 human readable prefix (HRP) of the recipient to `canto`
-	recipient, err = canto.GetcantoAddressFromBech32(data.Receiver)
+	// and change the bech32 human readable prefix (HRP) of the recipient to `basechain`
+	recipient, err = basechain.GetbasechainAddressFromBech32(data.Receiver)
 	if err != nil {
 		return nil, nil, "", "", errorsmod.Wrap(err, "invalid recipient")
 	}

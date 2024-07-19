@@ -14,7 +14,7 @@ import (
 
 func init() {
 	cfg := sdk.GetConfig()
-	cfg.SetBech32PrefixForAccount("canto", "cantopub")
+	cfg.SetBech32PrefixForAccount("basechain", "basechainpub")
 }
 
 func TestGetTransferSenderRecipient(t *testing.T) {
@@ -55,7 +55,7 @@ func TestGetTransferSenderRecipient(t *testing.T) {
 				Data: transfertypes.ModuleCdc.MustMarshalJSON(
 					&transfertypes.FungibleTokenPacketData{
 						Sender:   "cosmos1",
-						Receiver: "canto1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
+						Receiver: "basechain1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
 						Amount:   "123456",
 					},
 				),
@@ -69,7 +69,7 @@ func TestGetTransferSenderRecipient(t *testing.T) {
 				Data: transfertypes.ModuleCdc.MustMarshalJSON(
 					&transfertypes.FungibleTokenPacketData{
 						Sender:   "cosmos1qql8ag4cluz6r4dz28p3w00dnc9w8ueulg2gmc",
-						Receiver: "canto1",
+						Receiver: "basechain1",
 						Amount:   "123456",
 					},
 				),
@@ -78,48 +78,48 @@ func TestGetTransferSenderRecipient(t *testing.T) {
 			true,
 		},
 		{
-			"valid - cosmos sender, canto recipient",
+			"valid - cosmos sender, basechain recipient",
 			channeltypes.Packet{
 				Data: transfertypes.ModuleCdc.MustMarshalJSON(
 					&transfertypes.FungibleTokenPacketData{
 						Sender:   "cosmos1qql8ag4cluz6r4dz28p3w00dnc9w8ueulg2gmc",
-						Receiver: "canto1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
+						Receiver: "basechain1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
 						Amount:   "123456",
 					},
 				),
 			},
-			"canto1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
-			"canto1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
+			"basechain1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
+			"basechain1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
 			false,
 		},
 		{
-			"valid - canto sender, cosmos recipient",
+			"valid - basechain sender, cosmos recipient",
 			channeltypes.Packet{
 				Data: transfertypes.ModuleCdc.MustMarshalJSON(
 					&transfertypes.FungibleTokenPacketData{
-						Sender:   "canto1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
+						Sender:   "basechain1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
 						Receiver: "cosmos1qql8ag4cluz6r4dz28p3w00dnc9w8ueulg2gmc",
 						Amount:   "123456",
 					},
 				),
 			},
-			"canto1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
-			"canto1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
+			"basechain1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
+			"basechain1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
 			false,
 		},
 		{
-			"valid - osmosis sender, canto recipient",
+			"valid - osmosis sender, basechain recipient",
 			channeltypes.Packet{
 				Data: transfertypes.ModuleCdc.MustMarshalJSON(
 					&transfertypes.FungibleTokenPacketData{
 						Sender:   "osmo1qql8ag4cluz6r4dz28p3w00dnc9w8ueuhnecd2",
-						Receiver: "canto1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
+						Receiver: "basechain1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
 						Amount:   "123456",
 					},
 				),
 			},
-			"canto1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
-			"canto1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
+			"basechain1qql8ag4cluz6r4dz28p3w00dnc9w8ueud7tc0s",
+			"basechain1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
 			false,
 		},
 	}
@@ -164,7 +164,7 @@ func TestGetTransferAmount(t *testing.T) {
 				Data: transfertypes.ModuleCdc.MustMarshalJSON(
 					&transfertypes.FungibleTokenPacketData{
 						Sender:   "cosmos1qql8ag4cluz6r4dz28p3w00dnc9w8ueulg2gmc",
-						Receiver: "canto1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
+						Receiver: "basechain1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
 						Amount:   "",
 					},
 				),
@@ -178,7 +178,7 @@ func TestGetTransferAmount(t *testing.T) {
 				Data: transfertypes.ModuleCdc.MustMarshalJSON(
 					&transfertypes.FungibleTokenPacketData{
 						Sender:   "cosmos1qql8ag4cluz6r4dz28p3w00dnc9w8ueulg2gmc",
-						Receiver: "canto1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
+						Receiver: "basechain1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
 						Amount:   "test",
 					},
 				),
@@ -192,7 +192,7 @@ func TestGetTransferAmount(t *testing.T) {
 				Data: transfertypes.ModuleCdc.MustMarshalJSON(
 					&transfertypes.FungibleTokenPacketData{
 						Sender:   "cosmos1qql8ag4cluz6r4dz28p3w00dnc9w8ueulg2gmc",
-						Receiver: "canto1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
+						Receiver: "basechain1x2w87cvt5mqjncav4lxy8yfreynn273xrrp06v",
 						Amount:   "10000",
 					},
 				),

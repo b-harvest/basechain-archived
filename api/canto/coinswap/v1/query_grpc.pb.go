@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: canto/coinswap/v1/query.proto
+// source: basechain/coinswap/v1/query.proto
 
 package coinswapv1
 
@@ -19,9 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Query_Params_FullMethodName         = "/canto.coinswap.v1.Query/Params"
-	Query_LiquidityPool_FullMethodName  = "/canto.coinswap.v1.Query/LiquidityPool"
-	Query_LiquidityPools_FullMethodName = "/canto.coinswap.v1.Query/LiquidityPools"
+	Query_Params_FullMethodName         = "/basechain.coinswap.v1.Query/Params"
+	Query_LiquidityPool_FullMethodName  = "/basechain.coinswap.v1.Query/LiquidityPool"
+	Query_LiquidityPools_FullMethodName = "/basechain.coinswap.v1.Query/LiquidityPools"
 )
 
 // QueryClient is the client API for Query service.
@@ -170,7 +170,7 @@ func _Query_LiquidityPools_Handler(srv interface{}, ctx context.Context, dec fun
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Query_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "canto.coinswap.v1.Query",
+	ServiceName: "basechain.coinswap.v1.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -187,5 +187,5 @@ var Query_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "canto/coinswap/v1/query.proto",
+	Metadata: "basechain/coinswap/v1/query.proto",
 }

@@ -1,11 +1,11 @@
 syntax = "proto3";
-package canto.coinswap.v1;
+package basechain.coinswap.v1;
 
 import "cosmos/base/v1beta1/coin.proto";
 import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
 import "cosmos/base/query/v1beta1/pagination.proto";
-import "canto/coinswap/v1/coinswap.proto";
+import "basechain/coinswap/v1/coinswap.proto";
 
 option go_package = "github.com/Canto-Network/Canto/v7/x/coinswap/types";
 
@@ -13,20 +13,20 @@ option go_package = "github.com/Canto-Network/Canto/v7/x/coinswap/types";
 service Query {
   // Params returns parameters of the module.
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
-    option (google.api.http).get = "/canto/coinswap/params";
+    option (google.api.http).get = "/basechain/coinswap/params";
   }
 
   // LiquidityPool returns the liquidity pool for the provided
   // lpt_denom
   rpc LiquidityPool(QueryLiquidityPoolRequest)
       returns (QueryLiquidityPoolResponse) {
-    option (google.api.http).get = "/canto/coinswap/pools/{lpt_denom}";
+    option (google.api.http).get = "/basechain/coinswap/pools/{lpt_denom}";
   }
 
   // LiquidityPools returns all the liquidity pools available
   rpc LiquidityPools(QueryLiquidityPoolsRequest)
       returns (QueryLiquidityPoolsResponse) {
-    option (google.api.http).get = "/canto/coinswap/pools";
+    option (google.api.http).get = "/basechain/coinswap/pools";
   }
 }
 

@@ -1,5 +1,5 @@
 syntax = "proto3";
-package canto.govshuttle.v1;
+package basechain.govshuttle.v1;
 
 import "gogoproto/gogo.proto";
 import "cosmos_proto/cosmos.proto";
@@ -51,7 +51,7 @@ message TreasuryProposalMetadata {
 
   uint64 amount = 3;
 
-  string denom = 4; // canto or note
+  string denom = 4; // basechain or note
 }
 
 message LendingMarketMetadata {

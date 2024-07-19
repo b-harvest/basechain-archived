@@ -1,8 +1,8 @@
 syntax = "proto3";
-package canto.coinswap.v1;
+package basechain.coinswap.v1;
 
 import "gogoproto/gogo.proto";
-import "canto/coinswap/v1/coinswap.proto";
+import "basechain/coinswap/v1/coinswap.proto";
 
 option go_package = "github.com/Canto-Network/Canto/v7/x/coinswap/types";
 

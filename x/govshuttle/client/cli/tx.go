@@ -57,7 +57,7 @@ Where metadata.json contains (example):
 {
 	"Account": ["address_1", "address_2"],
 	"PropId":  1,
-	"values": ["canto", "osmo"],
+	"values": ["basechain", "osmo"],
 	"calldatas": ["calldata1", "calldata2"],
 	"signatures": ["func1", "func2"]
 }`, version.AppName,
@@ -124,7 +124,7 @@ Where metadata.json contains (example):
 	"recipient": "0xfffffff...",
 	"PropID":  1,
 	"amount": 1,
-	"denom": "canto/note"
+	"denom": "basechain/note"
 }`, version.AppName,
 		),
 		RunE: func(cmd *cobra.Command, args []string) error {

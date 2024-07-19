@@ -36,7 +36,7 @@ import (
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	cantoconfig "github.com/Canto-Network/Canto/v7/cmd/config"
+	basechainconfig "github.com/Canto-Network/Canto/v7/cmd/config"
 	epochstypes "github.com/Canto-Network/Canto/v7/x/epochs/types"
 )
 
@@ -88,27 +88,27 @@ func TestFullAppSimulation(t *testing.T) {
 	appOptions := make(simtestutil.AppOptionsMap, 0)
 	appOptions[flags.FlagHome] = DefaultNodeHome
 	appOptions[server.FlagInvCheckPeriod] = simcli.FlagPeriodValue
-	appOptions[flags.FlagChainID] = "canto_9000-1"
+	appOptions[flags.FlagChainID] = "basechain_9000-1"
 
 	// TODO: shadowed
-	cantoApp := NewCanto(logger, db, nil, true, map[int64]bool{}, DefaultNodeHome, simcli.FlagPeriodValue, true, appOptions, fauxMerkleModeOpt, baseapp.SetChainID(types.TestnetChainID+"-1"))
-	require.Equal(t, cantoconfig.AppName, cantoApp.Name())
+	basechainApp := NewCanto(logger, db, nil, true, map[int64]bool{}, DefaultNodeHome, simcli.FlagPeriodValue, true, appOptions, fauxMerkleModeOpt, baseapp.SetChainID(types.TestnetChainID+"-1"))
+	require.Equal(t, basechainconfig.AppName, basechainApp.Name())
 
 	// run randomized simulation
 	_, simParams, simErr := simulation.SimulateFromSeed(
 		t,
 		os.Stdout,
-		cantoApp.BaseApp,
-		AppStateFn(cantoApp.AppCodec(), cantoApp.SimulationManager()),
+		basechainApp.BaseApp,
+		AppStateFn(basechainApp.AppCodec(), basechainApp.SimulationManager()),
 		RandomAccounts, // replace with own random account function if using keys other than secp256k1
-		simtestutil.SimulationOperations(cantoApp, cantoApp.AppCodec(), config),
-		cantoApp.ModuleAccountAddrs(),
+		simtestutil.SimulationOperations(basechainApp, basechainApp.AppCodec(), config),
+		basechainApp.ModuleAccountAddrs(),
 		config,
-		cantoApp.AppCodec(),
+		basechainApp.AppCodec(),
 	)
 
 	// export state and simParams before the simulation error is checked
-	err = simtestutil.CheckExportSimulation(cantoApp, config, simParams)
+	err = simtestutil.CheckExportSimulation(basechainApp, config, simParams)
 	require.NoError(t, err)
 	require.NoError(t, simErr)
 
@@ -139,7 +139,7 @@ func TestAppImportExport(t *testing.T) {
 	sdk.DefaultPowerReduction = sdkmath.NewIntFromUint64(1000000)
 
 	app := NewCanto(logger, db, nil, true, map[int64]bool{}, DefaultNodeHome, simcli.FlagPeriodValue, true, appOptions, fauxMerkleModeOpt, baseapp.SetChainID(types.TestnetChainID+"-1"))
-	require.Equal(t, cantoconfig.AppName, app.Name())
+	require.Equal(t, basechainconfig.AppName, app.Name())
 
 	// run randomized simulation
 	_, simParams, simErr := simulation.SimulateFromSeed(
@@ -179,7 +179,7 @@ func TestAppImportExport(t *testing.T) {
 	}()
 
 	newApp := NewCanto(log.NewNopLogger(), newDB, nil, true, map[int64]bool{}, DefaultNodeHome, simcli.FlagPeriodValue, true, appOptions, fauxMerkleModeOpt, baseapp.SetChainID(types.TestnetChainID+"-1"))
-	require.Equal(t, cantoconfig.AppName, newApp.Name())
+	require.Equal(t, basechainconfig.AppName, newApp.Name())
 
 	var genesisState GenesisState
 	err = json.Unmarshal(exported.AppState, &genesisState)
@@ -275,7 +275,7 @@ func TestAppStateDeterminism(t *testing.T) {
 			appOptions.SetDefault(key, value)
 		}
 	}
-	appOptions.SetDefault(flags.FlagChainID, "canto_9000-1")
+	appOptions.SetDefault(flags.FlagChainID, "basechain_9000-1")
 	appOptions.SetDefault(flags.FlagHome, DefaultNodeHome)
 	appOptions.SetDefault(server.FlagInvCheckPeriod, simcli.FlagPeriodValue)
 	if simcli.FlagVerboseValue {
@@ -359,7 +359,7 @@ func TestAppSimulationAfterImport(t *testing.T) {
 	sdk.DefaultPowerReduction = sdkmath.NewIntFromUint64(1000000)
 
 	app := NewCanto(logger, db, nil, true, map[int64]bool{}, DefaultNodeHome, simcli.FlagPeriodValue, true, appOptions, fauxMerkleModeOpt, baseapp.SetChainID(types.TestnetChainID+"-1"))
-	require.Equal(t, cantoconfig.AppName, app.Name())
+	require.Equal(t, basechainconfig.AppName, app.Name())
 
 	// Run randomized simulation
 	stopEarly, simParams, simErr := simulation.SimulateFromSeed(
@@ -404,7 +404,7 @@ func TestAppSimulationAfterImport(t *testing.T) {
 	}()
 
 	newApp := NewCanto(log.NewNopLogger(), newDB, nil, true, map[int64]bool{}, DefaultNodeHome, simcli.FlagPeriodValue, true, appOptions, fauxMerkleModeOpt, baseapp.SetChainID(types.TestnetChainID+"-1"))
-	require.Equal(t, cantoconfig.AppName, newApp.Name())
+	require.Equal(t, basechainconfig.AppName, newApp.Name())
 
 	newApp.InitChain(&abci.RequestInitChain{
 		AppStateBytes: exported.AppState,

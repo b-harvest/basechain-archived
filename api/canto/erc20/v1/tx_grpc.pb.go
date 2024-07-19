@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: canto/erc20/v1/tx.proto
+// source: basechain/erc20/v1/tx.proto
 
 package erc20v1
 
@@ -19,12 +19,12 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Msg_ConvertCoin_FullMethodName                   = "/canto.erc20.v1.Msg/ConvertCoin"
-	Msg_ConvertERC20_FullMethodName                  = "/canto.erc20.v1.Msg/ConvertERC20"
-	Msg_UpdateParams_FullMethodName                  = "/canto.erc20.v1.Msg/UpdateParams"
-	Msg_RegisterCoinProposal_FullMethodName          = "/canto.erc20.v1.Msg/RegisterCoinProposal"
-	Msg_RegisterERC20Proposal_FullMethodName         = "/canto.erc20.v1.Msg/RegisterERC20Proposal"
-	Msg_ToggleTokenConversionProposal_FullMethodName = "/canto.erc20.v1.Msg/ToggleTokenConversionProposal"
+	Msg_ConvertCoin_FullMethodName                   = "/basechain.erc20.v1.Msg/ConvertCoin"
+	Msg_ConvertERC20_FullMethodName                  = "/basechain.erc20.v1.Msg/ConvertERC20"
+	Msg_UpdateParams_FullMethodName                  = "/basechain.erc20.v1.Msg/UpdateParams"
+	Msg_RegisterCoinProposal_FullMethodName          = "/basechain.erc20.v1.Msg/RegisterCoinProposal"
+	Msg_RegisterERC20Proposal_FullMethodName         = "/basechain.erc20.v1.Msg/RegisterERC20Proposal"
+	Msg_ToggleTokenConversionProposal_FullMethodName = "/basechain.erc20.v1.Msg/ToggleTokenConversionProposal"
 )
 
 // MsgClient is the client API for Msg service.
@@ -283,7 +283,7 @@ func _Msg_ToggleTokenConversionProposal_Handler(srv interface{}, ctx context.Con
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Msg_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "canto.erc20.v1.Msg",
+	ServiceName: "basechain.erc20.v1.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -312,5 +312,5 @@ var Msg_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "canto/erc20/v1/tx.proto",
+	Metadata: "basechain/erc20/v1/tx.proto",
 }

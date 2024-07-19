@@ -7,7 +7,7 @@ ARG KEY_NAME <add your keyname>
 ARG MONIKER <add your moniker>
 
 # add the network id
-ARG NETWORK_ID canto_9624-1
+ARG NETWORK_ID basechain_9624-1
 
 # arbitrary validator metadata
 ARG DETAILS <details as string>
@@ -23,29 +23,29 @@ RUN apt-get update &&\
 
 RUN snap install go --classic
 
-# builds out cantod
+# builds out basechaind
 RUN git clone https://github.com/Canto-Network/Canto-Testnet
-WORKDIR /Canto-Testnet/cmd/cantod
+WORKDIR /Canto-Testnet/cmd/basechaind
 RUN go install -tags ledger ./... &&\
-    mv $HOME/go/bin/cantod /usr/bin/
+    mv $HOME/go/bin/basechaind /usr/bin/
 
 # generate keys
-RUN cantod keys add $KEY_NAME
-    # cantod keys add $KEY_NAME --recover &&\
-    # cantod keys add $KEY_NAME --ledger 
+RUN basechaind keys add $KEY_NAME
+    # basechaind keys add $KEY_NAME --recover &&\
+    # basechaind keys add $KEY_NAME --ledger
 
 # initialize node
-RUN cantod init $MONIKER --chain-id canto_9624-1
+RUN basechaind init $MONIKER --chain-id basechain_9624-1
 
 # get genesis file
-RUN wget https://github.com/Canto-Network/Canto-Testnet-v2/raw/main/genesis.json -P $HOME/.cantod/config/
-RUN sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "0.0001acanto"/g' $HOME/.cantod/config/app.toml
-RUN wget https://github.com/Canto-Network/Canto-Testnet-v2/raw/main/Docker/cantod.service -P $HOME/systemd/system/
+RUN wget https://github.com/Canto-Network/Canto-Testnet-v2/raw/main/genesis.json -P $HOME/.basechaind/config/
+RUN sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "0.0001abasechain"/g' $HOME/.basechaind/config/app.toml
+RUN wget https://github.com/Canto-Network/Canto-Testnet-v2/raw/main/Docker/basechaind.service -P $HOME/systemd/system/
 
-# run cantod
-WORKDIR /Canto-Testnet/cmd/cantod
+# run basechaind
+WORKDIR /Canto-Testnet/cmd/basechaind
 RUN sudo systemctl daemon-reload &&\
-    sudo systemctl enable cantod.service &&\
-    systemctl start cantod && journalctl -u cantod -f
+    sudo systemctl enable basechaind.service &&\
+    systemctl start basechaind && journalctl -u basechaind -f
 
 ENTRYPOINT ["/bin/bash"]

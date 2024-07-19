@@ -1,10 +1,10 @@
 swagger: '2.0'
 info:
-  title: canto Chain - gRPC Gateway docs
+  title: basechain Chain - gRPC Gateway docs
   description: A REST interface for state queries and transactions
   version: 1.0.0
 paths:
-  /canto/epochs/v1/current_epoch:
+  /basechain/epochs/v1/current_epoch:
     get:
       summary: CurrentEpoch provide current epoch of specified identifier
       operationId: CurrentEpoch
@@ -46,7 +46,7 @@ paths:
           type: string
       tags:
         - Query
-  /canto/epochs/v1/epochs:
+  /basechain/epochs/v1/epochs:
     get:
       summary: EpochInfos provide running epochInfos
       operationId: EpochInfos
@@ -188,7 +188,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /canto/erc20/v1/params:
+  /basechain/erc20/v1/params:
     get:
       summary: Params retrieves the erc20 module params
       operationId: ERC20Params
@@ -244,7 +244,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /canto/erc20/v1/token_pairs:
+  /basechain/erc20/v1/token_pairs:
     get:
       summary: TokenPairs retrieves registered token pairs
       operationId: TokenPairs
@@ -393,7 +393,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /canto/erc20/v1/token_pairs/{token}:
+  /basechain/erc20/v1/token_pairs/{token}:
     get:
       summary: TokenPair retrieves a registered token pair
       operationId: TokenPair
@@ -474,7 +474,7 @@ paths:
           type: string
       tags:
         - Query
-  /canto/inflation/v1/circulating_supply:
+  /basechain/inflation/v1/circulating_supply:
     get:
       summary: |-
         CirculatingSupply retrieves the total number of tokens that are in
@@ -530,7 +530,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /canto/inflation/v1/epoch_mint_provision:
+  /basechain/inflation/v1/epoch_mint_provision:
     get:
       summary: EpochMintProvision retrieves current minting epoch provision value.
       operationId: EpochMintProvision
@@ -577,7 +577,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /canto/inflation/v1/inflation_rate:
+  /basechain/inflation/v1/inflation_rate:
     get:
       summary: InflationRate retrieves the inflation rate of the current period.
       operationId: InflationRate
@@ -619,7 +619,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /canto/inflation/v1/params:
+  /basechain/inflation/v1/params:
     get:
       summary: Params retrieves the total set of minting parameters.
       operationId: InflationParams
@@ -717,7 +717,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /canto/inflation/v1/period:
+  /basechain/inflation/v1/period:
     get:
       summary: Period retrieves current period.
       operationId: Period
@@ -758,7 +758,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /canto/inflation/v1/skipped_epochs:
+  /basechain/inflation/v1/skipped_epochs:
     get:
       summary: SkippedEpochs retrieves the total number of skipped epochs.
       operationId: SkippedEpochs
@@ -4388,7 +4388,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /canto/onboarding/v1/params:
+  /basechain/onboarding/v1/params:
     get:
       summary: Params retrieves the total set of onboarding parameters.
       operationId: OnboardingParams
@@ -4439,7 +4439,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /canto/coinswap/params:
+  /basechain/coinswap/params:
     get:
       summary: Params returns parameters of the module.
       operationId: CoinswapParams
@@ -4518,7 +4518,7 @@ paths:
                       format: byte
       tags:
         - Query
-  /canto/coinswap/pools:
+  /basechain/coinswap/pools:
     get:
       summary: LiquidityPools returns all the liquidity pools available
       operationId: LiquidityPools
@@ -4703,7 +4703,7 @@ paths:
           type: boolean
       tags:
         - Query
-  /canto/coinswap/pools/{lpt_denom}:
+  /basechain/coinswap/pools/{lpt_denom}:
     get:
       summary: |-
         LiquidityPool returns the liquidity pool for the provided
@@ -41785,7 +41785,7 @@ paths:
       tags:
         - Service
 definitions:
-  canto.epochs.v1.EpochInfo:
+  basechain.epochs.v1.EpochInfo:
     type: object
     properties:
       identifier:
@@ -41806,13 +41806,13 @@ definitions:
       current_epoch_start_height:
         type: string
         format: int64
-  canto.epochs.v1.QueryCurrentEpochResponse:
+  basechain.epochs.v1.QueryCurrentEpochResponse:
     type: object
     properties:
       current_epoch:
         type: string
         format: int64
-  canto.epochs.v1.QueryEpochsInfoResponse:
+  basechain.epochs.v1.QueryEpochsInfoResponse:
     type: object
     properties:
       epochs:
@@ -42280,7 +42280,7 @@ definitions:
                   "@type": "type.googleapis.com/google.protobuf.Duration",
                   "value": "1.212s"
                 }
-  canto.erc20.v1.Owner:
+  basechain.erc20.v1.Owner:
     type: string
     enum:
       - OWNER_UNSPECIFIED
@@ -42293,7 +42293,7 @@ definitions:
        - OWNER_UNSPECIFIED: OWNER_UNSPECIFIED defines an invalid/undefined owner.
        - OWNER_MODULE: OWNER_MODULE erc20 is owned by the erc20 module account.
        - OWNER_EXTERNAL: EXTERNAL erc20 is owned by an external account.
-  canto.erc20.v1.Params:
+  basechain.erc20.v1.Params:
     type: object
     properties:
       enable_erc20:
@@ -42309,7 +42309,7 @@ definitions:
 
           ModuleAddress Ethereum address.
     title: Params defines the erc20 module params
-  canto.erc20.v1.QueryParamsResponse:
+  basechain.erc20.v1.QueryParamsResponse:
     type: object
     properties:
       params:
@@ -42333,7 +42333,7 @@ definitions:
     description: |-
       QueryParamsResponse is the response type for the Query/Params RPC
       method.
-  canto.erc20.v1.QueryTokenPairResponse:
+  basechain.erc20.v1.QueryTokenPairResponse:
     type: object
     properties:
       token_pair:
@@ -42371,7 +42371,7 @@ definitions:
     description: |-
       QueryTokenPairResponse is the response type for the Query/TokenPair RPC
       method.
-  canto.erc20.v1.QueryTokenPairsResponse:
+  basechain.erc20.v1.QueryTokenPairsResponse:
     type: object
     properties:
       token_pairs:
@@ -42430,7 +42430,7 @@ definitions:
     description: |-
       QueryTokenPairsResponse is the response type for the Query/TokenPairs RPC
       method.
-  canto.erc20.v1.TokenPair:
+  basechain.erc20.v1.TokenPair:
     type: object
     properties:
       erc20_address:
@@ -42462,7 +42462,7 @@ definitions:
       TokenPair defines an instance that records a pairing consisting of a
       native
        Cosmos Coin and an ERC20 token address.
-  canto.inflation.v1.ExponentialCalculation:
+  basechain.inflation.v1.ExponentialCalculation:
     type: object
     properties:
       a:
@@ -42491,7 +42491,7 @@ definitions:
       bondedRatio *
 
       (max_variance / bonding_target))
-  canto.inflation.v1.InflationDistribution:
+  basechain.inflation.v1.InflationDistribution:
     type: object
     properties:
       staking_rewards:
@@ -42535,7 +42535,7 @@ definitions:
       mintDistribution1 = distribution1 / (1 - teamVestingDistribution)
 
       0.5333333         = 40%           / (1 - 25%)
-  canto.inflation.v1.Params:
+  basechain.inflation.v1.Params:
     type: object
     properties:
       mint_denom:
@@ -42594,7 +42594,7 @@ definitions:
         type: boolean
         title: parameter to enable inflation and halt increasing the skipped_epochs
     description: Params holds parameters for the inflation module.
-  canto.inflation.v1.QueryCirculatingSupplyResponse:
+  basechain.inflation.v1.QueryCirculatingSupplyResponse:
     type: object
     properties:
       circulating_supply:
@@ -42613,7 +42613,7 @@ definitions:
     description: |-
       QueryCirculatingSupplyResponse is the response type for the
       Query/CirculatingSupply RPC method.
-  canto.inflation.v1.QueryEpochMintProvisionResponse:
+  basechain.inflation.v1.QueryEpochMintProvisionResponse:
     type: object
     properties:
       epoch_mint_provision:
@@ -42627,7 +42627,7 @@ definitions:
     description: |-
       QueryEpochMintProvisionResponse is the response type for the
       Query/EpochMintProvision RPC method.
-  canto.inflation.v1.QueryInflationRateResponse:
+  basechain.inflation.v1.QueryInflationRateResponse:
     type: object
     properties:
       inflation_rate:
@@ -42638,7 +42638,7 @@ definitions:
       Query/InflationRate
 
       RPC method.
-  canto.inflation.v1.QueryParamsResponse:
+  basechain.inflation.v1.QueryParamsResponse:
     type: object
     properties:
       params:
@@ -42703,7 +42703,7 @@ definitions:
               parameter to enable inflation and halt increasing the
               skipped_epochs
     description: QueryParamsResponse is the response type for the Query/Params RPC method.
-  canto.inflation.v1.QueryPeriodResponse:
+  basechain.inflation.v1.QueryPeriodResponse:
     type: object
     properties:
       period:
@@ -42711,7 +42711,7 @@ definitions:
         format: uint64
         description: period is the current minting per epoch provision value.
     description: QueryPeriodResponse is the response type for the Query/Period RPC method.
-  canto.inflation.v1.QuerySkippedEpochsResponse:
+  basechain.inflation.v1.QuerySkippedEpochsResponse:
     type: object
     properties:
       skipped_epochs:
@@ -43782,7 +43782,7 @@ definitions:
     description: >-
       QueryParamsResponse defines the response type for querying x/evm
       parameters.
-  canto.onboarding.v1.Params:
+  basechain.onboarding.v1.Params:
     type: object
     properties:
       enable_onboarding:
@@ -43795,7 +43795,7 @@ definitions:
         items:
           type: string
     title: Params holds parameters for the onboarding module
-  canto.onboarding.v1.QueryParamsResponse:
+  basechain.onboarding.v1.QueryParamsResponse:
     type: object
     properties:
       params:
@@ -43813,7 +43813,7 @@ definitions:
               type: string
         title: Params holds parameters for the onboarding module
     description: QueryParamsResponse is the response type for the Query/Params RPC method.
-  canto.coinswap.v1.Params:
+  basechain.coinswap.v1.Params:
     type: object
     properties:
       fee:
@@ -43849,7 +43849,7 @@ definitions:
             NOTE: The amount field is an Int which implements the custom method
             signatures required by gogoproto.
     title: Params defines token module's parameters
-  canto.coinswap.v1.PoolInfo:
+  basechain.coinswap.v1.PoolInfo:
     type: object
     properties:
       id:
@@ -43899,7 +43899,7 @@ definitions:
       fee:
         type: string
         title: liquidity pool fee
-  canto.coinswap.v1.QueryLiquidityPoolResponse:
+  basechain.coinswap.v1.QueryLiquidityPoolResponse:
     type: object
     properties:
       pool:
@@ -43966,7 +43966,7 @@ definitions:
       RPC
 
       method
-  canto.coinswap.v1.QueryLiquidityPoolsResponse:
+  basechain.coinswap.v1.QueryLiquidityPoolsResponse:
     type: object
     properties:
       pools:
@@ -44061,7 +44061,7 @@ definitions:
       RPC
 
       method
-  canto.coinswap.v1.QueryParamsResponse:
+  basechain.coinswap.v1.QueryParamsResponse:
     type: object
     properties:
       params:

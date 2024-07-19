@@ -1,5 +1,5 @@
 syntax = "proto3";
-package canto.csr.v1;
+package basechain.csr.v1;
 
 import "gogoproto/gogo.proto";
 import "cosmos_proto/cosmos.proto";
@@ -9,7 +9,7 @@ option go_package = "github.com/Canto-Network/Canto/v7/x/csr/types";
 
 // Params holds parameters for the csr module
 message Params {
-  option (amino.name) = "canto/x/csr/Params";
+  option (amino.name) = "basechain/x/csr/Params";
 
   // boolean to enable the csr module
   bool enable_csr = 1;

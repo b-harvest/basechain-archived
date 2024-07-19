@@ -17,7 +17,7 @@ code .
 
 ## Branching & Releases
 
-* Each major version of canto should change the module path in go.mod.  
+* Each major version of basechain should change the module path in go.mod.  
 * branches should be created for each non-state-breaking release, eg release/v5.0.x
 
 ### Pull Request Templates

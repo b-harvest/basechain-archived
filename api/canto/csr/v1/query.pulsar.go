@@ -20,8 +20,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_query_proto_init()
-	md_QueryParamsRequest = File_canto_csr_v1_query_proto.Messages().ByName("QueryParamsRequest")
+	file_basechain_csr_v1_query_proto_init()
+	md_QueryParamsRequest = File_basechain_csr_v1_query_proto.Messages().ByName("QueryParamsRequest")
 }
 
 var _ protoreflect.Message = (*fastReflection_QueryParamsRequest)(nil)
@@ -33,7 +33,7 @@ func (x *QueryParamsRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryParamsRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_query_proto_msgTypes[0]
+	mi := &file_basechain_csr_v1_query_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -106,9 +106,9 @@ func (x *fastReflection_QueryParamsRequest) Has(fd protoreflect.FieldDescriptor)
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -122,9 +122,9 @@ func (x *fastReflection_QueryParamsRequest) Clear(fd protoreflect.FieldDescripto
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -138,9 +138,9 @@ func (x *fastReflection_QueryParamsRequest) Get(descriptor protoreflect.FieldDes
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -158,9 +158,9 @@ func (x *fastReflection_QueryParamsRequest) Set(fd protoreflect.FieldDescriptor,
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -178,9 +178,9 @@ func (x *fastReflection_QueryParamsRequest) Mutable(fd protoreflect.FieldDescrip
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -191,9 +191,9 @@ func (x *fastReflection_QueryParamsRequest) NewField(fd protoreflect.FieldDescri
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -203,7 +203,7 @@ func (x *fastReflection_QueryParamsRequest) NewField(fd protoreflect.FieldDescri
 func (x *fastReflection_QueryParamsRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.QueryParamsRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.QueryParamsRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -377,8 +377,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_query_proto_init()
-	md_QueryParamsResponse = File_canto_csr_v1_query_proto.Messages().ByName("QueryParamsResponse")
+	file_basechain_csr_v1_query_proto_init()
+	md_QueryParamsResponse = File_basechain_csr_v1_query_proto.Messages().ByName("QueryParamsResponse")
 	fd_QueryParamsResponse_params = md_QueryParamsResponse.Fields().ByName("params")
 }
 
@@ -391,7 +391,7 @@ func (x *QueryParamsResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryParamsResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_query_proto_msgTypes[1]
+	mi := &file_basechain_csr_v1_query_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -468,13 +468,13 @@ func (x *fastReflection_QueryParamsResponse) Range(f func(protoreflect.FieldDesc
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryParamsResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryParamsResponse.params":
+	case "basechain.csr.v1.QueryParamsResponse.params":
 		return x.Params != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -486,13 +486,13 @@ func (x *fastReflection_QueryParamsResponse) Has(fd protoreflect.FieldDescriptor
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryParamsResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryParamsResponse.params":
+	case "basechain.csr.v1.QueryParamsResponse.params":
 		x.Params = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -504,14 +504,14 @@ func (x *fastReflection_QueryParamsResponse) Clear(fd protoreflect.FieldDescript
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryParamsResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.csr.v1.QueryParamsResponse.params":
+	case "basechain.csr.v1.QueryParamsResponse.params":
 		value := x.Params
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -527,13 +527,13 @@ func (x *fastReflection_QueryParamsResponse) Get(descriptor protoreflect.FieldDe
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryParamsResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryParamsResponse.params":
+	case "basechain.csr.v1.QueryParamsResponse.params":
 		x.Params = value.Message().Interface().(*Params)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -549,16 +549,16 @@ func (x *fastReflection_QueryParamsResponse) Set(fd protoreflect.FieldDescriptor
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryParamsResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryParamsResponse.params":
+	case "basechain.csr.v1.QueryParamsResponse.params":
 		if x.Params == nil {
 			x.Params = new(Params)
 		}
 		return protoreflect.ValueOfMessage(x.Params.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -567,14 +567,14 @@ func (x *fastReflection_QueryParamsResponse) Mutable(fd protoreflect.FieldDescri
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryParamsResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryParamsResponse.params":
+	case "basechain.csr.v1.QueryParamsResponse.params":
 		m := new(Params)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -584,7 +584,7 @@ func (x *fastReflection_QueryParamsResponse) NewField(fd protoreflect.FieldDescr
 func (x *fastReflection_QueryParamsResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.QueryParamsResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.QueryParamsResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -812,8 +812,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_query_proto_init()
-	md_QueryCSRsRequest = File_canto_csr_v1_query_proto.Messages().ByName("QueryCSRsRequest")
+	file_basechain_csr_v1_query_proto_init()
+	md_QueryCSRsRequest = File_basechain_csr_v1_query_proto.Messages().ByName("QueryCSRsRequest")
 	fd_QueryCSRsRequest_pagination = md_QueryCSRsRequest.Fields().ByName("pagination")
 }
 
@@ -826,7 +826,7 @@ func (x *QueryCSRsRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryCSRsRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_query_proto_msgTypes[2]
+	mi := &file_basechain_csr_v1_query_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -903,13 +903,13 @@ func (x *fastReflection_QueryCSRsRequest) Range(f func(protoreflect.FieldDescrip
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryCSRsRequest) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRsRequest.pagination":
+	case "basechain.csr.v1.QueryCSRsRequest.pagination":
 		return x.Pagination != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -921,13 +921,13 @@ func (x *fastReflection_QueryCSRsRequest) Has(fd protoreflect.FieldDescriptor) b
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRsRequest) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRsRequest.pagination":
+	case "basechain.csr.v1.QueryCSRsRequest.pagination":
 		x.Pagination = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -939,14 +939,14 @@ func (x *fastReflection_QueryCSRsRequest) Clear(fd protoreflect.FieldDescriptor)
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryCSRsRequest) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.csr.v1.QueryCSRsRequest.pagination":
+	case "basechain.csr.v1.QueryCSRsRequest.pagination":
 		value := x.Pagination
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -962,13 +962,13 @@ func (x *fastReflection_QueryCSRsRequest) Get(descriptor protoreflect.FieldDescr
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRsRequest) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRsRequest.pagination":
+	case "basechain.csr.v1.QueryCSRsRequest.pagination":
 		x.Pagination = value.Message().Interface().(*v1beta1.PageRequest)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -984,16 +984,16 @@ func (x *fastReflection_QueryCSRsRequest) Set(fd protoreflect.FieldDescriptor, v
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRsRequest) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRsRequest.pagination":
+	case "basechain.csr.v1.QueryCSRsRequest.pagination":
 		if x.Pagination == nil {
 			x.Pagination = new(v1beta1.PageRequest)
 		}
 		return protoreflect.ValueOfMessage(x.Pagination.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1002,14 +1002,14 @@ func (x *fastReflection_QueryCSRsRequest) Mutable(fd protoreflect.FieldDescripto
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryCSRsRequest) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRsRequest.pagination":
+	case "basechain.csr.v1.QueryCSRsRequest.pagination":
 		m := new(v1beta1.PageRequest)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1019,7 +1019,7 @@ func (x *fastReflection_QueryCSRsRequest) NewField(fd protoreflect.FieldDescript
 func (x *fastReflection_QueryCSRsRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.QueryCSRsRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.QueryCSRsRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1299,8 +1299,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_query_proto_init()
-	md_QueryCSRsResponse = File_canto_csr_v1_query_proto.Messages().ByName("QueryCSRsResponse")
+	file_basechain_csr_v1_query_proto_init()
+	md_QueryCSRsResponse = File_basechain_csr_v1_query_proto.Messages().ByName("QueryCSRsResponse")
 	fd_QueryCSRsResponse_csrs = md_QueryCSRsResponse.Fields().ByName("csrs")
 	fd_QueryCSRsResponse_pagination = md_QueryCSRsResponse.Fields().ByName("pagination")
 }
@@ -1314,7 +1314,7 @@ func (x *QueryCSRsResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryCSRsResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_query_proto_msgTypes[3]
+	mi := &file_basechain_csr_v1_query_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1397,15 +1397,15 @@ func (x *fastReflection_QueryCSRsResponse) Range(f func(protoreflect.FieldDescri
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryCSRsResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRsResponse.csrs":
+	case "basechain.csr.v1.QueryCSRsResponse.csrs":
 		return len(x.Csrs) != 0
-	case "canto.csr.v1.QueryCSRsResponse.pagination":
+	case "basechain.csr.v1.QueryCSRsResponse.pagination":
 		return x.Pagination != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1417,15 +1417,15 @@ func (x *fastReflection_QueryCSRsResponse) Has(fd protoreflect.FieldDescriptor) 
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRsResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRsResponse.csrs":
+	case "basechain.csr.v1.QueryCSRsResponse.csrs":
 		x.Csrs = nil
-	case "canto.csr.v1.QueryCSRsResponse.pagination":
+	case "basechain.csr.v1.QueryCSRsResponse.pagination":
 		x.Pagination = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1437,20 +1437,20 @@ func (x *fastReflection_QueryCSRsResponse) Clear(fd protoreflect.FieldDescriptor
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryCSRsResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.csr.v1.QueryCSRsResponse.csrs":
+	case "basechain.csr.v1.QueryCSRsResponse.csrs":
 		if len(x.Csrs) == 0 {
 			return protoreflect.ValueOfList(&_QueryCSRsResponse_1_list{})
 		}
 		listValue := &_QueryCSRsResponse_1_list{list: &x.Csrs}
 		return protoreflect.ValueOfList(listValue)
-	case "canto.csr.v1.QueryCSRsResponse.pagination":
+	case "basechain.csr.v1.QueryCSRsResponse.pagination":
 		value := x.Pagination
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1466,17 +1466,17 @@ func (x *fastReflection_QueryCSRsResponse) Get(descriptor protoreflect.FieldDesc
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRsResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRsResponse.csrs":
+	case "basechain.csr.v1.QueryCSRsResponse.csrs":
 		lv := value.List()
 		clv := lv.(*_QueryCSRsResponse_1_list)
 		x.Csrs = *clv.list
-	case "canto.csr.v1.QueryCSRsResponse.pagination":
+	case "basechain.csr.v1.QueryCSRsResponse.pagination":
 		x.Pagination = value.Message().Interface().(*v1beta1.PageResponse)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1492,22 +1492,22 @@ func (x *fastReflection_QueryCSRsResponse) Set(fd protoreflect.FieldDescriptor, 
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRsResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRsResponse.csrs":
+	case "basechain.csr.v1.QueryCSRsResponse.csrs":
 		if x.Csrs == nil {
 			x.Csrs = []*CSR{}
 		}
 		value := &_QueryCSRsResponse_1_list{list: &x.Csrs}
 		return protoreflect.ValueOfList(value)
-	case "canto.csr.v1.QueryCSRsResponse.pagination":
+	case "basechain.csr.v1.QueryCSRsResponse.pagination":
 		if x.Pagination == nil {
 			x.Pagination = new(v1beta1.PageResponse)
 		}
 		return protoreflect.ValueOfMessage(x.Pagination.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1516,17 +1516,17 @@ func (x *fastReflection_QueryCSRsResponse) Mutable(fd protoreflect.FieldDescript
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryCSRsResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRsResponse.csrs":
+	case "basechain.csr.v1.QueryCSRsResponse.csrs":
 		list := []*CSR{}
 		return protoreflect.ValueOfList(&_QueryCSRsResponse_1_list{list: &list})
-	case "canto.csr.v1.QueryCSRsResponse.pagination":
+	case "basechain.csr.v1.QueryCSRsResponse.pagination":
 		m := new(v1beta1.PageResponse)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRsResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1536,7 +1536,7 @@ func (x *fastReflection_QueryCSRsResponse) NewField(fd protoreflect.FieldDescrip
 func (x *fastReflection_QueryCSRsResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.QueryCSRsResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.QueryCSRsResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1820,8 +1820,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_query_proto_init()
-	md_QueryCSRByNFTRequest = File_canto_csr_v1_query_proto.Messages().ByName("QueryCSRByNFTRequest")
+	file_basechain_csr_v1_query_proto_init()
+	md_QueryCSRByNFTRequest = File_basechain_csr_v1_query_proto.Messages().ByName("QueryCSRByNFTRequest")
 	fd_QueryCSRByNFTRequest_nftId = md_QueryCSRByNFTRequest.Fields().ByName("nftId")
 }
 
@@ -1834,7 +1834,7 @@ func (x *QueryCSRByNFTRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryCSRByNFTRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_query_proto_msgTypes[4]
+	mi := &file_basechain_csr_v1_query_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1911,13 +1911,13 @@ func (x *fastReflection_QueryCSRByNFTRequest) Range(f func(protoreflect.FieldDes
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryCSRByNFTRequest) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTRequest.nftId":
+	case "basechain.csr.v1.QueryCSRByNFTRequest.nftId":
 		return x.NftId != uint64(0)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1929,13 +1929,13 @@ func (x *fastReflection_QueryCSRByNFTRequest) Has(fd protoreflect.FieldDescripto
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByNFTRequest) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTRequest.nftId":
+	case "basechain.csr.v1.QueryCSRByNFTRequest.nftId":
 		x.NftId = uint64(0)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1947,14 +1947,14 @@ func (x *fastReflection_QueryCSRByNFTRequest) Clear(fd protoreflect.FieldDescrip
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryCSRByNFTRequest) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTRequest.nftId":
+	case "basechain.csr.v1.QueryCSRByNFTRequest.nftId":
 		value := x.NftId
 		return protoreflect.ValueOfUint64(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1970,13 +1970,13 @@ func (x *fastReflection_QueryCSRByNFTRequest) Get(descriptor protoreflect.FieldD
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByNFTRequest) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTRequest.nftId":
+	case "basechain.csr.v1.QueryCSRByNFTRequest.nftId":
 		x.NftId = value.Uint()
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1992,13 +1992,13 @@ func (x *fastReflection_QueryCSRByNFTRequest) Set(fd protoreflect.FieldDescripto
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByNFTRequest) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTRequest.nftId":
-		panic(fmt.Errorf("field nftId of message canto.csr.v1.QueryCSRByNFTRequest is not mutable"))
+	case "basechain.csr.v1.QueryCSRByNFTRequest.nftId":
+		panic(fmt.Errorf("field nftId of message basechain.csr.v1.QueryCSRByNFTRequest is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2007,13 +2007,13 @@ func (x *fastReflection_QueryCSRByNFTRequest) Mutable(fd protoreflect.FieldDescr
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryCSRByNFTRequest) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTRequest.nftId":
+	case "basechain.csr.v1.QueryCSRByNFTRequest.nftId":
 		return protoreflect.ValueOfUint64(uint64(0))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2023,7 +2023,7 @@ func (x *fastReflection_QueryCSRByNFTRequest) NewField(fd protoreflect.FieldDesc
 func (x *fastReflection_QueryCSRByNFTRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.QueryCSRByNFTRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.QueryCSRByNFTRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -2224,8 +2224,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_query_proto_init()
-	md_QueryCSRByNFTResponse = File_canto_csr_v1_query_proto.Messages().ByName("QueryCSRByNFTResponse")
+	file_basechain_csr_v1_query_proto_init()
+	md_QueryCSRByNFTResponse = File_basechain_csr_v1_query_proto.Messages().ByName("QueryCSRByNFTResponse")
 	fd_QueryCSRByNFTResponse_csr = md_QueryCSRByNFTResponse.Fields().ByName("csr")
 }
 
@@ -2238,7 +2238,7 @@ func (x *QueryCSRByNFTResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryCSRByNFTResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_query_proto_msgTypes[5]
+	mi := &file_basechain_csr_v1_query_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2315,13 +2315,13 @@ func (x *fastReflection_QueryCSRByNFTResponse) Range(f func(protoreflect.FieldDe
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryCSRByNFTResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTResponse.csr":
+	case "basechain.csr.v1.QueryCSRByNFTResponse.csr":
 		return x.Csr != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2333,13 +2333,13 @@ func (x *fastReflection_QueryCSRByNFTResponse) Has(fd protoreflect.FieldDescript
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByNFTResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTResponse.csr":
+	case "basechain.csr.v1.QueryCSRByNFTResponse.csr":
 		x.Csr = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2351,14 +2351,14 @@ func (x *fastReflection_QueryCSRByNFTResponse) Clear(fd protoreflect.FieldDescri
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryCSRByNFTResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTResponse.csr":
+	case "basechain.csr.v1.QueryCSRByNFTResponse.csr":
 		value := x.Csr
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -2374,13 +2374,13 @@ func (x *fastReflection_QueryCSRByNFTResponse) Get(descriptor protoreflect.Field
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByNFTResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTResponse.csr":
+	case "basechain.csr.v1.QueryCSRByNFTResponse.csr":
 		x.Csr = value.Message().Interface().(*CSR)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2396,16 +2396,16 @@ func (x *fastReflection_QueryCSRByNFTResponse) Set(fd protoreflect.FieldDescript
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByNFTResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTResponse.csr":
+	case "basechain.csr.v1.QueryCSRByNFTResponse.csr":
 		if x.Csr == nil {
 			x.Csr = new(CSR)
 		}
 		return protoreflect.ValueOfMessage(x.Csr.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2414,14 +2414,14 @@ func (x *fastReflection_QueryCSRByNFTResponse) Mutable(fd protoreflect.FieldDesc
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryCSRByNFTResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByNFTResponse.csr":
+	case "basechain.csr.v1.QueryCSRByNFTResponse.csr":
 		m := new(CSR)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByNFTResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByNFTResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByNFTResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByNFTResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2431,7 +2431,7 @@ func (x *fastReflection_QueryCSRByNFTResponse) NewField(fd protoreflect.FieldDes
 func (x *fastReflection_QueryCSRByNFTResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.QueryCSRByNFTResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.QueryCSRByNFTResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -2659,8 +2659,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_query_proto_init()
-	md_QueryCSRByContractRequest = File_canto_csr_v1_query_proto.Messages().ByName("QueryCSRByContractRequest")
+	file_basechain_csr_v1_query_proto_init()
+	md_QueryCSRByContractRequest = File_basechain_csr_v1_query_proto.Messages().ByName("QueryCSRByContractRequest")
 	fd_QueryCSRByContractRequest_address = md_QueryCSRByContractRequest.Fields().ByName("address")
 }
 
@@ -2673,7 +2673,7 @@ func (x *QueryCSRByContractRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryCSRByContractRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_query_proto_msgTypes[6]
+	mi := &file_basechain_csr_v1_query_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2750,13 +2750,13 @@ func (x *fastReflection_QueryCSRByContractRequest) Range(f func(protoreflect.Fie
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryCSRByContractRequest) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByContractRequest.address":
+	case "basechain.csr.v1.QueryCSRByContractRequest.address":
 		return x.Address != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2768,13 +2768,13 @@ func (x *fastReflection_QueryCSRByContractRequest) Has(fd protoreflect.FieldDesc
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByContractRequest) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByContractRequest.address":
+	case "basechain.csr.v1.QueryCSRByContractRequest.address":
 		x.Address = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2786,14 +2786,14 @@ func (x *fastReflection_QueryCSRByContractRequest) Clear(fd protoreflect.FieldDe
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryCSRByContractRequest) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.csr.v1.QueryCSRByContractRequest.address":
+	case "basechain.csr.v1.QueryCSRByContractRequest.address":
 		value := x.Address
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -2809,13 +2809,13 @@ func (x *fastReflection_QueryCSRByContractRequest) Get(descriptor protoreflect.F
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByContractRequest) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByContractRequest.address":
+	case "basechain.csr.v1.QueryCSRByContractRequest.address":
 		x.Address = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2831,13 +2831,13 @@ func (x *fastReflection_QueryCSRByContractRequest) Set(fd protoreflect.FieldDesc
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByContractRequest) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByContractRequest.address":
-		panic(fmt.Errorf("field address of message canto.csr.v1.QueryCSRByContractRequest is not mutable"))
+	case "basechain.csr.v1.QueryCSRByContractRequest.address":
+		panic(fmt.Errorf("field address of message basechain.csr.v1.QueryCSRByContractRequest is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2846,13 +2846,13 @@ func (x *fastReflection_QueryCSRByContractRequest) Mutable(fd protoreflect.Field
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryCSRByContractRequest) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByContractRequest.address":
+	case "basechain.csr.v1.QueryCSRByContractRequest.address":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2862,7 +2862,7 @@ func (x *fastReflection_QueryCSRByContractRequest) NewField(fd protoreflect.Fiel
 func (x *fastReflection_QueryCSRByContractRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.QueryCSRByContractRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.QueryCSRByContractRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -3079,8 +3079,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_query_proto_init()
-	md_QueryCSRByContractResponse = File_canto_csr_v1_query_proto.Messages().ByName("QueryCSRByContractResponse")
+	file_basechain_csr_v1_query_proto_init()
+	md_QueryCSRByContractResponse = File_basechain_csr_v1_query_proto.Messages().ByName("QueryCSRByContractResponse")
 	fd_QueryCSRByContractResponse_csr = md_QueryCSRByContractResponse.Fields().ByName("csr")
 }
 
@@ -3093,7 +3093,7 @@ func (x *QueryCSRByContractResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryCSRByContractResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_query_proto_msgTypes[7]
+	mi := &file_basechain_csr_v1_query_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3170,13 +3170,13 @@ func (x *fastReflection_QueryCSRByContractResponse) Range(f func(protoreflect.Fi
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryCSRByContractResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByContractResponse.csr":
+	case "basechain.csr.v1.QueryCSRByContractResponse.csr":
 		return x.Csr != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3188,13 +3188,13 @@ func (x *fastReflection_QueryCSRByContractResponse) Has(fd protoreflect.FieldDes
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByContractResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByContractResponse.csr":
+	case "basechain.csr.v1.QueryCSRByContractResponse.csr":
 		x.Csr = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3206,14 +3206,14 @@ func (x *fastReflection_QueryCSRByContractResponse) Clear(fd protoreflect.FieldD
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryCSRByContractResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.csr.v1.QueryCSRByContractResponse.csr":
+	case "basechain.csr.v1.QueryCSRByContractResponse.csr":
 		value := x.Csr
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -3229,13 +3229,13 @@ func (x *fastReflection_QueryCSRByContractResponse) Get(descriptor protoreflect.
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByContractResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByContractResponse.csr":
+	case "basechain.csr.v1.QueryCSRByContractResponse.csr":
 		x.Csr = value.Message().Interface().(*CSR)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3251,16 +3251,16 @@ func (x *fastReflection_QueryCSRByContractResponse) Set(fd protoreflect.FieldDes
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryCSRByContractResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByContractResponse.csr":
+	case "basechain.csr.v1.QueryCSRByContractResponse.csr":
 		if x.Csr == nil {
 			x.Csr = new(CSR)
 		}
 		return protoreflect.ValueOfMessage(x.Csr.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3269,14 +3269,14 @@ func (x *fastReflection_QueryCSRByContractResponse) Mutable(fd protoreflect.Fiel
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryCSRByContractResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryCSRByContractResponse.csr":
+	case "basechain.csr.v1.QueryCSRByContractResponse.csr":
 		m := new(CSR)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryCSRByContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryCSRByContractResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryCSRByContractResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryCSRByContractResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3286,7 +3286,7 @@ func (x *fastReflection_QueryCSRByContractResponse) NewField(fd protoreflect.Fie
 func (x *fastReflection_QueryCSRByContractResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.QueryCSRByContractResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.QueryCSRByContractResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -3513,8 +3513,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_query_proto_init()
-	md_QueryTurnstileRequest = File_canto_csr_v1_query_proto.Messages().ByName("QueryTurnstileRequest")
+	file_basechain_csr_v1_query_proto_init()
+	md_QueryTurnstileRequest = File_basechain_csr_v1_query_proto.Messages().ByName("QueryTurnstileRequest")
 }
 
 var _ protoreflect.Message = (*fastReflection_QueryTurnstileRequest)(nil)
@@ -3526,7 +3526,7 @@ func (x *QueryTurnstileRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryTurnstileRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_query_proto_msgTypes[8]
+	mi := &file_basechain_csr_v1_query_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3599,9 +3599,9 @@ func (x *fastReflection_QueryTurnstileRequest) Has(fd protoreflect.FieldDescript
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3615,9 +3615,9 @@ func (x *fastReflection_QueryTurnstileRequest) Clear(fd protoreflect.FieldDescri
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3631,9 +3631,9 @@ func (x *fastReflection_QueryTurnstileRequest) Get(descriptor protoreflect.Field
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -3651,9 +3651,9 @@ func (x *fastReflection_QueryTurnstileRequest) Set(fd protoreflect.FieldDescript
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3671,9 +3671,9 @@ func (x *fastReflection_QueryTurnstileRequest) Mutable(fd protoreflect.FieldDesc
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3684,9 +3684,9 @@ func (x *fastReflection_QueryTurnstileRequest) NewField(fd protoreflect.FieldDes
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileRequest"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3696,7 +3696,7 @@ func (x *fastReflection_QueryTurnstileRequest) NewField(fd protoreflect.FieldDes
 func (x *fastReflection_QueryTurnstileRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.QueryTurnstileRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.QueryTurnstileRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -3870,8 +3870,8 @@ var (
 )
 
 func init() {
-	file_canto_csr_v1_query_proto_init()
-	md_QueryTurnstileResponse = File_canto_csr_v1_query_proto.Messages().ByName("QueryTurnstileResponse")
+	file_basechain_csr_v1_query_proto_init()
+	md_QueryTurnstileResponse = File_basechain_csr_v1_query_proto.Messages().ByName("QueryTurnstileResponse")
 	fd_QueryTurnstileResponse_address = md_QueryTurnstileResponse.Fields().ByName("address")
 }
 
@@ -3884,7 +3884,7 @@ func (x *QueryTurnstileResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *QueryTurnstileResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_csr_v1_query_proto_msgTypes[9]
+	mi := &file_basechain_csr_v1_query_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3961,13 +3961,13 @@ func (x *fastReflection_QueryTurnstileResponse) Range(f func(protoreflect.FieldD
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_QueryTurnstileResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryTurnstileResponse.address":
+	case "basechain.csr.v1.QueryTurnstileResponse.address":
 		return x.Address != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3979,13 +3979,13 @@ func (x *fastReflection_QueryTurnstileResponse) Has(fd protoreflect.FieldDescrip
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryTurnstileResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryTurnstileResponse.address":
+	case "basechain.csr.v1.QueryTurnstileResponse.address":
 		x.Address = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3997,14 +3997,14 @@ func (x *fastReflection_QueryTurnstileResponse) Clear(fd protoreflect.FieldDescr
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_QueryTurnstileResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.csr.v1.QueryTurnstileResponse.address":
+	case "basechain.csr.v1.QueryTurnstileResponse.address":
 		value := x.Address
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -4020,13 +4020,13 @@ func (x *fastReflection_QueryTurnstileResponse) Get(descriptor protoreflect.Fiel
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryTurnstileResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryTurnstileResponse.address":
+	case "basechain.csr.v1.QueryTurnstileResponse.address":
 		x.Address = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4042,13 +4042,13 @@ func (x *fastReflection_QueryTurnstileResponse) Set(fd protoreflect.FieldDescrip
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_QueryTurnstileResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryTurnstileResponse.address":
-		panic(fmt.Errorf("field address of message canto.csr.v1.QueryTurnstileResponse is not mutable"))
+	case "basechain.csr.v1.QueryTurnstileResponse.address":
+		panic(fmt.Errorf("field address of message basechain.csr.v1.QueryTurnstileResponse is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4057,13 +4057,13 @@ func (x *fastReflection_QueryTurnstileResponse) Mutable(fd protoreflect.FieldDes
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_QueryTurnstileResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.csr.v1.QueryTurnstileResponse.address":
+	case "basechain.csr.v1.QueryTurnstileResponse.address":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.csr.v1.QueryTurnstileResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.csr.v1.QueryTurnstileResponse"))
 		}
-		panic(fmt.Errorf("message canto.csr.v1.QueryTurnstileResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.csr.v1.QueryTurnstileResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4073,7 +4073,7 @@ func (x *fastReflection_QueryTurnstileResponse) NewField(fd protoreflect.FieldDe
 func (x *fastReflection_QueryTurnstileResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.csr.v1.QueryTurnstileResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.csr.v1.QueryTurnstileResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -4288,7 +4288,7 @@ func (x *fastReflection_QueryTurnstileResponse) ProtoMethods() *protoiface.Metho
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/csr/v1/query.proto
+// source: basechain/csr/v1/query.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -4307,7 +4307,7 @@ type QueryParamsRequest struct {
 func (x *QueryParamsRequest) Reset() {
 	*x = QueryParamsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_query_proto_msgTypes[0]
+		mi := &file_basechain_csr_v1_query_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4321,7 +4321,7 @@ func (*QueryParamsRequest) ProtoMessage() {}
 
 // Deprecated: Use QueryParamsRequest.ProtoReflect.Descriptor instead.
 func (*QueryParamsRequest) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_query_proto_rawDescGZIP(), []int{0}
+	return file_basechain_csr_v1_query_proto_rawDescGZIP(), []int{0}
 }
 
 // QueryParamsResponse is the response type for the Query/Params RPC method.
@@ -4337,7 +4337,7 @@ type QueryParamsResponse struct {
 func (x *QueryParamsResponse) Reset() {
 	*x = QueryParamsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_query_proto_msgTypes[1]
+		mi := &file_basechain_csr_v1_query_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4351,7 +4351,7 @@ func (*QueryParamsResponse) ProtoMessage() {}
 
 // Deprecated: Use QueryParamsResponse.ProtoReflect.Descriptor instead.
 func (*QueryParamsResponse) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_query_proto_rawDescGZIP(), []int{1}
+	return file_basechain_csr_v1_query_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *QueryParamsResponse) GetParams() *Params {
@@ -4374,7 +4374,7 @@ type QueryCSRsRequest struct {
 func (x *QueryCSRsRequest) Reset() {
 	*x = QueryCSRsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_query_proto_msgTypes[2]
+		mi := &file_basechain_csr_v1_query_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4388,7 +4388,7 @@ func (*QueryCSRsRequest) ProtoMessage() {}
 
 // Deprecated: Use QueryCSRsRequest.ProtoReflect.Descriptor instead.
 func (*QueryCSRsRequest) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_query_proto_rawDescGZIP(), []int{2}
+	return file_basechain_csr_v1_query_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *QueryCSRsRequest) GetPagination() *v1beta1.PageRequest {
@@ -4412,7 +4412,7 @@ type QueryCSRsResponse struct {
 func (x *QueryCSRsResponse) Reset() {
 	*x = QueryCSRsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_query_proto_msgTypes[3]
+		mi := &file_basechain_csr_v1_query_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4426,7 +4426,7 @@ func (*QueryCSRsResponse) ProtoMessage() {}
 
 // Deprecated: Use QueryCSRsResponse.ProtoReflect.Descriptor instead.
 func (*QueryCSRsResponse) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_query_proto_rawDescGZIP(), []int{3}
+	return file_basechain_csr_v1_query_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *QueryCSRsResponse) GetCsrs() []*CSR {
@@ -4455,7 +4455,7 @@ type QueryCSRByNFTRequest struct {
 func (x *QueryCSRByNFTRequest) Reset() {
 	*x = QueryCSRByNFTRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_query_proto_msgTypes[4]
+		mi := &file_basechain_csr_v1_query_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4469,7 +4469,7 @@ func (*QueryCSRByNFTRequest) ProtoMessage() {}
 
 // Deprecated: Use QueryCSRByNFTRequest.ProtoReflect.Descriptor instead.
 func (*QueryCSRByNFTRequest) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_query_proto_rawDescGZIP(), []int{4}
+	return file_basechain_csr_v1_query_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *QueryCSRByNFTRequest) GetNftId() uint64 {
@@ -4492,7 +4492,7 @@ type QueryCSRByNFTResponse struct {
 func (x *QueryCSRByNFTResponse) Reset() {
 	*x = QueryCSRByNFTResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_query_proto_msgTypes[5]
+		mi := &file_basechain_csr_v1_query_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4506,7 +4506,7 @@ func (*QueryCSRByNFTResponse) ProtoMessage() {}
 
 // Deprecated: Use QueryCSRByNFTResponse.ProtoReflect.Descriptor instead.
 func (*QueryCSRByNFTResponse) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_query_proto_rawDescGZIP(), []int{5}
+	return file_basechain_csr_v1_query_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *QueryCSRByNFTResponse) GetCsr() *CSR {
@@ -4529,7 +4529,7 @@ type QueryCSRByContractRequest struct {
 func (x *QueryCSRByContractRequest) Reset() {
 	*x = QueryCSRByContractRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_query_proto_msgTypes[6]
+		mi := &file_basechain_csr_v1_query_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4543,7 +4543,7 @@ func (*QueryCSRByContractRequest) ProtoMessage() {}
 
 // Deprecated: Use QueryCSRByContractRequest.ProtoReflect.Descriptor instead.
 func (*QueryCSRByContractRequest) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_query_proto_rawDescGZIP(), []int{6}
+	return file_basechain_csr_v1_query_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *QueryCSRByContractRequest) GetAddress() string {
@@ -4567,7 +4567,7 @@ type QueryCSRByContractResponse struct {
 func (x *QueryCSRByContractResponse) Reset() {
 	*x = QueryCSRByContractResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_query_proto_msgTypes[7]
+		mi := &file_basechain_csr_v1_query_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4581,7 +4581,7 @@ func (*QueryCSRByContractResponse) ProtoMessage() {}
 
 // Deprecated: Use QueryCSRByContractResponse.ProtoReflect.Descriptor instead.
 func (*QueryCSRByContractResponse) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_query_proto_rawDescGZIP(), []int{7}
+	return file_basechain_csr_v1_query_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *QueryCSRByContractResponse) GetCsr() *CSR {
@@ -4601,7 +4601,7 @@ type QueryTurnstileRequest struct {
 func (x *QueryTurnstileRequest) Reset() {
 	*x = QueryTurnstileRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_query_proto_msgTypes[8]
+		mi := &file_basechain_csr_v1_query_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4615,7 +4615,7 @@ func (*QueryTurnstileRequest) ProtoMessage() {}
 
 // Deprecated: Use QueryTurnstileRequest.ProtoReflect.Descriptor instead.
 func (*QueryTurnstileRequest) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_query_proto_rawDescGZIP(), []int{8}
+	return file_basechain_csr_v1_query_proto_rawDescGZIP(), []int{8}
 }
 
 // QueryTurnstileResponse is the response type for the Query/Turnstile RPC
@@ -4631,7 +4631,7 @@ type QueryTurnstileResponse struct {
 func (x *QueryTurnstileResponse) Reset() {
 	*x = QueryTurnstileResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_csr_v1_query_proto_msgTypes[9]
+		mi := &file_basechain_csr_v1_query_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4645,7 +4645,7 @@ func (*QueryTurnstileResponse) ProtoMessage() {}
 
 // Deprecated: Use QueryTurnstileResponse.ProtoReflect.Descriptor instead.
 func (*QueryTurnstileResponse) Descriptor() ([]byte, []int) {
-	return file_canto_csr_v1_query_proto_rawDescGZIP(), []int{9}
+	return file_basechain_csr_v1_query_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *QueryTurnstileResponse) GetAddress() string {
@@ -4655,9 +4655,9 @@ func (x *QueryTurnstileResponse) GetAddress() string {
 	return ""
 }
 
-var File_canto_csr_v1_query_proto protoreflect.FileDescriptor
+var File_basechain_csr_v1_query_proto protoreflect.FileDescriptor
 
-var file_canto_csr_v1_query_proto_rawDesc = []byte{
+var file_basechain_csr_v1_query_proto_rawDesc = []byte{
 	0x0a, 0x18, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x63, 0x73, 0x72, 0x2f, 0x76, 0x31, 0x2f, 0x71,
 	0x75, 0x65, 0x72, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0c, 0x63, 0x61, 0x6e, 0x74,
 	0x6f, 0x2e, 0x63, 0x73, 0x72, 0x2e, 0x76, 0x31, 0x1a, 0x14, 0x67, 0x6f, 0x67, 0x6f, 0x70, 0x72,
@@ -4761,51 +4761,51 @@ var file_canto_csr_v1_query_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_csr_v1_query_proto_rawDescOnce sync.Once
-	file_canto_csr_v1_query_proto_rawDescData = file_canto_csr_v1_query_proto_rawDesc
+	file_basechain_csr_v1_query_proto_rawDescOnce sync.Once
+	file_basechain_csr_v1_query_proto_rawDescData = file_basechain_csr_v1_query_proto_rawDesc
 )
 
-func file_canto_csr_v1_query_proto_rawDescGZIP() []byte {
-	file_canto_csr_v1_query_proto_rawDescOnce.Do(func() {
-		file_canto_csr_v1_query_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_csr_v1_query_proto_rawDescData)
+func file_basechain_csr_v1_query_proto_rawDescGZIP() []byte {
+	file_basechain_csr_v1_query_proto_rawDescOnce.Do(func() {
+		file_basechain_csr_v1_query_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_csr_v1_query_proto_rawDescData)
 	})
-	return file_canto_csr_v1_query_proto_rawDescData
+	return file_basechain_csr_v1_query_proto_rawDescData
 }
 
-var file_canto_csr_v1_query_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
-var file_canto_csr_v1_query_proto_goTypes = []interface{}{
-	(*QueryParamsRequest)(nil),         // 0: canto.csr.v1.QueryParamsRequest
-	(*QueryParamsResponse)(nil),        // 1: canto.csr.v1.QueryParamsResponse
-	(*QueryCSRsRequest)(nil),           // 2: canto.csr.v1.QueryCSRsRequest
-	(*QueryCSRsResponse)(nil),          // 3: canto.csr.v1.QueryCSRsResponse
-	(*QueryCSRByNFTRequest)(nil),       // 4: canto.csr.v1.QueryCSRByNFTRequest
-	(*QueryCSRByNFTResponse)(nil),      // 5: canto.csr.v1.QueryCSRByNFTResponse
-	(*QueryCSRByContractRequest)(nil),  // 6: canto.csr.v1.QueryCSRByContractRequest
-	(*QueryCSRByContractResponse)(nil), // 7: canto.csr.v1.QueryCSRByContractResponse
-	(*QueryTurnstileRequest)(nil),      // 8: canto.csr.v1.QueryTurnstileRequest
-	(*QueryTurnstileResponse)(nil),     // 9: canto.csr.v1.QueryTurnstileResponse
-	(*Params)(nil),                     // 10: canto.csr.v1.Params
+var file_basechain_csr_v1_query_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
+var file_basechain_csr_v1_query_proto_goTypes = []interface{}{
+	(*QueryParamsRequest)(nil),         // 0: basechain.csr.v1.QueryParamsRequest
+	(*QueryParamsResponse)(nil),        // 1: basechain.csr.v1.QueryParamsResponse
+	(*QueryCSRsRequest)(nil),           // 2: basechain.csr.v1.QueryCSRsRequest
+	(*QueryCSRsResponse)(nil),          // 3: basechain.csr.v1.QueryCSRsResponse
+	(*QueryCSRByNFTRequest)(nil),       // 4: basechain.csr.v1.QueryCSRByNFTRequest
+	(*QueryCSRByNFTResponse)(nil),      // 5: basechain.csr.v1.QueryCSRByNFTResponse
+	(*QueryCSRByContractRequest)(nil),  // 6: basechain.csr.v1.QueryCSRByContractRequest
+	(*QueryCSRByContractResponse)(nil), // 7: basechain.csr.v1.QueryCSRByContractResponse
+	(*QueryTurnstileRequest)(nil),      // 8: basechain.csr.v1.QueryTurnstileRequest
+	(*QueryTurnstileResponse)(nil),     // 9: basechain.csr.v1.QueryTurnstileResponse
+	(*Params)(nil),                     // 10: basechain.csr.v1.Params
 	(*v1beta1.PageRequest)(nil),        // 11: cosmos.base.query.v1beta1.PageRequest
-	(*CSR)(nil),                        // 12: canto.csr.v1.CSR
+	(*CSR)(nil),                        // 12: basechain.csr.v1.CSR
 	(*v1beta1.PageResponse)(nil),       // 13: cosmos.base.query.v1beta1.PageResponse
 }
-var file_canto_csr_v1_query_proto_depIdxs = []int32{
-	10, // 0: canto.csr.v1.QueryParamsResponse.params:type_name -> canto.csr.v1.Params
-	11, // 1: canto.csr.v1.QueryCSRsRequest.pagination:type_name -> cosmos.base.query.v1beta1.PageRequest
-	12, // 2: canto.csr.v1.QueryCSRsResponse.csrs:type_name -> canto.csr.v1.CSR
-	13, // 3: canto.csr.v1.QueryCSRsResponse.pagination:type_name -> cosmos.base.query.v1beta1.PageResponse
-	12, // 4: canto.csr.v1.QueryCSRByNFTResponse.csr:type_name -> canto.csr.v1.CSR
-	12, // 5: canto.csr.v1.QueryCSRByContractResponse.csr:type_name -> canto.csr.v1.CSR
-	0,  // 6: canto.csr.v1.Query.Params:input_type -> canto.csr.v1.QueryParamsRequest
-	2,  // 7: canto.csr.v1.Query.CSRs:input_type -> canto.csr.v1.QueryCSRsRequest
-	4,  // 8: canto.csr.v1.Query.CSRByNFT:input_type -> canto.csr.v1.QueryCSRByNFTRequest
-	6,  // 9: canto.csr.v1.Query.CSRByContract:input_type -> canto.csr.v1.QueryCSRByContractRequest
-	8,  // 10: canto.csr.v1.Query.Turnstile:input_type -> canto.csr.v1.QueryTurnstileRequest
-	1,  // 11: canto.csr.v1.Query.Params:output_type -> canto.csr.v1.QueryParamsResponse
-	3,  // 12: canto.csr.v1.Query.CSRs:output_type -> canto.csr.v1.QueryCSRsResponse
-	5,  // 13: canto.csr.v1.Query.CSRByNFT:output_type -> canto.csr.v1.QueryCSRByNFTResponse
-	7,  // 14: canto.csr.v1.Query.CSRByContract:output_type -> canto.csr.v1.QueryCSRByContractResponse
-	9,  // 15: canto.csr.v1.Query.Turnstile:output_type -> canto.csr.v1.QueryTurnstileResponse
+var file_basechain_csr_v1_query_proto_depIdxs = []int32{
+	10, // 0: basechain.csr.v1.QueryParamsResponse.params:type_name -> basechain.csr.v1.Params
+	11, // 1: basechain.csr.v1.QueryCSRsRequest.pagination:type_name -> cosmos.base.query.v1beta1.PageRequest
+	12, // 2: basechain.csr.v1.QueryCSRsResponse.csrs:type_name -> basechain.csr.v1.CSR
+	13, // 3: basechain.csr.v1.QueryCSRsResponse.pagination:type_name -> cosmos.base.query.v1beta1.PageResponse
+	12, // 4: basechain.csr.v1.QueryCSRByNFTResponse.csr:type_name -> basechain.csr.v1.CSR
+	12, // 5: basechain.csr.v1.QueryCSRByContractResponse.csr:type_name -> basechain.csr.v1.CSR
+	0,  // 6: basechain.csr.v1.Query.Params:input_type -> basechain.csr.v1.QueryParamsRequest
+	2,  // 7: basechain.csr.v1.Query.CSRs:input_type -> basechain.csr.v1.QueryCSRsRequest
+	4,  // 8: basechain.csr.v1.Query.CSRByNFT:input_type -> basechain.csr.v1.QueryCSRByNFTRequest
+	6,  // 9: basechain.csr.v1.Query.CSRByContract:input_type -> basechain.csr.v1.QueryCSRByContractRequest
+	8,  // 10: basechain.csr.v1.Query.Turnstile:input_type -> basechain.csr.v1.QueryTurnstileRequest
+	1,  // 11: basechain.csr.v1.Query.Params:output_type -> basechain.csr.v1.QueryParamsResponse
+	3,  // 12: basechain.csr.v1.Query.CSRs:output_type -> basechain.csr.v1.QueryCSRsResponse
+	5,  // 13: basechain.csr.v1.Query.CSRByNFT:output_type -> basechain.csr.v1.QueryCSRByNFTResponse
+	7,  // 14: basechain.csr.v1.Query.CSRByContract:output_type -> basechain.csr.v1.QueryCSRByContractResponse
+	9,  // 15: basechain.csr.v1.Query.Turnstile:output_type -> basechain.csr.v1.QueryTurnstileResponse
 	11, // [11:16] is the sub-list for method output_type
 	6,  // [6:11] is the sub-list for method input_type
 	6,  // [6:6] is the sub-list for extension type_name
@@ -4813,15 +4813,15 @@ var file_canto_csr_v1_query_proto_depIdxs = []int32{
 	0,  // [0:6] is the sub-list for field type_name
 }
 
-func init() { file_canto_csr_v1_query_proto_init() }
-func file_canto_csr_v1_query_proto_init() {
-	if File_canto_csr_v1_query_proto != nil {
+func init() { file_basechain_csr_v1_query_proto_init() }
+func file_basechain_csr_v1_query_proto_init() {
+	if File_basechain_csr_v1_query_proto != nil {
 		return
 	}
-	file_canto_csr_v1_params_proto_init()
-	file_canto_csr_v1_csr_proto_init()
+	file_basechain_csr_v1_params_proto_init()
+	file_basechain_csr_v1_csr_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_canto_csr_v1_query_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_query_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryParamsRequest); i {
 			case 0:
 				return &v.state
@@ -4833,7 +4833,7 @@ func file_canto_csr_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_csr_v1_query_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_query_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryParamsResponse); i {
 			case 0:
 				return &v.state
@@ -4845,7 +4845,7 @@ func file_canto_csr_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_csr_v1_query_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_query_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryCSRsRequest); i {
 			case 0:
 				return &v.state
@@ -4857,7 +4857,7 @@ func file_canto_csr_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_csr_v1_query_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_query_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryCSRsResponse); i {
 			case 0:
 				return &v.state
@@ -4869,7 +4869,7 @@ func file_canto_csr_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_csr_v1_query_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_query_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryCSRByNFTRequest); i {
 			case 0:
 				return &v.state
@@ -4881,7 +4881,7 @@ func file_canto_csr_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_csr_v1_query_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_query_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryCSRByNFTResponse); i {
 			case 0:
 				return &v.state
@@ -4893,7 +4893,7 @@ func file_canto_csr_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_csr_v1_query_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_query_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryCSRByContractRequest); i {
 			case 0:
 				return &v.state
@@ -4905,7 +4905,7 @@ func file_canto_csr_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_csr_v1_query_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_query_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryCSRByContractResponse); i {
 			case 0:
 				return &v.state
@@ -4917,7 +4917,7 @@ func file_canto_csr_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_csr_v1_query_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_query_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryTurnstileRequest); i {
 			case 0:
 				return &v.state
@@ -4929,7 +4929,7 @@ func file_canto_csr_v1_query_proto_init() {
 				return nil
 			}
 		}
-		file_canto_csr_v1_query_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_csr_v1_query_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryTurnstileResponse); i {
 			case 0:
 				return &v.state
@@ -4946,18 +4946,18 @@ func file_canto_csr_v1_query_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_csr_v1_query_proto_rawDesc,
+			RawDescriptor: file_basechain_csr_v1_query_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   10,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_canto_csr_v1_query_proto_goTypes,
-		DependencyIndexes: file_canto_csr_v1_query_proto_depIdxs,
-		MessageInfos:      file_canto_csr_v1_query_proto_msgTypes,
+		GoTypes:           file_basechain_csr_v1_query_proto_goTypes,
+		DependencyIndexes: file_basechain_csr_v1_query_proto_depIdxs,
+		MessageInfos:      file_basechain_csr_v1_query_proto_msgTypes,
 	}.Build()
-	File_canto_csr_v1_query_proto = out.File
-	file_canto_csr_v1_query_proto_rawDesc = nil
-	file_canto_csr_v1_query_proto_goTypes = nil
-	file_canto_csr_v1_query_proto_depIdxs = nil
+	File_basechain_csr_v1_query_proto = out.File
+	file_basechain_csr_v1_query_proto_rawDesc = nil
+	file_basechain_csr_v1_query_proto_goTypes = nil
+	file_basechain_csr_v1_query_proto_depIdxs = nil
 }

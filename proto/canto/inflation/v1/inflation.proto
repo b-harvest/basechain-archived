@@ -1,5 +1,5 @@
 syntax = "proto3";
-package canto.inflation.v1;
+package basechain.inflation.v1;
 
 import "gogoproto/gogo.proto";
 import "cosmos_proto/cosmos.proto";

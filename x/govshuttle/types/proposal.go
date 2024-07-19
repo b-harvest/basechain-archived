@@ -81,7 +81,7 @@ func (tp *TreasuryProposal) ValidateBasic() error {
 	tm := tp.GetMetadata()
 	s := strings.ToLower(tm.GetDenom())
 
-	if s != "canto" && s != "note" {
+	if s != "basechain" && s != "note" {
 		return errorsmod.Wrapf(govtypes.ErrInvalidProposalContent, "%s is not a valid denom string", tm.GetDenom())
 	}
 

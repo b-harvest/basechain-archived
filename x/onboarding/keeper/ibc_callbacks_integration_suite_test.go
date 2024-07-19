@@ -33,13 +33,13 @@ type IBCTestingSuite struct {
 	coordinator *ibcgotesting.Coordinator
 
 	// testing chains used for convenience and readability
-	cantoChain      *ibcgotesting.TestChain
+	basechainChain  *ibcgotesting.TestChain
 	IBCGravityChain *ibcgotesting.TestChain
 	IBCCosmosChain  *ibcgotesting.TestChain
 
-	pathGravitycanto  *ibcgotesting.Path
-	pathCosmoscanto   *ibcgotesting.Path
-	pathGravityCosmos *ibcgotesting.Path
+	pathGravitybasechain *ibcgotesting.Path
+	pathCosmosbasechain  *ibcgotesting.Path
+	pathGravityCosmos    *ibcgotesting.Path
 }
 
 var s *IBCTestingSuite
@@ -56,14 +56,14 @@ func TestIBCTestingSuite(t *testing.T) {
 func (suite *IBCTestingSuite) SetupTest() {
 	// initializes 3 test chains
 	suite.coordinator = ibcgotesting.NewCoordinator(suite.T(), 1, 2)
-	suite.cantoChain = suite.coordinator.GetChain(ibcgotesting.GetChainIDCanto(1))
+	suite.basechainChain = suite.coordinator.GetChain(ibcgotesting.GetChainIDCanto(1))
 	suite.IBCGravityChain = suite.coordinator.GetChain(ibcgotesting.GetChainID(2))
 	suite.IBCCosmosChain = suite.coordinator.GetChain(ibcgotesting.GetChainID(3))
-	suite.coordinator.CommitNBlocks(suite.cantoChain, 2)
+	suite.coordinator.CommitNBlocks(suite.basechainChain, 2)
 	suite.coordinator.CommitNBlocks(suite.IBCGravityChain, 2)
 	suite.coordinator.CommitNBlocks(suite.IBCCosmosChain, 2)
 
-	// Mint coins on the gravity side which we'll use to unlock our acanto
+	// Mint coins on the gravity side which we'll use to unlock our abasecoin
 	coinUsdc := sdk.NewCoin("uUSDC", sdkmath.NewIntWithDecimal(10000, 6))
 	coinUsdt := sdk.NewCoin("uUSDT", sdkmath.NewIntWithDecimal(10000, 6))
 	coins := sdk.NewCoins(coinUsdc, coinUsdt)
@@ -72,7 +72,7 @@ func (suite *IBCTestingSuite) SetupTest() {
 	err = suite.IBCGravityChain.GetSimApp().BankKeeper.SendCoinsFromModuleToAccount(suite.IBCGravityChain.GetContext(), minttypes.ModuleName, suite.IBCGravityChain.SenderAccount.GetAddress(), coins)
 	suite.Require().NoError(err)
 
-	// Mint coins on the cosmos side which we'll use to unlock our acanto
+	// Mint coins on the cosmos side which we'll use to unlock our abasecoin
 	coinAtom := sdk.NewCoin("uatom", sdkmath.NewIntWithDecimal(10000, 6))
 	coins = sdk.NewCoins(coinAtom)
 	err = suite.IBCCosmosChain.GetSimApp().BankKeeper.MintCoins(suite.IBCCosmosChain.GetContext(), minttypes.ModuleName, coins)
@@ -82,56 +82,56 @@ func (suite *IBCTestingSuite) SetupTest() {
 
 	params := types.DefaultParams()
 	params.EnableOnboarding = true
-	suite.cantoChain.App.(*app.Canto).OnboardingKeeper.SetParams(suite.cantoChain.GetContext(), params)
+	suite.basechainChain.App.(*app.Canto).OnboardingKeeper.SetParams(suite.basechainChain.GetContext(), params)
 
 	// Setup the paths between the chains
-	suite.pathGravitycanto = ibcgotesting.NewTransferPath(suite.IBCGravityChain, suite.cantoChain) // clientID, connectionID, channelID empty
-	suite.pathCosmoscanto = ibcgotesting.NewTransferPath(suite.IBCCosmosChain, suite.cantoChain)
+	suite.pathGravitybasechain = ibcgotesting.NewTransferPath(suite.IBCGravityChain, suite.basechainChain) // clientID, connectionID, channelID empty
+	suite.pathCosmosbasechain = ibcgotesting.NewTransferPath(suite.IBCCosmosChain, suite.basechainChain)
 	suite.pathGravityCosmos = ibcgotesting.NewTransferPath(suite.IBCCosmosChain, suite.IBCGravityChain)
-	suite.coordinator.Setup(suite.pathGravitycanto) // clientID, connectionID, channelID filled
-	suite.coordinator.Setup(suite.pathCosmoscanto)
+	suite.coordinator.Setup(suite.pathGravitybasechain) // clientID, connectionID, channelID filled
+	suite.coordinator.Setup(suite.pathCosmosbasechain)
 	suite.coordinator.Setup(suite.pathGravityCosmos)
-	suite.Require().Equal("07-tendermint-0", suite.pathGravitycanto.EndpointA.ClientID)
-	suite.Require().Equal("connection-0", suite.pathGravitycanto.EndpointA.ConnectionID)
-	suite.Require().Equal("channel-0", suite.pathGravitycanto.EndpointA.ChannelID)
+	suite.Require().Equal("07-tendermint-0", suite.pathGravitybasechain.EndpointA.ClientID)
+	suite.Require().Equal("connection-0", suite.pathGravitybasechain.EndpointA.ConnectionID)
+	suite.Require().Equal("channel-0", suite.pathGravitybasechain.EndpointA.ChannelID)
 
 	// Set the proposer address for the current header
 	// It because EVMKeeper.GetCoinbaseAddress requires ProposerAddress in block header
-	suite.cantoChain.CurrentHeader.ProposerAddress = suite.cantoChain.LastHeader.ValidatorSet.Proposer.Address
+	suite.basechainChain.CurrentHeader.ProposerAddress = suite.basechainChain.LastHeader.ValidatorSet.Proposer.Address
 	suite.IBCGravityChain.CurrentHeader.ProposerAddress = suite.IBCGravityChain.LastHeader.ValidatorSet.Proposer.Address
 	suite.IBCCosmosChain.CurrentHeader.ProposerAddress = suite.IBCCosmosChain.LastHeader.ValidatorSet.Proposer.Address
 }
 
-// FundCantoChain mints coins and sends them to the cantoChain sender account
+// FundCantoChain mints coins and sends them to the basechainChain sender account
 func (suite *IBCTestingSuite) FundCantoChain(coins sdk.Coins) {
-	err := suite.cantoChain.App.(*app.Canto).BankKeeper.MintCoins(suite.cantoChain.GetContext(), inflationtypes.ModuleName, coins)
+	err := suite.basechainChain.App.(*app.Canto).BankKeeper.MintCoins(suite.basechainChain.GetContext(), inflationtypes.ModuleName, coins)
 	suite.Require().NoError(err)
-	err = suite.cantoChain.App.(*app.Canto).BankKeeper.SendCoinsFromModuleToAccount(suite.cantoChain.GetContext(), inflationtypes.ModuleName, suite.cantoChain.SenderAccount.GetAddress(), coins)
+	err = suite.basechainChain.App.(*app.Canto).BankKeeper.SendCoinsFromModuleToAccount(suite.basechainChain.GetContext(), inflationtypes.ModuleName, suite.basechainChain.SenderAccount.GetAddress(), coins)
 	suite.Require().NoError(err)
 }
 
 // setupRegisterCoin deploys an erc20 contract and creates the token pair
 func (suite *IBCTestingSuite) setupRegisterCoin(metadata banktypes.Metadata) *erc20types.TokenPair {
-	err := suite.cantoChain.App.(*app.Canto).BankKeeper.MintCoins(suite.cantoChain.GetContext(), inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
+	err := suite.basechainChain.App.(*app.Canto).BankKeeper.MintCoins(suite.basechainChain.GetContext(), inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
 	suite.Require().NoError(err)
 
-	pair, err := suite.cantoChain.App.(*app.Canto).Erc20Keeper.RegisterCoin(suite.cantoChain.GetContext(), metadata)
+	pair, err := suite.basechainChain.App.(*app.Canto).Erc20Keeper.RegisterCoin(suite.basechainChain.GetContext(), metadata)
 	suite.Require().NoError(err)
 	return pair
 }
 
-// CreatePool creates a pool with acanto and the given denom
+// CreatePool creates a pool with abasecoin and the given denom
 func (suite *IBCTestingSuite) CreatePool(denom string) {
-	coincanto := sdk.NewCoin("acanto", sdkmath.NewIntWithDecimal(10000, 18))
+	coinbasechain := sdk.NewCoin("abasecoin", sdkmath.NewIntWithDecimal(10000, 18))
 	coinIBC := sdk.NewCoin(denom, sdkmath.NewIntWithDecimal(10000, 6))
-	coins := sdk.NewCoins(coincanto, coinIBC)
+	coins := sdk.NewCoins(coinbasechain, coinIBC)
 	suite.FundCantoChain(coins)
 
-	coinswapKeeper := suite.cantoChain.App.(*app.Canto).CoinswapKeeper
-	coinswapKeeper.SetStandardDenom(suite.cantoChain.GetContext(), "acanto")
-	coinswapParams := coinswapKeeper.GetParams(suite.cantoChain.GetContext())
+	coinswapKeeper := suite.basechainChain.App.(*app.Canto).CoinswapKeeper
+	coinswapKeeper.SetStandardDenom(suite.basechainChain.GetContext(), "abasecoin")
+	coinswapParams := coinswapKeeper.GetParams(suite.basechainChain.GetContext())
 	coinswapParams.MaxSwapAmount = sdk.NewCoins(sdk.NewCoin(denom, sdkmath.NewIntWithDecimal(10, 6)))
-	coinswapKeeper.SetParams(suite.cantoChain.GetContext(), coinswapParams)
+	coinswapKeeper.SetParams(suite.basechainChain.GetContext(), coinswapParams)
 
 	// Create a message to add liquidity to the pool
 	msgAddLiquidity := coinswaptypes.MsgAddLiquidity{
@@ -139,11 +139,11 @@ func (suite *IBCTestingSuite) CreatePool(denom string) {
 		ExactStandardAmt: sdkmath.NewIntWithDecimal(10000, 18),
 		MinLiquidity:     sdkmath.NewInt(1),
 		Deadline:         time.Now().Add(time.Minute * 10).Unix(),
-		Sender:           suite.cantoChain.SenderAccount.GetAddress().String(),
+		Sender:           suite.basechainChain.SenderAccount.GetAddress().String(),
 	}
 
 	// Add liquidity to the pool
-	suite.cantoChain.App.(*app.Canto).CoinswapKeeper.AddLiquidity(suite.cantoChain.GetContext(), &msgAddLiquidity)
+	suite.basechainChain.App.(*app.Canto).CoinswapKeeper.AddLiquidity(suite.basechainChain.GetContext(), &msgAddLiquidity)
 }
 
 var (

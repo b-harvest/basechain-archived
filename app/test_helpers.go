@@ -30,7 +30,7 @@ func init() {
 }
 
 // DefaultConsensusParams defines the default Tendermint consensus params used in
-// canto testing.
+// basechain testing.
 var DefaultConsensusParams = &tmproto.ConsensusParams{
 	Block: &tmproto.BlockParams{
 		MaxBytes: 200000,
@@ -55,7 +55,7 @@ func init() {
 	config.SetBip44CoinType(cfg)
 }
 
-// Setup initializes a new canto. A Nop logger is set in canto.
+// Setup initializes a new basechain. A Nop logger is set in basechain.
 func Setup(
 	isCheckTx bool,
 	feemarketGenesis *feemarkettypes.GenesisState,

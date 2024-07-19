@@ -22,8 +22,8 @@ var (
 )
 
 func init() {
-	file_canto_inflation_v1_inflation_proto_init()
-	md_InflationDistribution = File_canto_inflation_v1_inflation_proto.Messages().ByName("InflationDistribution")
+	file_basechain_inflation_v1_inflation_proto_init()
+	md_InflationDistribution = File_basechain_inflation_v1_inflation_proto.Messages().ByName("InflationDistribution")
 	fd_InflationDistribution_staking_rewards = md_InflationDistribution.Fields().ByName("staking_rewards")
 	fd_InflationDistribution_community_pool = md_InflationDistribution.Fields().ByName("community_pool")
 }
@@ -37,7 +37,7 @@ func (x *InflationDistribution) ProtoReflect() protoreflect.Message {
 }
 
 func (x *InflationDistribution) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_inflation_v1_inflation_proto_msgTypes[0]
+	mi := &file_basechain_inflation_v1_inflation_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -120,15 +120,15 @@ func (x *fastReflection_InflationDistribution) Range(f func(protoreflect.FieldDe
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_InflationDistribution) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.inflation.v1.InflationDistribution.staking_rewards":
+	case "basechain.inflation.v1.InflationDistribution.staking_rewards":
 		return x.StakingRewards != ""
-	case "canto.inflation.v1.InflationDistribution.community_pool":
+	case "basechain.inflation.v1.InflationDistribution.community_pool":
 		return x.CommunityPool != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.InflationDistribution"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.InflationDistribution"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.InflationDistribution does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.InflationDistribution does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -140,15 +140,15 @@ func (x *fastReflection_InflationDistribution) Has(fd protoreflect.FieldDescript
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_InflationDistribution) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.inflation.v1.InflationDistribution.staking_rewards":
+	case "basechain.inflation.v1.InflationDistribution.staking_rewards":
 		x.StakingRewards = ""
-	case "canto.inflation.v1.InflationDistribution.community_pool":
+	case "basechain.inflation.v1.InflationDistribution.community_pool":
 		x.CommunityPool = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.InflationDistribution"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.InflationDistribution"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.InflationDistribution does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.InflationDistribution does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -160,17 +160,17 @@ func (x *fastReflection_InflationDistribution) Clear(fd protoreflect.FieldDescri
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_InflationDistribution) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.inflation.v1.InflationDistribution.staking_rewards":
+	case "basechain.inflation.v1.InflationDistribution.staking_rewards":
 		value := x.StakingRewards
 		return protoreflect.ValueOfString(value)
-	case "canto.inflation.v1.InflationDistribution.community_pool":
+	case "basechain.inflation.v1.InflationDistribution.community_pool":
 		value := x.CommunityPool
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.InflationDistribution"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.InflationDistribution"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.InflationDistribution does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.InflationDistribution does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -186,15 +186,15 @@ func (x *fastReflection_InflationDistribution) Get(descriptor protoreflect.Field
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_InflationDistribution) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.inflation.v1.InflationDistribution.staking_rewards":
+	case "basechain.inflation.v1.InflationDistribution.staking_rewards":
 		x.StakingRewards = value.Interface().(string)
-	case "canto.inflation.v1.InflationDistribution.community_pool":
+	case "basechain.inflation.v1.InflationDistribution.community_pool":
 		x.CommunityPool = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.InflationDistribution"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.InflationDistribution"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.InflationDistribution does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.InflationDistribution does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -210,15 +210,15 @@ func (x *fastReflection_InflationDistribution) Set(fd protoreflect.FieldDescript
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_InflationDistribution) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.inflation.v1.InflationDistribution.staking_rewards":
-		panic(fmt.Errorf("field staking_rewards of message canto.inflation.v1.InflationDistribution is not mutable"))
-	case "canto.inflation.v1.InflationDistribution.community_pool":
-		panic(fmt.Errorf("field community_pool of message canto.inflation.v1.InflationDistribution is not mutable"))
+	case "basechain.inflation.v1.InflationDistribution.staking_rewards":
+		panic(fmt.Errorf("field staking_rewards of message basechain.inflation.v1.InflationDistribution is not mutable"))
+	case "basechain.inflation.v1.InflationDistribution.community_pool":
+		panic(fmt.Errorf("field community_pool of message basechain.inflation.v1.InflationDistribution is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.InflationDistribution"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.InflationDistribution"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.InflationDistribution does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.InflationDistribution does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -227,15 +227,15 @@ func (x *fastReflection_InflationDistribution) Mutable(fd protoreflect.FieldDesc
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_InflationDistribution) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.inflation.v1.InflationDistribution.staking_rewards":
+	case "basechain.inflation.v1.InflationDistribution.staking_rewards":
 		return protoreflect.ValueOfString("")
-	case "canto.inflation.v1.InflationDistribution.community_pool":
+	case "basechain.inflation.v1.InflationDistribution.community_pool":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.InflationDistribution"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.InflationDistribution"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.InflationDistribution does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.InflationDistribution does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -245,7 +245,7 @@ func (x *fastReflection_InflationDistribution) NewField(fd protoreflect.FieldDes
 func (x *fastReflection_InflationDistribution) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.inflation.v1.InflationDistribution", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.inflation.v1.InflationDistribution", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -509,8 +509,8 @@ var (
 )
 
 func init() {
-	file_canto_inflation_v1_inflation_proto_init()
-	md_ExponentialCalculation = File_canto_inflation_v1_inflation_proto.Messages().ByName("ExponentialCalculation")
+	file_basechain_inflation_v1_inflation_proto_init()
+	md_ExponentialCalculation = File_basechain_inflation_v1_inflation_proto.Messages().ByName("ExponentialCalculation")
 	fd_ExponentialCalculation_a = md_ExponentialCalculation.Fields().ByName("a")
 	fd_ExponentialCalculation_r = md_ExponentialCalculation.Fields().ByName("r")
 	fd_ExponentialCalculation_c = md_ExponentialCalculation.Fields().ByName("c")
@@ -527,7 +527,7 @@ func (x *ExponentialCalculation) ProtoReflect() protoreflect.Message {
 }
 
 func (x *ExponentialCalculation) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_inflation_v1_inflation_proto_msgTypes[1]
+	mi := &file_basechain_inflation_v1_inflation_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -628,21 +628,21 @@ func (x *fastReflection_ExponentialCalculation) Range(f func(protoreflect.FieldD
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_ExponentialCalculation) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.inflation.v1.ExponentialCalculation.a":
+	case "basechain.inflation.v1.ExponentialCalculation.a":
 		return x.A != ""
-	case "canto.inflation.v1.ExponentialCalculation.r":
+	case "basechain.inflation.v1.ExponentialCalculation.r":
 		return x.R != ""
-	case "canto.inflation.v1.ExponentialCalculation.c":
+	case "basechain.inflation.v1.ExponentialCalculation.c":
 		return x.C != ""
-	case "canto.inflation.v1.ExponentialCalculation.bonding_target":
+	case "basechain.inflation.v1.ExponentialCalculation.bonding_target":
 		return x.BondingTarget != ""
-	case "canto.inflation.v1.ExponentialCalculation.max_variance":
+	case "basechain.inflation.v1.ExponentialCalculation.max_variance":
 		return x.MaxVariance != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.ExponentialCalculation"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.ExponentialCalculation"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.ExponentialCalculation does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.ExponentialCalculation does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -654,21 +654,21 @@ func (x *fastReflection_ExponentialCalculation) Has(fd protoreflect.FieldDescrip
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_ExponentialCalculation) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.inflation.v1.ExponentialCalculation.a":
+	case "basechain.inflation.v1.ExponentialCalculation.a":
 		x.A = ""
-	case "canto.inflation.v1.ExponentialCalculation.r":
+	case "basechain.inflation.v1.ExponentialCalculation.r":
 		x.R = ""
-	case "canto.inflation.v1.ExponentialCalculation.c":
+	case "basechain.inflation.v1.ExponentialCalculation.c":
 		x.C = ""
-	case "canto.inflation.v1.ExponentialCalculation.bonding_target":
+	case "basechain.inflation.v1.ExponentialCalculation.bonding_target":
 		x.BondingTarget = ""
-	case "canto.inflation.v1.ExponentialCalculation.max_variance":
+	case "basechain.inflation.v1.ExponentialCalculation.max_variance":
 		x.MaxVariance = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.ExponentialCalculation"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.ExponentialCalculation"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.ExponentialCalculation does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.ExponentialCalculation does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -680,26 +680,26 @@ func (x *fastReflection_ExponentialCalculation) Clear(fd protoreflect.FieldDescr
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_ExponentialCalculation) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.inflation.v1.ExponentialCalculation.a":
+	case "basechain.inflation.v1.ExponentialCalculation.a":
 		value := x.A
 		return protoreflect.ValueOfString(value)
-	case "canto.inflation.v1.ExponentialCalculation.r":
+	case "basechain.inflation.v1.ExponentialCalculation.r":
 		value := x.R
 		return protoreflect.ValueOfString(value)
-	case "canto.inflation.v1.ExponentialCalculation.c":
+	case "basechain.inflation.v1.ExponentialCalculation.c":
 		value := x.C
 		return protoreflect.ValueOfString(value)
-	case "canto.inflation.v1.ExponentialCalculation.bonding_target":
+	case "basechain.inflation.v1.ExponentialCalculation.bonding_target":
 		value := x.BondingTarget
 		return protoreflect.ValueOfString(value)
-	case "canto.inflation.v1.ExponentialCalculation.max_variance":
+	case "basechain.inflation.v1.ExponentialCalculation.max_variance":
 		value := x.MaxVariance
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.ExponentialCalculation"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.ExponentialCalculation"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.ExponentialCalculation does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.ExponentialCalculation does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -715,21 +715,21 @@ func (x *fastReflection_ExponentialCalculation) Get(descriptor protoreflect.Fiel
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_ExponentialCalculation) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.inflation.v1.ExponentialCalculation.a":
+	case "basechain.inflation.v1.ExponentialCalculation.a":
 		x.A = value.Interface().(string)
-	case "canto.inflation.v1.ExponentialCalculation.r":
+	case "basechain.inflation.v1.ExponentialCalculation.r":
 		x.R = value.Interface().(string)
-	case "canto.inflation.v1.ExponentialCalculation.c":
+	case "basechain.inflation.v1.ExponentialCalculation.c":
 		x.C = value.Interface().(string)
-	case "canto.inflation.v1.ExponentialCalculation.bonding_target":
+	case "basechain.inflation.v1.ExponentialCalculation.bonding_target":
 		x.BondingTarget = value.Interface().(string)
-	case "canto.inflation.v1.ExponentialCalculation.max_variance":
+	case "basechain.inflation.v1.ExponentialCalculation.max_variance":
 		x.MaxVariance = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.ExponentialCalculation"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.ExponentialCalculation"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.ExponentialCalculation does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.ExponentialCalculation does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -745,21 +745,21 @@ func (x *fastReflection_ExponentialCalculation) Set(fd protoreflect.FieldDescrip
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_ExponentialCalculation) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.inflation.v1.ExponentialCalculation.a":
-		panic(fmt.Errorf("field a of message canto.inflation.v1.ExponentialCalculation is not mutable"))
-	case "canto.inflation.v1.ExponentialCalculation.r":
-		panic(fmt.Errorf("field r of message canto.inflation.v1.ExponentialCalculation is not mutable"))
-	case "canto.inflation.v1.ExponentialCalculation.c":
-		panic(fmt.Errorf("field c of message canto.inflation.v1.ExponentialCalculation is not mutable"))
-	case "canto.inflation.v1.ExponentialCalculation.bonding_target":
-		panic(fmt.Errorf("field bonding_target of message canto.inflation.v1.ExponentialCalculation is not mutable"))
-	case "canto.inflation.v1.ExponentialCalculation.max_variance":
-		panic(fmt.Errorf("field max_variance of message canto.inflation.v1.ExponentialCalculation is not mutable"))
+	case "basechain.inflation.v1.ExponentialCalculation.a":
+		panic(fmt.Errorf("field a of message basechain.inflation.v1.ExponentialCalculation is not mutable"))
+	case "basechain.inflation.v1.ExponentialCalculation.r":
+		panic(fmt.Errorf("field r of message basechain.inflation.v1.ExponentialCalculation is not mutable"))
+	case "basechain.inflation.v1.ExponentialCalculation.c":
+		panic(fmt.Errorf("field c of message basechain.inflation.v1.ExponentialCalculation is not mutable"))
+	case "basechain.inflation.v1.ExponentialCalculation.bonding_target":
+		panic(fmt.Errorf("field bonding_target of message basechain.inflation.v1.ExponentialCalculation is not mutable"))
+	case "basechain.inflation.v1.ExponentialCalculation.max_variance":
+		panic(fmt.Errorf("field max_variance of message basechain.inflation.v1.ExponentialCalculation is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.ExponentialCalculation"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.ExponentialCalculation"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.ExponentialCalculation does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.ExponentialCalculation does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -768,21 +768,21 @@ func (x *fastReflection_ExponentialCalculation) Mutable(fd protoreflect.FieldDes
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_ExponentialCalculation) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.inflation.v1.ExponentialCalculation.a":
+	case "basechain.inflation.v1.ExponentialCalculation.a":
 		return protoreflect.ValueOfString("")
-	case "canto.inflation.v1.ExponentialCalculation.r":
+	case "basechain.inflation.v1.ExponentialCalculation.r":
 		return protoreflect.ValueOfString("")
-	case "canto.inflation.v1.ExponentialCalculation.c":
+	case "basechain.inflation.v1.ExponentialCalculation.c":
 		return protoreflect.ValueOfString("")
-	case "canto.inflation.v1.ExponentialCalculation.bonding_target":
+	case "basechain.inflation.v1.ExponentialCalculation.bonding_target":
 		return protoreflect.ValueOfString("")
-	case "canto.inflation.v1.ExponentialCalculation.max_variance":
+	case "basechain.inflation.v1.ExponentialCalculation.max_variance":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.inflation.v1.ExponentialCalculation"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.inflation.v1.ExponentialCalculation"))
 		}
-		panic(fmt.Errorf("message canto.inflation.v1.ExponentialCalculation does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.inflation.v1.ExponentialCalculation does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -792,7 +792,7 @@ func (x *fastReflection_ExponentialCalculation) NewField(fd protoreflect.FieldDe
 func (x *fastReflection_ExponentialCalculation) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.inflation.v1.ExponentialCalculation", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.inflation.v1.ExponentialCalculation", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1179,7 +1179,7 @@ func (x *fastReflection_ExponentialCalculation) ProtoMethods() *protoiface.Metho
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/inflation/v1/inflation.proto
+// source: basechain/inflation/v1/inflation.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -1220,7 +1220,7 @@ type InflationDistribution struct {
 func (x *InflationDistribution) Reset() {
 	*x = InflationDistribution{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_inflation_v1_inflation_proto_msgTypes[0]
+		mi := &file_basechain_inflation_v1_inflation_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1234,7 +1234,7 @@ func (*InflationDistribution) ProtoMessage() {}
 
 // Deprecated: Use InflationDistribution.ProtoReflect.Descriptor instead.
 func (*InflationDistribution) Descriptor() ([]byte, []int) {
-	return file_canto_inflation_v1_inflation_proto_rawDescGZIP(), []int{0}
+	return file_basechain_inflation_v1_inflation_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *InflationDistribution) GetStakingRewards() string {
@@ -1276,7 +1276,7 @@ type ExponentialCalculation struct {
 func (x *ExponentialCalculation) Reset() {
 	*x = ExponentialCalculation{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_inflation_v1_inflation_proto_msgTypes[1]
+		mi := &file_basechain_inflation_v1_inflation_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1290,7 +1290,7 @@ func (*ExponentialCalculation) ProtoMessage() {}
 
 // Deprecated: Use ExponentialCalculation.ProtoReflect.Descriptor instead.
 func (*ExponentialCalculation) Descriptor() ([]byte, []int) {
-	return file_canto_inflation_v1_inflation_proto_rawDescGZIP(), []int{1}
+	return file_basechain_inflation_v1_inflation_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *ExponentialCalculation) GetA() string {
@@ -1328,9 +1328,9 @@ func (x *ExponentialCalculation) GetMaxVariance() string {
 	return ""
 }
 
-var File_canto_inflation_v1_inflation_proto protoreflect.FileDescriptor
+var File_basechain_inflation_v1_inflation_proto protoreflect.FileDescriptor
 
-var file_canto_inflation_v1_inflation_proto_rawDesc = []byte{
+var file_basechain_inflation_v1_inflation_proto_rawDesc = []byte{
 	0x0a, 0x22, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x69, 0x6e, 0x66, 0x6c, 0x61, 0x74, 0x69, 0x6f,
 	0x6e, 0x2f, 0x76, 0x31, 0x2f, 0x69, 0x6e, 0x66, 0x6c, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x12, 0x12, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2e, 0x69, 0x6e, 0x66, 0x6c,
@@ -1395,23 +1395,23 @@ var file_canto_inflation_v1_inflation_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_inflation_v1_inflation_proto_rawDescOnce sync.Once
-	file_canto_inflation_v1_inflation_proto_rawDescData = file_canto_inflation_v1_inflation_proto_rawDesc
+	file_basechain_inflation_v1_inflation_proto_rawDescOnce sync.Once
+	file_basechain_inflation_v1_inflation_proto_rawDescData = file_basechain_inflation_v1_inflation_proto_rawDesc
 )
 
-func file_canto_inflation_v1_inflation_proto_rawDescGZIP() []byte {
-	file_canto_inflation_v1_inflation_proto_rawDescOnce.Do(func() {
-		file_canto_inflation_v1_inflation_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_inflation_v1_inflation_proto_rawDescData)
+func file_basechain_inflation_v1_inflation_proto_rawDescGZIP() []byte {
+	file_basechain_inflation_v1_inflation_proto_rawDescOnce.Do(func() {
+		file_basechain_inflation_v1_inflation_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_inflation_v1_inflation_proto_rawDescData)
 	})
-	return file_canto_inflation_v1_inflation_proto_rawDescData
+	return file_basechain_inflation_v1_inflation_proto_rawDescData
 }
 
-var file_canto_inflation_v1_inflation_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_canto_inflation_v1_inflation_proto_goTypes = []interface{}{
-	(*InflationDistribution)(nil),  // 0: canto.inflation.v1.InflationDistribution
-	(*ExponentialCalculation)(nil), // 1: canto.inflation.v1.ExponentialCalculation
+var file_basechain_inflation_v1_inflation_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_basechain_inflation_v1_inflation_proto_goTypes = []interface{}{
+	(*InflationDistribution)(nil),  // 0: basechain.inflation.v1.InflationDistribution
+	(*ExponentialCalculation)(nil), // 1: basechain.inflation.v1.ExponentialCalculation
 }
-var file_canto_inflation_v1_inflation_proto_depIdxs = []int32{
+var file_basechain_inflation_v1_inflation_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -1419,13 +1419,13 @@ var file_canto_inflation_v1_inflation_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_canto_inflation_v1_inflation_proto_init() }
-func file_canto_inflation_v1_inflation_proto_init() {
-	if File_canto_inflation_v1_inflation_proto != nil {
+func init() { file_basechain_inflation_v1_inflation_proto_init() }
+func file_basechain_inflation_v1_inflation_proto_init() {
+	if File_basechain_inflation_v1_inflation_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_canto_inflation_v1_inflation_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_inflation_v1_inflation_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*InflationDistribution); i {
 			case 0:
 				return &v.state
@@ -1437,7 +1437,7 @@ func file_canto_inflation_v1_inflation_proto_init() {
 				return nil
 			}
 		}
-		file_canto_inflation_v1_inflation_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_inflation_v1_inflation_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ExponentialCalculation); i {
 			case 0:
 				return &v.state
@@ -1454,18 +1454,18 @@ func file_canto_inflation_v1_inflation_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_inflation_v1_inflation_proto_rawDesc,
+			RawDescriptor: file_basechain_inflation_v1_inflation_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_canto_inflation_v1_inflation_proto_goTypes,
-		DependencyIndexes: file_canto_inflation_v1_inflation_proto_depIdxs,
-		MessageInfos:      file_canto_inflation_v1_inflation_proto_msgTypes,
+		GoTypes:           file_basechain_inflation_v1_inflation_proto_goTypes,
+		DependencyIndexes: file_basechain_inflation_v1_inflation_proto_depIdxs,
+		MessageInfos:      file_basechain_inflation_v1_inflation_proto_msgTypes,
 	}.Build()
-	File_canto_inflation_v1_inflation_proto = out.File
-	file_canto_inflation_v1_inflation_proto_rawDesc = nil
-	file_canto_inflation_v1_inflation_proto_goTypes = nil
-	file_canto_inflation_v1_inflation_proto_depIdxs = nil
+	File_basechain_inflation_v1_inflation_proto = out.File
+	file_basechain_inflation_v1_inflation_proto_rawDesc = nil
+	file_basechain_inflation_v1_inflation_proto_goTypes = nil
+	file_basechain_inflation_v1_inflation_proto_depIdxs = nil
 }

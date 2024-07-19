@@ -72,7 +72,7 @@ func (suite *KeeperTestSuite) TestMsgExecutionByProposal() {
 		{
 			"fail - MsgLendingMarketProposal - authority check",
 			&govshuttletypes.MsgLendingMarketProposal{
-				Authority:   "canto1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
+				Authority:   "basechain1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
 				Title:       "lending market proposal test",
 				Description: "lending market proposal test description",
 				Metadata: &govshuttletypes.LendingMarketMetadata{
@@ -144,14 +144,14 @@ func (suite *KeeperTestSuite) TestMsgExecutionByProposal() {
 		{
 			"fail - MsgTreasuryProposal - authority check",
 			&govshuttletypes.MsgTreasuryProposal{
-				Authority:   "canto1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
+				Authority:   "basechain1yrmjye0zyfvr0lthc6fwq7qlwg9e8muftxa630",
 				Title:       "treasury proposal test",
 				Description: "treasury proposal test description",
 				Metadata: &govshuttletypes.TreasuryProposalMetadata{
 					PropID:    2,
 					Recipient: "0x20F72265e2225837fd77C692e0781f720B93eF89",
 					Amount:    1234,
-					Denom:     "acanto",
+					Denom:     "abasecoin",
 				},
 			},
 			func(uint64, sdk.Msg) {},
@@ -167,7 +167,7 @@ func (suite *KeeperTestSuite) TestMsgExecutionByProposal() {
 					PropID:    2,
 					Recipient: "0x20F72265e2225837fd77C692e0781f720B93eF89",
 					Amount:    1234,
-					Denom:     "acanto",
+					Denom:     "abasecoin",
 				},
 			},
 			func(proposalId uint64, msg sdk.Msg) {

@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: canto/epochs/v1/query.proto
+// source: basechain/epochs/v1/query.proto
 
 package epochsv1
 
@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Query_EpochInfos_FullMethodName   = "/canto.epochs.v1.Query/EpochInfos"
-	Query_CurrentEpoch_FullMethodName = "/canto.epochs.v1.Query/CurrentEpoch"
+	Query_EpochInfos_FullMethodName   = "/basechain.epochs.v1.Query/EpochInfos"
+	Query_CurrentEpoch_FullMethodName = "/basechain.epochs.v1.Query/CurrentEpoch"
 )
 
 // QueryClient is the client API for Query service.
@@ -133,7 +133,7 @@ func _Query_CurrentEpoch_Handler(srv interface{}, ctx context.Context, dec func(
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Query_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "canto.epochs.v1.Query",
+	ServiceName: "basechain.epochs.v1.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -146,5 +146,5 @@ var Query_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "canto/epochs/v1/query.proto",
+	Metadata: "basechain/epochs/v1/query.proto",
 }

@@ -26,8 +26,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgConvertCoin = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgConvertCoin")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgConvertCoin = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgConvertCoin")
 	fd_MsgConvertCoin_coin = md_MsgConvertCoin.Fields().ByName("coin")
 	fd_MsgConvertCoin_receiver = md_MsgConvertCoin.Fields().ByName("receiver")
 	fd_MsgConvertCoin_sender = md_MsgConvertCoin.Fields().ByName("sender")
@@ -42,7 +42,7 @@ func (x *MsgConvertCoin) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgConvertCoin) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[0]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -131,17 +131,17 @@ func (x *fastReflection_MsgConvertCoin) Range(f func(protoreflect.FieldDescripto
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_MsgConvertCoin) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgConvertCoin.coin":
+	case "basechain.erc20.v1.MsgConvertCoin.coin":
 		return x.Coin != nil
-	case "canto.erc20.v1.MsgConvertCoin.receiver":
+	case "basechain.erc20.v1.MsgConvertCoin.receiver":
 		return x.Receiver != ""
-	case "canto.erc20.v1.MsgConvertCoin.sender":
+	case "basechain.erc20.v1.MsgConvertCoin.sender":
 		return x.Sender != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoin does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoin does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -153,17 +153,17 @@ func (x *fastReflection_MsgConvertCoin) Has(fd protoreflect.FieldDescriptor) boo
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgConvertCoin) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgConvertCoin.coin":
+	case "basechain.erc20.v1.MsgConvertCoin.coin":
 		x.Coin = nil
-	case "canto.erc20.v1.MsgConvertCoin.receiver":
+	case "basechain.erc20.v1.MsgConvertCoin.receiver":
 		x.Receiver = ""
-	case "canto.erc20.v1.MsgConvertCoin.sender":
+	case "basechain.erc20.v1.MsgConvertCoin.sender":
 		x.Sender = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoin does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoin does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -175,20 +175,20 @@ func (x *fastReflection_MsgConvertCoin) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_MsgConvertCoin) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.erc20.v1.MsgConvertCoin.coin":
+	case "basechain.erc20.v1.MsgConvertCoin.coin":
 		value := x.Coin
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
-	case "canto.erc20.v1.MsgConvertCoin.receiver":
+	case "basechain.erc20.v1.MsgConvertCoin.receiver":
 		value := x.Receiver
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgConvertCoin.sender":
+	case "basechain.erc20.v1.MsgConvertCoin.sender":
 		value := x.Sender
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoin does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoin does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -204,17 +204,17 @@ func (x *fastReflection_MsgConvertCoin) Get(descriptor protoreflect.FieldDescrip
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgConvertCoin) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgConvertCoin.coin":
+	case "basechain.erc20.v1.MsgConvertCoin.coin":
 		x.Coin = value.Message().Interface().(*v1beta1.Coin)
-	case "canto.erc20.v1.MsgConvertCoin.receiver":
+	case "basechain.erc20.v1.MsgConvertCoin.receiver":
 		x.Receiver = value.Interface().(string)
-	case "canto.erc20.v1.MsgConvertCoin.sender":
+	case "basechain.erc20.v1.MsgConvertCoin.sender":
 		x.Sender = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoin does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoin does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -230,20 +230,20 @@ func (x *fastReflection_MsgConvertCoin) Set(fd protoreflect.FieldDescriptor, val
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgConvertCoin) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgConvertCoin.coin":
+	case "basechain.erc20.v1.MsgConvertCoin.coin":
 		if x.Coin == nil {
 			x.Coin = new(v1beta1.Coin)
 		}
 		return protoreflect.ValueOfMessage(x.Coin.ProtoReflect())
-	case "canto.erc20.v1.MsgConvertCoin.receiver":
-		panic(fmt.Errorf("field receiver of message canto.erc20.v1.MsgConvertCoin is not mutable"))
-	case "canto.erc20.v1.MsgConvertCoin.sender":
-		panic(fmt.Errorf("field sender of message canto.erc20.v1.MsgConvertCoin is not mutable"))
+	case "basechain.erc20.v1.MsgConvertCoin.receiver":
+		panic(fmt.Errorf("field receiver of message basechain.erc20.v1.MsgConvertCoin is not mutable"))
+	case "basechain.erc20.v1.MsgConvertCoin.sender":
+		panic(fmt.Errorf("field sender of message basechain.erc20.v1.MsgConvertCoin is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoin does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoin does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -252,18 +252,18 @@ func (x *fastReflection_MsgConvertCoin) Mutable(fd protoreflect.FieldDescriptor)
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_MsgConvertCoin) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgConvertCoin.coin":
+	case "basechain.erc20.v1.MsgConvertCoin.coin":
 		m := new(v1beta1.Coin)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
-	case "canto.erc20.v1.MsgConvertCoin.receiver":
+	case "basechain.erc20.v1.MsgConvertCoin.receiver":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgConvertCoin.sender":
+	case "basechain.erc20.v1.MsgConvertCoin.sender":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoin does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoin does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -273,7 +273,7 @@ func (x *fastReflection_MsgConvertCoin) NewField(fd protoreflect.FieldDescriptor
 func (x *fastReflection_MsgConvertCoin) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgConvertCoin", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgConvertCoin", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -586,8 +586,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgConvertCoinResponse = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgConvertCoinResponse")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgConvertCoinResponse = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgConvertCoinResponse")
 }
 
 var _ protoreflect.Message = (*fastReflection_MsgConvertCoinResponse)(nil)
@@ -599,7 +599,7 @@ func (x *MsgConvertCoinResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgConvertCoinResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[1]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -672,9 +672,9 @@ func (x *fastReflection_MsgConvertCoinResponse) Has(fd protoreflect.FieldDescrip
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoinResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoinResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -688,9 +688,9 @@ func (x *fastReflection_MsgConvertCoinResponse) Clear(fd protoreflect.FieldDescr
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoinResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoinResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -704,9 +704,9 @@ func (x *fastReflection_MsgConvertCoinResponse) Get(descriptor protoreflect.Fiel
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoinResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoinResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -724,9 +724,9 @@ func (x *fastReflection_MsgConvertCoinResponse) Set(fd protoreflect.FieldDescrip
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoinResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoinResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -744,9 +744,9 @@ func (x *fastReflection_MsgConvertCoinResponse) Mutable(fd protoreflect.FieldDes
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoinResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoinResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -757,9 +757,9 @@ func (x *fastReflection_MsgConvertCoinResponse) NewField(fd protoreflect.FieldDe
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertCoinResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertCoinResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -769,7 +769,7 @@ func (x *fastReflection_MsgConvertCoinResponse) NewField(fd protoreflect.FieldDe
 func (x *fastReflection_MsgConvertCoinResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgConvertCoinResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgConvertCoinResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -946,8 +946,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgConvertERC20 = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgConvertERC20")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgConvertERC20 = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgConvertERC20")
 	fd_MsgConvertERC20_contract_address = md_MsgConvertERC20.Fields().ByName("contract_address")
 	fd_MsgConvertERC20_amount = md_MsgConvertERC20.Fields().ByName("amount")
 	fd_MsgConvertERC20_receiver = md_MsgConvertERC20.Fields().ByName("receiver")
@@ -963,7 +963,7 @@ func (x *MsgConvertERC20) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgConvertERC20) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[2]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1058,19 +1058,19 @@ func (x *fastReflection_MsgConvertERC20) Range(f func(protoreflect.FieldDescript
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_MsgConvertERC20) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgConvertERC20.contract_address":
+	case "basechain.erc20.v1.MsgConvertERC20.contract_address":
 		return x.ContractAddress != ""
-	case "canto.erc20.v1.MsgConvertERC20.amount":
+	case "basechain.erc20.v1.MsgConvertERC20.amount":
 		return x.Amount != ""
-	case "canto.erc20.v1.MsgConvertERC20.receiver":
+	case "basechain.erc20.v1.MsgConvertERC20.receiver":
 		return x.Receiver != ""
-	case "canto.erc20.v1.MsgConvertERC20.sender":
+	case "basechain.erc20.v1.MsgConvertERC20.sender":
 		return x.Sender != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20 does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20 does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1082,19 +1082,19 @@ func (x *fastReflection_MsgConvertERC20) Has(fd protoreflect.FieldDescriptor) bo
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgConvertERC20) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgConvertERC20.contract_address":
+	case "basechain.erc20.v1.MsgConvertERC20.contract_address":
 		x.ContractAddress = ""
-	case "canto.erc20.v1.MsgConvertERC20.amount":
+	case "basechain.erc20.v1.MsgConvertERC20.amount":
 		x.Amount = ""
-	case "canto.erc20.v1.MsgConvertERC20.receiver":
+	case "basechain.erc20.v1.MsgConvertERC20.receiver":
 		x.Receiver = ""
-	case "canto.erc20.v1.MsgConvertERC20.sender":
+	case "basechain.erc20.v1.MsgConvertERC20.sender":
 		x.Sender = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20 does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20 does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1106,23 +1106,23 @@ func (x *fastReflection_MsgConvertERC20) Clear(fd protoreflect.FieldDescriptor) 
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_MsgConvertERC20) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.erc20.v1.MsgConvertERC20.contract_address":
+	case "basechain.erc20.v1.MsgConvertERC20.contract_address":
 		value := x.ContractAddress
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgConvertERC20.amount":
+	case "basechain.erc20.v1.MsgConvertERC20.amount":
 		value := x.Amount
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgConvertERC20.receiver":
+	case "basechain.erc20.v1.MsgConvertERC20.receiver":
 		value := x.Receiver
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgConvertERC20.sender":
+	case "basechain.erc20.v1.MsgConvertERC20.sender":
 		value := x.Sender
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20 does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20 does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1138,19 +1138,19 @@ func (x *fastReflection_MsgConvertERC20) Get(descriptor protoreflect.FieldDescri
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgConvertERC20) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgConvertERC20.contract_address":
+	case "basechain.erc20.v1.MsgConvertERC20.contract_address":
 		x.ContractAddress = value.Interface().(string)
-	case "canto.erc20.v1.MsgConvertERC20.amount":
+	case "basechain.erc20.v1.MsgConvertERC20.amount":
 		x.Amount = value.Interface().(string)
-	case "canto.erc20.v1.MsgConvertERC20.receiver":
+	case "basechain.erc20.v1.MsgConvertERC20.receiver":
 		x.Receiver = value.Interface().(string)
-	case "canto.erc20.v1.MsgConvertERC20.sender":
+	case "basechain.erc20.v1.MsgConvertERC20.sender":
 		x.Sender = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20 does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20 does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1166,19 +1166,19 @@ func (x *fastReflection_MsgConvertERC20) Set(fd protoreflect.FieldDescriptor, va
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgConvertERC20) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgConvertERC20.contract_address":
-		panic(fmt.Errorf("field contract_address of message canto.erc20.v1.MsgConvertERC20 is not mutable"))
-	case "canto.erc20.v1.MsgConvertERC20.amount":
-		panic(fmt.Errorf("field amount of message canto.erc20.v1.MsgConvertERC20 is not mutable"))
-	case "canto.erc20.v1.MsgConvertERC20.receiver":
-		panic(fmt.Errorf("field receiver of message canto.erc20.v1.MsgConvertERC20 is not mutable"))
-	case "canto.erc20.v1.MsgConvertERC20.sender":
-		panic(fmt.Errorf("field sender of message canto.erc20.v1.MsgConvertERC20 is not mutable"))
+	case "basechain.erc20.v1.MsgConvertERC20.contract_address":
+		panic(fmt.Errorf("field contract_address of message basechain.erc20.v1.MsgConvertERC20 is not mutable"))
+	case "basechain.erc20.v1.MsgConvertERC20.amount":
+		panic(fmt.Errorf("field amount of message basechain.erc20.v1.MsgConvertERC20 is not mutable"))
+	case "basechain.erc20.v1.MsgConvertERC20.receiver":
+		panic(fmt.Errorf("field receiver of message basechain.erc20.v1.MsgConvertERC20 is not mutable"))
+	case "basechain.erc20.v1.MsgConvertERC20.sender":
+		panic(fmt.Errorf("field sender of message basechain.erc20.v1.MsgConvertERC20 is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20 does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20 does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1187,19 +1187,19 @@ func (x *fastReflection_MsgConvertERC20) Mutable(fd protoreflect.FieldDescriptor
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_MsgConvertERC20) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgConvertERC20.contract_address":
+	case "basechain.erc20.v1.MsgConvertERC20.contract_address":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgConvertERC20.amount":
+	case "basechain.erc20.v1.MsgConvertERC20.amount":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgConvertERC20.receiver":
+	case "basechain.erc20.v1.MsgConvertERC20.receiver":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgConvertERC20.sender":
+	case "basechain.erc20.v1.MsgConvertERC20.sender":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20 does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20 does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1209,7 +1209,7 @@ func (x *fastReflection_MsgConvertERC20) NewField(fd protoreflect.FieldDescripto
 func (x *fastReflection_MsgConvertERC20) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgConvertERC20", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgConvertERC20", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1554,8 +1554,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgConvertERC20Response = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgConvertERC20Response")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgConvertERC20Response = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgConvertERC20Response")
 }
 
 var _ protoreflect.Message = (*fastReflection_MsgConvertERC20Response)(nil)
@@ -1567,7 +1567,7 @@ func (x *MsgConvertERC20Response) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgConvertERC20Response) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[3]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1640,9 +1640,9 @@ func (x *fastReflection_MsgConvertERC20Response) Has(fd protoreflect.FieldDescri
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20Response does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20Response does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1656,9 +1656,9 @@ func (x *fastReflection_MsgConvertERC20Response) Clear(fd protoreflect.FieldDesc
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20Response does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20Response does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1672,9 +1672,9 @@ func (x *fastReflection_MsgConvertERC20Response) Get(descriptor protoreflect.Fie
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20Response does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20Response does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1692,9 +1692,9 @@ func (x *fastReflection_MsgConvertERC20Response) Set(fd protoreflect.FieldDescri
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20Response does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20Response does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1712,9 +1712,9 @@ func (x *fastReflection_MsgConvertERC20Response) Mutable(fd protoreflect.FieldDe
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20Response does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20Response does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1725,9 +1725,9 @@ func (x *fastReflection_MsgConvertERC20Response) NewField(fd protoreflect.FieldD
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgConvertERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgConvertERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgConvertERC20Response does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgConvertERC20Response does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1737,7 +1737,7 @@ func (x *fastReflection_MsgConvertERC20Response) NewField(fd protoreflect.FieldD
 func (x *fastReflection_MsgConvertERC20Response) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgConvertERC20Response", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgConvertERC20Response", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1912,8 +1912,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgUpdateParams = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgUpdateParams")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgUpdateParams = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgUpdateParams")
 	fd_MsgUpdateParams_authority = md_MsgUpdateParams.Fields().ByName("authority")
 	fd_MsgUpdateParams_params = md_MsgUpdateParams.Fields().ByName("params")
 }
@@ -1927,7 +1927,7 @@ func (x *MsgUpdateParams) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgUpdateParams) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[4]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2010,15 +2010,15 @@ func (x *fastReflection_MsgUpdateParams) Range(f func(protoreflect.FieldDescript
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_MsgUpdateParams) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgUpdateParams.authority":
+	case "basechain.erc20.v1.MsgUpdateParams.authority":
 		return x.Authority != ""
-	case "canto.erc20.v1.MsgUpdateParams.params":
+	case "basechain.erc20.v1.MsgUpdateParams.params":
 		return x.Params != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParams"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParams"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParams does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParams does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2030,15 +2030,15 @@ func (x *fastReflection_MsgUpdateParams) Has(fd protoreflect.FieldDescriptor) bo
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgUpdateParams) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgUpdateParams.authority":
+	case "basechain.erc20.v1.MsgUpdateParams.authority":
 		x.Authority = ""
-	case "canto.erc20.v1.MsgUpdateParams.params":
+	case "basechain.erc20.v1.MsgUpdateParams.params":
 		x.Params = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParams"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParams"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParams does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParams does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2050,17 +2050,17 @@ func (x *fastReflection_MsgUpdateParams) Clear(fd protoreflect.FieldDescriptor) 
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_MsgUpdateParams) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.erc20.v1.MsgUpdateParams.authority":
+	case "basechain.erc20.v1.MsgUpdateParams.authority":
 		value := x.Authority
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgUpdateParams.params":
+	case "basechain.erc20.v1.MsgUpdateParams.params":
 		value := x.Params
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParams"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParams"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParams does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParams does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -2076,15 +2076,15 @@ func (x *fastReflection_MsgUpdateParams) Get(descriptor protoreflect.FieldDescri
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgUpdateParams) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgUpdateParams.authority":
+	case "basechain.erc20.v1.MsgUpdateParams.authority":
 		x.Authority = value.Interface().(string)
-	case "canto.erc20.v1.MsgUpdateParams.params":
+	case "basechain.erc20.v1.MsgUpdateParams.params":
 		x.Params = value.Message().Interface().(*Params)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParams"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParams"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParams does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParams does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2100,18 +2100,18 @@ func (x *fastReflection_MsgUpdateParams) Set(fd protoreflect.FieldDescriptor, va
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgUpdateParams) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgUpdateParams.params":
+	case "basechain.erc20.v1.MsgUpdateParams.params":
 		if x.Params == nil {
 			x.Params = new(Params)
 		}
 		return protoreflect.ValueOfMessage(x.Params.ProtoReflect())
-	case "canto.erc20.v1.MsgUpdateParams.authority":
-		panic(fmt.Errorf("field authority of message canto.erc20.v1.MsgUpdateParams is not mutable"))
+	case "basechain.erc20.v1.MsgUpdateParams.authority":
+		panic(fmt.Errorf("field authority of message basechain.erc20.v1.MsgUpdateParams is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParams"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParams"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParams does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParams does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2120,16 +2120,16 @@ func (x *fastReflection_MsgUpdateParams) Mutable(fd protoreflect.FieldDescriptor
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_MsgUpdateParams) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgUpdateParams.authority":
+	case "basechain.erc20.v1.MsgUpdateParams.authority":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgUpdateParams.params":
+	case "basechain.erc20.v1.MsgUpdateParams.params":
 		m := new(Params)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParams"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParams"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParams does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParams does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2139,7 +2139,7 @@ func (x *fastReflection_MsgUpdateParams) NewField(fd protoreflect.FieldDescripto
 func (x *fastReflection_MsgUpdateParams) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgUpdateParams", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgUpdateParams", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -2409,8 +2409,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgUpdateParamsResponse = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgUpdateParamsResponse")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgUpdateParamsResponse = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgUpdateParamsResponse")
 }
 
 var _ protoreflect.Message = (*fastReflection_MsgUpdateParamsResponse)(nil)
@@ -2422,7 +2422,7 @@ func (x *MsgUpdateParamsResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgUpdateParamsResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[5]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2495,9 +2495,9 @@ func (x *fastReflection_MsgUpdateParamsResponse) Has(fd protoreflect.FieldDescri
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2511,9 +2511,9 @@ func (x *fastReflection_MsgUpdateParamsResponse) Clear(fd protoreflect.FieldDesc
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2527,9 +2527,9 @@ func (x *fastReflection_MsgUpdateParamsResponse) Get(descriptor protoreflect.Fie
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParamsResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParamsResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -2547,9 +2547,9 @@ func (x *fastReflection_MsgUpdateParamsResponse) Set(fd protoreflect.FieldDescri
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2567,9 +2567,9 @@ func (x *fastReflection_MsgUpdateParamsResponse) Mutable(fd protoreflect.FieldDe
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2580,9 +2580,9 @@ func (x *fastReflection_MsgUpdateParamsResponse) NewField(fd protoreflect.FieldD
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgUpdateParamsResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgUpdateParamsResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgUpdateParamsResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgUpdateParamsResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2592,7 +2592,7 @@ func (x *fastReflection_MsgUpdateParamsResponse) NewField(fd protoreflect.FieldD
 func (x *fastReflection_MsgUpdateParamsResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgUpdateParamsResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgUpdateParamsResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -2769,8 +2769,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgRegisterCoin = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgRegisterCoin")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgRegisterCoin = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgRegisterCoin")
 	fd_MsgRegisterCoin_authority = md_MsgRegisterCoin.Fields().ByName("authority")
 	fd_MsgRegisterCoin_title = md_MsgRegisterCoin.Fields().ByName("title")
 	fd_MsgRegisterCoin_description = md_MsgRegisterCoin.Fields().ByName("description")
@@ -2786,7 +2786,7 @@ func (x *MsgRegisterCoin) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgRegisterCoin) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[6]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2881,19 +2881,19 @@ func (x *fastReflection_MsgRegisterCoin) Range(f func(protoreflect.FieldDescript
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_MsgRegisterCoin) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgRegisterCoin.authority":
+	case "basechain.erc20.v1.MsgRegisterCoin.authority":
 		return x.Authority != ""
-	case "canto.erc20.v1.MsgRegisterCoin.title":
+	case "basechain.erc20.v1.MsgRegisterCoin.title":
 		return x.Title != ""
-	case "canto.erc20.v1.MsgRegisterCoin.description":
+	case "basechain.erc20.v1.MsgRegisterCoin.description":
 		return x.Description != ""
-	case "canto.erc20.v1.MsgRegisterCoin.metadata":
+	case "basechain.erc20.v1.MsgRegisterCoin.metadata":
 		return x.Metadata != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoin does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoin does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2905,19 +2905,19 @@ func (x *fastReflection_MsgRegisterCoin) Has(fd protoreflect.FieldDescriptor) bo
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgRegisterCoin) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgRegisterCoin.authority":
+	case "basechain.erc20.v1.MsgRegisterCoin.authority":
 		x.Authority = ""
-	case "canto.erc20.v1.MsgRegisterCoin.title":
+	case "basechain.erc20.v1.MsgRegisterCoin.title":
 		x.Title = ""
-	case "canto.erc20.v1.MsgRegisterCoin.description":
+	case "basechain.erc20.v1.MsgRegisterCoin.description":
 		x.Description = ""
-	case "canto.erc20.v1.MsgRegisterCoin.metadata":
+	case "basechain.erc20.v1.MsgRegisterCoin.metadata":
 		x.Metadata = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoin does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoin does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2929,23 +2929,23 @@ func (x *fastReflection_MsgRegisterCoin) Clear(fd protoreflect.FieldDescriptor) 
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_MsgRegisterCoin) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.erc20.v1.MsgRegisterCoin.authority":
+	case "basechain.erc20.v1.MsgRegisterCoin.authority":
 		value := x.Authority
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgRegisterCoin.title":
+	case "basechain.erc20.v1.MsgRegisterCoin.title":
 		value := x.Title
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgRegisterCoin.description":
+	case "basechain.erc20.v1.MsgRegisterCoin.description":
 		value := x.Description
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgRegisterCoin.metadata":
+	case "basechain.erc20.v1.MsgRegisterCoin.metadata":
 		value := x.Metadata
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoin does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoin does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -2961,19 +2961,19 @@ func (x *fastReflection_MsgRegisterCoin) Get(descriptor protoreflect.FieldDescri
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgRegisterCoin) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgRegisterCoin.authority":
+	case "basechain.erc20.v1.MsgRegisterCoin.authority":
 		x.Authority = value.Interface().(string)
-	case "canto.erc20.v1.MsgRegisterCoin.title":
+	case "basechain.erc20.v1.MsgRegisterCoin.title":
 		x.Title = value.Interface().(string)
-	case "canto.erc20.v1.MsgRegisterCoin.description":
+	case "basechain.erc20.v1.MsgRegisterCoin.description":
 		x.Description = value.Interface().(string)
-	case "canto.erc20.v1.MsgRegisterCoin.metadata":
+	case "basechain.erc20.v1.MsgRegisterCoin.metadata":
 		x.Metadata = value.Message().Interface().(*v1beta11.Metadata)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoin does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoin does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2989,22 +2989,22 @@ func (x *fastReflection_MsgRegisterCoin) Set(fd protoreflect.FieldDescriptor, va
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgRegisterCoin) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgRegisterCoin.metadata":
+	case "basechain.erc20.v1.MsgRegisterCoin.metadata":
 		if x.Metadata == nil {
 			x.Metadata = new(v1beta11.Metadata)
 		}
 		return protoreflect.ValueOfMessage(x.Metadata.ProtoReflect())
-	case "canto.erc20.v1.MsgRegisterCoin.authority":
-		panic(fmt.Errorf("field authority of message canto.erc20.v1.MsgRegisterCoin is not mutable"))
-	case "canto.erc20.v1.MsgRegisterCoin.title":
-		panic(fmt.Errorf("field title of message canto.erc20.v1.MsgRegisterCoin is not mutable"))
-	case "canto.erc20.v1.MsgRegisterCoin.description":
-		panic(fmt.Errorf("field description of message canto.erc20.v1.MsgRegisterCoin is not mutable"))
+	case "basechain.erc20.v1.MsgRegisterCoin.authority":
+		panic(fmt.Errorf("field authority of message basechain.erc20.v1.MsgRegisterCoin is not mutable"))
+	case "basechain.erc20.v1.MsgRegisterCoin.title":
+		panic(fmt.Errorf("field title of message basechain.erc20.v1.MsgRegisterCoin is not mutable"))
+	case "basechain.erc20.v1.MsgRegisterCoin.description":
+		panic(fmt.Errorf("field description of message basechain.erc20.v1.MsgRegisterCoin is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoin does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoin does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3013,20 +3013,20 @@ func (x *fastReflection_MsgRegisterCoin) Mutable(fd protoreflect.FieldDescriptor
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_MsgRegisterCoin) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgRegisterCoin.authority":
+	case "basechain.erc20.v1.MsgRegisterCoin.authority":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgRegisterCoin.title":
+	case "basechain.erc20.v1.MsgRegisterCoin.title":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgRegisterCoin.description":
+	case "basechain.erc20.v1.MsgRegisterCoin.description":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgRegisterCoin.metadata":
+	case "basechain.erc20.v1.MsgRegisterCoin.metadata":
 		m := new(v1beta11.Metadata)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoin"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoin"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoin does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoin does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3036,7 +3036,7 @@ func (x *fastReflection_MsgRegisterCoin) NewField(fd protoreflect.FieldDescripto
 func (x *fastReflection_MsgRegisterCoin) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgRegisterCoin", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgRegisterCoin", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -3392,8 +3392,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgRegisterCoinResponse = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgRegisterCoinResponse")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgRegisterCoinResponse = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgRegisterCoinResponse")
 }
 
 var _ protoreflect.Message = (*fastReflection_MsgRegisterCoinResponse)(nil)
@@ -3405,7 +3405,7 @@ func (x *MsgRegisterCoinResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgRegisterCoinResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[7]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3478,9 +3478,9 @@ func (x *fastReflection_MsgRegisterCoinResponse) Has(fd protoreflect.FieldDescri
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoinResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoinResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3494,9 +3494,9 @@ func (x *fastReflection_MsgRegisterCoinResponse) Clear(fd protoreflect.FieldDesc
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoinResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoinResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3510,9 +3510,9 @@ func (x *fastReflection_MsgRegisterCoinResponse) Get(descriptor protoreflect.Fie
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoinResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoinResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -3530,9 +3530,9 @@ func (x *fastReflection_MsgRegisterCoinResponse) Set(fd protoreflect.FieldDescri
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoinResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoinResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3550,9 +3550,9 @@ func (x *fastReflection_MsgRegisterCoinResponse) Mutable(fd protoreflect.FieldDe
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoinResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoinResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3563,9 +3563,9 @@ func (x *fastReflection_MsgRegisterCoinResponse) NewField(fd protoreflect.FieldD
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterCoinResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterCoinResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterCoinResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterCoinResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3575,7 +3575,7 @@ func (x *fastReflection_MsgRegisterCoinResponse) NewField(fd protoreflect.FieldD
 func (x *fastReflection_MsgRegisterCoinResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgRegisterCoinResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgRegisterCoinResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -3752,8 +3752,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgRegisterERC20 = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgRegisterERC20")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgRegisterERC20 = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgRegisterERC20")
 	fd_MsgRegisterERC20_authority = md_MsgRegisterERC20.Fields().ByName("authority")
 	fd_MsgRegisterERC20_title = md_MsgRegisterERC20.Fields().ByName("title")
 	fd_MsgRegisterERC20_description = md_MsgRegisterERC20.Fields().ByName("description")
@@ -3769,7 +3769,7 @@ func (x *MsgRegisterERC20) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgRegisterERC20) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[8]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3864,19 +3864,19 @@ func (x *fastReflection_MsgRegisterERC20) Range(f func(protoreflect.FieldDescrip
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_MsgRegisterERC20) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgRegisterERC20.authority":
+	case "basechain.erc20.v1.MsgRegisterERC20.authority":
 		return x.Authority != ""
-	case "canto.erc20.v1.MsgRegisterERC20.title":
+	case "basechain.erc20.v1.MsgRegisterERC20.title":
 		return x.Title != ""
-	case "canto.erc20.v1.MsgRegisterERC20.description":
+	case "basechain.erc20.v1.MsgRegisterERC20.description":
 		return x.Description != ""
-	case "canto.erc20.v1.MsgRegisterERC20.erc20address":
+	case "basechain.erc20.v1.MsgRegisterERC20.erc20address":
 		return x.Erc20Address != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20 does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20 does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3888,19 +3888,19 @@ func (x *fastReflection_MsgRegisterERC20) Has(fd protoreflect.FieldDescriptor) b
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgRegisterERC20) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgRegisterERC20.authority":
+	case "basechain.erc20.v1.MsgRegisterERC20.authority":
 		x.Authority = ""
-	case "canto.erc20.v1.MsgRegisterERC20.title":
+	case "basechain.erc20.v1.MsgRegisterERC20.title":
 		x.Title = ""
-	case "canto.erc20.v1.MsgRegisterERC20.description":
+	case "basechain.erc20.v1.MsgRegisterERC20.description":
 		x.Description = ""
-	case "canto.erc20.v1.MsgRegisterERC20.erc20address":
+	case "basechain.erc20.v1.MsgRegisterERC20.erc20address":
 		x.Erc20Address = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20 does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20 does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3912,23 +3912,23 @@ func (x *fastReflection_MsgRegisterERC20) Clear(fd protoreflect.FieldDescriptor)
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_MsgRegisterERC20) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.erc20.v1.MsgRegisterERC20.authority":
+	case "basechain.erc20.v1.MsgRegisterERC20.authority":
 		value := x.Authority
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgRegisterERC20.title":
+	case "basechain.erc20.v1.MsgRegisterERC20.title":
 		value := x.Title
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgRegisterERC20.description":
+	case "basechain.erc20.v1.MsgRegisterERC20.description":
 		value := x.Description
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgRegisterERC20.erc20address":
+	case "basechain.erc20.v1.MsgRegisterERC20.erc20address":
 		value := x.Erc20Address
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20 does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20 does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -3944,19 +3944,19 @@ func (x *fastReflection_MsgRegisterERC20) Get(descriptor protoreflect.FieldDescr
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgRegisterERC20) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgRegisterERC20.authority":
+	case "basechain.erc20.v1.MsgRegisterERC20.authority":
 		x.Authority = value.Interface().(string)
-	case "canto.erc20.v1.MsgRegisterERC20.title":
+	case "basechain.erc20.v1.MsgRegisterERC20.title":
 		x.Title = value.Interface().(string)
-	case "canto.erc20.v1.MsgRegisterERC20.description":
+	case "basechain.erc20.v1.MsgRegisterERC20.description":
 		x.Description = value.Interface().(string)
-	case "canto.erc20.v1.MsgRegisterERC20.erc20address":
+	case "basechain.erc20.v1.MsgRegisterERC20.erc20address":
 		x.Erc20Address = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20 does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20 does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3972,19 +3972,19 @@ func (x *fastReflection_MsgRegisterERC20) Set(fd protoreflect.FieldDescriptor, v
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgRegisterERC20) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgRegisterERC20.authority":
-		panic(fmt.Errorf("field authority of message canto.erc20.v1.MsgRegisterERC20 is not mutable"))
-	case "canto.erc20.v1.MsgRegisterERC20.title":
-		panic(fmt.Errorf("field title of message canto.erc20.v1.MsgRegisterERC20 is not mutable"))
-	case "canto.erc20.v1.MsgRegisterERC20.description":
-		panic(fmt.Errorf("field description of message canto.erc20.v1.MsgRegisterERC20 is not mutable"))
-	case "canto.erc20.v1.MsgRegisterERC20.erc20address":
-		panic(fmt.Errorf("field erc20address of message canto.erc20.v1.MsgRegisterERC20 is not mutable"))
+	case "basechain.erc20.v1.MsgRegisterERC20.authority":
+		panic(fmt.Errorf("field authority of message basechain.erc20.v1.MsgRegisterERC20 is not mutable"))
+	case "basechain.erc20.v1.MsgRegisterERC20.title":
+		panic(fmt.Errorf("field title of message basechain.erc20.v1.MsgRegisterERC20 is not mutable"))
+	case "basechain.erc20.v1.MsgRegisterERC20.description":
+		panic(fmt.Errorf("field description of message basechain.erc20.v1.MsgRegisterERC20 is not mutable"))
+	case "basechain.erc20.v1.MsgRegisterERC20.erc20address":
+		panic(fmt.Errorf("field erc20address of message basechain.erc20.v1.MsgRegisterERC20 is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20 does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20 does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3993,19 +3993,19 @@ func (x *fastReflection_MsgRegisterERC20) Mutable(fd protoreflect.FieldDescripto
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_MsgRegisterERC20) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgRegisterERC20.authority":
+	case "basechain.erc20.v1.MsgRegisterERC20.authority":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgRegisterERC20.title":
+	case "basechain.erc20.v1.MsgRegisterERC20.title":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgRegisterERC20.description":
+	case "basechain.erc20.v1.MsgRegisterERC20.description":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgRegisterERC20.erc20address":
+	case "basechain.erc20.v1.MsgRegisterERC20.erc20address":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20 does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20 does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4015,7 +4015,7 @@ func (x *fastReflection_MsgRegisterERC20) NewField(fd protoreflect.FieldDescript
 func (x *fastReflection_MsgRegisterERC20) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgRegisterERC20", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgRegisterERC20", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -4360,8 +4360,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgRegisterERC20Response = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgRegisterERC20Response")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgRegisterERC20Response = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgRegisterERC20Response")
 }
 
 var _ protoreflect.Message = (*fastReflection_MsgRegisterERC20Response)(nil)
@@ -4373,7 +4373,7 @@ func (x *MsgRegisterERC20Response) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgRegisterERC20Response) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[9]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4446,9 +4446,9 @@ func (x *fastReflection_MsgRegisterERC20Response) Has(fd protoreflect.FieldDescr
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20Response does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20Response does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4462,9 +4462,9 @@ func (x *fastReflection_MsgRegisterERC20Response) Clear(fd protoreflect.FieldDes
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20Response does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20Response does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4478,9 +4478,9 @@ func (x *fastReflection_MsgRegisterERC20Response) Get(descriptor protoreflect.Fi
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20Response does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20Response does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -4498,9 +4498,9 @@ func (x *fastReflection_MsgRegisterERC20Response) Set(fd protoreflect.FieldDescr
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20Response does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20Response does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4518,9 +4518,9 @@ func (x *fastReflection_MsgRegisterERC20Response) Mutable(fd protoreflect.FieldD
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20Response does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20Response does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4531,9 +4531,9 @@ func (x *fastReflection_MsgRegisterERC20Response) NewField(fd protoreflect.Field
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgRegisterERC20Response"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgRegisterERC20Response"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgRegisterERC20Response does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgRegisterERC20Response does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4543,7 +4543,7 @@ func (x *fastReflection_MsgRegisterERC20Response) NewField(fd protoreflect.Field
 func (x *fastReflection_MsgRegisterERC20Response) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgRegisterERC20Response", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgRegisterERC20Response", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -4720,8 +4720,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgToggleTokenConversion = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgToggleTokenConversion")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgToggleTokenConversion = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgToggleTokenConversion")
 	fd_MsgToggleTokenConversion_authority = md_MsgToggleTokenConversion.Fields().ByName("authority")
 	fd_MsgToggleTokenConversion_title = md_MsgToggleTokenConversion.Fields().ByName("title")
 	fd_MsgToggleTokenConversion_description = md_MsgToggleTokenConversion.Fields().ByName("description")
@@ -4737,7 +4737,7 @@ func (x *MsgToggleTokenConversion) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgToggleTokenConversion) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[10]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4832,19 +4832,19 @@ func (x *fastReflection_MsgToggleTokenConversion) Range(f func(protoreflect.Fiel
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_MsgToggleTokenConversion) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgToggleTokenConversion.authority":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.authority":
 		return x.Authority != ""
-	case "canto.erc20.v1.MsgToggleTokenConversion.title":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.title":
 		return x.Title != ""
-	case "canto.erc20.v1.MsgToggleTokenConversion.description":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.description":
 		return x.Description != ""
-	case "canto.erc20.v1.MsgToggleTokenConversion.token":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.token":
 		return x.Token != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversion"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversion"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversion does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversion does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4856,19 +4856,19 @@ func (x *fastReflection_MsgToggleTokenConversion) Has(fd protoreflect.FieldDescr
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgToggleTokenConversion) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgToggleTokenConversion.authority":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.authority":
 		x.Authority = ""
-	case "canto.erc20.v1.MsgToggleTokenConversion.title":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.title":
 		x.Title = ""
-	case "canto.erc20.v1.MsgToggleTokenConversion.description":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.description":
 		x.Description = ""
-	case "canto.erc20.v1.MsgToggleTokenConversion.token":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.token":
 		x.Token = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversion"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversion"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversion does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversion does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4880,23 +4880,23 @@ func (x *fastReflection_MsgToggleTokenConversion) Clear(fd protoreflect.FieldDes
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_MsgToggleTokenConversion) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "canto.erc20.v1.MsgToggleTokenConversion.authority":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.authority":
 		value := x.Authority
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgToggleTokenConversion.title":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.title":
 		value := x.Title
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgToggleTokenConversion.description":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.description":
 		value := x.Description
 		return protoreflect.ValueOfString(value)
-	case "canto.erc20.v1.MsgToggleTokenConversion.token":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.token":
 		value := x.Token
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversion"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversion"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversion does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversion does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -4912,19 +4912,19 @@ func (x *fastReflection_MsgToggleTokenConversion) Get(descriptor protoreflect.Fi
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgToggleTokenConversion) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgToggleTokenConversion.authority":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.authority":
 		x.Authority = value.Interface().(string)
-	case "canto.erc20.v1.MsgToggleTokenConversion.title":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.title":
 		x.Title = value.Interface().(string)
-	case "canto.erc20.v1.MsgToggleTokenConversion.description":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.description":
 		x.Description = value.Interface().(string)
-	case "canto.erc20.v1.MsgToggleTokenConversion.token":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.token":
 		x.Token = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversion"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversion"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversion does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversion does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4940,19 +4940,19 @@ func (x *fastReflection_MsgToggleTokenConversion) Set(fd protoreflect.FieldDescr
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_MsgToggleTokenConversion) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgToggleTokenConversion.authority":
-		panic(fmt.Errorf("field authority of message canto.erc20.v1.MsgToggleTokenConversion is not mutable"))
-	case "canto.erc20.v1.MsgToggleTokenConversion.title":
-		panic(fmt.Errorf("field title of message canto.erc20.v1.MsgToggleTokenConversion is not mutable"))
-	case "canto.erc20.v1.MsgToggleTokenConversion.description":
-		panic(fmt.Errorf("field description of message canto.erc20.v1.MsgToggleTokenConversion is not mutable"))
-	case "canto.erc20.v1.MsgToggleTokenConversion.token":
-		panic(fmt.Errorf("field token of message canto.erc20.v1.MsgToggleTokenConversion is not mutable"))
+	case "basechain.erc20.v1.MsgToggleTokenConversion.authority":
+		panic(fmt.Errorf("field authority of message basechain.erc20.v1.MsgToggleTokenConversion is not mutable"))
+	case "basechain.erc20.v1.MsgToggleTokenConversion.title":
+		panic(fmt.Errorf("field title of message basechain.erc20.v1.MsgToggleTokenConversion is not mutable"))
+	case "basechain.erc20.v1.MsgToggleTokenConversion.description":
+		panic(fmt.Errorf("field description of message basechain.erc20.v1.MsgToggleTokenConversion is not mutable"))
+	case "basechain.erc20.v1.MsgToggleTokenConversion.token":
+		panic(fmt.Errorf("field token of message basechain.erc20.v1.MsgToggleTokenConversion is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversion"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversion"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversion does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversion does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4961,19 +4961,19 @@ func (x *fastReflection_MsgToggleTokenConversion) Mutable(fd protoreflect.FieldD
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_MsgToggleTokenConversion) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "canto.erc20.v1.MsgToggleTokenConversion.authority":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.authority":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgToggleTokenConversion.title":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.title":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgToggleTokenConversion.description":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.description":
 		return protoreflect.ValueOfString("")
-	case "canto.erc20.v1.MsgToggleTokenConversion.token":
+	case "basechain.erc20.v1.MsgToggleTokenConversion.token":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversion"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversion"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversion does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversion does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -4983,7 +4983,7 @@ func (x *fastReflection_MsgToggleTokenConversion) NewField(fd protoreflect.Field
 func (x *fastReflection_MsgToggleTokenConversion) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgToggleTokenConversion", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgToggleTokenConversion", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -5328,8 +5328,8 @@ var (
 )
 
 func init() {
-	file_canto_erc20_v1_tx_proto_init()
-	md_MsgToggleTokenConversionResponse = File_canto_erc20_v1_tx_proto.Messages().ByName("MsgToggleTokenConversionResponse")
+	file_basechain_erc20_v1_tx_proto_init()
+	md_MsgToggleTokenConversionResponse = File_basechain_erc20_v1_tx_proto.Messages().ByName("MsgToggleTokenConversionResponse")
 }
 
 var _ protoreflect.Message = (*fastReflection_MsgToggleTokenConversionResponse)(nil)
@@ -5341,7 +5341,7 @@ func (x *MsgToggleTokenConversionResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *MsgToggleTokenConversionResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_canto_erc20_v1_tx_proto_msgTypes[11]
+	mi := &file_basechain_erc20_v1_tx_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5414,9 +5414,9 @@ func (x *fastReflection_MsgToggleTokenConversionResponse) Has(fd protoreflect.Fi
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversionResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversionResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -5430,9 +5430,9 @@ func (x *fastReflection_MsgToggleTokenConversionResponse) Clear(fd protoreflect.
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversionResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversionResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -5446,9 +5446,9 @@ func (x *fastReflection_MsgToggleTokenConversionResponse) Get(descriptor protore
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversionResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversionResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -5466,9 +5466,9 @@ func (x *fastReflection_MsgToggleTokenConversionResponse) Set(fd protoreflect.Fi
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversionResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversionResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -5486,9 +5486,9 @@ func (x *fastReflection_MsgToggleTokenConversionResponse) Mutable(fd protoreflec
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversionResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversionResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -5499,9 +5499,9 @@ func (x *fastReflection_MsgToggleTokenConversionResponse) NewField(fd protorefle
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: canto.erc20.v1.MsgToggleTokenConversionResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: basechain.erc20.v1.MsgToggleTokenConversionResponse"))
 		}
-		panic(fmt.Errorf("message canto.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message basechain.erc20.v1.MsgToggleTokenConversionResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -5511,7 +5511,7 @@ func (x *fastReflection_MsgToggleTokenConversionResponse) NewField(fd protorefle
 func (x *fastReflection_MsgToggleTokenConversionResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in canto.erc20.v1.MsgToggleTokenConversionResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in basechain.erc20.v1.MsgToggleTokenConversionResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -5683,7 +5683,7 @@ func (x *fastReflection_MsgToggleTokenConversionResponse) ProtoMethods() *protoi
 // versions:
 // 	protoc-gen-go v1.27.0
 // 	protoc        (unknown)
-// source: canto/erc20/v1/tx.proto
+// source: basechain/erc20/v1/tx.proto
 
 const (
 	// Verify that this generated code is sufficiently up-to-date.
@@ -5710,7 +5710,7 @@ type MsgConvertCoin struct {
 func (x *MsgConvertCoin) Reset() {
 	*x = MsgConvertCoin{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[0]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5724,7 +5724,7 @@ func (*MsgConvertCoin) ProtoMessage() {}
 
 // Deprecated: Use MsgConvertCoin.ProtoReflect.Descriptor instead.
 func (*MsgConvertCoin) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{0}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *MsgConvertCoin) GetCoin() *v1beta1.Coin {
@@ -5758,7 +5758,7 @@ type MsgConvertCoinResponse struct {
 func (x *MsgConvertCoinResponse) Reset() {
 	*x = MsgConvertCoinResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[1]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5772,7 +5772,7 @@ func (*MsgConvertCoinResponse) ProtoMessage() {}
 
 // Deprecated: Use MsgConvertCoinResponse.ProtoReflect.Descriptor instead.
 func (*MsgConvertCoinResponse) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{1}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{1}
 }
 
 // MsgConvertERC20 defines a Msg to convert a ERC20 token to a native Cosmos
@@ -5795,7 +5795,7 @@ type MsgConvertERC20 struct {
 func (x *MsgConvertERC20) Reset() {
 	*x = MsgConvertERC20{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[2]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5809,7 +5809,7 @@ func (*MsgConvertERC20) ProtoMessage() {}
 
 // Deprecated: Use MsgConvertERC20.ProtoReflect.Descriptor instead.
 func (*MsgConvertERC20) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{2}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *MsgConvertERC20) GetContractAddress() string {
@@ -5850,7 +5850,7 @@ type MsgConvertERC20Response struct {
 func (x *MsgConvertERC20Response) Reset() {
 	*x = MsgConvertERC20Response{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[3]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5864,7 +5864,7 @@ func (*MsgConvertERC20Response) ProtoMessage() {}
 
 // Deprecated: Use MsgConvertERC20Response.ProtoReflect.Descriptor instead.
 func (*MsgConvertERC20Response) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{3}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{3}
 }
 
 type MsgUpdateParams struct {
@@ -5884,7 +5884,7 @@ type MsgUpdateParams struct {
 func (x *MsgUpdateParams) Reset() {
 	*x = MsgUpdateParams{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[4]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5898,7 +5898,7 @@ func (*MsgUpdateParams) ProtoMessage() {}
 
 // Deprecated: Use MsgUpdateParams.ProtoReflect.Descriptor instead.
 func (*MsgUpdateParams) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{4}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *MsgUpdateParams) GetAuthority() string {
@@ -5928,7 +5928,7 @@ type MsgUpdateParamsResponse struct {
 func (x *MsgUpdateParamsResponse) Reset() {
 	*x = MsgUpdateParamsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[5]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5942,7 +5942,7 @@ func (*MsgUpdateParamsResponse) ProtoMessage() {}
 
 // Deprecated: Use MsgUpdateParamsResponse.ProtoReflect.Descriptor instead.
 func (*MsgUpdateParamsResponse) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{5}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{5}
 }
 
 // MsgRegisterCoin is a gov Content type to register a token pair for a
@@ -5966,7 +5966,7 @@ type MsgRegisterCoin struct {
 func (x *MsgRegisterCoin) Reset() {
 	*x = MsgRegisterCoin{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[6]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5980,7 +5980,7 @@ func (*MsgRegisterCoin) ProtoMessage() {}
 
 // Deprecated: Use MsgRegisterCoin.ProtoReflect.Descriptor instead.
 func (*MsgRegisterCoin) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{6}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *MsgRegisterCoin) GetAuthority() string {
@@ -6020,7 +6020,7 @@ type MsgRegisterCoinResponse struct {
 func (x *MsgRegisterCoinResponse) Reset() {
 	*x = MsgRegisterCoinResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[7]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6034,7 +6034,7 @@ func (*MsgRegisterCoinResponse) ProtoMessage() {}
 
 // Deprecated: Use MsgRegisterCoinResponse.ProtoReflect.Descriptor instead.
 func (*MsgRegisterCoinResponse) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{7}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{7}
 }
 
 // MsgRegisterERC20 is a gov Content type to register a token pair for
@@ -6058,7 +6058,7 @@ type MsgRegisterERC20 struct {
 func (x *MsgRegisterERC20) Reset() {
 	*x = MsgRegisterERC20{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[8]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6072,7 +6072,7 @@ func (*MsgRegisterERC20) ProtoMessage() {}
 
 // Deprecated: Use MsgRegisterERC20.ProtoReflect.Descriptor instead.
 func (*MsgRegisterERC20) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{8}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *MsgRegisterERC20) GetAuthority() string {
@@ -6112,7 +6112,7 @@ type MsgRegisterERC20Response struct {
 func (x *MsgRegisterERC20Response) Reset() {
 	*x = MsgRegisterERC20Response{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[9]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6126,7 +6126,7 @@ func (*MsgRegisterERC20Response) ProtoMessage() {}
 
 // Deprecated: Use MsgRegisterERC20Response.ProtoReflect.Descriptor instead.
 func (*MsgRegisterERC20Response) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{9}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{9}
 }
 
 // MsgToggleTokenConversion is a gov Content type to toggle the
@@ -6151,7 +6151,7 @@ type MsgToggleTokenConversion struct {
 func (x *MsgToggleTokenConversion) Reset() {
 	*x = MsgToggleTokenConversion{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[10]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6165,7 +6165,7 @@ func (*MsgToggleTokenConversion) ProtoMessage() {}
 
 // Deprecated: Use MsgToggleTokenConversion.ProtoReflect.Descriptor instead.
 func (*MsgToggleTokenConversion) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{10}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *MsgToggleTokenConversion) GetAuthority() string {
@@ -6205,7 +6205,7 @@ type MsgToggleTokenConversionResponse struct {
 func (x *MsgToggleTokenConversionResponse) Reset() {
 	*x = MsgToggleTokenConversionResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_canto_erc20_v1_tx_proto_msgTypes[11]
+		mi := &file_basechain_erc20_v1_tx_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6219,12 +6219,12 @@ func (*MsgToggleTokenConversionResponse) ProtoMessage() {}
 
 // Deprecated: Use MsgToggleTokenConversionResponse.ProtoReflect.Descriptor instead.
 func (*MsgToggleTokenConversionResponse) Descriptor() ([]byte, []int) {
-	return file_canto_erc20_v1_tx_proto_rawDescGZIP(), []int{11}
+	return file_basechain_erc20_v1_tx_proto_rawDescGZIP(), []int{11}
 }
 
-var File_canto_erc20_v1_tx_proto protoreflect.FileDescriptor
+var File_basechain_erc20_v1_tx_proto protoreflect.FileDescriptor
 
-var file_canto_erc20_v1_tx_proto_rawDesc = []byte{
+var file_basechain_erc20_v1_tx_proto_rawDesc = []byte{
 	0x0a, 0x17, 0x63, 0x61, 0x6e, 0x74, 0x6f, 0x2f, 0x65, 0x72, 0x63, 0x32, 0x30, 0x2f, 0x76, 0x31,
 	0x2f, 0x74, 0x78, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0e, 0x63, 0x61, 0x6e, 0x74, 0x6f,
 	0x2e, 0x65, 0x72, 0x63, 0x32, 0x30, 0x2e, 0x76, 0x31, 0x1a, 0x14, 0x67, 0x6f, 0x67, 0x6f, 0x70,
@@ -6379,51 +6379,51 @@ var file_canto_erc20_v1_tx_proto_rawDesc = []byte{
 }
 
 var (
-	file_canto_erc20_v1_tx_proto_rawDescOnce sync.Once
-	file_canto_erc20_v1_tx_proto_rawDescData = file_canto_erc20_v1_tx_proto_rawDesc
+	file_basechain_erc20_v1_tx_proto_rawDescOnce sync.Once
+	file_basechain_erc20_v1_tx_proto_rawDescData = file_basechain_erc20_v1_tx_proto_rawDesc
 )
 
-func file_canto_erc20_v1_tx_proto_rawDescGZIP() []byte {
-	file_canto_erc20_v1_tx_proto_rawDescOnce.Do(func() {
-		file_canto_erc20_v1_tx_proto_rawDescData = protoimpl.X.CompressGZIP(file_canto_erc20_v1_tx_proto_rawDescData)
+func file_basechain_erc20_v1_tx_proto_rawDescGZIP() []byte {
+	file_basechain_erc20_v1_tx_proto_rawDescOnce.Do(func() {
+		file_basechain_erc20_v1_tx_proto_rawDescData = protoimpl.X.CompressGZIP(file_basechain_erc20_v1_tx_proto_rawDescData)
 	})
-	return file_canto_erc20_v1_tx_proto_rawDescData
+	return file_basechain_erc20_v1_tx_proto_rawDescData
 }
 
-var file_canto_erc20_v1_tx_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
-var file_canto_erc20_v1_tx_proto_goTypes = []interface{}{
-	(*MsgConvertCoin)(nil),                   // 0: canto.erc20.v1.MsgConvertCoin
-	(*MsgConvertCoinResponse)(nil),           // 1: canto.erc20.v1.MsgConvertCoinResponse
-	(*MsgConvertERC20)(nil),                  // 2: canto.erc20.v1.MsgConvertERC20
-	(*MsgConvertERC20Response)(nil),          // 3: canto.erc20.v1.MsgConvertERC20Response
-	(*MsgUpdateParams)(nil),                  // 4: canto.erc20.v1.MsgUpdateParams
-	(*MsgUpdateParamsResponse)(nil),          // 5: canto.erc20.v1.MsgUpdateParamsResponse
-	(*MsgRegisterCoin)(nil),                  // 6: canto.erc20.v1.MsgRegisterCoin
-	(*MsgRegisterCoinResponse)(nil),          // 7: canto.erc20.v1.MsgRegisterCoinResponse
-	(*MsgRegisterERC20)(nil),                 // 8: canto.erc20.v1.MsgRegisterERC20
-	(*MsgRegisterERC20Response)(nil),         // 9: canto.erc20.v1.MsgRegisterERC20Response
-	(*MsgToggleTokenConversion)(nil),         // 10: canto.erc20.v1.MsgToggleTokenConversion
-	(*MsgToggleTokenConversionResponse)(nil), // 11: canto.erc20.v1.MsgToggleTokenConversionResponse
+var file_basechain_erc20_v1_tx_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
+var file_basechain_erc20_v1_tx_proto_goTypes = []interface{}{
+	(*MsgConvertCoin)(nil),                   // 0: basechain.erc20.v1.MsgConvertCoin
+	(*MsgConvertCoinResponse)(nil),           // 1: basechain.erc20.v1.MsgConvertCoinResponse
+	(*MsgConvertERC20)(nil),                  // 2: basechain.erc20.v1.MsgConvertERC20
+	(*MsgConvertERC20Response)(nil),          // 3: basechain.erc20.v1.MsgConvertERC20Response
+	(*MsgUpdateParams)(nil),                  // 4: basechain.erc20.v1.MsgUpdateParams
+	(*MsgUpdateParamsResponse)(nil),          // 5: basechain.erc20.v1.MsgUpdateParamsResponse
+	(*MsgRegisterCoin)(nil),                  // 6: basechain.erc20.v1.MsgRegisterCoin
+	(*MsgRegisterCoinResponse)(nil),          // 7: basechain.erc20.v1.MsgRegisterCoinResponse
+	(*MsgRegisterERC20)(nil),                 // 8: basechain.erc20.v1.MsgRegisterERC20
+	(*MsgRegisterERC20Response)(nil),         // 9: basechain.erc20.v1.MsgRegisterERC20Response
+	(*MsgToggleTokenConversion)(nil),         // 10: basechain.erc20.v1.MsgToggleTokenConversion
+	(*MsgToggleTokenConversionResponse)(nil), // 11: basechain.erc20.v1.MsgToggleTokenConversionResponse
 	(*v1beta1.Coin)(nil),                     // 12: cosmos.base.v1beta1.Coin
-	(*Params)(nil),                           // 13: canto.erc20.v1.Params
+	(*Params)(nil),                           // 13: basechain.erc20.v1.Params
 	(*v1beta11.Metadata)(nil),                // 14: cosmos.bank.v1beta1.Metadata
 }
-var file_canto_erc20_v1_tx_proto_depIdxs = []int32{
-	12, // 0: canto.erc20.v1.MsgConvertCoin.coin:type_name -> cosmos.base.v1beta1.Coin
-	13, // 1: canto.erc20.v1.MsgUpdateParams.params:type_name -> canto.erc20.v1.Params
-	14, // 2: canto.erc20.v1.MsgRegisterCoin.metadata:type_name -> cosmos.bank.v1beta1.Metadata
-	0,  // 3: canto.erc20.v1.Msg.ConvertCoin:input_type -> canto.erc20.v1.MsgConvertCoin
-	2,  // 4: canto.erc20.v1.Msg.ConvertERC20:input_type -> canto.erc20.v1.MsgConvertERC20
-	4,  // 5: canto.erc20.v1.Msg.UpdateParams:input_type -> canto.erc20.v1.MsgUpdateParams
-	6,  // 6: canto.erc20.v1.Msg.RegisterCoinProposal:input_type -> canto.erc20.v1.MsgRegisterCoin
-	8,  // 7: canto.erc20.v1.Msg.RegisterERC20Proposal:input_type -> canto.erc20.v1.MsgRegisterERC20
-	10, // 8: canto.erc20.v1.Msg.ToggleTokenConversionProposal:input_type -> canto.erc20.v1.MsgToggleTokenConversion
-	1,  // 9: canto.erc20.v1.Msg.ConvertCoin:output_type -> canto.erc20.v1.MsgConvertCoinResponse
-	3,  // 10: canto.erc20.v1.Msg.ConvertERC20:output_type -> canto.erc20.v1.MsgConvertERC20Response
-	5,  // 11: canto.erc20.v1.Msg.UpdateParams:output_type -> canto.erc20.v1.MsgUpdateParamsResponse
-	7,  // 12: canto.erc20.v1.Msg.RegisterCoinProposal:output_type -> canto.erc20.v1.MsgRegisterCoinResponse
-	9,  // 13: canto.erc20.v1.Msg.RegisterERC20Proposal:output_type -> canto.erc20.v1.MsgRegisterERC20Response
-	11, // 14: canto.erc20.v1.Msg.ToggleTokenConversionProposal:output_type -> canto.erc20.v1.MsgToggleTokenConversionResponse
+var file_basechain_erc20_v1_tx_proto_depIdxs = []int32{
+	12, // 0: basechain.erc20.v1.MsgConvertCoin.coin:type_name -> cosmos.base.v1beta1.Coin
+	13, // 1: basechain.erc20.v1.MsgUpdateParams.params:type_name -> basechain.erc20.v1.Params
+	14, // 2: basechain.erc20.v1.MsgRegisterCoin.metadata:type_name -> cosmos.bank.v1beta1.Metadata
+	0,  // 3: basechain.erc20.v1.Msg.ConvertCoin:input_type -> basechain.erc20.v1.MsgConvertCoin
+	2,  // 4: basechain.erc20.v1.Msg.ConvertERC20:input_type -> basechain.erc20.v1.MsgConvertERC20
+	4,  // 5: basechain.erc20.v1.Msg.UpdateParams:input_type -> basechain.erc20.v1.MsgUpdateParams
+	6,  // 6: basechain.erc20.v1.Msg.RegisterCoinProposal:input_type -> basechain.erc20.v1.MsgRegisterCoin
+	8,  // 7: basechain.erc20.v1.Msg.RegisterERC20Proposal:input_type -> basechain.erc20.v1.MsgRegisterERC20
+	10, // 8: basechain.erc20.v1.Msg.ToggleTokenConversionProposal:input_type -> basechain.erc20.v1.MsgToggleTokenConversion
+	1,  // 9: basechain.erc20.v1.Msg.ConvertCoin:output_type -> basechain.erc20.v1.MsgConvertCoinResponse
+	3,  // 10: basechain.erc20.v1.Msg.ConvertERC20:output_type -> basechain.erc20.v1.MsgConvertERC20Response
+	5,  // 11: basechain.erc20.v1.Msg.UpdateParams:output_type -> basechain.erc20.v1.MsgUpdateParamsResponse
+	7,  // 12: basechain.erc20.v1.Msg.RegisterCoinProposal:output_type -> basechain.erc20.v1.MsgRegisterCoinResponse
+	9,  // 13: basechain.erc20.v1.Msg.RegisterERC20Proposal:output_type -> basechain.erc20.v1.MsgRegisterERC20Response
+	11, // 14: basechain.erc20.v1.Msg.ToggleTokenConversionProposal:output_type -> basechain.erc20.v1.MsgToggleTokenConversionResponse
 	9,  // [9:15] is the sub-list for method output_type
 	3,  // [3:9] is the sub-list for method input_type
 	3,  // [3:3] is the sub-list for extension type_name
@@ -6431,14 +6431,14 @@ var file_canto_erc20_v1_tx_proto_depIdxs = []int32{
 	0,  // [0:3] is the sub-list for field type_name
 }
 
-func init() { file_canto_erc20_v1_tx_proto_init() }
-func file_canto_erc20_v1_tx_proto_init() {
-	if File_canto_erc20_v1_tx_proto != nil {
+func init() { file_basechain_erc20_v1_tx_proto_init() }
+func file_basechain_erc20_v1_tx_proto_init() {
+	if File_basechain_erc20_v1_tx_proto != nil {
 		return
 	}
-	file_canto_erc20_v1_genesis_proto_init()
+	file_basechain_erc20_v1_genesis_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_canto_erc20_v1_tx_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgConvertCoin); i {
 			case 0:
 				return &v.state
@@ -6450,7 +6450,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgConvertCoinResponse); i {
 			case 0:
 				return &v.state
@@ -6462,7 +6462,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgConvertERC20); i {
 			case 0:
 				return &v.state
@@ -6474,7 +6474,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgConvertERC20Response); i {
 			case 0:
 				return &v.state
@@ -6486,7 +6486,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgUpdateParams); i {
 			case 0:
 				return &v.state
@@ -6498,7 +6498,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgUpdateParamsResponse); i {
 			case 0:
 				return &v.state
@@ -6510,7 +6510,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgRegisterCoin); i {
 			case 0:
 				return &v.state
@@ -6522,7 +6522,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgRegisterCoinResponse); i {
 			case 0:
 				return &v.state
@@ -6534,7 +6534,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgRegisterERC20); i {
 			case 0:
 				return &v.state
@@ -6546,7 +6546,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgRegisterERC20Response); i {
 			case 0:
 				return &v.state
@@ -6558,7 +6558,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgToggleTokenConversion); i {
 			case 0:
 				return &v.state
@@ -6570,7 +6570,7 @@ func file_canto_erc20_v1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_canto_erc20_v1_tx_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_basechain_erc20_v1_tx_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MsgToggleTokenConversionResponse); i {
 			case 0:
 				return &v.state
@@ -6587,18 +6587,18 @@ func file_canto_erc20_v1_tx_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_canto_erc20_v1_tx_proto_rawDesc,
+			RawDescriptor: file_basechain_erc20_v1_tx_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   12,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_canto_erc20_v1_tx_proto_goTypes,
-		DependencyIndexes: file_canto_erc20_v1_tx_proto_depIdxs,
-		MessageInfos:      file_canto_erc20_v1_tx_proto_msgTypes,
+		GoTypes:           file_basechain_erc20_v1_tx_proto_goTypes,
+		DependencyIndexes: file_basechain_erc20_v1_tx_proto_depIdxs,
+		MessageInfos:      file_basechain_erc20_v1_tx_proto_msgTypes,
 	}.Build()
-	File_canto_erc20_v1_tx_proto = out.File
-	file_canto_erc20_v1_tx_proto_rawDesc = nil
-	file_canto_erc20_v1_tx_proto_goTypes = nil
-	file_canto_erc20_v1_tx_proto_depIdxs = nil
+	File_basechain_erc20_v1_tx_proto = out.File
+	file_basechain_erc20_v1_tx_proto_rawDesc = nil
+	file_basechain_erc20_v1_tx_proto_goTypes = nil
+	file_basechain_erc20_v1_tx_proto_depIdxs = nil
 }

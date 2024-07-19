@@ -47,7 +47,7 @@ import (
 	evmtypes "github.com/evmos/ethermint/x/evm/types"
 
 	cmdcfg "github.com/Canto-Network/Canto/v7/cmd/config"
-	cantokr "github.com/Canto-Network/Canto/v7/crypto/keyring"
+	basechainkr "github.com/Canto-Network/Canto/v7/crypto/keyring"
 	"github.com/Canto-Network/Canto/v7/testutil/network"
 )
 
@@ -128,7 +128,7 @@ or a similar setup where each node has a manually configurable IP address.
 Note, strict routability for addresses is turned off in the config file.
 
 Example:
-	cantod testnet init-files --v 4 --output-dir ./.testnets --starting-ip-address 192.168.10.2
+	basechaind testnet init-files --v 4 --output-dir ./.testnets --starting-ip-address 192.168.10.2
 	`,
 		RunE: func(cmd *cobra.Command, _ []string) error {
 			clientCtx, err := client.GetClientQueryContext(cmd)
@@ -155,7 +155,7 @@ Example:
 
 	addTestnetFlagsToCmd(cmd)
 	cmd.Flags().String(flagNodeDirPrefix, "node", "Prefix the directory name for each node with (node results in node0, node1, ...)")
-	cmd.Flags().String(flagNodeDaemonHome, "cantod", "Home directory of the node's daemon configuration")
+	cmd.Flags().String(flagNodeDaemonHome, "basechaind", "Home directory of the node's daemon configuration")
 	cmd.Flags().String(flagStartingIPAddress, "192.168.0.1", "Starting IP address (192.168.0.1 results in persistent peers list ID0@192.168.0.1:46656, ID1@192.168.0.2:46656, ...)")
 	cmd.Flags().String(flags.FlagKeyringBackend, flags.DefaultKeyringBackend, "Select keyring's backend (os|file|test)")
 
@@ -172,7 +172,7 @@ and generate "v" directories, populated with necessary validator configuration f
 (private validator, genesis, config, etc.).
 
 Example:
-	cantod testnet --v 4 --output-dir ./.testnets
+	basechaind testnet --v 4 --output-dir ./.testnets
 	`,
 		RunE: func(cmd *cobra.Command, _ []string) error {
 			args := startArgs{}
@@ -215,7 +215,7 @@ func initTestnetFiles(
 	args initArgs,
 ) error {
 	if args.chainID == "" {
-		args.chainID = fmt.Sprintf("canto_%d-1", tmrand.Int63n(9999999999999)+1)
+		args.chainID = fmt.Sprintf("basechain_%d-1", tmrand.Int63n(9999999999999)+1)
 	}
 
 	nodeIDs := make([]string, args.numValidators)
@@ -267,7 +267,7 @@ func initTestnetFiles(
 		memo := fmt.Sprintf("%s@%s:26656", nodeIDs[i], ip)
 		genFiles = append(genFiles, nodeConfig.GenesisFile())
 
-		kb, err := keyring.New(sdk.KeyringServiceName(), args.keyringBackend, nodeDir, inBuf, clientCtx.Codec, cantokr.Option())
+		kb, err := keyring.New(sdk.KeyringServiceName(), args.keyringBackend, nodeDir, inBuf, clientCtx.Codec, basechainkr.Option())
 		if err != nil {
 			return err
 		}

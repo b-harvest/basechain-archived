@@ -47,7 +47,7 @@ func (suite *AnteTestSuite) SetupTest(isCheckTx bool) {
 	suite.app = app.Setup(isCheckTx, feemarkettypes.DefaultGenesisState())
 	suite.ctx = suite.app.BaseApp.NewContextLegacy(isCheckTx, tmproto.Header{
 		Height:          1,
-		ChainID:         "canto_9001-1",
+		ChainID:         "basechain_9001-1",
 		Time:            time.Now().UTC(),
 		ProposerAddress: consAddress.Bytes(),
 
@@ -70,7 +70,7 @@ func (suite *AnteTestSuite) SetupTest(isCheckTx bool) {
 		LastResultsHash:    tmhash.Sum([]byte("last_result")),
 	})
 
-	suite.denom = "acanto"
+	suite.denom = "abasecoin"
 	evmParams := suite.app.EvmKeeper.GetParams(suite.ctx)
 	evmParams.EvmDenom = suite.denom
 	suite.app.EvmKeeper.SetParams(suite.ctx, evmParams)

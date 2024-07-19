@@ -17,10 +17,10 @@ RPC_PORT="854"
 IP_ADDR="0.0.0.0"
 
 KEY="mykey"
-CHAINID="canto_9000-1"
+CHAINID="basechain_9000-1"
 MONIKER="mymoniker"
 
-## default port prefixes for cantod
+## default port prefixes for basechaind
 NODE_P2P_PORT="2660"
 NODE_PORT="2663"
 NODE_RPC_PORT="2666"
@@ -52,29 +52,29 @@ done
 
 set -euxo pipefail
 
-DATA_DIR=$(mktemp -d -t canto-datadir.XXXXX)
+DATA_DIR=$(mktemp -d -t basechain-datadir.XXXXX)
 
 if [[ ! "$DATA_DIR" ]]; then
     echo "Could not create $DATA_DIR"
     exit 1
 fi
 
-# Compile canto
-echo "compiling canto"
+# Compile basechain
+echo "compiling basechain"
 make build
 
 # PID array declaration
 arr=()
 
 init_func() {
-    "$PWD"/build/cantod keys add $KEY"$i" --keyring-backend test --home "$DATA_DIR$i" --no-backup --algo "eth_secp256k1"
-    "$PWD"/build/cantod init $MONIKER --chain-id $CHAINID --home "$DATA_DIR$i"
-    "$PWD"/build/cantod add-genesis-account \
-    "$("$PWD"/build/cantod keys show "$KEY$i" --keyring-backend test -a --home "$DATA_DIR$i")" 1000000000000000000acanto,1000000000000000000stake \
+    "$PWD"/build/basechaind keys add $KEY"$i" --keyring-backend test --home "$DATA_DIR$i" --no-backup --algo "eth_secp256k1"
+    "$PWD"/build/basechaind init $MONIKER --chain-id $CHAINID --home "$DATA_DIR$i"
+    "$PWD"/build/basechaind add-genesis-account \
+    "$("$PWD"/build/basechaind keys show "$KEY$i" --keyring-backend test -a --home "$DATA_DIR$i")" 1000000000000000000abasecoin,1000000000000000000stake \
     --keyring-backend test --home "$DATA_DIR$i"
-    "$PWD"/build/cantod gentx "$KEY$i" 1000000000000000000stake --chain-id $CHAINID --keyring-backend test --home "$DATA_DIR$i"
-    "$PWD"/build/cantod collect-gentxs --home "$DATA_DIR$i"
-    "$PWD"/build/cantod validate-genesis --home "$DATA_DIR$i"
+    "$PWD"/build/basechaind gentx "$KEY$i" 1000000000000000000stake --chain-id $CHAINID --keyring-backend test --home "$DATA_DIR$i"
+    "$PWD"/build/basechaind collect-gentxs --home "$DATA_DIR$i"
+    "$PWD"/build/basechaind validate-genesis --home "$DATA_DIR$i"
 
     if [[ $MODE == "pending" ]]; then
       ls $DATA_DIR$i
@@ -103,17 +103,17 @@ init_func() {
 }
 
 start_func() {
-    echo "starting canto node $i in background ..."
-    "$PWD"/build/cantod start --pruning=nothing --rpc.unsafe \
+    echo "starting basechain node $i in background ..."
+    "$PWD"/build/basechaind start --pruning=nothing --rpc.unsafe \
     --p2p.laddr tcp://$IP_ADDR:$NODE_P2P_PORT"$i" --address tcp://$IP_ADDR:$NODE_PORT"$i" --rpc.laddr tcp://$IP_ADDR:$NODE_RPC_PORT"$i" \
     --json-rpc.address=$IP_ADDR:$RPC_PORT"$i" \
     --keyring-backend test --home "$DATA_DIR$i" \
     >"$DATA_DIR"/node"$i".log 2>&1 & disown
 
-    canto_PID=$!
-    echo "started canto node, pid=$canto_PID"
+    basechain_PID=$!
+    echo "started basechain node, pid=$basechain_PID"
     # add PID to array
-    arr+=("$canto_PID")
+    arr+=("$basechain_PID")
 
     if [[ $MODE == "pending" ]]; then
       echo "waiting for the first block..."
@@ -147,7 +147,7 @@ if [[ -z $TEST || $TEST == "rpc" ||  $TEST == "pending" ]]; then
 
     for i in $(seq 1 "$TEST_QTD"); do
         HOST_RPC=http://$IP_ADDR:$RPC_PORT"$i"
-        echo "going to test canto node $HOST_RPC ..."
+        echo "going to test basechain node $HOST_RPC ..."
         MODE=$MODE HOST=$HOST_RPC go test ./tests/... -timeout=$time_out -v -short
 
         RPC_FAIL=$?
@@ -156,12 +156,12 @@ if [[ -z $TEST || $TEST == "rpc" ||  $TEST == "pending" ]]; then
 fi
 
 stop_func() {
-    canto_PID=$i
-    echo "shutting down node, pid=$canto_PID ..."
+    basechain_PID=$i
+    echo "shutting down node, pid=$basechain_PID ..."
 
-    # Shutdown canto node
-    kill -9 "$canto_PID"
-    wait "$canto_PID"
+    # Shutdown basechain node
+    kill -9 "$basechain_PID"
+    wait "$basechain_PID"
 
     if [ $REMOVE_DATA_DIR == "true" ]
     then

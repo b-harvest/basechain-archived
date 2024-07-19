@@ -30,6 +30,6 @@ func RegisterInterfaces(registry codectypes.InterfaceRegistry) {
 
 // register csr msg types for Amino Codec in adherence to EIP-712 signing conventions
 func RegisterLegacyAminoCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgUpdateParams{}, "canto/x/csr/MsgUpdateParams", nil)
-	cdc.RegisterConcrete(&Params{}, "canto/x/csr/Params", nil)
+	cdc.RegisterConcrete(&MsgUpdateParams{}, "basechain/x/csr/MsgUpdateParams", nil)
+	cdc.RegisterConcrete(&Params{}, "basechain/x/csr/Params", nil)
 }

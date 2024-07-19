@@ -14,18 +14,18 @@ import (
 )
 
 const (
-	// MainnetChainID defines the canto EIP155 chain ID for mainnet
-	MainnetChainID = "canto_9001"
-	// TestnetChainID defines the canto EIP155 chain ID for testnet
-	TestnetChainID = "canto_9000"
+	// MainnetChainID defines the basechain EIP155 chain ID for mainnet
+	MainnetChainID = "basechain_9001"
+	// TestnetChainID defines the basechain EIP155 chain ID for testnet
+	TestnetChainID = "basechain_9000"
 )
 
-// IsMainnet returns true if the chain-id has the canto mainnet EIP155 chain prefix.
+// IsMainnet returns true if the chain-id has the basechain mainnet EIP155 chain prefix.
 func IsMainnet(chainID string) bool {
 	return strings.HasPrefix(chainID, MainnetChainID)
 }
 
-// IsTestnet returns true if the chain-id has the canto testnet EIP155 chain prefix.
+// IsTestnet returns true if the chain-id has the basechain testnet EIP155 chain prefix.
 func IsTestnet(chainID string) bool {
 	return strings.HasPrefix(chainID, TestnetChainID)
 }
@@ -58,11 +58,11 @@ func IsSupportedKey(pubkey cryptotypes.PubKey) bool {
 	}
 }
 
-// GetcantoAddressFromBech32 returns the sdk.Account address of given address,
+// GetbasechainAddressFromBech32 returns the sdk.Account address of given address,
 // while also changing bech32 human readable prefix (HRP) to the value set on
-// the global sdk.Config (eg: `canto`).
+// the global sdk.Config (eg: `basechain`).
 // The function fails if the provided bech32 address is invalid.
-func GetcantoAddressFromBech32(address string) (sdk.AccAddress, error) {
+func GetbasechainAddressFromBech32(address string) (sdk.AccAddress, error) {
 	bech32Prefix := strings.SplitN(address, "1", 2)[0]
 	if bech32Prefix == address {
 		return nil, errorsmod.Wrapf(sdkerrors.ErrInvalidAddress, "invalid bech32 address: %s", address)
