@@ -3,8 +3,8 @@ package keeper
 // DONTCOVER
 
 import (
+	"b-harvest/basechain/v1/x/csr/types"
 	errorsmod "cosmossdk.io/errors"
-	"github.com/Canto-Network/Canto/v7/x/csr/types"
 )
 
 // x/csr module sentinel errors

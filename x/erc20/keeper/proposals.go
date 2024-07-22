@@ -9,7 +9,7 @@ import (
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/Canto-Network/Canto/v7/x/erc20/types"
+	"b-harvest/basechain/v1/x/erc20/types"
 )
 
 // RegisterCoin deploys an erc20 contract and creates the token pair for the

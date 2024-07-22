@@ -1,8 +1,8 @@
 package inflation
 
 import (
-	"github.com/Canto-Network/Canto/v7/x/inflation/keeper"
-	"github.com/Canto-Network/Canto/v7/x/inflation/types"
+	"b-harvest/basechain/v1/x/inflation/keeper"
+	"b-harvest/basechain/v1/x/inflation/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

@@ -1,8 +1,8 @@
 package keeper_test
 
 import (
+	_ "b-harvest/basechain/v1/x/csr/keeper"
 	sdkmath "cosmossdk.io/math"
-	_ "github.com/Canto-Network/Canto/v7/x/csr/keeper"
 )
 
 // params test suite

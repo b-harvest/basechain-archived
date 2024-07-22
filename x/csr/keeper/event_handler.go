@@ -4,7 +4,7 @@ import (
 	errorsmod "cosmossdk.io/errors"
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/Canto-Network/Canto/v7/x/csr/types"
+	"b-harvest/basechain/v1/x/csr/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

@@ -3,9 +3,9 @@ package types
 import (
 	"fmt"
 
+	coinswapv1 "b-harvest/basechain/v1/api/basechain/coinswap/v1"
 	sdkmath "cosmossdk.io/math"
 	"cosmossdk.io/x/tx/signing"
-	coinswapv1 "github.com/Canto-Network/Canto/v7/api/basechain/coinswap/v1"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	protov2 "google.golang.org/protobuf/proto"
 )

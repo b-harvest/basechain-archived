@@ -4,8 +4,8 @@ import (
 	"math/rand"
 
 	//"github.com/Canto-Network/Canto/v2/testutil/sample"
-	govshuttlesimulation "github.com/Canto-Network/Canto/v7/x/govshuttle/simulation"
-	"github.com/Canto-Network/Canto/v7/x/govshuttle/types"
+	govshuttlesimulation "b-harvest/basechain/v1/x/govshuttle/simulation"
+	"b-harvest/basechain/v1/x/govshuttle/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	simtestutil "github.com/cosmos/cosmos-sdk/testutil/sims"
 	"github.com/cosmos/cosmos-sdk/types/module"

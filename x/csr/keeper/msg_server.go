@@ -7,7 +7,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
-	"github.com/Canto-Network/Canto/v7/x/csr/types"
+	"b-harvest/basechain/v1/x/csr/types"
 )
 
 type msgServer struct {

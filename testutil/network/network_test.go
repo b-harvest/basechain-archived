@@ -14,7 +14,7 @@ import (
 	"github.com/evmos/ethermint/server/config"
 	"github.com/evmos/ethermint/testutil/network"
 
-	basechainnetwork "github.com/Canto-Network/Canto/v7/testutil/network"
+	basechainnetwork "b-harvest/basechain/v1/testutil/network"
 )
 
 type IntegrationTestSuite struct {

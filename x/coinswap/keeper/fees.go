@@ -5,7 +5,7 @@ import (
 	sdkmath "cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/Canto-Network/Canto/v7/x/coinswap/types"
+	"b-harvest/basechain/v1/x/coinswap/types"
 )
 
 // DeductPoolCreationFee performs fee handling for creating liquidity pool

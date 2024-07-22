@@ -9,10 +9,10 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/evmos/ethermint/tests"
 
-	"github.com/Canto-Network/Canto/v7/contracts"
-	csrTypes "github.com/Canto-Network/Canto/v7/x/csr/types"
+	"b-harvest/basechain/v1/contracts"
+	csrTypes "b-harvest/basechain/v1/x/csr/types"
 
-	"github.com/Canto-Network/Canto/v7/x/erc20/types"
+	"b-harvest/basechain/v1/x/erc20/types"
 )
 
 // This test suite will run a simulation of sorts where transactions will have

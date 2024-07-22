@@ -11,8 +11,8 @@ import (
 	sdkmath "cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/Canto-Network/Canto/v7/x/coinswap/keeper"
-	"github.com/Canto-Network/Canto/v7/x/coinswap/types"
+	"b-harvest/basechain/v1/x/coinswap/keeper"
+	"b-harvest/basechain/v1/x/coinswap/types"
 )
 
 func TestSwapSuite(t *testing.T) {

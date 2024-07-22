@@ -19,9 +19,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 
-	"github.com/Canto-Network/Canto/v7/x/csr/client/cli"
-	"github.com/Canto-Network/Canto/v7/x/csr/keeper"
-	"github.com/Canto-Network/Canto/v7/x/csr/types"
+	"b-harvest/basechain/v1/x/csr/client/cli"
+	"b-harvest/basechain/v1/x/csr/keeper"
+	"b-harvest/basechain/v1/x/csr/types"
 )
 
 var (

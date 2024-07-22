@@ -16,12 +16,12 @@ import (
 	"github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	clienttypes "github.com/cosmos/ibc-go/v8/modules/core/02-client/types"
 
-	"github.com/Canto-Network/Canto/v7/app"
-	"github.com/Canto-Network/Canto/v7/contracts"
-	ibctesting "github.com/Canto-Network/Canto/v7/ibc/testing"
-	coinswaptypes "github.com/Canto-Network/Canto/v7/x/coinswap/types"
-	inflationtypes "github.com/Canto-Network/Canto/v7/x/inflation/types"
-	onboardingtest "github.com/Canto-Network/Canto/v7/x/onboarding/testutil"
+	"b-harvest/basechain/v1/app"
+	"b-harvest/basechain/v1/contracts"
+	ibctesting "b-harvest/basechain/v1/ibc/testing"
+	coinswaptypes "b-harvest/basechain/v1/x/coinswap/types"
+	inflationtypes "b-harvest/basechain/v1/x/inflation/types"
+	onboardingtest "b-harvest/basechain/v1/x/onboarding/testutil"
 )
 
 var (

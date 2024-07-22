@@ -15,9 +15,9 @@ import (
 	"github.com/evmos/ethermint/tests"
 	evmtypes "github.com/evmos/ethermint/x/evm/types"
 
-	"github.com/Canto-Network/Canto/v7/x/erc20/keeper"
-	"github.com/Canto-Network/Canto/v7/x/erc20/types"
-	inflationtypes "github.com/Canto-Network/Canto/v7/x/inflation/types"
+	"b-harvest/basechain/v1/x/erc20/keeper"
+	"b-harvest/basechain/v1/x/erc20/types"
+	inflationtypes "b-harvest/basechain/v1/x/inflation/types"
 )
 
 func (suite KeeperTestSuite) TestRegisterCoin() {

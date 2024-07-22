@@ -5,8 +5,8 @@ import (
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/Canto-Network/Canto/v7/x/erc20/keeper"
-	"github.com/Canto-Network/Canto/v7/x/erc20/types"
+	"b-harvest/basechain/v1/x/erc20/keeper"
+	"b-harvest/basechain/v1/x/erc20/types"
 )
 
 // InitGenesis import module genesis

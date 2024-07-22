@@ -3,8 +3,8 @@ package keeper_test
 import (
 	"time"
 
-	"github.com/Canto-Network/Canto/v7/x/csr"
-	"github.com/Canto-Network/Canto/v7/x/csr/types"
+	"b-harvest/basechain/v1/x/csr"
+	"b-harvest/basechain/v1/x/csr/types"
 	"github.com/evmos/ethermint/tests"
 )
 

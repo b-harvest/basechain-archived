@@ -15,7 +15,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/address"
 	"github.com/cosmos/cosmos-sdk/version"
 
-	"github.com/Canto-Network/Canto/v7/x/govshuttle/types"
+	"b-harvest/basechain/v1/x/govshuttle/types"
 )
 
 var (

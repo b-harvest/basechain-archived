@@ -3,14 +3,14 @@ package keeper
 import (
 	"math/big"
 
+	"b-harvest/basechain/v1/contracts"
 	errorsmod "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"
-	"github.com/Canto-Network/Canto/v7/contracts"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/Canto-Network/Canto/v7/x/govshuttle/types"
+	"b-harvest/basechain/v1/x/govshuttle/types"
 
-	erc20types "github.com/Canto-Network/Canto/v7/x/erc20/types"
+	erc20types "b-harvest/basechain/v1/x/erc20/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 )

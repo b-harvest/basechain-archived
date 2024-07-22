@@ -9,7 +9,7 @@ import (
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	channeltypes "github.com/cosmos/ibc-go/v8/modules/core/04-channel/types"
 
-	basechain "github.com/Canto-Network/Canto/v7/types"
+	basechain "b-harvest/basechain/v1/types"
 )
 
 // GetTransferSenderRecipient returns the sender and recipient sdk.AccAddresses

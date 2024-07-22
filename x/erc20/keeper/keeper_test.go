@@ -47,9 +47,9 @@ import (
 	evmtypes "github.com/evmos/ethermint/x/evm/types"
 	feemarkettypes "github.com/evmos/ethermint/x/feemarket/types"
 
-	"github.com/Canto-Network/Canto/v7/app"
-	"github.com/Canto-Network/Canto/v7/contracts"
-	"github.com/Canto-Network/Canto/v7/x/erc20/types"
+	"b-harvest/basechain/v1/app"
+	"b-harvest/basechain/v1/contracts"
+	"b-harvest/basechain/v1/x/erc20/types"
 )
 
 type KeeperTestSuite struct {

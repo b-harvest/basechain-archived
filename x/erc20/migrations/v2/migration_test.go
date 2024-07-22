@@ -12,8 +12,8 @@ import (
 
 	"github.com/evmos/ethermint/encoding"
 
-	v2 "github.com/Canto-Network/Canto/v7/x/erc20/migrations/v2"
-	erc20types "github.com/Canto-Network/Canto/v7/x/erc20/types"
+	v2 "b-harvest/basechain/v1/x/erc20/migrations/v2"
+	erc20types "b-harvest/basechain/v1/x/erc20/types"
 )
 
 func TestUpdateParams(t *testing.T) {

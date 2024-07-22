@@ -14,10 +14,10 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/Canto-Network/Canto/v7/ibc"
-	coinswaptypes "github.com/Canto-Network/Canto/v7/x/coinswap/types"
-	erc20types "github.com/Canto-Network/Canto/v7/x/erc20/types"
-	"github.com/Canto-Network/Canto/v7/x/onboarding/types"
+	"b-harvest/basechain/v1/ibc"
+	coinswaptypes "b-harvest/basechain/v1/x/coinswap/types"
+	erc20types "b-harvest/basechain/v1/x/erc20/types"
+	"b-harvest/basechain/v1/x/onboarding/types"
 )
 
 // OnRecvPacket performs an IBC receive callback.

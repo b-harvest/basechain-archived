@@ -23,14 +23,14 @@ import (
 	ibcgotesting "github.com/cosmos/ibc-go/v8/testing"
 	ibcmock "github.com/cosmos/ibc-go/v8/testing/mock"
 
-	"github.com/Canto-Network/Canto/v7/contracts"
-	"github.com/Canto-Network/Canto/v7/testutil"
-	coinswaptypes "github.com/Canto-Network/Canto/v7/x/coinswap/types"
-	erc20types "github.com/Canto-Network/Canto/v7/x/erc20/types"
-	inflationtypes "github.com/Canto-Network/Canto/v7/x/inflation/types"
-	"github.com/Canto-Network/Canto/v7/x/onboarding/keeper"
-	onboardingtest "github.com/Canto-Network/Canto/v7/x/onboarding/testutil"
-	"github.com/Canto-Network/Canto/v7/x/onboarding/types"
+	"b-harvest/basechain/v1/contracts"
+	"b-harvest/basechain/v1/testutil"
+	coinswaptypes "b-harvest/basechain/v1/x/coinswap/types"
+	erc20types "b-harvest/basechain/v1/x/erc20/types"
+	inflationtypes "b-harvest/basechain/v1/x/inflation/types"
+	"b-harvest/basechain/v1/x/onboarding/keeper"
+	onboardingtest "b-harvest/basechain/v1/x/onboarding/testutil"
+	"b-harvest/basechain/v1/x/onboarding/types"
 )
 
 var (

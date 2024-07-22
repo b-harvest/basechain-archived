@@ -20,9 +20,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/Canto-Network/Canto/v7/x/onboarding/client/cli"
-	"github.com/Canto-Network/Canto/v7/x/onboarding/keeper"
-	"github.com/Canto-Network/Canto/v7/x/onboarding/types"
+	"b-harvest/basechain/v1/x/onboarding/client/cli"
+	"b-harvest/basechain/v1/x/onboarding/keeper"
+	"b-harvest/basechain/v1/x/onboarding/types"
 )
 
 // type check to ensure the interface is properly implemented

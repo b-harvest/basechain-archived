@@ -3,8 +3,8 @@ package keeper
 import (
 	"fmt"
 
+	"b-harvest/basechain/v1/x/inflation/types"
 	sdkmath "cosmossdk.io/math"
-	"github.com/Canto-Network/Canto/v7/x/inflation/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

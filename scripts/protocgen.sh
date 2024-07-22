@@ -26,8 +26,8 @@ done
 cd ..
 
 # move proto files to the right places
-cp -r github.com/Canto-Network/Canto/v7/* ./
-rm -rf github.com
+#cp -r github.com/b-harvest/basechain/v1/* ./
+#rm -rf github.com
 
 go mod tidy
 

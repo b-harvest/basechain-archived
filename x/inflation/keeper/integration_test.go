@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
+	epochstypes "b-harvest/basechain/v1/x/epochs/types"
+	"b-harvest/basechain/v1/x/inflation/types"
 	sdkmath "cosmossdk.io/math"
-	epochstypes "github.com/Canto-Network/Canto/v7/x/epochs/types"
-	"github.com/Canto-Network/Canto/v7/x/inflation/types"
 	"github.com/cosmos/cosmos-sdk/crypto/keys/ed25519"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	bankKeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"

@@ -11,8 +11,8 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/evmos/ethermint/crypto/ethsecp256k1"
 
-	"github.com/Canto-Network/Canto/v7/testutil"
-	onboardingtypes "github.com/Canto-Network/Canto/v7/x/onboarding/types"
+	"b-harvest/basechain/v1/testutil"
+	onboardingtypes "b-harvest/basechain/v1/x/onboarding/types"
 )
 
 func (suite *KeeperTestSuite) TestMsgExecutionByProposal() {

@@ -17,9 +17,9 @@ import (
 	"github.com/evmos/ethermint/tests"
 	feemarkettypes "github.com/evmos/ethermint/x/feemarket/types"
 
-	"github.com/Canto-Network/Canto/v7/app"
-	"github.com/Canto-Network/Canto/v7/x/erc20"
-	"github.com/Canto-Network/Canto/v7/x/erc20/types"
+	"b-harvest/basechain/v1/app"
+	"b-harvest/basechain/v1/x/erc20"
+	"b-harvest/basechain/v1/x/erc20/types"
 )
 
 var (

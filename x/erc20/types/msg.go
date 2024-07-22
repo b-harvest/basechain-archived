@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
+	erc20v1 "b-harvest/basechain/v1/api/basechain/erc20/v1"
 	sdkmath "cosmossdk.io/math"
-	erc20v1 "github.com/Canto-Network/Canto/v7/api/basechain/erc20/v1"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	ethermint "github.com/evmos/ethermint/types"
 	protov2 "google.golang.org/protobuf/proto"

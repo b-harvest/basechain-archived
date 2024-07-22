@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/basechain/basechain.git"
+    "url": "git+https://github.com/b-harvest/basechain.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/basechain/basechain/issues"
+    "url": "https://github.com/b-harvest/basechain/issues"
   },
-  "homepage": "https://github.com/basechain/basechain#readme"
+  "homepage": "https://github.com/b-harvest/basechain#readme"
 }

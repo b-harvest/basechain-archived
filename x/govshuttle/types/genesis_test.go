@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/Canto-Network/Canto/v7/x/govshuttle/types"
+	"b-harvest/basechain/v1/x/govshuttle/types"
 	"github.com/stretchr/testify/require"
 )
 

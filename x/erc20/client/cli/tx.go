@@ -20,7 +20,7 @@ import (
 
 	ethermint "github.com/evmos/ethermint/types"
 
-	"github.com/Canto-Network/Canto/v7/x/erc20/types"
+	"b-harvest/basechain/v1/x/erc20/types"
 )
 
 var (

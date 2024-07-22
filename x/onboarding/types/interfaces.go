@@ -17,8 +17,8 @@ import (
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	channeltypes "github.com/cosmos/ibc-go/v8/modules/core/04-channel/types"
 
-	coinswaptypes "github.com/Canto-Network/Canto/v7/x/coinswap/types"
-	erc20types "github.com/Canto-Network/Canto/v7/x/erc20/types"
+	coinswaptypes "b-harvest/basechain/v1/x/coinswap/types"
+	erc20types "b-harvest/basechain/v1/x/erc20/types"
 )
 
 type Erc20Keeper interface {

@@ -19,8 +19,8 @@ import (
 
 	feemarkettypes "github.com/evmos/ethermint/x/feemarket/types"
 
-	"github.com/Canto-Network/Canto/v7/cmd/config"
-	"github.com/Canto-Network/Canto/v7/types"
+	"b-harvest/basechain/v1/cmd/config"
+	"b-harvest/basechain/v1/types"
 )
 
 func init() {

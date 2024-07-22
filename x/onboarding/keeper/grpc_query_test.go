@@ -1,7 +1,7 @@
 package keeper_test
 
 import (
-	"github.com/Canto-Network/Canto/v7/x/onboarding/types"
+	"b-harvest/basechain/v1/x/onboarding/types"
 )
 
 func (suite *KeeperTestSuite) TestQueryParams() {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Canto-Network/Canto/v7/x/epochs"
-	"github.com/Canto-Network/Canto/v7/x/epochs/types"
+	"b-harvest/basechain/v1/x/epochs"
+	"b-harvest/basechain/v1/x/epochs/types"
 )
 
 func (suite *KeeperTestSuite) TestEpochInfoChangesBeginBlockerAndInitGenesis() {

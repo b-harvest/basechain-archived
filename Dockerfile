@@ -1,6 +1,6 @@
 FROM golang:stretch AS build-env
 
-WORKDIR /go/src/github.com/basechain/basechain
+WORKDIR /go/src/github.com/b-harvest/basechain
 
 RUN apt-get update -y
 RUN apt-get install git -y
@@ -16,7 +16,7 @@ RUN apt-get install ca-certificates jq -y
 
 WORKDIR /root
 
-COPY --from=build-env /go/src/github.com/basechain/basechain/build/basechaind /usr/bin/basechaind
+COPY --from=build-env /go/src/github.com/b-harvest/basechain/build/basechaind /usr/bin/basechaind
 
 EXPOSE 26656 26657 1317 9090
 

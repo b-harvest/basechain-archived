@@ -20,9 +20,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 
-	"github.com/Canto-Network/Canto/v7/x/govshuttle/client/cli"
-	"github.com/Canto-Network/Canto/v7/x/govshuttle/keeper"
-	"github.com/Canto-Network/Canto/v7/x/govshuttle/types"
+	"b-harvest/basechain/v1/x/govshuttle/client/cli"
+	"b-harvest/basechain/v1/x/govshuttle/keeper"
+	"b-harvest/basechain/v1/x/govshuttle/types"
 )
 
 var (

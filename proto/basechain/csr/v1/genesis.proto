@@ -1,0 +1,16 @@
+syntax = "proto3";
+package basechain.csr.v1;
+
+import "gogoproto/gogo.proto";
+import "basechain/csr/v1/params.proto";
+import "basechain/csr/v1/csr.proto";
+
+option go_package = "github.com/b-harvest/basechain/v1/x/csr/types";
+
+// GenesisState defines the csr module's genesis state.
+message GenesisState {
+  // params defines all of the parameters of the module
+  Params params = 1 [ (gogoproto.nullable) = false ];
+  repeated CSR csrs = 2 [ (gogoproto.nullable) = false ];
+  string turnstile_address = 3;
+}

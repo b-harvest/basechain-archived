@@ -120,8 +120,8 @@ import (
 	ibctesting "github.com/cosmos/ibc-go/v8/testing"
 	ibctestingtypes "github.com/cosmos/ibc-go/v8/testing/types"
 
-	coinswapv1 "github.com/Canto-Network/Canto/v7/api/basechain/coinswap/v1"
-	erc20v1 "github.com/Canto-Network/Canto/v7/api/basechain/erc20/v1"
+	coinswapv1 "b-harvest/basechain/v1/api/basechain/coinswap/v1"
+	erc20v1 "b-harvest/basechain/v1/api/basechain/erc20/v1"
 	evmv1 "github.com/evmos/ethermint/api/ethermint/evm/v1"
 	ethante "github.com/evmos/ethermint/app/ante"
 	enccodec "github.com/evmos/ethermint/encoding/codec"
@@ -137,43 +137,35 @@ import (
 	feemarkettypes "github.com/evmos/ethermint/x/feemarket/types"
 
 	// unnamed import of statik for swagger UI support
-	_ "github.com/Canto-Network/Canto/v7/client/docs/statik"
+	_ "b-harvest/basechain/v1/client/docs/statik"
 
-	"github.com/Canto-Network/Canto/v7/app/ante"
-	"github.com/Canto-Network/Canto/v7/x/epochs"
-	epochskeeper "github.com/Canto-Network/Canto/v7/x/epochs/keeper"
-	epochstypes "github.com/Canto-Network/Canto/v7/x/epochs/types"
-	"github.com/Canto-Network/Canto/v7/x/erc20"
-	erc20keeper "github.com/Canto-Network/Canto/v7/x/erc20/keeper"
-	erc20types "github.com/Canto-Network/Canto/v7/x/erc20/types"
+	"b-harvest/basechain/v1/app/ante"
+	"b-harvest/basechain/v1/x/epochs"
+	epochskeeper "b-harvest/basechain/v1/x/epochs/keeper"
+	epochstypes "b-harvest/basechain/v1/x/epochs/types"
+	"b-harvest/basechain/v1/x/erc20"
+	erc20keeper "b-harvest/basechain/v1/x/erc20/keeper"
+	erc20types "b-harvest/basechain/v1/x/erc20/types"
 
-	"github.com/Canto-Network/Canto/v7/x/inflation"
-	inflationkeeper "github.com/Canto-Network/Canto/v7/x/inflation/keeper"
-	inflationtypes "github.com/Canto-Network/Canto/v7/x/inflation/types"
-	"github.com/Canto-Network/Canto/v7/x/onboarding"
-	onboardingkeeper "github.com/Canto-Network/Canto/v7/x/onboarding/keeper"
-	onboardingtypes "github.com/Canto-Network/Canto/v7/x/onboarding/types"
+	"b-harvest/basechain/v1/x/inflation"
+	inflationkeeper "b-harvest/basechain/v1/x/inflation/keeper"
+	inflationtypes "b-harvest/basechain/v1/x/inflation/types"
+	"b-harvest/basechain/v1/x/onboarding"
+	onboardingkeeper "b-harvest/basechain/v1/x/onboarding/keeper"
+	onboardingtypes "b-harvest/basechain/v1/x/onboarding/types"
 
 	//govshuttle imports
-	"github.com/Canto-Network/Canto/v7/x/govshuttle"
-	govshuttlekeeper "github.com/Canto-Network/Canto/v7/x/govshuttle/keeper"
-	govshuttletypes "github.com/Canto-Network/Canto/v7/x/govshuttle/types"
+	"b-harvest/basechain/v1/x/govshuttle"
+	govshuttlekeeper "b-harvest/basechain/v1/x/govshuttle/keeper"
+	govshuttletypes "b-harvest/basechain/v1/x/govshuttle/types"
 
-	"github.com/Canto-Network/Canto/v7/x/csr"
-	csrkeeper "github.com/Canto-Network/Canto/v7/x/csr/keeper"
-	csrtypes "github.com/Canto-Network/Canto/v7/x/csr/types"
+	"b-harvest/basechain/v1/x/csr"
+	csrkeeper "b-harvest/basechain/v1/x/csr/keeper"
+	csrtypes "b-harvest/basechain/v1/x/csr/types"
 
-	"github.com/Canto-Network/Canto/v7/x/coinswap"
-	coinswapkeeper "github.com/Canto-Network/Canto/v7/x/coinswap/keeper"
-	coinswaptypes "github.com/Canto-Network/Canto/v7/x/coinswap/types"
-
-	v2 "github.com/Canto-Network/Canto/v7/app/upgrades/v2"
-	v3 "github.com/Canto-Network/Canto/v7/app/upgrades/v3"
-	v4 "github.com/Canto-Network/Canto/v7/app/upgrades/v4"
-	v5 "github.com/Canto-Network/Canto/v7/app/upgrades/v5"
-	v6 "github.com/Canto-Network/Canto/v7/app/upgrades/v6"
-	v7 "github.com/Canto-Network/Canto/v7/app/upgrades/v7"
-	v8 "github.com/Canto-Network/Canto/v7/app/upgrades/v8"
+	"b-harvest/basechain/v1/x/coinswap"
+	coinswapkeeper "b-harvest/basechain/v1/x/coinswap/keeper"
+	coinswaptypes "b-harvest/basechain/v1/x/coinswap/types"
 )
 
 // Name defines the application binary name
@@ -1346,54 +1338,18 @@ func initParamsKeeper(appCodec codec.BinaryCodec, legacyAmino *codec.LegacyAmino
 }
 
 func (app *Canto) setupUpgradeHandlers() {
-	// v2 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v2.UpgradeName,
-		v2.CreateUpgradeHandler(app.ModuleManager, app.configurator),
-	)
-
-	// v3 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v3.UpgradeName,
-		v3.CreateUpgradeHandler(app.ModuleManager, app.configurator),
-	)
-
-	// v4 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v4.UpgradeName,
-		v4.CreateUpgradeHandler(app.ModuleManager, app.configurator, app.GovshuttleKeeper),
-	)
-
-	// v4 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v5.UpgradeName,
-		v5.CreateUpgradeHandler(app.ModuleManager, app.configurator),
-	)
-
-	// v6 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v6.UpgradeName,
-		v6.CreateUpgradeHandler(app.ModuleManager, app.configurator),
-	)
-
-	// v7 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v7.UpgradeName,
-		v7.CreateUpgradeHandler(app.ModuleManager, app.configurator, *app.OnboardingKeeper, app.CoinswapKeeper),
-	)
-
-	// v8 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v8.UpgradeName,
-		v8.CreateUpgradeHandler(
-			app.ModuleManager,
-			app.ParamsKeeper.Subspace(baseapp.Paramspace).WithKeyTable(paramstypes.ConsensusParamsKeyTable()),
-			app.ConsensusParamsKeeper.ParamsStore,
-			app.configurator,
-			app.IBCKeeper.ClientKeeper,
-			app.StakingKeeper,
-		),
-	)
+	//// v8 upgrade handler
+	//app.UpgradeKeeper.SetUpgradeHandler(
+	//	v8.UpgradeName,
+	//	v8.CreateUpgradeHandler(
+	//		app.ModuleManager,
+	//		app.ParamsKeeper.Subspace(baseapp.Paramspace).WithKeyTable(paramstypes.ConsensusParamsKeyTable()),
+	//		app.ConsensusParamsKeeper.ParamsStore,
+	//		app.configurator,
+	//		app.IBCKeeper.ClientKeeper,
+	//		app.StakingKeeper,
+	//	),
+	//)
 
 	// When a planned update height is reached, the old binary will panic
 	// writing on disk the height and name of the update that triggered it
@@ -1410,30 +1366,11 @@ func (app *Canto) setupUpgradeHandlers() {
 	var storeUpgrades *storetypes.StoreUpgrades
 
 	switch upgradeInfo.Name {
-	case v2.UpgradeName:
-		// no store upgrades in v2
-	case v3.UpgradeName:
-		// no store upgrades in v3
-	case v4.UpgradeName:
-		// no store upgrades in v4
-		storeUpgrades = &storetypes.StoreUpgrades{
-			Added: []string{govshuttletypes.StoreKey},
-		}
-	case v5.UpgradeName:
-		storeUpgrades = &storetypes.StoreUpgrades{
-			Added: []string{csrtypes.StoreKey},
-		}
-	case v6.UpgradeName:
-		// no store upgrades in v6
-	case v7.UpgradeName:
-		storeUpgrades = &storetypes.StoreUpgrades{
-			Added: []string{onboardingtypes.StoreKey, coinswaptypes.StoreKey},
-		}
-	case v8.UpgradeName:
-		setupLegacyKeyTables(&app.ParamsKeeper)
-		storeUpgrades = &storetypes.StoreUpgrades{
-			Added: []string{crisistypes.StoreKey, consensusparamtypes.StoreKey},
-		}
+	//case v8.UpgradeName:
+	//	setupLegacyKeyTables(&app.ParamsKeeper)
+	//	storeUpgrades = &storetypes.StoreUpgrades{
+	//		Added: []string{crisistypes.StoreKey, consensusparamtypes.StoreKey},
+	//	}
 	}
 
 	if storeUpgrades != nil {

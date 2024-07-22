@@ -20,9 +20,9 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 
-	"github.com/Canto-Network/Canto/v7/x/erc20/client/cli"
-	"github.com/Canto-Network/Canto/v7/x/erc20/keeper"
-	"github.com/Canto-Network/Canto/v7/x/erc20/types"
+	"b-harvest/basechain/v1/x/erc20/client/cli"
+	"b-harvest/basechain/v1/x/erc20/keeper"
+	"b-harvest/basechain/v1/x/erc20/types"
 )
 
 // type check to ensure the interface is properly implemented

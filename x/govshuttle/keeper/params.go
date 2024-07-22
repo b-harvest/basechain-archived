@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/Canto-Network/Canto/v7/x/govshuttle/types"
+	"b-harvest/basechain/v1/x/govshuttle/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

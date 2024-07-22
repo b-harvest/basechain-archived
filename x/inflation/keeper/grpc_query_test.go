@@ -6,7 +6,7 @@ import (
 	sdkmath "cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/Canto-Network/Canto/v7/x/inflation/types"
+	"b-harvest/basechain/v1/x/inflation/types"
 	ethermint "github.com/evmos/ethermint/types"
 )
 

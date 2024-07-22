@@ -10,8 +10,8 @@ import (
 	"strings"
 	"testing"
 
+	"b-harvest/basechain/v1/types"
 	upgradetypes "cosmossdk.io/x/upgrade/types"
-	"github.com/Canto-Network/Canto/v7/types"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
 
@@ -36,8 +36,8 @@ import (
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	basechainconfig "github.com/Canto-Network/Canto/v7/cmd/config"
-	epochstypes "github.com/Canto-Network/Canto/v7/x/epochs/types"
+	basechainconfig "b-harvest/basechain/v1/cmd/config"
+	epochstypes "b-harvest/basechain/v1/x/epochs/types"
 )
 
 var FlagEnableStreamingValue bool
