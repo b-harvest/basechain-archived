@@ -1,11 +1,11 @@
 # Becoming A Validator
 
-**How to validate on the Canto Mainnet**
+**How to validate on the Basechain Mainnet**
 
 *(basechain_7700-1)*
 
-> Genesis file [Published](https://github.com/Canto-Network/Canto/raw/main/Mainnet/genesis.json)
-> Peers list [Published](https://github.com/Canto-Network/Canto/blob/main/Mainnet/peers.txt)
+> Genesis file [Published](https://github.com/Basechain-Network/Basechain/raw/main/Mainnet/genesis.json)
+> Peers list [Published](https://github.com/Basechain-Network/Basechain/blob/main/Mainnet/peers.txt)
 
 ## Hardware Requirements
 
@@ -50,8 +50,8 @@ Or install individually:
 ### Clone git repository
 
 ```bash
-git clone https://github.com/Canto-Network/Canto.git
-cd Canto/cmd/basechaind
+git clone https://github.com/Basechain-Network/Basechain.git
+cd Basechain/cmd/basechaind
 go install -tags ledger ./...
 sudo mv $HOME/go/bin/basechaind /usr/bin/
 
@@ -67,7 +67,7 @@ Replace `<keyname>` below with whatever you'd like to name your key.
 
 Store a backup of your keys and mnemonic securely offline.
 
-Then save the generated public key config in the main Canto directory as `<key_name>.info`. It should look like this:
+Then save the generated public key config in the main Basechain directory as `<key_name>.info`. It should look like this:
 
 ```
 
@@ -82,7 +82,7 @@ You'll use this file later when creating your validator txn.
 
 ## Set up validator
 
-Install basechaind binary from `Canto` directory: 
+Install basechaind binary from `Basechain` directory: 
 
 `sudo make install`
 
@@ -94,11 +94,11 @@ If this runs successfully, it should dump a blob of JSON to the terminal.
 
 Download the Genesis file: 
 
-`wget https://raw.githubusercontent.com/Canto-Network/Canto/genesis/Networks/Mainnet/genesis.json -P $HOME/.basechaind/config/` 
+`wget https://raw.githubusercontent.com/Basechain-Network/Basechain/genesis/Networks/Mainnet/genesis.json -P $HOME/.basechaind/config/` 
 
 > _**Note:** If you later get `Error: couldn't read GenesisDoc file: open /root/.basechaind/config/genesis.json: no such file or directory` put the genesis.json file wherever it wants instead, such as:
 > 
-> `sudo wget https://github.com/Canto-Network/Canto/raw/main/Mainnet/genesis.json -P/root/.basechaind/config/`
+> `sudo wget https://github.com/Basechain-Network/Basechain/raw/main/Mainnet/genesis.json -P/root/.basechaind/config/`
 
 Edit the minimum-gas-prices in `${HOME}/.basechaind/config/app.toml`:
 
@@ -116,7 +116,7 @@ Add persistent peers to `$HOME/.basechaind/config/config.toml`:
 ```bash
 
 [Unit]
-Description=Canto Node
+Description=Basechain Node
 After=network.target
 
 [Service]

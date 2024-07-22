@@ -17,9 +17,9 @@ import (
 	"b-harvest/basechain/v1/types"
 )
 
-func TestCantoExport(t *testing.T) {
+func TestBasechainExport(t *testing.T) {
 	db := dbm.NewMemDB()
-	app := NewCanto(
+	app := NewBasechain(
 		log.NewLogger(os.Stdout),
 		db,
 		nil,
@@ -51,7 +51,7 @@ func TestCantoExport(t *testing.T) {
 	app.Commit()
 
 	// Making a new app object with the db, so that initchain hasn't been called
-	app2 := NewCanto(
+	app2 := NewBasechain(
 		log.NewLogger(os.Stdout),
 		db,
 		nil,

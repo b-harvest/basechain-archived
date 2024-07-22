@@ -56,7 +56,7 @@ type SenderAccount struct {
 }
 
 // ChainIDPrefix defines the default chain ID prefix for basechain test chains
-var ChainIDPrefixCanto = "basechain_9000-"
+var ChainIDPrefixBasechain = "basechain_9000-"
 
 // TestChain is a testing struct that wraps a simapp with the last TM Header, the current ABCI
 // header and the validators of the TestChain. It also contains a field called ChainID. This
@@ -210,7 +210,7 @@ func NewTestChain(t *testing.T, coord *Coordinator, chainID string) *TestChain {
 //
 // Time management is handled by the Coordinator in order to ensure synchrony between chains.
 // Each update of any chain increments the block header time for all chains by 5 seconds.
-func NewTestChainCanto(t *testing.T, coord *Coordinator, chainID string) *TestChain {
+func NewTestChainBasechain(t *testing.T, coord *Coordinator, chainID string) *TestChain {
 	t.Helper()
 	// generate validator private/public key
 	privVal := mock.NewPV()
@@ -244,7 +244,7 @@ func NewTestChainCanto(t *testing.T, coord *Coordinator, chainID string) *TestCh
 		Coins:   sdk.NewCoins(sdk.NewCoin(sdk.DefaultBondDenom, amount)),
 	}
 
-	app := SetupWithGenesisValSetCanto(t, valSet, []authtypes.GenesisAccount{acc}, chainID, balance)
+	app := SetupWithGenesisValSetBasechain(t, valSet, []authtypes.GenesisAccount{acc}, chainID, balance)
 
 	// create current header and call begin block
 	header := tmproto.Header{

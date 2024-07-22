@@ -9,7 +9,7 @@ parent:
 
 ## Abstract
 
-The x/onboarding module automatically swaps a portion of the assets being transferred to Canto network via IBC transfer for Canto without the need for a manual process, and converts the remaining assets to ERC20 tokens.
+The x/onboarding module automatically swaps a portion of the assets being transferred to Basechain network via IBC transfer for Basechain without the need for a manual process, and converts the remaining assets to ERC20 tokens.
 
 ## Contents
 

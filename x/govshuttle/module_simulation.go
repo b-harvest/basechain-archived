@@ -3,7 +3,7 @@ package govshuttle
 import (
 	"math/rand"
 
-	//"github.com/Canto-Network/Canto/v2/testutil/sample"
+	//"github.com/Basechain-Network/Basechain/v2/testutil/sample"
 	govshuttlesimulation "b-harvest/basechain/v1/x/govshuttle/simulation"
 	"b-harvest/basechain/v1/x/govshuttle/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"

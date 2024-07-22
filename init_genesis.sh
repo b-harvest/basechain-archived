@@ -24,7 +24,7 @@ basechaind config chain-id $CHAINID
 basechaind keys add $KEY --keyring-backend $KEYRING --algo $KEYALGO
 basechaind keys add $KEY2 --keyring-backend $KEYRING --algo $KEYALGO
 
-# Set moniker and chain-id for Canto (Moniker can be anything, chain-id must be an integer)
+# Set moniker and chain-id for Basechain (Moniker can be anything, chain-id must be an integer)
 basechaind init $MONIKER --chain-id $CHAINID
 
 # Change parameter token denominations to abasecoin

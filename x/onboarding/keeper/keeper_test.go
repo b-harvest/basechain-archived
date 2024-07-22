@@ -30,7 +30,7 @@ type KeeperTestSuite struct {
 
 	ctx sdk.Context
 
-	app            *app.Canto
+	app            *app.Basechain
 	queryClient    types.QueryClient
 	queryClientEvm evm.QueryClient
 	validator      stakingtypes.Validator

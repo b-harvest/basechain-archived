@@ -34,7 +34,7 @@ func (k Keeper) OnRecvPacket(
 
 	// It always returns original ACK
 	// meaning that even if the swap or conversion fails, it does not revert IBC transfer
-	// and the asset transferred to the Canto network will still remain in the Canto network
+	// and the asset transferred to the Basechain network will still remain in the Basechain network
 
 	params := k.GetParams(ctx)
 	if !params.EnableOnboarding {

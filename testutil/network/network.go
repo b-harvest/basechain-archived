@@ -70,7 +70,7 @@ type AppConstructor = func(val Validator) servertypes.Application
 // NewAppConstructor returns a new simapp AppConstructor
 func NewAppConstructor(chainID string) AppConstructor {
 	return func(val Validator) servertypes.Application {
-		return app.NewCanto(
+		return app.NewBasechain(
 			val.Ctx.Logger,
 			dbm.NewMemDB(),
 			nil,
@@ -120,7 +120,7 @@ type Config struct {
 // DefaultConfig returns a sane default configuration suitable for nearly all
 // testing requirements.
 func DefaultConfig() Config {
-	tempApp := app.NewCanto(
+	tempApp := app.NewBasechain(
 		log.NewNopLogger(),
 		dbm.NewMemDB(),
 		nil,

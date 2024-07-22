@@ -59,9 +59,9 @@ func init() {
 func Setup(
 	isCheckTx bool,
 	feemarketGenesis *feemarkettypes.GenesisState,
-) *Canto {
+) *Basechain {
 	db := dbm.NewMemDB()
-	app := NewCanto(log.NewNopLogger(), db, nil, true, map[int64]bool{}, DefaultNodeHome, 0, false, simtestutil.NewAppOptionsWithFlagHome(DefaultNodeHome), baseapp.SetChainID(types.MainnetChainID+"-1"))
+	app := NewBasechain(log.NewNopLogger(), db, nil, true, map[int64]bool{}, DefaultNodeHome, 0, false, simtestutil.NewAppOptionsWithFlagHome(DefaultNodeHome), baseapp.SetChainID(types.MainnetChainID+"-1"))
 	if !isCheckTx {
 		// init chain must be called to stop deliverState from being nil
 		genesisState := NewDefaultGenesisState()
@@ -93,7 +93,7 @@ func Setup(
 	return app
 }
 
-func SetupWithGenesisAccounts(genAccs []authtypes.GenesisAccount, balances ...banktypes.Balance) *Canto {
+func SetupWithGenesisAccounts(genAccs []authtypes.GenesisAccount, balances ...banktypes.Balance) *Basechain {
 	app := Setup(false, feemarkettypes.DefaultGenesisState())
 	genesisState := NewDefaultGenesisState()
 	authGenesis := authtypes.NewGenesisState(authtypes.DefaultParams(), genAccs)

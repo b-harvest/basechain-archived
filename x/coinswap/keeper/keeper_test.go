@@ -43,7 +43,7 @@ type TestSuite struct {
 	suite.Suite
 
 	ctx         sdk.Context
-	app         *app.Canto
+	app         *app.Basechain
 	keeper      keeper.Keeper
 	queryClient types.QueryClient
 	msgServer   types.MsgServer
@@ -168,7 +168,7 @@ func (suite *TestSuite) TestParams() {
 	}
 }
 
-func setupWithGenesisAccounts() *app.Canto {
+func setupWithGenesisAccounts() *app.Basechain {
 	amountInitStandard, _ := sdkmath.NewIntFromString("30000000000000000000")
 	amountInitBTC, _ := sdkmath.NewIntFromString("3000000000")
 

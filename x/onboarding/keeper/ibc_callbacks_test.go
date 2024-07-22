@@ -99,13 +99,13 @@ func (suite *KeeperTestSuite) TestOnRecvPacket() {
 	expAck := ibcmock.MockAcknowledgement
 
 	testCases := []struct {
-		name              string
-		malleate          func()
-		ackSuccess        bool
-		receiverBalance   sdk.Coins
-		expCantoBalance   sdk.Coin
-		expVoucherBalance sdk.Coin
-		expErc20Balance   sdkmath.Int
+		name                string
+		malleate            func()
+		ackSuccess          bool
+		receiverBalance     sdk.Coins
+		expBasechainBalance sdk.Coin
+		expVoucherBalance   sdk.Coin
+		expErc20Balance     sdkmath.Int
 	}{
 		{
 			"fail - invalid sender - missing '1' ",
@@ -443,7 +443,7 @@ func (suite *KeeperTestSuite) TestOnRecvPacket() {
 				erc20balance = suite.app.Erc20Keeper.BalanceOf(suite.ctx, contracts.ERC20MinterBurnerDecimalsContract.ABI, usdtPair.GetERC20Contract(), common.BytesToAddress(ethsecpAddr.Bytes()))
 			}
 
-			suite.Require().Equal(tc.expCantoBalance, basechainBalance)
+			suite.Require().Equal(tc.expBasechainBalance, basechainBalance)
 			suite.Require().Equal(tc.expVoucherBalance, voucherBalance)
 			suite.Require().Equal(tc.expErc20Balance.String(), erc20balance.String())
 

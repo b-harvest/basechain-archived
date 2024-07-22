@@ -33,11 +33,11 @@ func NewCoordinator(t *testing.T, nEVMChains, mCosmosChains int) *Coordinator {
 	}
 
 	// setup EVM chains
-	DefaultTestingAppInit = CantoTestingAppInit
+	DefaultTestingAppInit = BasechainTestingAppInit
 
 	for i := 1; i <= nEVMChains; i++ {
-		chainID := GetChainIDCanto(i)
-		chains[chainID] = NewTestChainCanto(t, coord, chainID)
+		chainID := GetChainIDBasechain(i)
+		chains[chainID] = NewTestChainBasechain(t, coord, chainID)
 	}
 
 	// setup Cosmos chains
@@ -187,8 +187,8 @@ func GetChainID(index int) string {
 }
 
 // GetChainID returns the chainID used for the provided index.
-func GetChainIDCanto(index int) string {
-	return ChainIDPrefixCanto + strconv.Itoa(index)
+func GetChainIDBasechain(index int) string {
+	return ChainIDPrefixBasechain + strconv.Itoa(index)
 }
 
 // CommitBlock commits a block on the provided indexes and then increments the global time.

@@ -24,8 +24,8 @@ RUN apt-get update &&\
 RUN snap install go --classic
 
 # builds out basechaind
-RUN git clone https://github.com/Canto-Network/Canto-Testnet
-WORKDIR /Canto-Testnet/cmd/basechaind
+RUN git clone https://github.com/Basechain-Network/Basechain-Testnet
+WORKDIR /Basechain-Testnet/cmd/basechaind
 RUN go install -tags ledger ./... &&\
     mv $HOME/go/bin/basechaind /usr/bin/
 
@@ -38,12 +38,12 @@ RUN basechaind keys add $KEY_NAME
 RUN basechaind init $MONIKER --chain-id basechain_9624-1
 
 # get genesis file
-RUN wget https://github.com/Canto-Network/Canto-Testnet-v2/raw/main/genesis.json -P $HOME/.basechaind/config/
+RUN wget https://github.com/Basechain-Network/Basechain-Testnet-v2/raw/main/genesis.json -P $HOME/.basechaind/config/
 RUN sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "0.0001abasechain"/g' $HOME/.basechaind/config/app.toml
-RUN wget https://github.com/Canto-Network/Canto-Testnet-v2/raw/main/Docker/basechaind.service -P $HOME/systemd/system/
+RUN wget https://github.com/Basechain-Network/Basechain-Testnet-v2/raw/main/Docker/basechaind.service -P $HOME/systemd/system/
 
 # run basechaind
-WORKDIR /Canto-Testnet/cmd/basechaind
+WORKDIR /Basechain-Testnet/cmd/basechaind
 RUN sudo systemctl daemon-reload &&\
     sudo systemctl enable basechaind.service &&\
     systemctl start basechaind && journalctl -u basechaind -f

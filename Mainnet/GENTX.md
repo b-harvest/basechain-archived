@@ -8,9 +8,9 @@
 ```bash
 basechaind init <node_name> --chain-id <chain_id>
 ```
-* Download the [genesis file](https://github.com/Canto-Network/Canto/raw/main/Mainnet/genesis.json)
+* Download the [genesis file](https://github.com/Basechain-Network/Basechain/raw/main/Mainnet/genesis.json)
 ```bash
-wget https://github.com/Canto-Network/Canto/raw/main/Mainnet/genesis.json -b $HOME/.basechaind/config
+wget https://github.com/Basechain-Network/Basechain/raw/main/Mainnet/genesis.json -b $HOME/.basechaind/config
 ```
 
 ### Add a Genesis Account
@@ -24,17 +24,17 @@ A GENTX is a genesis transaction that adds a validator node to the genesis file.
 ```bash
 basechaind gentx <key_name> <token-amount>abasechain --chain-id=<chain_id> --moniker=<your_moniker> --commission-max-change-rate=0.01 --commission-max-rate=0.10 --commission-rate=0.05 --details="<details here>" --security-contact="<email>" --website="<website>"
 ```
-* Fork [Canto](https://github.com/Canto-Network/Canto)
+* Fork [Basechain](https://github.com/Basechain-Network/Basechain)
 
-* Copy the contents of `${HOME}/.basechaind/config/gentx/gentx-XXXXXXXX.json` to `$HOME/Canto/Mainnet/gentx/<yourvalidatorname>.json`
+* Copy the contents of `${HOME}/.basechaind/config/gentx/gentx-XXXXXXXX.json` to `$HOME/Basechain/Mainnet/gentx/<yourvalidatorname>.json`
 
-* Copy the genesis.json file `${HOME}/.basechaind/config/genesis.json` to `$HOME/Canto/Mainnet/Genesis-Files/`
+* Copy the genesis.json file `${HOME}/.basechaind/config/genesis.json` to `$HOME/Basechain/Mainnet/Genesis-Files/`
 
-* Create a pull request to the main branch of the [repository](https://github.com/Canto-Network/Canto/Mainnet/gentx)
+* Create a pull request to the main branch of the [repository](https://github.com/Basechain-Network/Basechain/Mainnet/gentx)
 
 ### Restarting Your Node
 
-You do not need to reinitialize your Canto Node. Basically a hard fork on Cosmos is starting from block 1 with a new genesis file. All your configuration files can stay the same. Steps to ensure a safe restart
+You do not need to reinitialize your Basechain Node. Basically a hard fork on Cosmos is starting from block 1 with a new genesis file. All your configuration files can stay the same. Steps to ensure a safe restart
 
 1) Backup your data directory. 
 * `mkdir $HOME/basechain-backup` 
@@ -61,7 +61,7 @@ If you do not reinitialize then your peer id and ip address will remain the same
 
 7) Download the new binary
 ```
-cd $HOME/Canto
+cd $HOME/Basechain
 git checkout <branch>
 make install
 mv $HOME/go/bin/basechaind /usr/bin/
@@ -80,7 +80,7 @@ mv $HOME/go/bin/basechaind /usr/bin/
 
 2) Download the old genesis file
 
-* `wget https://github.com/Canto-Network/Canto/raw/main/Mainnet/genesis.json -b $HOME/.basechaind/config/`
+* `wget https://github.com/Basechain-Network/Basechain/raw/main/Mainnet/genesis.json -b $HOME/.basechaind/config/`
 
 3) Restart your node
 

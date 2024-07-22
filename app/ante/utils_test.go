@@ -34,7 +34,7 @@ type AnteTestSuite struct {
 	suite.Suite
 
 	ctx   sdk.Context
-	app   *app.Canto
+	app   *app.Basechain
 	denom string
 }
 

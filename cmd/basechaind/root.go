@@ -54,7 +54,7 @@ const (
 // NewRootCmd creates a new root command for basechaind. It is called once in the
 // main function.
 func NewRootCmd() (*cobra.Command, params.EncodingConfig) {
-	tempApp := app.NewCanto(
+	tempApp := app.NewBasechain(
 		log.NewNopLogger(),
 		dbm.NewMemDB(),
 		nil,
@@ -262,7 +262,7 @@ func (a appCreator) newApp(logger log.Logger, db dbm.DB, traceStore io.Writer, a
 		skipUpgradeHeights[int64(h)] = true
 	}
 
-	basechainApp := app.NewCanto(
+	basechainApp := app.NewBasechain(
 		logger, db, traceStore, true, skipUpgradeHeights,
 		cast.ToString(appOpts.Get(flags.FlagHome)),
 		cast.ToUint(appOpts.Get(sdkserver.FlagInvCheckPeriod)),
@@ -286,20 +286,20 @@ func (a appCreator) appExport(
 	appOpts servertypes.AppOptions,
 	modulesToExport []string,
 ) (servertypes.ExportedApp, error) {
-	var basechainApp *app.Canto
+	var basechainApp *app.Basechain
 	homePath, ok := appOpts.Get(flags.FlagHome).(string)
 	if !ok || homePath == "" {
 		return servertypes.ExportedApp{}, errors.New("application home not set")
 	}
 
 	if height != -1 {
-		basechainApp = app.NewCanto(logger, db, traceStore, false, map[int64]bool{}, "", uint(1), false, appOpts)
+		basechainApp = app.NewBasechain(logger, db, traceStore, false, map[int64]bool{}, "", uint(1), false, appOpts)
 
 		if err := basechainApp.LoadHeight(height); err != nil {
 			return servertypes.ExportedApp{}, err
 		}
 	} else {
-		basechainApp = app.NewCanto(logger, db, traceStore, true, map[int64]bool{}, "", uint(1), false, appOpts)
+		basechainApp = app.NewBasechain(logger, db, traceStore, true, map[int64]bool{}, "", uint(1), false, appOpts)
 	}
 
 	return basechainApp.ExportAppStateAndValidators(forZeroHeight, jailAllowedAddrs, modulesToExport)

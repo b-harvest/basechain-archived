@@ -39,19 +39,19 @@ Ref: https://keepachangelog.com/en/1.0.0/
 
 ### State Machine Breaking
 
-- (deps) [#126](https://github.com/Canto-Network/Canto/pull/126) Bump Comsos-SDK to v0.50.6, CometBFT to v0.38.6, ibc-go to v8.2.1
+- (deps) [#126](https://github.com/Basechain-Network/Basechain/pull/126) Bump Comsos-SDK to v0.50.6, CometBFT to v0.38.6, ibc-go to v8.2.1
   <!-- add ethermint bump up info after release -->
 
 ### Improvements
 
-- (ante) [#126](https://github.com/Canto-Network/Canto/pull/126) Remove NewValidatorCommissionDecorator because its logic is duplicated with the logic implemented in the staking module's msg server.
-- (x/*) [#126](https://github.com/Canto-Network/Canto/pull/126) Apply Cosmos-SDK improvements.
+- (ante) [#126](https://github.com/Basechain-Network/Basechain/pull/126) Remove NewValidatorCommissionDecorator because its logic is duplicated with the logic implemented in the staking module's msg server.
+- (x/*) [#126](https://github.com/Basechain-Network/Basechain/pull/126) Apply Cosmos-SDK improvements.
   - Remove `Type()` and `Route()` methods from all msgs
   - Remove `GetSigner()` methods from all msgs, move their logic to protobuf and define a custom GetSigner func if needed.
   - `authority` has been added to the required module to execute proposal msgs.
 
 ### Client Breaking
 
-- (x/*) [#126](https://github.com/Canto-Network/Canto/pull/126) module-specific proposal and update params is moved to msg levelto to support msgs-based gov proposals.
+- (x/*) [#126](https://github.com/Basechain-Network/Basechain/pull/126) module-specific proposal and update params is moved to msg levelto to support msgs-based gov proposals.
 
 <!-- Release links -->

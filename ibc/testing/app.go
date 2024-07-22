@@ -38,7 +38,7 @@ import (
 
 var DefaultTestingAppInit func() (TestingApp, map[string]json.RawMessage) = SetupTestingApp
 
-var CantoTestingAppInit func() (TestingApp, map[string]json.RawMessage) = SetupTestingCantoApp
+var BasechainTestingAppInit func() (TestingApp, map[string]json.RawMessage) = SetupTestingBasechainApp
 
 type TestingApp interface {
 	servertypes.ABCI
@@ -65,9 +65,9 @@ func SetupTestingApp() (TestingApp, map[string]json.RawMessage) {
 }
 
 // SetupTestingApp initializes the IBC-go testing application
-func SetupTestingCantoApp() (TestingApp, map[string]json.RawMessage) {
+func SetupTestingBasechainApp() (TestingApp, map[string]json.RawMessage) {
 	db := dbm.NewMemDB()
-	app := basechainapp.NewCanto(log.NewNopLogger(), db, nil, true, map[int64]bool{}, basechainapp.DefaultNodeHome, 5, false, simtestutil.EmptyAppOptions{})
+	app := basechainapp.NewBasechain(log.NewNopLogger(), db, nil, true, map[int64]bool{}, basechainapp.DefaultNodeHome, 5, false, simtestutil.EmptyAppOptions{})
 
 	return app, basechainapp.NewDefaultGenesisState()
 }
@@ -151,7 +151,7 @@ func SetupWithGenesisValSet(tb testing.TB, valSet *tmtypes.ValidatorSet, genAccs
 // that also act as delegators. For simplicity, each validator is bonded with a delegation
 // of one consensus engine unit (10^6) in the default token of the simapp from first genesis
 // account. A Nop logger is set in SimApp.
-func SetupWithGenesisValSetCanto(tb testing.TB, valSet *tmtypes.ValidatorSet, genAccs []authtypes.GenesisAccount, chainID string, balances ...banktypes.Balance) TestingApp {
+func SetupWithGenesisValSetBasechain(tb testing.TB, valSet *tmtypes.ValidatorSet, genAccs []authtypes.GenesisAccount, chainID string, balances ...banktypes.Balance) TestingApp {
 	tb.Helper()
 	app, genesisState := DefaultTestingAppInit()
 

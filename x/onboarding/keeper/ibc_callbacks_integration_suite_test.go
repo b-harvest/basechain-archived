@@ -56,7 +56,7 @@ func TestIBCTestingSuite(t *testing.T) {
 func (suite *IBCTestingSuite) SetupTest() {
 	// initializes 3 test chains
 	suite.coordinator = ibcgotesting.NewCoordinator(suite.T(), 1, 2)
-	suite.basechainChain = suite.coordinator.GetChain(ibcgotesting.GetChainIDCanto(1))
+	suite.basechainChain = suite.coordinator.GetChain(ibcgotesting.GetChainIDBasechain(1))
 	suite.IBCGravityChain = suite.coordinator.GetChain(ibcgotesting.GetChainID(2))
 	suite.IBCCosmosChain = suite.coordinator.GetChain(ibcgotesting.GetChainID(3))
 	suite.coordinator.CommitNBlocks(suite.basechainChain, 2)
@@ -82,7 +82,7 @@ func (suite *IBCTestingSuite) SetupTest() {
 
 	params := types.DefaultParams()
 	params.EnableOnboarding = true
-	suite.basechainChain.App.(*app.Canto).OnboardingKeeper.SetParams(suite.basechainChain.GetContext(), params)
+	suite.basechainChain.App.(*app.Basechain).OnboardingKeeper.SetParams(suite.basechainChain.GetContext(), params)
 
 	// Setup the paths between the chains
 	suite.pathGravitybasechain = ibcgotesting.NewTransferPath(suite.IBCGravityChain, suite.basechainChain) // clientID, connectionID, channelID empty
@@ -102,20 +102,20 @@ func (suite *IBCTestingSuite) SetupTest() {
 	suite.IBCCosmosChain.CurrentHeader.ProposerAddress = suite.IBCCosmosChain.LastHeader.ValidatorSet.Proposer.Address
 }
 
-// FundCantoChain mints coins and sends them to the basechainChain sender account
-func (suite *IBCTestingSuite) FundCantoChain(coins sdk.Coins) {
-	err := suite.basechainChain.App.(*app.Canto).BankKeeper.MintCoins(suite.basechainChain.GetContext(), inflationtypes.ModuleName, coins)
+// FundBasechainChain mints coins and sends them to the basechainChain sender account
+func (suite *IBCTestingSuite) FundBasechainChain(coins sdk.Coins) {
+	err := suite.basechainChain.App.(*app.Basechain).BankKeeper.MintCoins(suite.basechainChain.GetContext(), inflationtypes.ModuleName, coins)
 	suite.Require().NoError(err)
-	err = suite.basechainChain.App.(*app.Canto).BankKeeper.SendCoinsFromModuleToAccount(suite.basechainChain.GetContext(), inflationtypes.ModuleName, suite.basechainChain.SenderAccount.GetAddress(), coins)
+	err = suite.basechainChain.App.(*app.Basechain).BankKeeper.SendCoinsFromModuleToAccount(suite.basechainChain.GetContext(), inflationtypes.ModuleName, suite.basechainChain.SenderAccount.GetAddress(), coins)
 	suite.Require().NoError(err)
 }
 
 // setupRegisterCoin deploys an erc20 contract and creates the token pair
 func (suite *IBCTestingSuite) setupRegisterCoin(metadata banktypes.Metadata) *erc20types.TokenPair {
-	err := suite.basechainChain.App.(*app.Canto).BankKeeper.MintCoins(suite.basechainChain.GetContext(), inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
+	err := suite.basechainChain.App.(*app.Basechain).BankKeeper.MintCoins(suite.basechainChain.GetContext(), inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
 	suite.Require().NoError(err)
 
-	pair, err := suite.basechainChain.App.(*app.Canto).Erc20Keeper.RegisterCoin(suite.basechainChain.GetContext(), metadata)
+	pair, err := suite.basechainChain.App.(*app.Basechain).Erc20Keeper.RegisterCoin(suite.basechainChain.GetContext(), metadata)
 	suite.Require().NoError(err)
 	return pair
 }
@@ -125,9 +125,9 @@ func (suite *IBCTestingSuite) CreatePool(denom string) {
 	coinbasechain := sdk.NewCoin("abasecoin", sdkmath.NewIntWithDecimal(10000, 18))
 	coinIBC := sdk.NewCoin(denom, sdkmath.NewIntWithDecimal(10000, 6))
 	coins := sdk.NewCoins(coinbasechain, coinIBC)
-	suite.FundCantoChain(coins)
+	suite.FundBasechainChain(coins)
 
-	coinswapKeeper := suite.basechainChain.App.(*app.Canto).CoinswapKeeper
+	coinswapKeeper := suite.basechainChain.App.(*app.Basechain).CoinswapKeeper
 	coinswapKeeper.SetStandardDenom(suite.basechainChain.GetContext(), "abasecoin")
 	coinswapParams := coinswapKeeper.GetParams(suite.basechainChain.GetContext())
 	coinswapParams.MaxSwapAmount = sdk.NewCoins(sdk.NewCoin(denom, sdkmath.NewIntWithDecimal(10, 6)))
@@ -143,7 +143,7 @@ func (suite *IBCTestingSuite) CreatePool(denom string) {
 	}
 
 	// Add liquidity to the pool
-	suite.basechainChain.App.(*app.Canto).CoinswapKeeper.AddLiquidity(suite.basechainChain.GetContext(), &msgAddLiquidity)
+	suite.basechainChain.App.(*app.Basechain).CoinswapKeeper.AddLiquidity(suite.basechainChain.GetContext(), &msgAddLiquidity)
 }
 
 var (

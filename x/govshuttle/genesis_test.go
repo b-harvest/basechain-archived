@@ -21,10 +21,10 @@ import (
 type GenesisTestSuite struct {
 	suite.Suite //top level testing suite
 
-	appA *app.Canto
+	appA *app.Basechain
 	ctxA sdk.Context
 
-	appB *app.Canto
+	appB *app.Basechain
 	ctxB sdk.Context
 }
 
@@ -36,7 +36,7 @@ func TestGenesisTestSuite(t *testing.T) {
 }
 
 func (suite *GenesisTestSuite) DoSetupTest(t require.TestingT) {
-	suite.appA = app.NewCanto(
+	suite.appA = app.NewBasechain(
 		log.NewNopLogger(),
 		dbm.NewMemDB(),
 		nil,
@@ -49,7 +49,7 @@ func (suite *GenesisTestSuite) DoSetupTest(t require.TestingT) {
 	)
 	suite.ctxA = suite.appA.NewContext(true)
 
-	suite.appB = app.NewCanto(
+	suite.appB = app.NewBasechain(
 		log.NewNopLogger(),
 		dbm.NewMemDB(),
 		nil,

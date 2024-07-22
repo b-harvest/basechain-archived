@@ -14,10 +14,10 @@ cd proto
 proto_dirs=$(find ./basechain -path -prune -o -name '*.proto' -print0 | xargs -0 -n1 dirname | sort | uniq)
 for dir in $proto_dirs; do
   for file in $(find "${dir}" -maxdepth 1 -name '*.proto'); do
-    # this regex checks if a proto file has its go_package set to Canto/...
+    # this regex checks if a proto file has its go_package set to Basechain/...
     # gogo proto files SHOULD ONLY be generated if this is false
     # we don't want gogo proto to run for proto files which are natively built for google.golang.org/protobuf
-    if grep -q "option go_package.*Canto" "$file"; then
+    if grep -q "option go_package.*Basechain" "$file"; then
       buf generate --template buf.gen.gogo.yaml $file
     fi
   done

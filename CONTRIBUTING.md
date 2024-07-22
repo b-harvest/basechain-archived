@@ -1,6 +1,6 @@
 # Basic Guidelines
 
-Canto is written in Go.  We prefer to use the latest version of go because this will prevent mixed runtimes, and thus, errors. 
+Basechain is written in Go.  We prefer to use the latest version of go because this will prevent mixed runtimes, and thus, errors. 
 
 ## Dev Env setup
 * go v1.20.0
@@ -9,8 +9,8 @@ Canto is written in Go.  We prefer to use the latest version of go because this 
 * Mac or Linux, no Windows
 
 ```bash
-git clone https://github.com/Canto-Network/Canto
-cd Canto
+git clone https://github.com/Basechain-Network/Basechain
+cd Basechain
 go install ./...
 code .
 ```

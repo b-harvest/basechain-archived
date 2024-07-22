@@ -194,15 +194,15 @@ var (
 )
 
 var (
-	_ runtime.AppI            = (*Canto)(nil)
-	_ servertypes.Application = (*Canto)(nil)
-	_ ibctesting.TestingApp   = (*Canto)(nil)
+	_ runtime.AppI            = (*Basechain)(nil)
+	_ servertypes.Application = (*Basechain)(nil)
+	_ ibctesting.TestingApp   = (*Basechain)(nil)
 )
 
-// Canto implements an extended ABCI application. It is an application
+// Basechain implements an extended ABCI application. It is an application
 // that may process transactions through Ethereum's EVM running atop of
 // Tendermint consensus.
-type Canto struct {
+type Basechain struct {
 	*baseapp.BaseApp
 	legacyAmino       *codec.LegacyAmino
 	appCodec          codec.Codec
@@ -240,7 +240,7 @@ type Canto struct {
 	EvmKeeper       *evmkeeper.Keeper
 	FeeMarketKeeper feemarketkeeper.Keeper
 
-	// Canto keepers
+	// Basechain keepers
 	InflationKeeper  inflationkeeper.Keeper
 	Erc20Keeper      erc20keeper.Keeper
 	EpochsKeeper     epochskeeper.Keeper
@@ -273,15 +273,15 @@ func init() {
 
 	DefaultNodeHome = filepath.Join(userHomeDir, ".basechaind")
 
-	// manually update the power reduction by replacing micro (u) -> atto (a) Canto
+	// manually update the power reduction by replacing micro (u) -> atto (a) Basechain
 	sdk.DefaultPowerReduction = ethermint.PowerReduction
 	// modify fee market parameter defaults through global
 	feemarkettypes.DefaultMinGasPrice = sdkmath.LegacyNewDec(20_000_000_000)
 	feemarkettypes.DefaultMinGasMultiplier = sdkmath.LegacyNewDecWithPrec(5, 1)
 }
 
-// NewCanto returns a reference to a new initialized Ethermint application.
-func NewCanto(
+// NewBasechain returns a reference to a new initialized Ethermint application.
+func NewBasechain(
 	logger log.Logger,
 	db dbm.DB,
 	traceStore io.Writer,
@@ -292,7 +292,7 @@ func NewCanto(
 	simulation bool,
 	appOpts servertypes.AppOptions,
 	baseAppOptions ...func(*baseapp.BaseApp),
-) *Canto {
+) *Basechain {
 	legacyAmino := codec.NewLegacyAmino()
 	signingOptions := signing.Options{
 		AddressCodec: address.Bech32Codec{
@@ -359,7 +359,7 @@ func NewCanto(
 		ibcexported.StoreKey, ibctransfertypes.StoreKey, capabilitytypes.StoreKey,
 		// ethermint keys
 		evmtypes.StoreKey, feemarkettypes.StoreKey,
-		// Canto keys
+		// Basechain keys
 		inflationtypes.StoreKey,
 		erc20types.StoreKey,
 		epochstypes.StoreKey,
@@ -378,7 +378,7 @@ func NewCanto(
 	// Add the EVM transient store key
 	tkeys := storetypes.NewTransientStoreKeys(paramstypes.TStoreKey, evmtypes.TransientKey, feemarkettypes.TransientKey)
 	memKeys := storetypes.NewMemoryStoreKeys(capabilitytypes.MemStoreKey)
-	app := &Canto{
+	app := &Basechain{
 		BaseApp:           bApp,
 		legacyAmino:       legacyAmino,
 		appCodec:          appCodec,
@@ -596,7 +596,7 @@ func NewCanto(
 		nil, geth.NewEVM, tracer, evmSs,
 	)
 
-	// Canto Keeper
+	// Basechain Keeper
 	app.CoinswapKeeper = coinswapkeeper.NewKeeper(
 		appCodec,
 		runtime.NewKVStoreService(keys[coinswaptypes.ModuleName]),
@@ -753,7 +753,7 @@ func NewCanto(
 		evm.NewAppModule(app.EvmKeeper, app.AccountKeeper, evmSs),
 		feemarket.NewAppModule(app.FeeMarketKeeper, feeMarketSs),
 
-		// Canto app modules
+		// Basechain app modules
 		inflation.NewAppModule(app.InflationKeeper, app.AccountKeeper, *app.StakingKeeper),
 		erc20.NewAppModule(app.Erc20Keeper, app.AccountKeeper, app.AccountKeeper.AddressCodec()),
 		epochs.NewAppModule(appCodec, app.EpochsKeeper),
@@ -882,7 +882,7 @@ func NewCanto(
 		paramstypes.ModuleName,
 		upgradetypes.ModuleName,
 		consensusparamtypes.ModuleName,
-		// Canto modules
+		// Basechain modules
 		inflationtypes.ModuleName,
 		erc20types.ModuleName,
 		epochstypes.ModuleName,
@@ -989,8 +989,8 @@ func NewCanto(
 	return app
 }
 
-// use Canto's custom AnteHandler
-func (app *Canto) setAnteHandler(txConfig client.TxConfig, maxGasWanted uint64, cdc codec.BinaryCodec, simulation bool) {
+// use Basechain's custom AnteHandler
+func (app *Basechain) setAnteHandler(txConfig client.TxConfig, maxGasWanted uint64, cdc codec.BinaryCodec, simulation bool) {
 	anteHandler, err := ante.NewAnteHandler(
 		ante.HandlerOptions{
 			AccountKeeper:          app.AccountKeeper,
@@ -1020,7 +1020,7 @@ func (app *Canto) setAnteHandler(txConfig client.TxConfig, maxGasWanted uint64, 
 	app.SetAnteHandler(anteHandler)
 }
 
-func (app *Canto) setPostHandler() {
+func (app *Basechain) setPostHandler() {
 	postHandler, err := posthandler.NewPostHandler(
 		posthandler.HandlerOptions{},
 	)
@@ -1032,31 +1032,31 @@ func (app *Canto) setPostHandler() {
 }
 
 // Name returns the name of the App
-func (app *Canto) Name() string { return app.BaseApp.Name() }
+func (app *Basechain) Name() string { return app.BaseApp.Name() }
 
 // PreBlocker updates every pre begin block
-func (app *Canto) PreBlocker(ctx sdk.Context, _ *abci.RequestFinalizeBlock) (*sdk.ResponsePreBlock, error) {
+func (app *Basechain) PreBlocker(ctx sdk.Context, _ *abci.RequestFinalizeBlock) (*sdk.ResponsePreBlock, error) {
 	return app.ModuleManager.PreBlock(ctx)
 }
 
 // BeginBlocker runs the Tendermint ABCI BeginBlock logic. It executes state changes at the beginning
 // of the new block for every registered module. If there is a registered fork at the current height,
 // BeginBlocker will schedule the upgrade plan and perform the state migration (if any).
-func (app *Canto) BeginBlocker(ctx sdk.Context) (sdk.BeginBlock, error) {
+func (app *Basechain) BeginBlocker(ctx sdk.Context) (sdk.BeginBlock, error) {
 	return app.ModuleManager.BeginBlock(ctx)
 }
 
 // EndBlocker updates every end block
-func (app *Canto) EndBlocker(ctx sdk.Context) (sdk.EndBlock, error) {
+func (app *Basechain) EndBlocker(ctx sdk.Context) (sdk.EndBlock, error) {
 	return app.ModuleManager.EndBlock(ctx)
 }
 
-func (app *Canto) Configurator() module.Configurator {
+func (app *Basechain) Configurator() module.Configurator {
 	return app.configurator
 }
 
 // InitChainer updates at chain initialization
-func (app *Canto) InitChainer(ctx sdk.Context, req *abci.RequestInitChain) (*abci.ResponseInitChain, error) {
+func (app *Basechain) InitChainer(ctx sdk.Context, req *abci.RequestInitChain) (*abci.ResponseInitChain, error) {
 	var genesisState GenesisState
 	if err := json.Unmarshal(req.AppStateBytes, &genesisState); err != nil {
 		panic(err)
@@ -1068,12 +1068,12 @@ func (app *Canto) InitChainer(ctx sdk.Context, req *abci.RequestInitChain) (*abc
 }
 
 // LoadHeight loads state at a particular height
-func (app *Canto) LoadHeight(height int64) error {
+func (app *Basechain) LoadHeight(height int64) error {
 	return app.LoadVersion(height)
 }
 
 // ModuleAccountAddrs returns all the app's module account addresses.
-func (app *Canto) ModuleAccountAddrs() map[string]bool {
+func (app *Basechain) ModuleAccountAddrs() map[string]bool {
 	modAccAddrs := make(map[string]bool)
 	for acc := range maccPerms {
 		modAccAddrs[authtypes.NewModuleAddress(acc).String()] = true
@@ -1082,34 +1082,34 @@ func (app *Canto) ModuleAccountAddrs() map[string]bool {
 	return modAccAddrs
 }
 
-// LegacyAmino returns Canto's amino codec.
+// LegacyAmino returns Basechain's amino codec.
 //
 // NOTE: This is solely to be used for testing purposes as it may be desirable
 // for modules to register their own custom testing types.
-func (app *Canto) LegacyAmino() *codec.LegacyAmino {
+func (app *Basechain) LegacyAmino() *codec.LegacyAmino {
 	return app.legacyAmino
 }
 
-// AppCodec returns Canto's app codec.
+// AppCodec returns Basechain's app codec.
 //
 // NOTE: This is solely to be used for testing purposes as it may be desirable
 // for modules to register their own custom testing types.
-func (app *Canto) AppCodec() codec.Codec {
+func (app *Basechain) AppCodec() codec.Codec {
 	return app.appCodec
 }
 
-// InterfaceRegistry returns Canto's InterfaceRegistry
-func (app *Canto) InterfaceRegistry() types.InterfaceRegistry {
+// InterfaceRegistry returns Basechain's InterfaceRegistry
+func (app *Basechain) InterfaceRegistry() types.InterfaceRegistry {
 	return app.interfaceRegistry
 }
 
-// TxConfig returns Canto's TxConfig
-func (app *Canto) TxConfig() client.TxConfig {
+// TxConfig returns Basechain's TxConfig
+func (app *Basechain) TxConfig() client.TxConfig {
 	return app.txConfig
 }
 
 // AutoCliOpts returns the autocli options for the app.
-func (app *Canto) AutoCliOpts() autocli.AppOptions {
+func (app *Basechain) AutoCliOpts() autocli.AppOptions {
 	modules := make(map[string]appmodule.AppModule, 0)
 	for _, m := range app.ModuleManager.Modules {
 		if moduleWithName, ok := m.(module.HasName); ok {
@@ -1130,19 +1130,19 @@ func (app *Canto) AutoCliOpts() autocli.AppOptions {
 }
 
 // DefaultGenesis returns a default genesis from the registered AppModuleBasic's.
-func (app *Canto) DefaultGenesis() map[string]json.RawMessage {
+func (app *Basechain) DefaultGenesis() map[string]json.RawMessage {
 	return app.BasicModuleManager.DefaultGenesis(app.appCodec)
 }
 
 // GetKey returns the KVStoreKey for the provided store key.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Canto) GetKey(storeKey string) *storetypes.KVStoreKey {
+func (app *Basechain) GetKey(storeKey string) *storetypes.KVStoreKey {
 	return app.keys[storeKey]
 }
 
 // GetStoreKeys returns all the stored store keys.
-func (app *Canto) GetStoreKeys() []storetypes.StoreKey {
+func (app *Basechain) GetStoreKeys() []storetypes.StoreKey {
 	keys := make([]storetypes.StoreKey, len(app.keys))
 	for _, key := range app.keys {
 		keys = append(keys, key)
@@ -1154,33 +1154,33 @@ func (app *Canto) GetStoreKeys() []storetypes.StoreKey {
 // GetTKey returns the TransientStoreKey for the provided store key.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Canto) GetTKey(storeKey string) *storetypes.TransientStoreKey {
+func (app *Basechain) GetTKey(storeKey string) *storetypes.TransientStoreKey {
 	return app.tkeys[storeKey]
 }
 
 // GetMemKey returns the MemStoreKey for the provided mem key.
 //
 // NOTE: This is solely used for testing purposes.
-func (app *Canto) GetMemKey(storeKey string) *storetypes.MemoryStoreKey {
+func (app *Basechain) GetMemKey(storeKey string) *storetypes.MemoryStoreKey {
 	return app.memKeys[storeKey]
 }
 
 // GetSubspace returns a param subspace for a given module name.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Canto) GetSubspace(moduleName string) paramstypes.Subspace {
+func (app *Basechain) GetSubspace(moduleName string) paramstypes.Subspace {
 	subspace, _ := app.ParamsKeeper.GetSubspace(moduleName)
 	return subspace
 }
 
 // SimulationManager implements the SimulationApp interface
-func (app *Canto) SimulationManager() *module.SimulationManager {
+func (app *Basechain) SimulationManager() *module.SimulationManager {
 	return app.sm
 }
 
 // RegisterAPIRoutes registers all application module routes with the provided
 // API server.
-func (app *Canto) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConfig) {
+func (app *Basechain) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConfig) {
 	clientCtx := apiSvr.ClientCtx
 
 	// Register new tx routes from grpc-gateway.
@@ -1201,11 +1201,11 @@ func (app *Canto) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConf
 	}
 }
 
-func (app *Canto) RegisterTxService(clientCtx client.Context) {
+func (app *Basechain) RegisterTxService(clientCtx client.Context) {
 	authtx.RegisterTxService(app.BaseApp.GRPCQueryRouter(), clientCtx, app.BaseApp.Simulate, app.interfaceRegistry)
 }
 
-func (app *Canto) RegisterTendermintService(clientCtx client.Context) {
+func (app *Basechain) RegisterTendermintService(clientCtx client.Context) {
 	cmtservice.RegisterTendermintService(
 		clientCtx,
 		app.BaseApp.GRPCQueryRouter(),
@@ -1214,50 +1214,50 @@ func (app *Canto) RegisterTendermintService(clientCtx client.Context) {
 	)
 }
 
-func (app *Canto) RegisterNodeService(clientCtx client.Context, cfg config.Config) {
+func (app *Basechain) RegisterNodeService(clientCtx client.Context, cfg config.Config) {
 	node.RegisterNodeService(clientCtx, app.GRPCQueryRouter(), cfg)
 }
 
 // IBC Go TestingApp functions
 
 // GetBaseApp implements the TestingApp interface.
-func (app *Canto) GetBaseApp() *baseapp.BaseApp {
+func (app *Basechain) GetBaseApp() *baseapp.BaseApp {
 	return app.BaseApp
 }
 
 // GetStakingKeeper implements the TestingApp interface.
-func (app *Canto) GetStakingKeeper() ibctestingtypes.StakingKeeper {
+func (app *Basechain) GetStakingKeeper() ibctestingtypes.StakingKeeper {
 	return app.StakingKeeper
 }
 
 // GetIBCKeeper implements the TestingApp interface.
-func (app *Canto) GetIBCKeeper() *ibckeeper.Keeper {
+func (app *Basechain) GetIBCKeeper() *ibckeeper.Keeper {
 	return app.IBCKeeper
 }
 
-func (app *Canto) GetErc20Keeper() erc20keeper.Keeper {
+func (app *Basechain) GetErc20Keeper() erc20keeper.Keeper {
 	return app.Erc20Keeper
 }
 
-func (app *Canto) GetCoinswapKeeper() coinswapkeeper.Keeper {
+func (app *Basechain) GetCoinswapKeeper() coinswapkeeper.Keeper {
 	return app.CoinswapKeeper
 }
 
-func (app *Canto) GetOnboardingKeeper() *onboardingkeeper.Keeper {
+func (app *Basechain) GetOnboardingKeeper() *onboardingkeeper.Keeper {
 	return app.OnboardingKeeper
 }
 
 // GetScopedIBCKeeper implements the TestingApp interface.
-func (app *Canto) GetScopedIBCKeeper() capabilitykeeper.ScopedKeeper {
+func (app *Basechain) GetScopedIBCKeeper() capabilitykeeper.ScopedKeeper {
 	return app.ScopedIBCKeeper
 }
 
 // GetTxConfig implements the TestingApp interface.
-func (app *Canto) GetTxConfig() client.TxConfig {
+func (app *Basechain) GetTxConfig() client.TxConfig {
 	return app.txConfig
 }
 
-func (app *Canto) FinalizeBlock(req *abci.RequestFinalizeBlock) (*abci.ResponseFinalizeBlock, error) {
+func (app *Basechain) FinalizeBlock(req *abci.RequestFinalizeBlock) (*abci.ResponseFinalizeBlock, error) {
 	// when skipping sdk 47 for sdk 50, the upgrade handler is called too late in BaseApp
 	// this is a hack to ensure that the migration is executed when needed and not panics
 	app.once.Do(func() {
@@ -1297,7 +1297,7 @@ func RegisterSwaggerAPI(_ client.Context, rtr *mux.Router, swaggerEnabled bool) 
 
 // BlockedAddrs returns all the app's module account addresses that are not
 // allowed to receive external tokens.
-func (app *Canto) BlockedAddrs() map[string]bool {
+func (app *Basechain) BlockedAddrs() map[string]bool {
 	blockedAddrs := make(map[string]bool)
 	for acc := range maccPerms {
 		blockedAddrs[authtypes.NewModuleAddress(acc).String()] = true
@@ -1321,7 +1321,7 @@ func initParamsKeeper(appCodec codec.BinaryCodec, legacyAmino *codec.LegacyAmino
 	// ethermint subspaces
 	paramsKeeper.Subspace(evmtypes.ModuleName)
 	paramsKeeper.Subspace(feemarkettypes.ModuleName)
-	// Canto subspaces
+	// Basechain subspaces
 	paramsKeeper.Subspace(inflationtypes.ModuleName)
 	paramsKeeper.Subspace(erc20types.ModuleName)
 	paramsKeeper.Subspace(onboardingtypes.ModuleName)
@@ -1337,7 +1337,7 @@ func initParamsKeeper(appCodec codec.BinaryCodec, legacyAmino *codec.LegacyAmino
 	return paramsKeeper
 }
 
-func (app *Canto) setupUpgradeHandlers() {
+func (app *Basechain) setupUpgradeHandlers() {
 	//// v8 upgrade handler
 	//app.UpgradeKeeper.SetUpgradeHandler(
 	//	v8.UpgradeName,
