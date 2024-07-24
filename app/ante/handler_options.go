@@ -72,7 +72,7 @@ func newEthAnteHandler(options HandlerOptions) sdk.AnteHandler {
 func newCosmosAnteHandler(options HandlerOptions) sdk.AnteHandler {
 	return sdk.ChainAnteDecorators(
 		ethante.RejectMessagesDecorator{}, // reject MsgEthereumTxs
-		cosmosante.NewAuthzLimiterDecorator(
+		cosmosante.NewDisabledMsgDecorator(
 			sdk.MsgTypeURL(&evmtypes.MsgEthereumTx{}),
 			sdk.MsgTypeURL(&sdkvesting.MsgCreateVestingAccount{}),
 		),
@@ -100,7 +100,7 @@ func newCosmosAnteHandler(options HandlerOptions) sdk.AnteHandler {
 func newCosmosSimulationAnteHandler(options HandlerOptions) sdk.AnteHandler {
 	return sdk.ChainAnteDecorators(
 		ethante.RejectMessagesDecorator{}, // reject MsgEthereumTxs
-		cosmosante.NewAuthzLimiterDecorator(
+		cosmosante.NewDisabledMsgDecorator(
 			sdk.MsgTypeURL(&evmtypes.MsgEthereumTx{}),
 			sdk.MsgTypeURL(&sdkvesting.MsgCreateVestingAccount{}),
 		),
@@ -128,7 +128,7 @@ func newCosmosSimulationAnteHandler(options HandlerOptions) sdk.AnteHandler {
 func newCosmosAnteHandlerEip712(options HandlerOptions) sdk.AnteHandler {
 	return sdk.ChainAnteDecorators(
 		ethante.RejectMessagesDecorator{}, // reject MsgEthereumTxs
-		cosmosante.NewAuthzLimiterDecorator(
+		cosmosante.NewDisabledMsgDecorator(
 			sdk.MsgTypeURL(&evmtypes.MsgEthereumTx{}),
 			sdk.MsgTypeURL(&sdkvesting.MsgCreateVestingAccount{}),
 		),
