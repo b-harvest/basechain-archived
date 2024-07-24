@@ -108,9 +108,6 @@ import (
 	"github.com/Canto-Network/Canto/v7/x/inflation"
 	inflationkeeper "github.com/Canto-Network/Canto/v7/x/inflation/keeper"
 	inflationtypes "github.com/Canto-Network/Canto/v7/x/inflation/types"
-	"github.com/Canto-Network/Canto/v7/x/onboarding"
-	onboardingkeeper "github.com/Canto-Network/Canto/v7/x/onboarding/keeper"
-	onboardingtypes "github.com/Canto-Network/Canto/v7/x/onboarding/types"
 
 	//govshuttle imports
 	"github.com/Canto-Network/Canto/v7/x/govshuttle"
@@ -171,7 +168,6 @@ var (
 		erc20.AppModuleBasic{},
 		govshuttle.AppModuleBasic{},
 		epochs.AppModuleBasic{},
-		onboarding.AppModuleBasic{},
 	)
 
 	// module account permissions
@@ -185,7 +181,6 @@ var (
 		inflationtypes.ModuleName:      {authtypes.Minter},
 		erc20types.ModuleName:          {authtypes.Minter, authtypes.Burner},
 		govshuttletypes.ModuleName:     {authtypes.Minter, authtypes.Burner},
-		onboardingtypes.ModuleName:     {authtypes.Minter, authtypes.Burner},
 	}
 
 	// module accounts that are allowed to receive tokens
@@ -240,7 +235,6 @@ type Canto struct {
 	InflationKeeper  inflationkeeper.Keeper
 	Erc20Keeper      erc20keeper.Keeper
 	EpochsKeeper     epochskeeper.Keeper
-	OnboardingKeeper *onboardingkeeper.Keeper
 	GovshuttleKeeper govshuttlekeeper.Keeper
 
 	// the module manager
@@ -297,7 +291,6 @@ func NewCanto(
 		// Canto keys
 		inflationtypes.StoreKey, erc20types.StoreKey,
 		epochstypes.StoreKey,
-		onboardingtypes.StoreKey,
 		govshuttletypes.StoreKey,
 	)
 
@@ -469,7 +462,6 @@ func NewCanto(
 		inflation.NewAppModule(appCodec, app.InflationKeeper, app.AccountKeeper, app.StakingKeeper),
 		erc20.NewAppModule(appCodec, app.Erc20Keeper, app.AccountKeeper, app.BankKeeper, app.EvmKeeper, app.FeeMarketKeeper),
 		epochs.NewAppModule(appCodec, app.EpochsKeeper),
-		onboarding.NewAppModule(*app.OnboardingKeeper),
 		govshuttle.NewAppModule(appCodec, app.GovshuttleKeeper, app.AccountKeeper),
 	)
 
@@ -501,7 +493,6 @@ func NewCanto(
 		paramstypes.ModuleName,
 		inflationtypes.ModuleName,
 		erc20types.ModuleName,
-		onboardingtypes.ModuleName,
 		govshuttletypes.ModuleName,
 	)
 
@@ -514,7 +505,6 @@ func NewCanto(
 		feemarkettypes.ModuleName,
 		// Note: epochs' endblock should be "real" end of epochs, we keep epochs endblock at the end
 		epochstypes.ModuleName,
-		onboardingtypes.ModuleName,
 		// no-op modules
 		capabilitytypes.ModuleName,
 		authtypes.ModuleName,
@@ -564,7 +554,6 @@ func NewCanto(
 		inflationtypes.ModuleName,
 		erc20types.ModuleName,
 		epochstypes.ModuleName,
-		onboardingtypes.ModuleName,
 		govshuttletypes.ModuleName,
 		// NOTE: crisis module must go at the end to check for invariants on each module
 		crisistypes.ModuleName,
@@ -824,10 +813,6 @@ func (app *Canto) GetErc20Keeper() erc20keeper.Keeper {
 	return app.Erc20Keeper
 }
 
-func (app *Canto) GetOnboardingKeeper() *onboardingkeeper.Keeper {
-	return app.OnboardingKeeper
-}
-
 // GetTxConfig implements the TestingApp interface.
 func (app *Canto) GetTxConfig() client.TxConfig {
 	cfg := encoding.MakeConfig(ModuleBasics)
@@ -875,7 +860,6 @@ func initParamsKeeper(
 	// Canto subspaces
 	paramsKeeper.Subspace(inflationtypes.ModuleName)
 	paramsKeeper.Subspace(erc20types.ModuleName)
-	paramsKeeper.Subspace(onboardingtypes.ModuleName)
 	paramsKeeper.Subspace(govshuttletypes.ModuleName)
 	return paramsKeeper
 }
