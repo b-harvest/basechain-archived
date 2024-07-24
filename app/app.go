@@ -81,18 +81,6 @@ import (
 	upgradekeeper "github.com/cosmos/cosmos-sdk/x/upgrade/keeper"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	"github.com/cosmos/ibc-go/v3/modules/apps/transfer"
-	ibctransferkeeper "github.com/cosmos/ibc-go/v3/modules/apps/transfer/keeper"
-	ibctransfertypes "github.com/cosmos/ibc-go/v3/modules/apps/transfer/types"
-	ibc "github.com/cosmos/ibc-go/v3/modules/core"
-	ibcclient "github.com/cosmos/ibc-go/v3/modules/core/02-client"
-	ibcclientclient "github.com/cosmos/ibc-go/v3/modules/core/02-client/client"
-	ibcclienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
-	porttypes "github.com/cosmos/ibc-go/v3/modules/core/05-port/types"
-	ibchost "github.com/cosmos/ibc-go/v3/modules/core/24-host"
-	ibckeeper "github.com/cosmos/ibc-go/v3/modules/core/keeper"
-	ibctesting "github.com/cosmos/ibc-go/v3/testing"
-
 	ethermintapp "github.com/evmos/ethermint/app"
 	"github.com/evmos/ethermint/encoding"
 	srvflags "github.com/evmos/ethermint/server/flags"
@@ -169,7 +157,6 @@ var (
 		distr.AppModuleBasic{},
 		gov.NewAppModuleBasic(
 			paramsclient.ProposalHandler, distrclient.ProposalHandler, upgradeclient.ProposalHandler, upgradeclient.CancelProposalHandler,
-			ibcclientclient.UpdateClientProposalHandler, ibcclientclient.UpgradeProposalHandler,
 			// Canto proposal types
 			erc20client.RegisterCoinProposalHandler, erc20client.RegisterERC20ProposalHandler, erc20client.ToggleTokenConversionProposalHandler,
 			govshuttleclient.LendingMarketProposalHandler,
@@ -178,12 +165,10 @@ var (
 		params.AppModuleBasic{},
 		crisis.AppModuleBasic{},
 		slashing.AppModuleBasic{},
-		ibc.AppModuleBasic{},
 		authzmodule.AppModuleBasic{},
 		feegrantmodule.AppModuleBasic{},
 		upgrade.AppModuleBasic{},
 		evidence.AppModuleBasic{},
-		transfer.AppModuleBasic{},
 		evm.AppModuleBasic{},
 		feemarket.AppModuleBasic{},
 		inflation.AppModuleBasic{},
@@ -201,7 +186,6 @@ var (
 		stakingtypes.BondedPoolName:    {authtypes.Burner, authtypes.Staking},
 		stakingtypes.NotBondedPoolName: {authtypes.Burner, authtypes.Staking},
 		govtypes.ModuleName:            {authtypes.Burner},
-		ibctransfertypes.ModuleName:    {authtypes.Minter, authtypes.Burner},
 		evmtypes.ModuleName:            {authtypes.Minter, authtypes.Burner}, // used for secure addition and subtraction of balance using module account
 		inflationtypes.ModuleName:      {authtypes.Minter},
 		erc20types.ModuleName:          {authtypes.Minter, authtypes.Burner},
@@ -219,7 +203,6 @@ var (
 var (
 	_ servertypes.Application = (*Canto)(nil)
 	_ simapp.App              = (*Canto)(nil)
-	_ ibctesting.TestingApp   = (*Canto)(nil)
 )
 
 // Canto implements an extended ABCI application. It is an application
@@ -253,13 +236,7 @@ type Canto struct {
 	ParamsKeeper     paramskeeper.Keeper
 	FeeGrantKeeper   feegrantkeeper.Keeper
 	AuthzKeeper      authzkeeper.Keeper
-	IBCKeeper        *ibckeeper.Keeper // IBC Keeper must be a pointer in the app, so we can SetRouter on it correctly
 	EvidenceKeeper   evidencekeeper.Keeper
-	TransferKeeper   ibctransferkeeper.Keeper
-
-	// make scoped keepers public for test purposes
-	ScopedIBCKeeper      capabilitykeeper.ScopedKeeper
-	ScopedTransferKeeper capabilitykeeper.ScopedKeeper
 
 	// Ethermint keepers
 	EvmKeeper       *evmkeeper.Keeper
@@ -324,8 +301,6 @@ func NewCanto(
 		govtypes.StoreKey, paramstypes.StoreKey, upgradetypes.StoreKey,
 		evidencetypes.StoreKey, capabilitytypes.StoreKey,
 		feegrant.StoreKey, authzkeeper.StoreKey,
-		// ibc keys
-		ibchost.StoreKey, ibctransfertypes.StoreKey,
 		// ethermint keys
 		evmtypes.StoreKey, feemarkettypes.StoreKey,
 		// Canto keys
@@ -359,9 +334,6 @@ func NewCanto(
 
 	// add capability keeper and ScopeToModule for ibc module
 	app.CapabilityKeeper = capabilitykeeper.NewKeeper(appCodec, keys[capabilitytypes.StoreKey], memKeys[capabilitytypes.MemStoreKey])
-
-	scopedIBCKeeper := app.CapabilityKeeper.ScopeToModule(ibchost.ModuleName)
-	scopedTransferKeeper := app.CapabilityKeeper.ScopeToModule(ibctransfertypes.ModuleName)
 
 	// Applications that wish to enforce statically created ScopedKeepers should call `Seal` after creating
 	// their scoped modules in `NewApp` with `ScopeToModule`
@@ -405,11 +377,6 @@ func NewCanto(
 		tracer,
 	)
 
-	// Create IBC Keeper
-	app.IBCKeeper = ibckeeper.NewKeeper(
-		appCodec, keys[ibchost.StoreKey], app.GetSubspace(ibchost.ModuleName), &stakingKeeper, app.UpgradeKeeper, scopedIBCKeeper,
-	)
-
 	app.CoinswapKeeper = coinswapkeeper.NewKeeper(
 		appCodec,
 		keys[coinswaptypes.ModuleName],
@@ -426,7 +393,6 @@ func NewCanto(
 		AddRoute(paramproposal.RouterKey, params.NewParamChangeProposalHandler(app.ParamsKeeper)).
 		AddRoute(distrtypes.RouterKey, distr.NewCommunityPoolSpendProposalHandler(app.DistrKeeper)).
 		AddRoute(upgradetypes.RouterKey, upgrade.NewSoftwareUpgradeProposalHandler(app.UpgradeKeeper)).
-		AddRoute(ibcclienttypes.RouterKey, ibcclient.NewClientProposalHandler(app.IBCKeeper.ClientKeeper)).
 		AddRoute(erc20types.RouterKey, erc20keeper.NewErc20ProposalHandler(&app.Erc20Keeper)).
 		AddRoute(govshuttletypes.RouterKey, govshuttlekeeper.NewgovshuttleProposalHandler(&app.GovshuttleKeeper))
 
@@ -482,54 +448,6 @@ func NewCanto(
 		),
 	)
 
-	// Create Transfer Stack
-
-	// SendPacket, since it is originating from the application to core IBC:
-	// transferKeeper.SendPacket -> onboarding.SendPacket -> channel.SendPacket
-
-	// RecvPacket, message that originates from core IBC and goes down to app, the flow is the otherway
-	// channel.RecvPacket -> onboarding.OnRecvPacket -> transfer.OnRecvPacket
-
-	app.OnboardingKeeper = onboardingkeeper.NewKeeper(
-		app.GetSubspace(onboardingtypes.ModuleName),
-		app.AccountKeeper,
-		app.BankKeeper,
-		app.IBCKeeper.ChannelKeeper,
-		app.TransferKeeper,
-		app.CoinswapKeeper,
-		app.Erc20Keeper,
-	)
-
-	app.TransferKeeper = ibctransferkeeper.NewKeeper(
-		appCodec, keys[ibctransfertypes.StoreKey], app.GetSubspace(ibctransfertypes.ModuleName), app.OnboardingKeeper,
-		app.IBCKeeper.ChannelKeeper, &app.IBCKeeper.PortKeeper,
-		app.AccountKeeper, app.BankKeeper, scopedTransferKeeper,
-	)
-
-	app.OnboardingKeeper.SetTransferKeeper(app.TransferKeeper)
-
-	// Set the ICS4 wrappers for onboarding middlewares
-	app.OnboardingKeeper.SetICS4Wrapper(app.IBCKeeper.ChannelKeeper)
-	// NOTE: ICS4 wrapper for Transfer Keeper already set
-
-	// Override the ICS20 app module
-	transferModule := transfer.NewAppModule(app.TransferKeeper)
-
-	// transfer stack contains (from top to bottom):
-	// - Onboarding Middleware
-	// - Transfer
-
-	// create IBC module from bottom to top of stack
-	var transferStack porttypes.IBCModule
-
-	transferStack = transfer.NewIBCModule(app.TransferKeeper)
-	transferStack = onboarding.NewIBCMiddleware(*app.OnboardingKeeper, transferStack)
-
-	// Create static IBC router, add transfer route, then set and seal it
-	ibcRouter := porttypes.NewRouter()
-	ibcRouter.AddRoute(ibctransfertypes.ModuleName, transferStack)
-	app.IBCKeeper.SetRouter(ibcRouter)
-
 	// create evidence keeper with router
 	evidenceKeeper := evidencekeeper.NewKeeper(
 		appCodec, keys[evidencetypes.StoreKey], &app.StakingKeeper, app.SlashingKeeper,
@@ -565,9 +483,6 @@ func NewCanto(
 		feegrantmodule.NewAppModule(appCodec, app.AccountKeeper, app.BankKeeper, app.FeeGrantKeeper, app.interfaceRegistry),
 		authzmodule.NewAppModule(appCodec, app.AuthzKeeper, app.AccountKeeper, app.BankKeeper, app.interfaceRegistry),
 
-		// ibc modules
-		ibc.NewAppModule(app.IBCKeeper),
-		transferModule,
 		// Ethermint app modules
 		evm.NewAppModule(app.EvmKeeper, app.AccountKeeper),
 		feemarket.NewAppModule(app.FeeMarketKeeper),
@@ -597,9 +512,7 @@ func NewCanto(
 		slashingtypes.ModuleName,
 		evidencetypes.ModuleName,
 		stakingtypes.ModuleName,
-		ibchost.ModuleName,
 		// no-op modules
-		ibctransfertypes.ModuleName,
 		authtypes.ModuleName,
 		banktypes.ModuleName,
 		govtypes.ModuleName,
@@ -626,8 +539,6 @@ func NewCanto(
 		epochstypes.ModuleName,
 		onboardingtypes.ModuleName,
 		// no-op modules
-		ibchost.ModuleName,
-		ibctransfertypes.ModuleName,
 		capabilitytypes.ModuleName,
 		authtypes.ModuleName,
 		banktypes.ModuleName,
@@ -661,7 +572,6 @@ func NewCanto(
 		stakingtypes.ModuleName,
 		slashingtypes.ModuleName,
 		govtypes.ModuleName,
-		ibchost.ModuleName,
 		// Ethermint modules
 		// evm module denomination is used by the fees module, in AnteHandle
 		evmtypes.ModuleName,
@@ -670,7 +580,6 @@ func NewCanto(
 		feemarkettypes.ModuleName,
 		genutiltypes.ModuleName,
 		evidencetypes.ModuleName,
-		ibctransfertypes.ModuleName,
 		authz.ModuleName,
 		feegrant.ModuleName,
 		paramstypes.ModuleName,
@@ -710,8 +619,6 @@ func NewCanto(
 		params.NewAppModule(app.ParamsKeeper),
 		evidence.NewAppModule(app.EvidenceKeeper),
 		feegrantmodule.NewAppModule(appCodec, app.AccountKeeper, app.BankKeeper, app.FeeGrantKeeper, app.interfaceRegistry),
-		ibc.NewAppModule(app.IBCKeeper),
-		transferModule,
 		// TODO: Temporary exclusion authz due to issues with implementation of authz simulation
 		// authzmodule.NewAppModule(appCodec, app.AuthzKeeper, app.AccountKeeper, app.BankKeeper, app.interfaceRegistry),
 
@@ -743,7 +650,6 @@ func NewCanto(
 		BankKeeper:      app.BankKeeper,
 		EvmKeeper:       app.EvmKeeper,
 		FeegrantKeeper:  app.FeeGrantKeeper,
-		IBCKeeper:       app.IBCKeeper,
 		FeeMarketKeeper: app.FeeMarketKeeper,
 		SignModeHandler: encodingConfig.TxConfig.SignModeHandler(),
 		SigGasConsumer:  SigVerificationGasConsumer,
@@ -765,9 +671,6 @@ func NewCanto(
 			tmos.Exit(err.Error())
 		}
 	}
-
-	app.ScopedIBCKeeper = scopedIBCKeeper
-	app.ScopedTransferKeeper = scopedTransferKeeper
 
 	// Finally start the tpsCounter.
 	app.tpsCounter = newTPSCounter(logger)
@@ -933,8 +836,6 @@ func (app *Canto) RegisterTendermintService(clientCtx client.Context) {
 	tmservice.RegisterTendermintService(app.BaseApp.GRPCQueryRouter(), clientCtx, app.interfaceRegistry)
 }
 
-// IBC Go TestingApp functions
-
 // GetBaseApp implements the TestingApp interface.
 func (app *Canto) GetBaseApp() *baseapp.BaseApp {
 	return app.BaseApp
@@ -943,11 +844,6 @@ func (app *Canto) GetBaseApp() *baseapp.BaseApp {
 // GetStakingKeeper implements the TestingApp interface.
 func (app *Canto) GetStakingKeeper() stakingkeeper.Keeper {
 	return app.StakingKeeper
-}
-
-// GetIBCKeeper implements the TestingApp interface.
-func (app *Canto) GetIBCKeeper() *ibckeeper.Keeper {
-	return app.IBCKeeper
 }
 
 func (app *Canto) GetErc20Keeper() erc20keeper.Keeper {
@@ -960,11 +856,6 @@ func (app *Canto) GetCoinswapKeeper() coinswapkeeper.Keeper {
 
 func (app *Canto) GetOnboardingKeeper() *onboardingkeeper.Keeper {
 	return app.OnboardingKeeper
-}
-
-// GetScopedIBCKeeper implements the TestingApp interface.
-func (app *Canto) GetScopedIBCKeeper() capabilitykeeper.ScopedKeeper {
-	return app.ScopedIBCKeeper
 }
 
 // GetTxConfig implements the TestingApp interface.
@@ -1008,8 +899,6 @@ func initParamsKeeper(
 	paramsKeeper.Subspace(slashingtypes.ModuleName)
 	paramsKeeper.Subspace(govtypes.ModuleName).WithKeyTable(govtypes.ParamKeyTable())
 	paramsKeeper.Subspace(crisistypes.ModuleName)
-	paramsKeeper.Subspace(ibctransfertypes.ModuleName)
-	paramsKeeper.Subspace(ibchost.ModuleName)
 	// ethermint subspaces
 	paramsKeeper.Subspace(evmtypes.ModuleName)
 	paramsKeeper.Subspace(feemarkettypes.ModuleName)

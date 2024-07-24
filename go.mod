@@ -29,7 +29,6 @@ require (
 )
 
 require (
-	github.com/cosmos/ibc-go/v3 v3.2.0
 	github.com/evmos/ethermint v0.19.3
 )
 

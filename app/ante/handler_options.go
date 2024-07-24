@@ -8,8 +8,6 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/ante"
 	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	ibcante "github.com/cosmos/ibc-go/v3/modules/core/ante"
-	ibckeeper "github.com/cosmos/ibc-go/v3/modules/core/keeper"
 
 	ethante "github.com/evmos/ethermint/app/ante"
 	evmtypes "github.com/evmos/ethermint/x/evm/types"
@@ -23,7 +21,6 @@ import (
 type HandlerOptions struct {
 	AccountKeeper   evmtypes.AccountKeeper
 	BankKeeper      evmtypes.BankKeeper
-	IBCKeeper       *ibckeeper.Keeper
 	FeeMarketKeeper evmtypes.FeeMarketKeeper
 	EvmKeeper       ethante.EVMKeeper
 	FeegrantKeeper  ante.FeegrantKeeper
@@ -95,7 +92,6 @@ func newCosmosAnteHandler(options HandlerOptions) sdk.AnteHandler {
 		ante.NewSigGasConsumeDecorator(options.AccountKeeper, options.SigGasConsumer),
 		ante.NewSigVerificationDecorator(options.AccountKeeper, options.SignModeHandler),
 		ante.NewIncrementSequenceDecorator(options.AccountKeeper),
-		ibcante.NewAnteDecorator(options.IBCKeeper),
 		ethante.NewGasWantedDecorator(options.EvmKeeper, options.FeeMarketKeeper),
 	)
 }
@@ -124,7 +120,6 @@ func newCosmosSimulationAnteHandler(options HandlerOptions) sdk.AnteHandler {
 		//ante.NewSigGasConsumeDecorator(options.AccountKeeper, options.SigGasConsumer),
 		//ante.NewSigVerificationDecorator(options.AccountKeeper, options.SignModeHandler),
 		ante.NewIncrementSequenceDecorator(options.AccountKeeper),
-		ibcante.NewAnteDecorator(options.IBCKeeper),
 		ethante.NewGasWantedDecorator(options.EvmKeeper, options.FeeMarketKeeper),
 	)
 }
@@ -153,7 +148,6 @@ func newCosmosAnteHandlerEip712(options HandlerOptions) sdk.AnteHandler {
 		// Note: signature verification uses EIP instead of the cosmos signature validator
 		ethante.NewEip712SigVerificationDecorator(options.AccountKeeper, options.SignModeHandler),
 		ante.NewIncrementSequenceDecorator(options.AccountKeeper),
-		ibcante.NewAnteDecorator(options.IBCKeeper),
 		ethante.NewGasWantedDecorator(options.EvmKeeper, options.FeeMarketKeeper),
 	)
 }
