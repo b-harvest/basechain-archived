@@ -117,10 +117,6 @@ import (
 	govshuttleclient "github.com/Canto-Network/Canto/v7/x/govshuttle/client"
 	govshuttlekeeper "github.com/Canto-Network/Canto/v7/x/govshuttle/keeper"
 	govshuttletypes "github.com/Canto-Network/Canto/v7/x/govshuttle/types"
-
-	"github.com/Canto-Network/Canto/v7/x/coinswap"
-	coinswapkeeper "github.com/Canto-Network/Canto/v7/x/coinswap/keeper"
-	coinswaptypes "github.com/Canto-Network/Canto/v7/x/coinswap/types"
 )
 
 func init() {
@@ -176,7 +172,6 @@ var (
 		govshuttle.AppModuleBasic{},
 		epochs.AppModuleBasic{},
 		onboarding.AppModuleBasic{},
-		coinswap.AppModuleBasic{},
 	)
 
 	// module account permissions
@@ -191,7 +186,6 @@ var (
 		erc20types.ModuleName:          {authtypes.Minter, authtypes.Burner},
 		govshuttletypes.ModuleName:     {authtypes.Minter, authtypes.Burner},
 		onboardingtypes.ModuleName:     {authtypes.Minter, authtypes.Burner},
-		coinswaptypes.ModuleName:       {authtypes.Minter, authtypes.Burner},
 	}
 
 	// module accounts that are allowed to receive tokens
@@ -249,9 +243,6 @@ type Canto struct {
 	OnboardingKeeper *onboardingkeeper.Keeper
 	GovshuttleKeeper govshuttlekeeper.Keeper
 
-	// Coinswap keeper
-	CoinswapKeeper coinswapkeeper.Keeper
-
 	// the module manager
 	mm *module.Manager
 
@@ -308,8 +299,6 @@ func NewCanto(
 		epochstypes.StoreKey,
 		onboardingtypes.StoreKey,
 		govshuttletypes.StoreKey,
-		// Coinswap keys
-		coinswaptypes.StoreKey,
 	)
 
 	// Add the EVM transient store key
@@ -375,16 +364,6 @@ func NewCanto(
 		appCodec, keys[evmtypes.StoreKey], tkeys[evmtypes.TransientKey], app.GetSubspace(evmtypes.ModuleName),
 		app.AccountKeeper, app.BankKeeper, &stakingKeeper, app.FeeMarketKeeper,
 		tracer,
-	)
-
-	app.CoinswapKeeper = coinswapkeeper.NewKeeper(
-		appCodec,
-		keys[coinswaptypes.ModuleName],
-		app.GetSubspace(coinswaptypes.ModuleName),
-		app.BankKeeper,
-		app.AccountKeeper,
-		app.ModuleAccountAddrs(),
-		authtypes.FeeCollectorName,
 	)
 
 	// register the proposal types
@@ -492,7 +471,6 @@ func NewCanto(
 		epochs.NewAppModule(appCodec, app.EpochsKeeper),
 		onboarding.NewAppModule(*app.OnboardingKeeper),
 		govshuttle.NewAppModule(appCodec, app.GovshuttleKeeper, app.AccountKeeper),
-		coinswap.NewAppModule(appCodec, app.CoinswapKeeper, app.AccountKeeper, app.BankKeeper),
 	)
 
 	// During begin block slashing happens after distr.BeginBlocker so that
@@ -525,7 +503,6 @@ func NewCanto(
 		erc20types.ModuleName,
 		onboardingtypes.ModuleName,
 		govshuttletypes.ModuleName,
-		coinswaptypes.ModuleName,
 	)
 
 	// NOTE: fee market module must go last in order to retrieve the block gas used.
@@ -554,7 +531,6 @@ func NewCanto(
 		inflationtypes.ModuleName,
 		erc20types.ModuleName,
 		govshuttletypes.ModuleName,
-		coinswaptypes.ModuleName,
 	)
 
 	// NOTE: The genutils module must occur after staking so that pools are
@@ -590,7 +566,6 @@ func NewCanto(
 		epochstypes.ModuleName,
 		onboardingtypes.ModuleName,
 		govshuttletypes.ModuleName,
-		coinswaptypes.ModuleName,
 		// NOTE: crisis module must go at the end to check for invariants on each module
 		crisistypes.ModuleName,
 	)
@@ -627,7 +602,6 @@ func NewCanto(
 		epochs.NewAppModule(appCodec, app.EpochsKeeper),
 		inflation.NewAppModule(appCodec, app.InflationKeeper, app.AccountKeeper, app.StakingKeeper),
 		feemarket.NewAppModule(app.FeeMarketKeeper),
-		coinswap.NewAppModule(appCodec, app.CoinswapKeeper, app.AccountKeeper, app.BankKeeper),
 
 		// TODO: Modules that have not yet been implemented for simulation
 		// govshuttle, inflation, erc20
@@ -850,10 +824,6 @@ func (app *Canto) GetErc20Keeper() erc20keeper.Keeper {
 	return app.Erc20Keeper
 }
 
-func (app *Canto) GetCoinswapKeeper() coinswapkeeper.Keeper {
-	return app.CoinswapKeeper
-}
-
 func (app *Canto) GetOnboardingKeeper() *onboardingkeeper.Keeper {
 	return app.OnboardingKeeper
 }
@@ -907,7 +877,6 @@ func initParamsKeeper(
 	paramsKeeper.Subspace(erc20types.ModuleName)
 	paramsKeeper.Subspace(onboardingtypes.ModuleName)
 	paramsKeeper.Subspace(govshuttletypes.ModuleName)
-	paramsKeeper.Subspace(coinswaptypes.ModuleName)
 	return paramsKeeper
 }
 
