@@ -130,20 +130,9 @@ import (
 	govshuttlekeeper "github.com/Canto-Network/Canto/v7/x/govshuttle/keeper"
 	govshuttletypes "github.com/Canto-Network/Canto/v7/x/govshuttle/types"
 
-	"github.com/Canto-Network/Canto/v7/x/csr"
-	csrkeeper "github.com/Canto-Network/Canto/v7/x/csr/keeper"
-	csrtypes "github.com/Canto-Network/Canto/v7/x/csr/types"
-
 	"github.com/Canto-Network/Canto/v7/x/coinswap"
 	coinswapkeeper "github.com/Canto-Network/Canto/v7/x/coinswap/keeper"
 	coinswaptypes "github.com/Canto-Network/Canto/v7/x/coinswap/types"
-
-	v2 "github.com/Canto-Network/Canto/v7/app/upgrades/v2"
-	v3 "github.com/Canto-Network/Canto/v7/app/upgrades/v3"
-	v4 "github.com/Canto-Network/Canto/v7/app/upgrades/v4"
-	v5 "github.com/Canto-Network/Canto/v7/app/upgrades/v5"
-	v6 "github.com/Canto-Network/Canto/v7/app/upgrades/v6"
-	v7 "github.com/Canto-Network/Canto/v7/app/upgrades/v7"
 )
 
 func init() {
@@ -200,7 +189,6 @@ var (
 		inflation.AppModuleBasic{},
 		erc20.AppModuleBasic{},
 		govshuttle.AppModuleBasic{},
-		csr.AppModuleBasic{},
 		epochs.AppModuleBasic{},
 		onboarding.AppModuleBasic{},
 		coinswap.AppModuleBasic{},
@@ -217,7 +205,6 @@ var (
 		evmtypes.ModuleName:            {authtypes.Minter, authtypes.Burner}, // used for secure addition and subtraction of balance using module account
 		inflationtypes.ModuleName:      {authtypes.Minter},
 		erc20types.ModuleName:          {authtypes.Minter, authtypes.Burner},
-		csrtypes.ModuleName:            {authtypes.Minter, authtypes.Burner},
 		govshuttletypes.ModuleName:     {authtypes.Minter, authtypes.Burner},
 		onboardingtypes.ModuleName:     {authtypes.Minter, authtypes.Burner},
 		coinswaptypes.ModuleName:       {authtypes.Minter, authtypes.Burner},
@@ -284,7 +271,6 @@ type Canto struct {
 	EpochsKeeper     epochskeeper.Keeper
 	OnboardingKeeper *onboardingkeeper.Keeper
 	GovshuttleKeeper govshuttlekeeper.Keeper
-	CSRKeeper        csrkeeper.Keeper
 
 	// Coinswap keeper
 	CoinswapKeeper coinswapkeeper.Keeper
@@ -346,7 +332,6 @@ func NewCanto(
 		inflationtypes.StoreKey, erc20types.StoreKey,
 		epochstypes.StoreKey,
 		onboardingtypes.StoreKey,
-		csrtypes.StoreKey,
 		govshuttletypes.StoreKey,
 		// Coinswap keys
 		coinswaptypes.StoreKey,
@@ -442,8 +427,8 @@ func NewCanto(
 		AddRoute(distrtypes.RouterKey, distr.NewCommunityPoolSpendProposalHandler(app.DistrKeeper)).
 		AddRoute(upgradetypes.RouterKey, upgrade.NewSoftwareUpgradeProposalHandler(app.UpgradeKeeper)).
 		AddRoute(ibcclienttypes.RouterKey, ibcclient.NewClientProposalHandler(app.IBCKeeper.ClientKeeper)).
-		AddRoute(erc20types.RouterKey, erc20keeper.NewErc20ProposalHandler(&app.Erc20Keeper)).
-		AddRoute(govshuttletypes.RouterKey, govshuttlekeeper.NewgovshuttleProposalHandler(&app.GovshuttleKeeper))
+		AddRoute(erc20types.RouterKey, erc20.NewErc20ProposalHandler(&app.Erc20Keeper)).
+		AddRoute(govshuttletypes.RouterKey, govshuttle.NewgovshuttleProposalHandler(&app.GovshuttleKeeper))
 
 	govKeeper := govkeeper.NewKeeper(
 		appCodec, keys[govtypes.StoreKey], app.GetSubspace(govtypes.ModuleName),
@@ -477,13 +462,6 @@ func NewCanto(
 		app.AccountKeeper, app.Erc20Keeper, govKeeper,
 	)
 
-	app.CSRKeeper = csrkeeper.NewKeeper(
-		appCodec, keys[csrtypes.StoreKey],
-		app.GetSubspace(csrtypes.ModuleName),
-		app.AccountKeeper, app.EvmKeeper, app.BankKeeper,
-		authtypes.FeeCollectorName,
-	)
-
 	epochsKeeper := epochskeeper.NewKeeper(appCodec, keys[epochstypes.StoreKey])
 	app.EpochsKeeper = *epochsKeeper.SetHooks(
 		epochskeeper.NewMultiEpochHooks(
@@ -501,7 +479,6 @@ func NewCanto(
 	app.EvmKeeper = app.EvmKeeper.SetHooks(
 		evmkeeper.NewMultiEvmHooks(
 			app.Erc20Keeper.Hooks(),
-			app.CSRKeeper.Hooks(),
 		),
 	)
 
@@ -595,12 +572,11 @@ func NewCanto(
 		evm.NewAppModule(app.EvmKeeper, app.AccountKeeper),
 		feemarket.NewAppModule(app.FeeMarketKeeper),
 		// Canto app modules
-		inflation.NewAppModule(appCodec, app.InflationKeeper, app.AccountKeeper, app.StakingKeeper),
-		erc20.NewAppModule(appCodec, app.Erc20Keeper, app.AccountKeeper, app.BankKeeper, app.EvmKeeper, app.FeeMarketKeeper),
+		inflation.NewAppModule(app.InflationKeeper, app.AccountKeeper, app.StakingKeeper),
+		erc20.NewAppModule(app.Erc20Keeper, app.AccountKeeper),
 		epochs.NewAppModule(appCodec, app.EpochsKeeper),
 		onboarding.NewAppModule(*app.OnboardingKeeper),
-		govshuttle.NewAppModule(appCodec, app.GovshuttleKeeper, app.AccountKeeper),
-		csr.NewAppModule(appCodec, app.CSRKeeper, app.AccountKeeper),
+		govshuttle.NewAppModule(app.GovshuttleKeeper, app.AccountKeeper),
 		coinswap.NewAppModule(appCodec, app.CoinswapKeeper, app.AccountKeeper, app.BankKeeper),
 	)
 
@@ -636,7 +612,6 @@ func NewCanto(
 		erc20types.ModuleName,
 		onboardingtypes.ModuleName,
 		govshuttletypes.ModuleName,
-		csrtypes.ModuleName,
 		coinswaptypes.ModuleName,
 	)
 
@@ -668,7 +643,6 @@ func NewCanto(
 		inflationtypes.ModuleName,
 		erc20types.ModuleName,
 		govshuttletypes.ModuleName,
-		csrtypes.ModuleName,
 		coinswaptypes.ModuleName,
 	)
 
@@ -707,7 +681,6 @@ func NewCanto(
 		epochstypes.ModuleName,
 		onboardingtypes.ModuleName,
 		govshuttletypes.ModuleName,
-		csrtypes.ModuleName,
 		coinswaptypes.ModuleName,
 		// NOTE: crisis module must go at the end to check for invariants on each module
 		crisistypes.ModuleName,
@@ -745,15 +718,12 @@ func NewCanto(
 		// canto, ethermint modules
 		evm.NewAppModule(app.EvmKeeper, app.AccountKeeper),
 		epochs.NewAppModule(appCodec, app.EpochsKeeper),
-		inflation.NewAppModule(appCodec, app.InflationKeeper, app.AccountKeeper, app.StakingKeeper),
+		inflation.NewAppModule(app.InflationKeeper, app.AccountKeeper, app.StakingKeeper),
 		feemarket.NewAppModule(app.FeeMarketKeeper),
 		coinswap.NewAppModule(appCodec, app.CoinswapKeeper, app.AccountKeeper, app.BankKeeper),
-		csr.NewAppModule(appCodec, app.CSRKeeper, app.AccountKeeper),
-		govshuttle.NewAppModule(appCodec, app.GovshuttleKeeper, app.AccountKeeper),
-		erc20.NewAppModule(appCodec, app.Erc20Keeper, app.AccountKeeper, app.BankKeeper, app.EvmKeeper, app.FeeMarketKeeper),
 
 		// TODO: Modules that have not yet been implemented for simulation
-		// govshuttle, csr, inflation, erc20
+		// govshuttle, inflation, erc20
 	)
 
 	app.sm.RegisterStoreDecoders()
@@ -1048,45 +1018,16 @@ func initParamsKeeper(
 	paramsKeeper.Subspace(erc20types.ModuleName)
 	paramsKeeper.Subspace(onboardingtypes.ModuleName)
 	paramsKeeper.Subspace(govshuttletypes.ModuleName)
-	paramsKeeper.Subspace(csrtypes.ModuleName)
 	paramsKeeper.Subspace(coinswaptypes.ModuleName)
 	return paramsKeeper
 }
 
 func (app *Canto) setupUpgradeHandlers() {
-	// v2 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v2.UpgradeName,
-		v2.CreateUpgradeHandler(app.mm, app.configurator),
-	)
-	// v3 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v3.UpgradeName,
-		v3.CreateUpgradeHandler(app.mm, app.configurator),
-	)
-	// v4 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v4.UpgradeName,
-		v4.CreateUpgradeHandler(app.mm, app.configurator, app.GovshuttleKeeper),
-	)
-
-	// v4 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v5.UpgradeName,
-		v5.CreateUpgradeHandler(app.mm, app.configurator),
-	)
-
-	// v6 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v6.UpgradeName,
-		v6.CreateUpgradeHandler(app.mm, app.configurator),
-	)
-
-	// v7 upgrade handler
-	app.UpgradeKeeper.SetUpgradeHandler(
-		v7.UpgradeName,
-		v7.CreateUpgradeHandler(app.mm, app.configurator, *app.OnboardingKeeper, app.CoinswapKeeper),
-	)
+	// upgrade handler example
+	//app.UpgradeKeeper.SetUpgradeHandler(
+	//	v7.UpgradeName,
+	//	v7.CreateUpgradeHandler(app.mm, app.configurator, *app.OnboardingKeeper, app.CoinswapKeeper),
+	//)
 
 	// When a planned update height is reached, the old binary will panic
 	// writing on disk the height and name of the update that triggered it
@@ -1102,27 +1043,13 @@ func (app *Canto) setupUpgradeHandlers() {
 
 	var storeUpgrades *storetypes.StoreUpgrades
 
-	switch upgradeInfo.Name {
-	case v2.UpgradeName:
-		// no store upgrades in v2
-	case v3.UpgradeName:
-		// no store upgrades in v3
-	case v4.UpgradeName:
-		// no store upgrades in v4
-		storeUpgrades = &storetypes.StoreUpgrades{
-			Added: []string{govshuttletypes.StoreKey},
-		}
-	case v5.UpgradeName:
-		storeUpgrades = &storetypes.StoreUpgrades{
-			Added: []string{csrtypes.StoreKey},
-		}
-	case v6.UpgradeName:
-		// no store upgrades in v6
-	case v7.UpgradeName:
-		storeUpgrades = &storetypes.StoreUpgrades{
-			Added: []string{onboardingtypes.StoreKey, coinswaptypes.StoreKey},
-		}
-	}
+	// // store upgrade example
+	//switch upgradeInfo.Name {
+	//case v7.UpgradeName:
+	//	storeUpgrades = &storetypes.StoreUpgrades{
+	//		Added: []string{onboardingtypes.StoreKey, coinswaptypes.StoreKey},
+	//	}
+	//}
 
 	if storeUpgrades != nil {
 		// configure store loader that checks if version == upgradeHeight and applies store upgrades

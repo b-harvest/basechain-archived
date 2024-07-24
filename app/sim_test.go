@@ -31,7 +31,6 @@ import (
 	dbm "github.com/tendermint/tm-db"
 
 	cantoconfig "github.com/Canto-Network/Canto/v7/cmd/config"
-	csrtypes "github.com/Canto-Network/Canto/v7/x/csr/types"
 	erc20types "github.com/Canto-Network/Canto/v7/x/erc20/types"
 	govshuttletypes "github.com/Canto-Network/Canto/v7/x/govshuttle/types"
 	inflationtypes "github.com/Canto-Network/Canto/v7/x/inflation/types"
@@ -219,7 +218,6 @@ func TestAppImportExport(t *testing.T) {
 		{app.keys[erc20types.StoreKey], newApp.keys[erc20types.StoreKey], [][]byte{}},
 		// In the case of epoch module, the value is updated when importing genesis, so the store consistency is broken
 		//{app.keys[epochstypes.StoreKey], newApp.keys[epochstypes.StoreKey], [][]byte{}},
-		{app.keys[csrtypes.StoreKey], newApp.keys[csrtypes.StoreKey], [][]byte{}},
 		{app.keys[govshuttletypes.StoreKey], newApp.keys[govshuttletypes.StoreKey], [][]byte{}},
 	}
 
