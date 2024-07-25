@@ -7,7 +7,7 @@ import (
 	evmtypes "github.com/evmos/ethermint/x/evm/types"
 )
 
-//Required for deploying Map-Contract/Caling setter methods of Map-Contract
+// Required for deploying Map-Contract/Caling setter methods of Map-Contract
 type ERC20Keeper interface {
 	CallEVM(ctx sdk.Context, abi abi.ABI, from, contract common.Address, commit bool, method string, args ...interface{}) (*evmtypes.MsgEthereumTxResponse, error)
 
