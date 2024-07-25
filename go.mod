@@ -28,16 +28,14 @@ require (
 	gopkg.in/yaml.v2 v2.4.0
 )
 
-require (
-	github.com/cosmos/ibc-go/v3 v3.2.0
-	github.com/evmos/ethermint v0.19.3
-)
+require github.com/evmos/ethermint v0.19.3
 
 require (
 	github.com/btcsuite/btcd v0.22.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.1.1 // indirect
 	github.com/cosmos/cosmos-proto v1.0.0-beta.3 // indirect
 	github.com/cosmos/gogoproto v1.4.11 // indirect
+	github.com/cosmos/ibc-go/v3 v3.2.0 // indirect
 	github.com/danieljoos/wincred v1.0.2 // indirect
 	github.com/felixge/httpsnoop v1.0.1 // indirect
 	github.com/go-ole/go-ole v1.2.5 // indirect

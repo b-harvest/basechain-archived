@@ -196,10 +196,6 @@ func (suite *ProposalTestSuite) TestRegisterCoinProposal() {
 		Display: "coin",
 	}
 
-	validIBCDenom := "ibc/7F1D3FCF4AE79E1554D670D1AD949A9BA4E4A3C76C63093E17E446A46061A7A2"
-	validIBCSymbol := "ATOM"
-	validIBCName := "Atom"
-
 	testCases := []struct {
 		msg         string
 		title       string
@@ -221,10 +217,6 @@ func (suite *ProposalTestSuite) TestRegisterCoinProposal() {
 		{msg: "Register token pair - invalid length token (128)", title: "test", description: "test desc", metadata: createMetadata(strings.Repeat("a", 129), "test"), expectPass: false},
 		{msg: "Register token pair - invalid length title (140)", title: strings.Repeat("a", length.MaxTitleLength+1), description: "test desc", metadata: validMetadata, expectPass: false},
 		{msg: "Register token pair - invalid length description (5000)", title: "title", description: strings.Repeat("a", length.MaxDescriptionLength+1), metadata: validMetadata, expectPass: false},
-
-		// Ibc
-		{msg: "Register token pair - ibc", title: "test", description: "test desc", metadata: createFullMetadata(validIBCDenom, validIBCSymbol, validIBCName), expectPass: true},
-		{msg: "Register token pair - ibc invalid denom", title: "test", description: "test desc", metadata: createFullMetadata("ibc/", validIBCSymbol, validIBCName), expectPass: false},
 	}
 
 	for i, tc := range testCases {

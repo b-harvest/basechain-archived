@@ -117,13 +117,6 @@ func (suite *MsgsTestSuite) TestMsgConvertCoin() {
 			sdk.AccAddress(tests.GenerateAddress().Bytes()).String(),
 			true,
 		},
-		{
-			"msg convert coin - pass with `ibc/{hash}` denom",
-			sdk.NewCoin("ibc/7F1D3FCF4AE79E1554D670D1AD949A9BA4E4A3C76C63093E17E446A46061A7A2", sdk.NewInt(100)),
-			tests.GenerateAddress().String(),
-			sdk.AccAddress(tests.GenerateAddress().Bytes()).String(),
-			true,
-		},
 	}
 
 	for i, tc := range testCases {
