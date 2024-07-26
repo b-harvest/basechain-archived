@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "canto Chain - gRPC Gateway docs",
+    "title": "BaseChain - gRPC Gateway docs",
     "description": "A REST interface for state queries and transactions",
     "version": "1.0.0"
   },
@@ -42,61 +42,6 @@
           "BaseFee": "FeeMarketBaseFee"
         }
       }
-    },
-    {
-      "url": "./tmp-swagger-gen/canto/onboarding/v1/query.swagger.json",
-      "operationIds": {
-        "rename": {
-          "Params": "OnboardingParams"
-        }
-      }
-    },
-    {
-      "url": "./tmp-swagger-gen/canto/coinswap/v1/query.swagger.json",
-      "operationIds": {
-        "rename": {
-          "Params": "CoinswapParams"
-        }
-      }
-    },
-    {
-      "url": "./tmp-swagger-gen/ibc/applications/transfer/v1/query.swagger.json",
-      "operationIds": {
-        "rename": {
-          "Params": "TransferParams"
-        }
-      }
-    },
-    {
-      "url": "./tmp-swagger-gen/ibc/core/client/v1/query.swagger.json",
-      "operationIds": {
-        "rename": {
-          "Params": "ClientParams"
-        }
-      }
-    },
-    {
-      "url": "./tmp-swagger-gen/ibc/core/connection/v1/query.swagger.json",
-      "operationIds": {
-        "rename": {
-          "Params": "ConnectionParams"
-        }
-      }
-    },
-    {
-      "url": "./tmp-swagger-gen/ibc/core/channel/v1/query.swagger.json"
-    },
-    {
-      "url": "./tmp-swagger-gen/cosmos/auth/v1beta1/query.swagger.json",
-      "operationIds": {
-        "rename": {
-          "Account": "AuthAccount",
-          "Params": "AuthParams"
-        }
-      }
-    },
-    {
-      "url": "./tmp-swagger-gen/cosmos/authz/v1beta1/query.swagger.json"
     },
     {
       "url": "./tmp-swagger-gen/cosmos/bank/v1beta1/query.swagger.json",
