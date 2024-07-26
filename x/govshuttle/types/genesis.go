@@ -1,18 +1,14 @@
 package types
 
-// DefaultIndex is the default capability global index
-const DefaultIndex uint64 = 1
-
 // DefaultGenesis returns the default Capability genesis state
 func DefaultGenesis() *GenesisState {
-	return NewGenesisState(DefaultParams(), nil)
+	return NewGenesisState(DefaultParams(), "")
 }
 
-func NewGenesisState(params Params, portAddress []byte) *GenesisState {
+func NewGenesisState(params Params, portContractAddr string) *GenesisState {
 	return &GenesisState{
-		Params:      params,
-		PortAddress: portAddress,
-		// this line is used by starport scaffolding # genesis/types/init
+		Params:           params,
+		PortContractAddr: portContractAddr,
 	}
 }
 

@@ -21,7 +21,7 @@ func (suite *KeeperTestSuite) TestImportExportGenesisEmpty() {
 	_, found := suite.app.GovshuttleKeeper.GetPort(suite.ctx)
 	suite.Require().False(found)
 	genState := govshuttle.ExportGenesis(suite.ctx, suite.app.GovshuttleKeeper)
-	suite.Require().Nil(genState.PortAddress)
+	suite.Require().Equal(genState.PortContractAddr, "")
 
 	// Copy genState to genState2 and init with it
 	var genState2 types.GenesisState
@@ -35,12 +35,12 @@ func (suite *KeeperTestSuite) TestImportExportGenesisEmpty() {
 	genState3 := govshuttle.ExportGenesis(suite.ctx, suite.app.GovshuttleKeeper)
 	suite.Equal(*genState, genState2)
 	suite.Equal(genState2, *genState3)
-	suite.Require().Nil(genState.PortAddress)
+	suite.Require().Equal(genState.PortContractAddr, "")
 }
 
 func (suite *KeeperTestSuite) TestInitExportGenesis() {
-	portAddress := tests.GenerateAddress()
-	expGenesis := types.NewGenesisState(types.DefaultParams(), portAddress.Bytes())
+	portContractAddr := tests.GenerateAddress()
+	expGenesis := types.NewGenesisState(types.DefaultParams(), portContractAddr.String())
 
 	govshuttle.InitGenesis(suite.ctx, suite.app.GovshuttleKeeper, suite.app.AccountKeeper, *expGenesis)
 	genState := govshuttle.ExportGenesis(suite.ctx, suite.app.GovshuttleKeeper)
