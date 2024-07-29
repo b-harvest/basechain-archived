@@ -108,7 +108,7 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 		expPass  bool
 	}{
 		{
-			"conversion is disabled globally",
+			"fail: conversion is disabled globally",
 			func() {
 				params := types.DefaultParams()
 				params.EnableErc20 = false
@@ -117,7 +117,7 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 			false,
 		},
 		{
-			"denom already registered",
+			"fail: denom already registered",
 			func() {
 				regPair := types.NewTokenPair(tests.GenerateAddress(), metadata.Base, true, types.OWNER_MODULE)
 				suite.app.Erc20Keeper.SetDenomMap(suite.ctx, regPair.Denom, regPair.GetID())
@@ -126,33 +126,17 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 			false,
 		},
 		{
-			"token doesn't have supply",
+			"fail: token doesn't have supply",
 			func() {
 			},
 			false,
 		},
 		{
-			"metadata different that stored",
+			"fail: metadata different that stored",
 			func() {
 				metadata.Base = cosmosTokenBase
-				validMetadata := banktypes.Metadata{
-					Description: "description",
-					Base:        cosmosTokenBase,
-					// NOTE: Denom units MUST be increasing
-					DenomUnits: []*banktypes.DenomUnit{
-						{
-							Denom:    cosmosTokenBase,
-							Exponent: 0,
-						},
-						{
-							Denom:    cosmosTokenDisplay,
-							Exponent: uint32(18),
-						},
-					},
-					Name:    erc20Name,
-					Symbol:  erc20Symbol,
-					Display: cosmosTokenDisplay,
-				}
+				validMetadata := metadata
+				validMetadata.Name = "different"
 
 				err := suite.app.BankKeeper.MintCoins(suite.ctx, inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(validMetadata.Base, 1)})
 				suite.Require().NoError(err)
@@ -161,7 +145,7 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 			false,
 		},
 		{
-			"evm denom registration - CANTO",
+			"fail: evm denom registration - CANTO",
 			func() {
 				metadata.Base = "CANTO"
 				err := suite.app.BankKeeper.MintCoins(suite.ctx, inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
@@ -170,7 +154,7 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 			false,
 		},
 		{
-			"evm denom registration - CANTO",
+			"fail: evm denom registration - CANTO",
 			func() {
 				metadata.Base = "CANTO"
 				err := suite.app.BankKeeper.MintCoins(suite.ctx, inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
@@ -179,7 +163,7 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 			false,
 		},
 		{
-			"evm denom registration - aCANTO",
+			"fail: evm denom registration - aCANTO",
 			func() {
 				metadata.Base = "aCANTO"
 				err := suite.app.BankKeeper.MintCoins(suite.ctx, inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
@@ -188,7 +172,7 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 			false,
 		},
 		{
-			"evm denom registration - wCANTO",
+			"fail: evm denom registration - wCANTO",
 			func() {
 				metadata.Base = "wCANTO"
 				err := suite.app.BankKeeper.MintCoins(suite.ctx, inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
@@ -206,7 +190,7 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 			true,
 		},
 		{
-			"force fail evm",
+			"fail: force fail evm",
 			func() {
 				metadata.Base = cosmosTokenBase
 				err := suite.app.BankKeeper.MintCoins(suite.ctx, inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
@@ -222,7 +206,7 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 			false,
 		},
 		{
-			"force delete module account evm",
+			"fail: force delete module account evm",
 			func() {
 				metadata.Base = cosmosTokenBase
 				err := suite.app.BankKeeper.MintCoins(suite.ctx, inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
@@ -230,6 +214,29 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 
 				acc := suite.app.AccountKeeper.GetAccount(suite.ctx, types.ModuleAddress.Bytes())
 				suite.app.AccountKeeper.RemoveAccount(suite.ctx, acc)
+			},
+			false,
+		},
+		{
+			"fail: token pair already exists with same denom",
+			func() {
+				metadata.Base = cosmosTokenBase
+				err := suite.app.BankKeeper.MintCoins(suite.ctx, inflationtypes.ModuleName, sdk.Coins{sdk.NewInt64Coin(metadata.Base, 1)})
+				suite.Require().NoError(err)
+
+				tokenPair, err := suite.app.Erc20Keeper.RegisterCoin(suite.ctx, metadata)
+				suite.Require().NoError(err)
+				suite.Commit()
+
+				// check token pair is stored
+				suite.Require().Equal(types.OWNER_MODULE, tokenPair.ContractOwner)
+				suite.Require().Equal(metadata.Base, tokenPair.Denom)
+				suite.Require().Equal(true, tokenPair.Enabled)
+
+				// check denom erc20 are stored
+				id := tokenPair.GetID()
+				suite.Require().Equal(id, suite.app.Erc20Keeper.GetDenomMap(suite.ctx, tokenPair.Denom))
+				suite.Require().Equal(id, suite.app.Erc20Keeper.GetERC20Map(suite.ctx, common.HexToAddress(tokenPair.Erc20Address)))
 			},
 			false,
 		},
@@ -247,7 +254,7 @@ func (suite KeeperTestSuite) TestRegisterCoin() {
 				Erc20Address:  "0x80b5a32E4F032B2a058b4F29EC95EEfEEB87aDcd",
 				Denom:         "acoin",
 				Enabled:       true,
-				ContractOwner: 1,
+				ContractOwner: types.OWNER_MODULE,
 			}
 
 			if tc.expPass {
