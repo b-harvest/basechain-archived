@@ -6,6 +6,7 @@ import (
 	ethermint "github.com/evmos/ethermint/types"
 )
 
+// TODO: fix the config to basechain
 const (
 	AppName = "cantod"
 	// Bech32Prefix defines the Bech32 prefix used for EthAccounts

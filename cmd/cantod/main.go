@@ -31,11 +31,8 @@ func main() {
 func setupConfig() {
 	// set the address prefixes
 	config := sdk.GetConfig()
+	// TODO: refactor for basechain
 	cmdcfg.SetBech32Prefixes(config)
-	// TODO fix
-	// if err := cmdcfg.EnableObservability(); err != nil {
-	// 	panic(err)
-	// }
 	cmdcfg.SetBip44CoinType(config)
 	config.Seal()
 }
