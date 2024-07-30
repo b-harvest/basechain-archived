@@ -24,6 +24,8 @@ import (
 
 var (
 	uqstars = "utestdenom"
+	// The following test codes are to prove that multiple token pairs should not be registered
+	// with the same denom, but if this happens, only the one in the index is valid.
 	// uqstars1 and uqstars2 have same denom
 	// uqstars1 is deployed first.
 	uqstars1 = types.TokenPair{

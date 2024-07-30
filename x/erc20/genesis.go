@@ -30,8 +30,8 @@ func InitGenesis(
 	}
 
 	// set indexes
-	// multiple contracts at the same denom can exist,
-	// but only one which is in indexes are valid.
+	// multiple token pairs should not be registered with the same denom,
+	// but if this happens, only the one in the index is valid.
 	for _, idx := range data.DenomIndexes {
 		id := idx.GetTokenPairId()
 		k.SetTokenPairIdByDenom(ctx, idx.Denom, id)
