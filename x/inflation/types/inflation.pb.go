@@ -39,8 +39,10 @@ type InflationDistribution struct {
 	// is
 	// // to be allocated to the incentives module address
 	// string usage_incentives = 2 [
-	//   (gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec",
-	//   (gogoproto.nullable) = false
+	//
+	//	(gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec",
+	//	(gogoproto.nullable) = false
+	//
 	// ];
 	// community_pool defines the proportion of the minted minted_denom that is to
 	// be allocated to the community pool
